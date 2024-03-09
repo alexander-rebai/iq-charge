@@ -1,37 +1,114 @@
-import Link from "next/link";
+import CallToActionBanner from "~/components/call-to-action-banner";
+import ItemsBanner from "~/components/call-to-action-items";
+import Contact from "~/components/contact";
+import { Footer } from "~/components/footer";
+import { Header } from "~/components/header";
+import { Hero } from "~/components/hero";
+import Information, {
+  type Information as InformationType,
+} from "~/components/information";
+import Product, { type Product as ProductType } from "~/components/product";
+import RoadMap from "~/components/roadmap";
 
-export default function HomePage() {
+const products: ProductType[] = [
+  {
+    name: "Alfen",
+    path: "alfen",
+    img: "/alfen/s1.jpg",
+    features: [
+      "U kunt de kosten van elke laadsessie opvolgen. Dankzij de optie split-billing kunt u de laadkosten van uw voertuig scheiden van het huishoudelijk energieverbruik en rechtstreeks factureren aan uw werkgever of uw bedrijf.",
+    ],
+  },
+  {
+    name: "Huawei Smart Charger",
+    path: "huawei",
+    img: "/huawei/h1.jpg",
+    features: [
+      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik.",
+      "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
+      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik.",
+    ],
+  },
+  {
+    name: "Wallbox Pulsar Plus",
+    path: "wallbox",
+    img: "/wallbox/w2.webp",
+    features: [
+      "De Wallbox Pulsar Plus is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik.",
+      "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
+      "De Wallbox Pulsar Plus is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik.",
+    ],
+  },
+];
+
+const information: InformationType[] = [
+  {
+    title: "IQ Charge: Charge Intelligently",
+    info: "Geef uw reis een krachtige impuls, of het nu gaat om uw dagelijkse woon-werkverkeer of het opladen van uw bedrijfsvloot, met IQ Charge. Stap in een wereld waar elke laadbeurt slimmere, data-verrijkte inzichten biedt, die uw energieverbruik optimaliseren en nieuwe niveaus van gemak en controle ontgrendelen. Het is niet zomaar opladen; het gaat om het verrijken van elke reis met intelligentie en vooruitziendheid. Naadloze Integratie voor Leven en Werk.",
+  },
+  {
+    title: "Seamless integration for Life and Work",
+    info: "Q Charge herdefinieert de oplaad ervaring door naadloos te integreren in zowel uw persoonlijke als professionele leven. Onze geavanceerde oplossingen zorgen ervoor dat uw voertuig, of uw hele vloot, altijd klaar en opgeladen is, zonder uw dag- of werkproces te onderbreken. Ervaar het gemak van een laadoplossing die zich aan u aanpast, waardoor elke dag efficiënter wordt en elke operatie soepeler verloopt.",
+  },
+  {
+    title: "IQ Charge, Drive Intelligent",
+    info: "Stap in de snelle baan van efficiëntie met IQ Charge. Onze snellaadtechnologie verkort wachttijden aanzienlijk, waardoor u vooruit gaat met minimale downtime. Perfect voor de milieubewuste individu of het vooruitstrevende bedrijf, onze stations zijn ontworpen om u efficiënt en duurzaam in beweging te houden. Verhoog uw impact bij elke laadbeurt, door productiviteit en milieubeheer vooruit te drijven.",
+  },
+];
+
+export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-          Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-        </h1>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/usage/first-steps"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">First Steps →</h3>
-            <div className="text-lg">
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
-            </div>
-          </Link>
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/introduction"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">Documentation →</h3>
-            <div className="text-lg">
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
-            </div>
-          </Link>
-        </div>
-      </div>
-    </main>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <CallToActionBanner
+          title="Samen naar een duurzame toekomst met de juiste laadoplossing"
+          info="Vraag een offerte aan of neem contact met ons op voor meer informatie."
+        />
+        <ItemsBanner />
+
+        <section id="oplossingen">
+          <div className="mb-5 mt-5 flex flex-col gap-8 lg:mb-10 lg:mt-20">
+            <h2 className="text-center text-5xl font-semibold">
+              Onze oplossingen
+            </h2>
+            {products.map((product, i) => (
+              <Product
+                key={i}
+                product={product}
+                reverse={i % 2 ? true : false}
+              />
+            ))}
+          </div>
+        </section>
+        <RoadMap />
+
+        <section id="over">
+          <div className="mb-10 mt-20 flex flex-col gap-8">
+            <h2 className="text-center text-5xl font-semibold">Over ons</h2>
+            {information.map((info, i) => (
+              <Information
+                key={i}
+                information={info}
+                reverse={i % 2 ? true : false}
+              />
+            ))}
+          </div>
+        </section>
+        <CallToActionBanner
+          title="Meld uw laadpaal aan bij Fluvius"
+          info="Het is verplicht om uw private laadpaal aangesloten op het laagspanningsnet met een vermogen van 5 kVA of meer aan te melden bij Fluvius."
+          isFluvius
+        />
+        <section id="contact">
+          <div className="mb-10 mt-20 flex flex-col gap-8">
+            <h2 className="text-center text-5xl font-semibold">Contact</h2>
+            <Contact />
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
