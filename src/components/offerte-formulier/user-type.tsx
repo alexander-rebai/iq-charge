@@ -7,7 +7,7 @@ const UserType = () => {
   const { handleNext, handleSubmitStep } = useOfferte();
 
   const onSelectUserType = async (userType: "particulier" | "bedrijf") => {
-    await handleSubmitStep(userType, "userType");
+    handleSubmitStep(userType, "userType");
     handleNext();
   };
 

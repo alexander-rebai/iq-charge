@@ -27,7 +27,7 @@ const steps = [
   },
 ];
 
-export default function RoadMap({}: {}) {
+export default function RoadMap() {
   return (
     <Container className="mb-10 mt-10 lg:mb-96 lg:mt-40">
       <div className="relative hidden items-center justify-center lg:flex lg:gap-56 xl:gap-x-64">
