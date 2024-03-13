@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
-import { zodResolver } from '@hookform/resolvers/zod'
-import { Building, Mail, Phone } from 'lucide-react'
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import { Button } from './ui/button'
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Building, Mail, Phone } from "lucide-react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Button } from "./ui/button";
 import {
   Form,
   FormControl,
@@ -13,45 +13,45 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from './ui/form'
-import { Input } from './ui/input'
-import { Textarea } from './ui/textarea'
+} from "./ui/form";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
 
 const formSchema = z.object({
-  firstname: z.string({ required_error: 'Firstname is required' }),
-  lastname: z.string({ required_error: 'Lastname is required' }),
+  firstname: z.string({ required_error: "Firstname is required" }),
+  lastname: z.string({ required_error: "Lastname is required" }),
   email: z
-    .string({ required_error: 'Email is required' })
-    .email({ message: 'Invalid email' }),
-  phone: z.string({ required_error: 'Phone is required' }),
-  message: z.string({ required_error: 'Message is required' }),
-})
+    .string({ required_error: "Email is required" })
+    .email({ message: "Invalid email" }),
+  phone: z.string({ required_error: "Phone is required" }),
+  message: z.string({ required_error: "Message is required" }),
+});
 
-type ContactFormType = z.infer<typeof formSchema>
+type ContactFormType = z.infer<typeof formSchema>;
 
 export default function Contact() {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const form = useForm<ContactFormType>({
     resolver: zodResolver(formSchema),
     defaultValues: {},
-  })
+  });
 
   const resetForm = () => {
-    form.setValue('firstname', '')
-    form.setValue('lastname', '')
-    form.setValue('email', '')
-    form.setValue('phone', '')
-    form.setValue('message', '')
-  }
+    form.setValue("firstname", "");
+    form.setValue("lastname", "");
+    form.setValue("email", "");
+    form.setValue("phone", "");
+    form.setValue("message", "");
+  };
 
   const onSubmit = async (values: ContactFormType) => {
-    setLoading(true)
-    console.log(values)
+    setLoading(true);
+    console.log(values);
     // await sendContactFormMail(values)
-    resetForm()
-    setLoading(false)
-  }
+    resetForm();
+    setLoading(false);
+  };
 
   return (
     <div className="relative isolate">
@@ -182,7 +182,7 @@ export default function Contact() {
                 />
               </div>
               <div className="mt-8 flex justify-center">
-                <Button type="submit" disabled={loading} variant={'outline'}>
+                <Button type="submit" disabled={loading} variant={"outline"}>
                   Send message
                 </Button>
               </div>
@@ -191,5 +191,5 @@ export default function Contact() {
         </Form>
       </div>
     </div>
-  )
+  );
 }

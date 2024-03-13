@@ -1,4 +1,4 @@
-import { CheckCircle, CheckCircleIcon } from "lucide-react";
+import { CheckCircle, CheckCircleIcon, XCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "~/components/container";
@@ -10,41 +10,80 @@ import Specs from "~/components/specs-table";
 const specifications = [
   {
     category: "Model",
-    value: <span className="font-medium">Huawei Smart Charger 7KS-S0</span>,
-    value2: <span className="font-medium">Huawei Smart Charger 22KT-S0</span>,
+    value: <span className="font-semibold">Smappee EV Base</span>,
+    value2: <span className="font-semibold">Smappee EV Ultra</span>,
+    value3: <span className="font-semibold">Smappee EV One</span>,
+    value4: <span className="font-semibold">Smappee EV Wall</span>,
   },
   {
-    category: "Fase(n)",
-    value: "Eenfasig",
-    value2: "Driefasig",
+    category: "Max. vermogen",
+    value: "2 x 22kw",
+    value2: "2 x 240 kW",
+    value3: "22 kW",
+    value4: "2 x 240 kW",
   },
-  { category: "Max. vermogen", value: "7,4 kW", value2: "22 kW" },
-  { category: "Gebruikersinterface", value: "Scherm", value2: "Scherm" },
-  { category: "Montage", value: "Muur", value2: "Muur" },
-  { category: "Type stekker", value: "Type 2", value2: "Type 2" },
+  {
+    category: "Gebruikersinterface",
+    value: "App",
+    value2: "2 dynamische displays",
+    value3: "App",
+    value4: "App",
+  },
+  {
+    category: "Montage",
+    value: "Muur",
+    value2: "Muur",
+    value3: "Muur",
+    value4: "Muur",
+  },
+  {
+    category: "Type stekker",
+    value: "2 x Type 2",
+    value2: "2 x Type 2",
+    value3: "Type 2",
+    value4: "2 x Type 2",
+  },
   {
     category: "Afmetingen (mm) HxLxD",
-    value: "180 x 335 x 145",
-    value2: "180 x 335 x 145",
+    value: "1200 × 600 × 150 mm ",
+    value2: "1870 x 920 x 650 mm",
+    value3: "1100 × 120 × 120 mm",
+    value4: "300 × 300 × 110  mm",
   },
   {
-    category: "Beschermingsgraad ( IP )",
-    value: "IP54",
-    value2: "IP54",
+    category: "RFID - Laadbeveiliging",
+    value: <CheckCircle className="mx-auto text-green-600" />,
+    value2: <CheckCircle className="mx-auto text-green-600" />,
+    value3: <CheckCircle className="mx-auto text-green-600" />,
+    value4: <CheckCircle className="mx-auto text-green-600" />,
   },
   {
     category: "Lekstroomdetector (6mA DC Detector)",
     value: <CheckCircle className="mx-auto text-green-600" />,
     value2: <CheckCircle className="mx-auto text-green-600" />,
+    value3: <CheckCircle className="mx-auto text-green-600" />,
+    value4: <CheckCircle className="mx-auto text-green-600" />,
+  },
+  {
+    category: "Geconnecteerde services",
+    value: <CheckCircle className="mx-auto text-green-600 " />,
+    value2: <CheckCircle className="mx-auto text-green-600" />,
+    value3: <CheckCircle className="mx-auto text-green-600" />,
+    value4: <CheckCircle className="mx-auto text-green-600" />,
+  },
+  {
+    category: "Vaste laadkabel",
+    value: "2 kabels",
+    value2: "2 kabels",
+    value3: "1 kabel",
+    value4: "2 kabels",
   },
 ];
 
 const features = [
-  "Automatische faseschakeling",
-  "Verificatie: Bluetooth, RFID en Mobiele App",
-  "Dynamisch laadvermogen",
-  "Voorkomt overbelasting van de netverbinding",
-  "Compatibel met PV (Fotovoltaïsch), ESS (Energieopslagsystemen) en lader",
+  "Standaard wandmontage (Montagepaal optioneel)",
+  "MID certified energiemeter",
+  "Load Balancing en/of Smart Charging Network",
 ];
 
 export default function ProductPage() {
@@ -56,9 +95,7 @@ export default function ProductPage() {
           <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8 xl:gap-20">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h2 className="text-4xl font-bold tracking-tighter">
-                  Huawei Smart Charger
-                </h2>
+                <h2 className="text-4xl font-bold tracking-tighter">Alfen</h2>
                 <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Charge your electric vehicle with speed and convenience. Our
                   electric car charger is designed to provide fast and reliable
@@ -74,7 +111,12 @@ export default function ProductPage() {
             </div>
             <div className="flex items-center justify-center p-10 lg:p-0">
               <ImageCarousel
-                images={["/huawei/h1.png", "/huawei/h2.png", "/huawei/h3.png"]}
+                images={[
+                  "/smappee/s2.png",
+                  "/smappee/s1.png",
+                  "/smappee/s3.png",
+                  "/smappee/s4.png",
+                ]}
               />
             </div>
           </div>
@@ -121,8 +163,10 @@ export default function ProductPage() {
             </h2>
             <Specs
               specs={specifications}
-              image1="/huawei/h1.png"
-              image2="/huawei/h2.png"
+              image1="/smappee/s1.png"
+              image2="/smappee/s2.png"
+              image3="/smappee/s3.png"
+              image4="/smappee/s4.png"
             />
           </div>
         </div>

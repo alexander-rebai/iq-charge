@@ -1,20 +1,20 @@
-import Image from 'next/image'
-import { Container } from './container'
+import Image from "next/image";
+import { Container } from "./container";
 
 export default function CallToActionBanner({
   title,
   info,
   isFluvius,
 }: {
-  title: string
-  info: string
-  isFluvius?: boolean
+  title: string;
+  info: string;
+  isFluvius?: boolean;
 }) {
   return (
     <div className="relative overflow-hidden rounded-xl py-32">
       <Image
         className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
-        src={'/gradient.jpeg'}
+        src={"/gradient.jpeg"}
         alt=""
         width={2347}
         height={1244}
@@ -57,5 +57,5 @@ export default function CallToActionBanner({
         )}
       </Container>
     </div>
-  )
+  );
 }

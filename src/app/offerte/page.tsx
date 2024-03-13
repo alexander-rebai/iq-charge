@@ -28,7 +28,7 @@ const OffertePagina = () => {
   };
 
   return (
-    <Container className="flex w-full flex-col justify-center  ">
+    <Container className="flex min-h-[calc(100vh-419px)] w-full flex-col justify-center pb-12">
       <div className="w-full flex-col gap-8 first-letter:flex ">
         <Steps />
         <Card className="mt-10">

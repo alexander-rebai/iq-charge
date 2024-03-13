@@ -14,7 +14,7 @@ const tiers = [
   {
     name: "Alfen",
     price: "$1500",
-    img: "/alfen/s1.jpg",
+    img: "/alfen/s1.png",
     features: [
       "5 products",
       "Up to 1,000 subscribers",
@@ -26,7 +26,7 @@ const tiers = [
   {
     name: "Huawei",
     price: "$1500",
-    img: "/huawei/h1.jpg",
+    img: "/huawei/h1.png",
     features: [
       "5 products",
       "Up to 1,000 subscribers",
@@ -81,7 +81,7 @@ export default function ConfigureProduct() {
         <div className="flex flex-col">
           <CardContent>
             <div className="flex flex-col items-center gap-4">
-              <h1 className="text-center text-4xl font-extrabold text-primary">
+              <h1 className="text-primary text-center text-4xl font-extrabold">
                 Onze producten
               </h1>
             </div>
@@ -98,7 +98,7 @@ export default function ConfigureProduct() {
                     height={200}
                   />
                 </div>
-                <div className="mt-6 block rounded-md px-3 py-2 text-center text-3xl font-semibold leading-6 text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                <div className="text-primary focus-visible:outline-primary mt-6 block rounded-md px-3 py-2 text-center text-3xl font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
                   {tier.name}
                 </div>
                 <ul
@@ -108,7 +108,7 @@ export default function ConfigureProduct() {
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex gap-x-3">
                       <Check
-                        className="h-6 w-5 flex-none text-primary"
+                        className="text-primary h-6 w-5 flex-none"
                         aria-hidden="true"
                       />
                       {feature}
@@ -116,7 +116,7 @@ export default function ConfigureProduct() {
                   ))}
                 </ul>
 
-                <div className="mt-6 flex flex-col rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                <div className="focus-visible:outline-primary mt-6 flex flex-col rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
                   <span className="text-2xl font-bold tracking-tight text-slate-900">
                     {tier.price}
                   </span>
@@ -137,7 +137,7 @@ export default function ConfigureProduct() {
         <div className="relative flex w-full flex-col md:w-4/5">
           <div
             onClick={() => setSelectedTier(undefined)}
-            className="focus:shadow-outline-blue absolute -left-5 -top-14 inline-block cursor-pointer rounded-full bg-primary px-2 py-2 text-white hover:opacity-90 focus:outline-none md:left-0 md:top-0"
+            className="focus:shadow-outline-blue bg-primary absolute -left-5 -top-14 inline-block cursor-pointer rounded-full px-2 py-2 text-white hover:opacity-90 focus:outline-none md:left-0 md:top-0"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@ export default function ConfigureProduct() {
           </div>
           <CardContent>
             <div className="flex flex-col items-center gap-4">
-              <h1 className="text-4xl font-extrabold text-primary">
+              <h1 className="text-primary text-4xl font-extrabold">
                 {selectedTier
                   ? `Configureer uw ${selectedTier.name}`
                   : "Onze producten"}
@@ -163,7 +163,7 @@ export default function ConfigureProduct() {
           </CardContent>
           <div className="rounded-3xl lg:p-8 xl:p-10">
             <div className="flex items-center justify-center gap-6">
-              <div className="h-32 w-1/2 overflow-hidden rounded-md border-2 border-primary p-4 lg:h-48">
+              <div className="border-primary h-32 w-1/2 overflow-hidden rounded-md border-2 p-4 lg:h-48">
                 <Image
                   src={selectedTier.img}
                   className="h-full w-full object-contain object-center lg:h-full lg:w-full"
@@ -172,21 +172,21 @@ export default function ConfigureProduct() {
                   height={600}
                 />
               </div>
-              <div className="flex h-32 w-1/2 flex-col items-center justify-center overflow-hidden rounded-md border-2 border-primary p-4 lg:h-48">
-                <h2 className="text font-extrabold text-primary">Uw prijs:</h2>
+              <div className="border-primary flex h-32 w-1/2 flex-col items-center justify-center overflow-hidden rounded-md border-2 p-4 lg:h-48">
+                <h2 className="text text-primary font-extrabold">Uw prijs:</h2>
                 <p className="text-2xl font-bold tracking-tight text-slate-900">
                   {selectedTier.price}
                 </p>
               </div>
             </div>
-            <hr className="my-6 border-t border-primary" />
+            <hr className="border-primary my-6 border-t" />
             <div className="mt-6 flex flex-col gap-8">
               <div className="flex gap-4">
-                <div className="flex h-8 w-8 items-center justify-center gap-x-3 rounded-full bg-primary text-lg font-semibold text-white">
+                <div className="bg-primary flex h-8 w-8 items-center justify-center gap-x-3 rounded-full text-lg font-semibold text-white">
                   1
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span className="text-lg font-semibold text-primary">
+                  <span className="text-primary text-lg font-semibold">
                     Inbegrepen
                   </span>
                   <ul className="list-disc text-slate-600">
@@ -199,10 +199,10 @@ export default function ConfigureProduct() {
               </div>
               <div className="flex flex-col gap-2">
                 <div className="flex gap-4">
-                  <div className="flex h-8 w-8 items-center justify-center gap-x-3 rounded-full bg-primary text-lg font-semibold text-white">
+                  <div className="bg-primary flex h-8 w-8 items-center justify-center gap-x-3 rounded-full text-lg font-semibold text-white">
                     2
                   </div>
-                  <span className="text-lg font-semibold text-primary">
+                  <span className="text-primary text-lg font-semibold">
                     Uitrusting
                   </span>
                 </div>
@@ -212,9 +212,9 @@ export default function ConfigureProduct() {
                 <div className="mt-4 flex gap-8">
                   <Card
                     className={cn(
-                      "hover:border-2 hover:border-primary-foreground hover:opacity-90",
+                      "hover:border-primary-foreground hover:border-2 hover:opacity-90",
                       hasSmartMeter &&
-                        "border-2 border-primary-foreground bg-primary/50 text-primary-foreground",
+                        "border-primary-foreground bg-primary/50 text-primary-foreground border-2",
                     )}
                   >
                     <CardContent
@@ -222,7 +222,7 @@ export default function ConfigureProduct() {
                       onClick={() => setHasSmartMeter(true)}
                     >
                       <div className="flex flex-col items-center">
-                        <h1 className="text-xl font-semibold text-primary">
+                        <h1 className="text-primary text-xl font-semibold">
                           Ja
                         </h1>
                       </div>
@@ -230,9 +230,9 @@ export default function ConfigureProduct() {
                   </Card>
                   <Card
                     className={cn(
-                      "hover:border-2 hover:border-primary-foreground",
+                      "hover:border-primary-foreground hover:border-2",
                       !hasSmartMeter &&
-                        "border-2 border-primary-foreground bg-primary/50 text-primary-foreground hover:opacity-90",
+                        "border-primary-foreground bg-primary/50 text-primary-foreground border-2 hover:opacity-90",
                     )}
                   >
                     <CardContent
@@ -240,7 +240,7 @@ export default function ConfigureProduct() {
                       onClick={() => setHasSmartMeter(false)}
                     >
                       <div className="flex flex-col items-center">
-                        <h1 className="text-xl font-semibold text-primary">
+                        <h1 className="text-primary text-xl font-semibold">
                           Nee
                         </h1>
                       </div>
@@ -251,10 +251,10 @@ export default function ConfigureProduct() {
               {selectedTier.models && (
                 <div className="flex flex-col gap-2">
                   <div className="flex flex-col gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center gap-x-3 rounded-full bg-primary text-lg font-semibold text-white">
+                    <div className="bg-primary flex h-8 w-8 items-center justify-center gap-x-3 rounded-full text-lg font-semibold text-white">
                       3
                     </div>
-                    <span className="text-lg font-semibold text-primary">
+                    <span className="text-primary text-lg font-semibold">
                       Model
                     </span>
                   </div>
@@ -262,9 +262,9 @@ export default function ConfigureProduct() {
                   <div className="mt-4 flex flex-col gap-4 md:flex-row md:gap-8">
                     <Card
                       className={cn(
-                        "hover:border-2 hover:border-primary-foreground hover:opacity-90",
+                        "hover:border-primary-foreground hover:border-2 hover:opacity-90",
                         selectedModel === selectedTier.models[0] &&
-                          "border-2 border-primary-foreground bg-primary/50 text-primary-foreground",
+                          "border-primary-foreground bg-primary/50 text-primary-foreground border-2",
                       )}
                     >
                       <CardContent
@@ -272,7 +272,7 @@ export default function ConfigureProduct() {
                         onClick={() => setSelectedModel(selectedTier.models[0])}
                       >
                         <div className="flex flex-col items-center">
-                          <h1 className="text-xl font-semibold text-primary">
+                          <h1 className="text-primary text-xl font-semibold">
                             {selectedTier.models[0]}
                           </h1>
                         </div>
@@ -280,9 +280,9 @@ export default function ConfigureProduct() {
                     </Card>
                     <Card
                       className={cn(
-                        "hover:border-2 hover:border-primary-foreground hover:opacity-90",
+                        "hover:border-primary-foreground hover:border-2 hover:opacity-90",
                         selectedModel === selectedTier.models[1] &&
-                          "border-2 border-primary-foreground bg-primary/50 text-primary-foreground",
+                          "border-primary-foreground bg-primary/50 text-primary-foreground border-2",
                       )}
                     >
                       <CardContent
@@ -290,7 +290,7 @@ export default function ConfigureProduct() {
                         onClick={() => setSelectedModel(selectedTier.models[1])}
                       >
                         <div className="flex flex-col items-center">
-                          <h1 className="text-xl font-semibold text-primary">
+                          <h1 className="text-primary text-xl font-semibold">
                             {selectedTier.models[1]}
                           </h1>
                         </div>
@@ -300,11 +300,11 @@ export default function ConfigureProduct() {
                 </div>
               )}
               <div className="flex gap-4">
-                <div className="flex h-8 w-8 items-center justify-center gap-x-3 rounded-full bg-primary text-lg font-semibold text-white">
+                <div className="bg-primary flex h-8 w-8 items-center justify-center gap-x-3 rounded-full text-lg font-semibold text-white">
                   {selectedTier.models ? 4 : 3}
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span className="text-lg font-semibold text-primary">
+                  <span className="text-primary text-lg font-semibold">
                     Opties
                   </span>
                   <div className="flex items-center space-x-2 text-lg text-slate-600">
