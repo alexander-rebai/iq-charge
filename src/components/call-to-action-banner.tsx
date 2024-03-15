@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { Container } from "./container";
+import "aos/dist/aos.css";
+import { cn } from "~/lib/utils";
 
 export default function CallToActionBanner({
   title,
@@ -11,7 +15,12 @@ export default function CallToActionBanner({
   isFluvius?: boolean;
 }) {
   return (
-    <div className="relative overflow-hidden rounded-xl py-32">
+    <div
+      className={cn(
+        "relative overflow-hidden rounded-xl py-32",
+        !isFluvius && "rounded-b-none",
+      )}
+    >
       <Image
         className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
         src={"/gradient.jpeg"}
@@ -22,28 +31,47 @@ export default function CallToActionBanner({
       />
       <Container className="relative">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2
+            className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            data-aos="fade-up"
+            data-aos-easing="ease-in-out"
+          >
             {title}
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-indigo-200">
+          <p
+            className="mx-auto mt-6 max-w-xl text-lg leading-8 text-indigo-200"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-easing="ease-in-out"
+          >
             {info}
           </p>
         </div>
         {isFluvius ? (
-          <div className="mt-10 flex items-center justify-center">
+          <div
+            className="mt-10 flex items-center justify-center"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-easing="ease-in-out"
+          >
             <a
               href="https://www.fluvius.be/nl/duurzame-mobiliteit/laadpaal-melden"
               target="_blank"
-              className="text-primary-foreground rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Laadpaal aanmelden
             </a>
           </div>
         ) : (
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <div
+            className="mt-10 flex items-center justify-center gap-x-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-easing="ease-in-out"
+          >
             <a
               href="#"
-              className="text-primary-foreground rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Vraag een offerte
             </a>

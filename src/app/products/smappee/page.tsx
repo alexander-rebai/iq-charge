@@ -90,13 +90,13 @@ export default function ProductPage() {
   return (
     <main>
       <Header />
-      <div className="py-12 lg:py-16">
+      <div className="mt-28 py-12 lg:py-16">
         <div className="px-4 md:px-6">
           <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8 xl:gap-20">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h2 className="text-4xl font-bold tracking-tighter">Alfen</h2>
-                <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                <p className="max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Charge your electric vehicle with speed and convenience. Our
                   electric car charger is designed to provide fast and reliable
                   charging for all compatible electric and hybrid vehicles.
@@ -104,7 +104,7 @@ export default function ProductPage() {
               </div>
               <Link
                 href="/offerte"
-                className="border-primary-foreground bg-primary/50 text-primary-foreground focus-visible:outline-primary w-fit rounded-3xl border-2 px-3.5 py-2 text-xl font-medium shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                className="w-fit rounded-3xl border-2 border-primary-foreground bg-primary/50 px-3.5 py-2 text-xl font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Vraag uw offerte aan
               </Link>
@@ -144,10 +144,10 @@ export default function ProductPage() {
                 it delivers efficient and reliable charging performance.
               </p>
             </div>
-            <div className="border-primary bg-muted flex w-full flex-col gap-4 self-center rounded-lg border p-4 shadow-sm">
+            <div className="flex w-full flex-col gap-4 self-center rounded-lg border border-primary bg-muted p-4 shadow-sm">
               {features.map((f, idx) => (
                 <div className="flex items-center gap-2" key={idx}>
-                  <CheckCircleIcon className="text-primary h-6 w-6" />
+                  <CheckCircleIcon className="h-6 w-6 text-primary" />
                   <h3 className="text-lg font-semibold">{f}</h3>
                 </div>
               ))}
@@ -158,7 +158,7 @@ export default function ProductPage() {
       <div className="py-12 lg:py-16">
         <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center gap-12">
-            <h2 className="text-primary text-center text-4xl font-bold">
+            <h2 className="text-center text-4xl font-bold text-primary">
               Specificaties
             </h2>
             <Specs

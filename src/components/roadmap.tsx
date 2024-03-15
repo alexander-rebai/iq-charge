@@ -1,6 +1,7 @@
-import { BatteryCharging, Car, Plug } from "lucide-react";
-import { Container } from "./container";
-import Image from "next/image";
+"use client";
+
+import "aos/dist/aos.css";
+import { Car, Plug } from "lucide-react";
 
 const steps = [
   {
@@ -30,56 +31,63 @@ const steps = [
 
 export default function RoadMap() {
   return (
-    <Container className="relative mb-10 mt-10 lg:mb-80 lg:mt-24">
-      <div className="relative hidden items-center justify-center lg:flex lg:gap-56 xl:gap-x-64">
-        <div className="absolute bottom-1/2 left-0 z-10 -translate-y-1/4">
-          <Plug size={38} className="text-primary-foreground rotate-90" />
+    <section className="relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-8 py-24 md:px-12 lg:px-36">
+        <div data-aos="fade-up">
+          <h3 className="text-4xl">This is how it works</h3>
         </div>
-        <div className="absolute inset-0 flex items-center" aria-hidden="true">
-          <div className="bg-primary h-0.5 w-full" />
-        </div>
-
-        {steps.map((step) => (
-          <div className="relative" key={step.number}>
+        <div className="relative mt-24 flex flex-wrap">
+          <div className="-z-1 absolute left-0 right-0 top-8 hidden h-[1px] lg:block">
             <div
-              className="border-primary-foreground relative flex h-8 w-8 items-center justify-center rounded-full border-2 bg-white"
-              aria-current="step"
-            >
-              <span className="text-primary-foreground absolute -top-8 text-xl font-bold">
-                {step.number}
-              </span>
-              <span
-                className="bg-primary-foreground h-2.5 w-2.5 rounded-full"
-                aria-hidden="true"
-              />
-            </div>
-            <div className="absolute left-1/2 top-8 -translate-x-1/2 transform">
-              <div className="bg-primary mx-auto h-16 w-0.5" />
-              <div className="border-primary-foreground bg-primary/50 text-primary-foreground relative flex h-44 w-60 flex-col justify-between rounded-md border-2 p-4 shadow-md">
-                <h1 className=" text-center text-lg font-bold">{step.name}</h1>
-                <p className="mt-2 text-center">{step.description}</p>
-              </div>
-            </div>
+              className="h-[1px] w-full bg-primary"
+              data-aos="fade-left"
+            ></div>
           </div>
-        ))}
-        <div className="absolute bottom-1/2 right-0 z-10 -translate-y-1/4">
-          <Car size={38} className="text-primary-foreground" />
+          <div className="absolute -top-6 left-0" data-aos="fade-right">
+            <Plug className="h-12 w-12 rotate-90 text-primary" />
+          </div>
+          <div className="absolute -top-6 right-0" data-aos="fade-left">
+            <Car className="h-12 w-12 text-primary" />
+          </div>
+          <div className="relative ml-[12.5%] mr-[12.5%] grid grid-cols-2 gap-6 lg:grid-cols-4">
+            {steps.map((step) => (
+              <div
+                className="w-full border-b border-primary-foreground pb-4"
+                key={step.number}
+                data-aos="fade-up"
+              >
+                <span
+                  className={`mb-5 flex h-16 w-16 items-center justify-center rounded-xl border border-primary-foreground bg-primary text-white lg:mb-16`}
+                >
+                  {step.number}
+                </span>
+                <div className="flex flex-col">
+                  <p className="mt-12 h-20 text-xl font-medium leading-6">
+                    {step.name}
+                  </p>
+                  <p className="mt-4 text-base text-muted-foreground">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          className="rounded-4xl relative mt-24 h-full rounded-xl border border-primary-foreground bg-primary/50 p-8 text-center  shadow-lg ring-primary lg:col-span-full lg:px-20"
+        >
+          <h4 className="lg:text-3xl">
+            &quot;IQ Charge has a team of experts
+            <span className="md:block">
+              who are ready to help at any moment.&quot;
+            </span>
+          </h4>
+          <p className="mt-6 text-xl uppercase italic text-primary-foreground">
+            Alexander Rebai
+          </p>
         </div>
       </div>
-      <div className="flex flex-col gap-8 lg:hidden">
-        {steps.map((step) => (
-          <div
-            key={step.number}
-            className="border-primary-foreground bg-primary/50 text-primary-foreground relative flex w-full flex-col justify-between self-center rounded-md border-2 p-4 shadow-md md:w-1/2"
-          >
-            <div className="text-primary-foreground absolute left-2 top-0">
-              {step.number}
-            </div>
-            <h1 className=" text-center text-lg font-bold">{step.name}</h1>
-            <p className="mt-2">{step.description}</p>
-          </div>
-        ))}
-      </div>
-    </Container>
+    </section>
   );
 }

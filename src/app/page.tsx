@@ -1,5 +1,4 @@
 import CallToActionBanner from "~/components/call-to-action-banner";
-import ItemsBanner from "~/components/call-to-action-items";
 import Contact from "~/components/contact";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
@@ -71,13 +70,12 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main className="mt-28">
         <Hero />
         <CallToActionBanner
           title="Samen naar een duurzame toekomst met de juiste laadoplossing"
           info="Vraag een offerte aan of neem contact met ons op voor meer informatie."
         />
-        <ItemsBanner />
 
         <Products products={products} />
         <RoadMap />

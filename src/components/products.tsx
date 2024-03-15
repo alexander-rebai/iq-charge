@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { Container } from "./container";
-import { Card, CardContent } from "./ui/card";
-import { useRouter } from "next/navigation";
+import { CardContainer, CardBody, CardItem } from "./3d-card";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export type Product = {
   name: string;
@@ -13,30 +15,33 @@ export type Product = {
 };
 
 export default function Products({ products }: { products: Product[] }) {
-  const router = useRouter();
   return (
-    <div className="bg-muted rounded-b-xl md:p-12">
-      <Container className="overflow-hidden">
-        <div className="flex flex-wrap justify-between md:gap-8">
+    <div className="rounded-b-xl bg-muted md:p-12">
+      <Container className="overflow-hidden" data-aos="fade-up">
+        <div className="flex flex-wrap justify-center md:gap-y-8">
           {products.map((product) => (
-            <Card
-              key={product.name}
-              className="hover:bg-primary/50 group mb-8 min-w-full flex-1 cursor-pointer transition-all duration-300 ease-in-out hover:shadow-xl md:min-h-[400px] md:min-w-[40%]"
-              onClick={() => router.push(`/products/${product.path}`)}
-            >
-              <CardContent className="flex h-full flex-col items-center justify-between p-12">
-                <Image
-                  src={product.img}
-                  alt={product.name}
-                  width={200}
-                  height={500}
-                  className="mb-4 group-hover:scale-110"
-                />
-                <div className="group-hover:text-primary-foreground text-center text-3xl font-bold">
+            <CardContainer className="flex-1 cursor-pointer" key={product.name}>
+              <CardBody className="relative flex flex-col items-center justify-between rounded-xl border border-black/[0.1] bg-gray-50 p-12 hover:bg-primary/50">
+                <CardItem
+                  translateZ="100"
+                  className="flex w-full items-center justify-center"
+                >
+                  <Image
+                    src={product.img}
+                    alt={product.name}
+                    width={200}
+                    height={500}
+                    className="mb-4 group-hover:scale-110"
+                  />
+                </CardItem>
+                <CardItem
+                  translateZ="50"
+                  className="text-xl font-bold text-neutral-600 dark:text-white"
+                >
                   {product.name}
-                </div>
-              </CardContent>
-            </Card>
+                </CardItem>
+              </CardBody>
+            </CardContainer>
           ))}
         </div>
       </Container>

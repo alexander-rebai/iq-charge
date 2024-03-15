@@ -2,6 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Building, Mail, Phone } from "lucide-react";
+import "aos/dist/aos.css";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -54,11 +55,11 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative isolate">
+    <div className="relative isolate" data-aos="fade-up">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-3">
         <div className="relative px-6 pt-6 lg:static lg:px-8">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 className="text-primary-foreground text-center text-3xl font-bold tracking-tight lg:text-start">
+            <h2 className="text-center text-3xl font-bold tracking-tight text-primary-foreground lg:text-start">
               Leave us a message
             </h2>
 
