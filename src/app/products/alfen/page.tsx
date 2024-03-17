@@ -1,17 +1,22 @@
+"use client";
+
 import { CheckCircle, CheckCircleIcon, XCircle } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { Container } from "~/components/container";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
-import ImageCarousel from "~/components/image-carousel";
 import Specs from "~/components/specs-table";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import ImageCarousel from "~/components/image-carousel";
+import Information, {
+  type Information as InformationType,
+} from "~/components/information";
 
 const specifications = [
   {
     category: "Model",
-    value: <span className="font-semibold">Alfen Eve Single Pro-line</span>,
-    value2: <span className="font-semibold">Alfen Eve Double Pro-line</span>,
+    value: <span className="font-semibold">Eve Single Pro-line</span>,
+    value2: <span className="font-semibold">Eve Double Pro-line</span>,
   },
   {
     category: "Fase(n)",
@@ -68,35 +73,66 @@ const specifications = [
   },
 ];
 
-const features = [
-  "Standaard wandmontage (Montagepaal optioneel)",
-  "MID certified energiemeter",
-  "Load Balancing en/of Smart Charging Network",
+const products = [
+  {
+    title: "Alfen Eve Single Pro-line",
+    info: "De Alfen Eve Single Pro-line is een laadpunt voor elektrische voertuigen dat beschikbaar is als eenfasig of driefasig systeem. Het laadpunt is beschikbaar met een maximaal vermogen van 7,4 kW (eenfasig) of 22 kW (driefasig).",
+    image: "/alfen/s1.png",
+  },
+  {
+    title: "Alfen Eve Double Pro-line",
+    info: "De Alfen Eve Double Pro-line is een laadpunt voor elektrische voertuigen dat beschikbaar is als een driefasig systeem. Het laadpunt is beschikbaar met een maximaal vermogen van 2 x 22 kW.",
+    image: "/alfen/d1.png",
+  },
 ];
 
 export default function ProductPage() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+    });
+  }, []);
+
   return (
     <main>
       <Header />
-      <div className="mt-28 py-12 lg:py-16">
-        <div className="px-4 md:px-6">
-          <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8 xl:gap-20">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h2 className="text-4xl font-bold tracking-tighter">Alfen</h2>
-                <p className="max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Charge your electric vehicle with speed and convenience. Our
-                  electric car charger is designed to provide fast and reliable
-                  charging for all compatible electric and hybrid vehicles.
-                </p>
-              </div>
-              <Link
+      <div className="mx-auto mb-10 mt-36 max-w-7xl px-4 pb-10 text-center sm:px-6 md:mt-28 lg:p-16">
+        <div className="lg:grid lg:grid-cols-3 lg:gap-x-4">
+          <div className="-md:mt-16 col-span-2 mt-6 flex flex-col items-center justify-center lg:items-start lg:text-left">
+            <h1
+              className="mb-8 max-w-xl text-center text-5xl font-bold tracking-tight text-slate-900 md:text-[64px] lg:text-left"
+              data-aos="fade-up"
+            >
+              Alfen
+            </h1>
+            <p
+              className="desc text-md mb-8 max-w-lg self-center text-center text-slate-700 lg:self-auto lg:pr-4 lg:text-left"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Snel, veilig en betrouwbaar opladen van uw elektrische voertuig.
+              IQ-Charge is de specialist in het plaatsen van laadpalen voor
+              elektrische voertuigen. Wij bieden een totaaloplossing voor zowel
+              particulieren als bedrijven.
+            </p>
+            <div
+              className="flex flex-col items-center justify-center gap-6 md:flex-row lg:items-start lg:justify-start"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <a
                 href="/offerte"
-                className="w-fit rounded-3xl border-2 border-primary-foreground bg-primary/50 px-3.5 py-2 text-xl font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="rounded-3xl border-2 border-primary-foreground bg-primary/50  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
-                Vraag uw offerte aan
-              </Link>
+                Vraag een offerte
+              </a>
             </div>
+          </div>
+          <div
+            className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className="flex items-center justify-center p-10 lg:p-0">
               <ImageCarousel
                 images={[
@@ -111,40 +147,17 @@ export default function ProductPage() {
           </div>
         </div>
       </div>
-      <div className="relative overflow-hidden rounded-xl py-32">
-        <Image
-          className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
-          src={"/gradient.jpeg"}
-          alt=""
-          width={2347}
-          height={1244}
-          unoptimized
-        />
-        <Container className="relative">
-          <div className="mx-auto grid max-w-7xl items-start gap-6 px-4 sm:px-6 lg:grid-cols-[1fr_600px] lg:gap-12 lg:px-8 xl:gap-20">
-            <div className="mx-auto max-w-lg">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Fast Charging. Effortless Power.
-              </h2>
-              <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-indigo-200">
-                Our electric car charger offers rapid charging, allowing you to
-                power up your vehicle quickly and get back on the road. With
-                support for various car models and advanced energy management,
-                it delivers efficient and reliable charging performance.
-              </p>
-            </div>
-            <div className="flex w-full flex-col gap-4 self-center rounded-lg border border-primary bg-muted p-4 shadow-sm">
-              {features.map((f, idx) => (
-                <div className="flex items-center gap-2" key={idx}>
-                  <CheckCircleIcon className="h-6 w-6 text-primary" />
-                  <h3 className="text-lg font-semibold">{f}</h3>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
+      <div className="mb-10 mt-20 flex flex-col px-2 md:gap-8">
+        {products.map((product, i) => (
+          <Information
+            key={i}
+            information={product}
+            reverse={i % 2 ? true : false}
+            isProduct
+          />
+        ))}
       </div>
-      <div className="py-12 lg:py-16">
+      <div className="py-12 lg:py-16" data-aos="fade-up">
         <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center gap-12">
             <h2 className="text-center text-4xl font-bold text-primary">
@@ -153,7 +166,7 @@ export default function ProductPage() {
             <Specs
               specs={specifications}
               image1="/alfen/s1.png"
-              image2="/alfen/d1.jpeg"
+              image2="/alfen/d1.png"
             />
           </div>
         </div>

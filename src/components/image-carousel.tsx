@@ -10,11 +10,11 @@ import {
 
 const ImageCarousel = ({ images }: { images: string[] }) => {
   return (
-    <Carousel className="w-full max-w-xs">
+    <Carousel className="w-full">
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>
-            <AspectRatio ratio={16 / 9} className="select-none">
+            <AspectRatio ratio={16 / 16} className="select-none">
               <Image
                 alt="Hero image"
                 className="overflow-hidden rounded-xl object-contain object-center"

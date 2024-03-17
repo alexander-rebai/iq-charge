@@ -31,7 +31,7 @@ export default function Specs({
         <table className="min-w-max md:min-w-full">
           <colgroup>
             <col
-              className={cn("bg-primary w-1/6 md:w-1/5", image4 && "w-1/5")}
+              className={cn("w-1/6 bg-primary md:w-1/5", image4 && "w-1/5")}
             />
             <col className={cn("w-1/3", image4 && "w-1/5")} />
             {specs.some((spec) => spec.value2) && (
@@ -45,7 +45,7 @@ export default function Specs({
               <tr key={idx}>
                 <td
                   className={cn(
-                    "max-w-0 border-b border-gray-400 py-5 pl-4 pr-3 md:max-w-none md:text-lg",
+                    "max-w-0 break-words border-b border-gray-400 py-5 pl-4 pr-3 md:max-w-none md:text-lg",
                     idx === 0
                       ? "rounded-t-xl"
                       : idx === specs.length - 1

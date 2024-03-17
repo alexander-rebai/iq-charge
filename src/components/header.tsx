@@ -135,7 +135,7 @@ function MobileNavigation() {
 
 export function Header({ empty }: { empty?: boolean }) {
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 h-28 bg-white bg-opacity-90 shadow-sm backdrop-blur-sm">
+    <header className="fixed left-0 right-0 top-0 z-50 h-28 w-screen bg-white bg-opacity-90 shadow-sm backdrop-blur-sm">
       <Container>
         <nav className="relative z-50 flex select-none justify-between">
           <div className="flex items-center md:gap-x-12">

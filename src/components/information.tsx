@@ -8,18 +8,21 @@ import "aos/dist/aos.css";
 export type Information = {
   title: string;
   info: string;
+  image: string;
 };
 
 export default function Information({
   information,
   reverse,
+  isProduct,
 }: {
   information: Information;
   reverse?: boolean;
+  isProduct?: boolean;
 }) {
   return (
     <Container
-      className="my-4 overflow-hidden rounded-xl bg-muted p-12"
+      className="m my-4 overflow-hidden rounded-xl bg-muted p-12"
       data-aos={reverse ? "fade-left" : "fade-right"}
     >
       <div className="grid items-center gap-8 md:grid-flow-col-dense md:grid-cols-2 md:gap-12">
@@ -30,7 +33,7 @@ export default function Information({
           <p className="mt-6 text-lg leading-8 text-gray-600">
             {information.info}
           </p>
-          {reverse && (
+          {reverse && !isProduct && (
             <div className="mt-10 flex w-full items-center justify-center gap-x-6">
               <a
                 href={`/offerte`}
@@ -41,18 +44,36 @@ export default function Information({
             </div>
           )}
         </div>
-        <div className="relative h-64 overflow-hidden rounded-xl lg:h-96">
-          <Image
-            src="/product.jpeg"
-            alt="Product screenshot"
-            className="rounded-xl object-cover shadow-xl"
-            fill
-            sizes="(max-width: 640px) 100vw,
-        (max-width: 1280px) 50vw,
-        (max-width: 1536px) 33vw,
-        25vw"
-          />
-        </div>
+        {isProduct ? (
+          <div className="relative h-64 overflow-hidden rounded-xl lg:h-96">
+            <Image
+              src={information.image}
+              alt="Product screenshot"
+              className={cn(
+                "object-contain",
+                information.title === "Smappee EV Wall" && "mt-24",
+              )}
+              fill
+              sizes="(max-width: 640px) 100vw,
+         (max-width: 1280px) 50vw,
+         (max-width: 1536px) 33vw,
+         25vw"
+            />
+          </div>
+        ) : (
+          <div className="relative h-64 overflow-hidden rounded-xl lg:h-96">
+            <Image
+              src="/product.jpeg"
+              alt="Product screenshot"
+              className="rounded-xl object-cover shadow-xl"
+              fill
+              sizes="(max-width: 640px) 100vw,
+         (max-width: 1280px) 50vw,
+         (max-width: 1536px) 33vw,
+         25vw"
+            />
+          </div>
+        )}
       </div>
     </Container>
   );
