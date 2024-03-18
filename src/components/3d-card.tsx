@@ -1,12 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import React, {
   createContext,
-  useState,
   useContext,
-  useRef,
   useEffect,
+  useRef,
+  useState,
 } from "react";
 import { cn } from "~/lib/utils";
 
@@ -116,6 +115,7 @@ export const CardItem = ({
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
