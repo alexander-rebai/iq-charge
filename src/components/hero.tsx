@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
+import { useEffect } from "react";
 
 export function Hero() {
   useEffect(() => {
@@ -12,7 +13,7 @@ export function Hero() {
   }, []);
 
   return (
-    <div className="mx-auto mb-10 max-w-7xl px-4 pb-10 text-center sm:px-6 lg:p-16">
+    <div className="mx-auto mb-10 max-w-7xl px-4 pb-10 text-center sm:px-6 md:mb-44 md:mt-44 lg:p-16">
       <div className="lg:grid lg:grid-cols-3 lg:gap-x-4">
         <div className="-md:mt-16 col-span-2 mt-6 flex flex-col items-center justify-center lg:items-start lg:text-left">
           <h1
@@ -49,17 +50,14 @@ export function Hero() {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <video
-            className="mx-auto w-[11.3rem] max-w-full rounded-[28px] bg-primary object-cover p-2 drop-shadow-xl sm:rounded-[36px] md:w-[18.875rem] md:rounded-[36px]"
-            autoPlay
-            playsInline
-            preload="metadata"
-            loop
-            muted
-          >
-            <source src="/video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <Image
+            src="/logo.png"
+            alt="Hero image"
+            width={800}
+            height={800}
+            layout="responsive"
+            priority
+          />
         </div>
       </div>
     </div>
