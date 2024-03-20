@@ -18,10 +18,13 @@ export default function Steps() {
     <nav aria-label="Progress" className="select-none">
       <ol
         role="list"
-        className="divide-y divide-gray-300 rounded-md border border-gray-300 md:flex md:divide-y-0"
+        className="divide-y divide-primary-foreground rounded-md border border-primary-foreground md:flex md:divide-y-0"
       >
         {steps.map((step, idx) => (
-          <li key={step.name} className="relative md:flex md:flex-1">
+          <li
+            key={step.name}
+            className="bg-primary-background relative md:flex md:flex-1"
+          >
             {idx + 1 < currentStep ? (
               <div
                 onClick={() => setCustomStep(idx + 1)}
@@ -67,7 +70,7 @@ export default function Steps() {
               </div>
             )}
 
-            {idx !== steps.length ? (
+            {idx !== steps.length - 1 ? (
               <>
                 {/* Arrow separator for lg screens and up */}
                 <div
@@ -75,7 +78,7 @@ export default function Steps() {
                   aria-hidden="true"
                 >
                   <svg
-                    className="h-full w-full text-gray-300"
+                    className="h-full w-full text-primary-foreground"
                     viewBox="0 0 22 80"
                     fill="none"
                     preserveAspectRatio="none"

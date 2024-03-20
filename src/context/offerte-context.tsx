@@ -76,6 +76,7 @@ export const OfferteProvider = ({ children }: { children: ReactNode }) => {
 
   const handleNext = () => {
     setCurrentStep(currentStep + 1);
+    window.scrollTo(0, 0);
   };
 
   const handlePrevious = () => {

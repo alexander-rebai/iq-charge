@@ -31,7 +31,7 @@ const steps = [
 
 export default function RoadMap() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="bg-primary-background relative overflow-hidden rounded-b-xl">
       <div className="mx-auto max-w-7xl px-8 py-24 md:px-12 lg:px-36">
         <div data-aos="fade-up">
           <h3 className="text-4xl">This is how it works</h3>
@@ -57,7 +57,7 @@ export default function RoadMap() {
                 data-aos="fade-up"
               >
                 <span
-                  className={`mb-5 flex h-16 w-16 items-center justify-center rounded-xl border border-primary-foreground bg-primary text-white lg:mb-16`}
+                  className={`bg-primary-light mb-5 flex h-16 w-16 items-center justify-center rounded-xl border border-primary-foreground text-primary-foreground lg:mb-16`}
                 >
                   {step.number}
                 </span>
@@ -75,7 +75,7 @@ export default function RoadMap() {
         </div>
         <div
           data-aos="fade-up"
-          className="rounded-4xl relative mt-24 h-full rounded-xl border border-primary-foreground bg-primary/50 p-8 text-center  shadow-lg ring-primary lg:col-span-full lg:px-20"
+          className="rounded-4xl bg-primary-light relative mt-24 h-full rounded-xl border border-primary-foreground p-8 text-center shadow-lg ring-primary lg:col-span-full lg:px-20"
         >
           <h4 className="lg:text-3xl">
             &quot;IQ Charge has a team of experts
@@ -83,7 +83,7 @@ export default function RoadMap() {
               who are ready to help at any moment.&quot;
             </span>
           </h4>
-          <p className="mt-6 text-xl uppercase italic text-primary-foreground">
+          <p className="mt-6 text-xl font-medium uppercase italic text-primary-foreground">
             Alexander Rebai
           </p>
         </div>

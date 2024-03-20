@@ -55,17 +55,17 @@ const information: InformationType[] = [
   {
     title: "IQ Charge: Charge Intelligently",
     info: "Geef uw reis een krachtige impuls, of het nu gaat om uw dagelijkse woon-werkverkeer of het opladen van uw bedrijfsvloot, met IQ Charge. Stap in een wereld waar elke laadbeurt slimmere, data-verrijkte inzichten biedt, die uw energieverbruik optimaliseren en nieuwe niveaus van gemak en controle ontgrendelen. Het is niet zomaar opladen; het gaat om het verrijken van elke reis met intelligentie en vooruitziendheid. Naadloze Integratie voor Leven en Werk.",
-    image: "/iqcharge/iqcharge.png",
+    image: "/info1.jpg",
   },
   {
     title: "Seamless integration for Life and Work",
     info: "Q Charge herdefinieert de oplaad ervaring door naadloos te integreren in zowel uw persoonlijke als professionele leven. Onze geavanceerde oplossingen zorgen ervoor dat uw voertuig, of uw hele vloot, altijd klaar en opgeladen is, zonder uw dag- of werkproces te onderbreken. Ervaar het gemak van een laadoplossing die zich aan u aanpast, waardoor elke dag efficiënter wordt en elke operatie soepeler verloopt.",
-    image: "/iqcharge/iqcharge2.png",
+    image: "/info3.jpg",
   },
   {
     title: "IQ Charge, Drive Intelligent",
     info: "Stap in de snelle baan van efficiëntie met IQ Charge. Onze snellaadtechnologie verkort wachttijden aanzienlijk, waardoor u vooruit gaat met minimale downtime. Perfect voor de milieubewuste individu of het vooruitstrevende bedrijf, onze stations zijn ontworpen om u efficiënt en duurzaam in beweging te houden. Verhoog uw impact bij elke laadbeurt, door productiviteit en milieubeheer vooruit te drijven.",
-    image: "/iqcharge/iqcharge3.png",
+    image: "/info2.jpg",
   },
 ];
 

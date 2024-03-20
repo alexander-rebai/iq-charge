@@ -1,15 +1,23 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import { useOfferte } from "~/context/offerte-context";
 import { Card, CardContent } from "../ui/card";
 
 const UserType = () => {
   const { handleNext, handleSubmitStep } = useOfferte();
 
-  const onSelectUserType = async (userType: "particulier" | "bedrijf") => {
+  const onSelectUserType = (userType: "particulier" | "bedrijf") => {
     handleSubmitStep(userType, "userType");
     handleNext();
   };
+
+  const searchParams = useSearchParams();
+  const userType = searchParams.get("userType");
+
+  if (userType) {
+    onSelectUserType(userType as "particulier" | "bedrijf");
+  }
 
   return (
     <div className="flex items-center justify-center gap-8 p-12">

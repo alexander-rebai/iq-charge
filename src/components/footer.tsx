@@ -6,7 +6,7 @@ import { Container } from "./container";
 
 export function Footer({ hideLinks }: { hideLinks?: boolean }) {
   return (
-    <footer className="bg-muted rounded-xl">
+    <footer className="bg-primary-background rounded-xl">
       <Container>
         <div className="flex items-center py-8">
           <Link href="/">

@@ -13,7 +13,7 @@ export function Hero() {
   }, []);
 
   return (
-    <div className="mx-auto mb-10 max-w-7xl px-4 pb-10 text-center sm:px-6 md:mb-44 md:mt-44 lg:p-16">
+    <div className="mx-auto mb-10 max-w-7xl px-4 pb-10 text-center sm:px-6 md:mb-44 md:mt-44 lg:p-16 ">
       <div className="lg:grid lg:grid-cols-3 lg:gap-x-4">
         <div className="-md:mt-16 col-span-2 mt-6 flex flex-col items-center justify-center lg:items-start lg:text-left">
           <h1
@@ -33,15 +33,21 @@ export function Hero() {
             particulieren als bedrijven.
           </p>
           <div
-            className="flex flex-col items-center justify-center gap-6 md:flex-row lg:items-start lg:justify-start"
+            className="flex flex-col items-center justify-center gap-6 md:flex-row"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             <a
-              href="/offerte"
-              className="rounded-3xl border-2 border-primary-foreground bg-primary/50  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              href="/offerte?userType=bedrijf"
+              className="bg-primary-light flex w-40 justify-center rounded-3xl border-2 border-primary-foreground px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
-              Vraag een offerte
+              Bedrijf
+            </a>
+            <a
+              href="/offerte?userType=particulier"
+              className="hover:bg-primary-light flex w-40 justify-center rounded-3xl border-2 border-primary-foreground px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm transition duration-200 ease-in-out hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              Particulier
             </a>
           </div>
         </div>

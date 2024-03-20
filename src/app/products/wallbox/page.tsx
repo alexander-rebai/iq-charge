@@ -1,16 +1,14 @@
 "use client";
 
-import { CheckCircle, CheckCircleIcon } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { CheckCircle } from "lucide-react";
+import { useEffect } from "react";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
 import ImageCarousel from "~/components/image-carousel";
+import Information from "~/components/information";
 import Specs from "~/components/specs-table";
-import Information, {
-  type Information as InformationType,
-} from "~/components/information";
-import { useEffect } from "react";
-import "aos/dist/aos.css";
-import AOS from "aos";
 
 const specifications = [
   { category: "Technologie", value: "Intelligent geconnecteerd" },
@@ -77,7 +75,7 @@ export default function ProductPage() {
             >
               <a
                 href="/offerte"
-                className="rounded-3xl border-2 border-primary-foreground bg-primary/50  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="bg-primary-light rounded-3xl border-2 border-primary-foreground  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Vraag een offerte
               </a>
@@ -111,7 +109,7 @@ export default function ProductPage() {
           />
         ))}
       </div>
-      <div className="py-12 lg:py-16" data-aos="fade-up">
+      <div className="bg-primary-background py-12 lg:py-16" data-aos="fade-up">
         <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center gap-12">
             <h2 className="text-center text-4xl font-bold text-primary">
