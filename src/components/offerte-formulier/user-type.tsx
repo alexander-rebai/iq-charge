@@ -1,7 +1,6 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useEffect } from "react";
 import { useOfferte } from "~/context/offerte-context";
 import { Card, CardContent } from "../ui/card";
 
@@ -16,41 +15,38 @@ const UserType = () => {
   const searchParams = useSearchParams();
   const userType = searchParams.get("userType");
 
-  useEffect(() => {
-    if (userType) {
-      onSelectUserType(userType as "particulier" | "bedrijf");
-    }
-  }, [userType]);
-
-  return (
-    <div className="flex items-center justify-center gap-8 p-12">
-      <div className="flex flex-col">
-        <CardContent>
-          <div className="flex flex-col items-center gap-4">
-            <h1 className="text-4xl font-extrabold text-primary">Over u</h1>
+  if (userType) {
+    onSelectUserType(userType as "particulier" | "bedrijf");
+  } else
+    return (
+      <div className="flex items-center justify-center gap-8 p-12">
+        <div className="flex flex-col">
+          <CardContent>
+            <div className="flex flex-col items-center gap-4">
+              <h1 className="text-4xl font-extrabold text-primary">Over u</h1>
+            </div>
+          </CardContent>
+          <div className="flex flex-col gap-x-12 gap-y-6 md:flex-row">
+            <Card
+              className="cursor-pointer hover:bg-muted"
+              onClick={() => onSelectUserType("bedrijf")}
+            >
+              <CardContent className="flex h-16 w-40 items-center justify-center p-4">
+                Bedrijf
+              </CardContent>
+            </Card>
+            <Card
+              className="cursor-pointer hover:bg-muted"
+              onClick={() => onSelectUserType("particulier")}
+            >
+              <CardContent className="flex h-16 w-40 items-center justify-center p-4">
+                Particulier
+              </CardContent>
+            </Card>
           </div>
-        </CardContent>
-        <div className="flex flex-col gap-x-12 gap-y-6 md:flex-row">
-          <Card
-            className="cursor-pointer hover:bg-muted"
-            onClick={() => onSelectUserType("bedrijf")}
-          >
-            <CardContent className="flex h-16 w-40 items-center justify-center p-4">
-              Bedrijf
-            </CardContent>
-          </Card>
-          <Card
-            className="cursor-pointer hover:bg-muted"
-            onClick={() => onSelectUserType("particulier")}
-          >
-            <CardContent className="flex h-16 w-40 items-center justify-center p-4">
-              Particulier
-            </CardContent>
-          </Card>
         </div>
       </div>
-    </div>
-  );
+    );
 };
 
 export default UserType;

@@ -12,6 +12,9 @@ const config = {
         hostname: 'res.cloudinary.com',
       },
     ]
+  },
+  experimental: {
+    missingSuspenseWithCSRBailout: false
   }
 };
 
