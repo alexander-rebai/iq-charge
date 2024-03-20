@@ -154,7 +154,12 @@ export default function ProductPage() {
           >
             <div className="flex items-center justify-center p-10 lg:p-0">
               <ImageCarousel
-                images={["/huawei/h1.png", "/huawei/h2.png", "/huawei/h3.png"]}
+                images={[
+                  "/smappee/s1.png",
+                  "/smappee/s2.png",
+                  "/smappee/s3.png",
+                  "/smappee/s4.png",
+                ]}
               />
             </div>
           </div>

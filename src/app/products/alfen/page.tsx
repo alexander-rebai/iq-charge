@@ -135,8 +135,8 @@ export default function ProductPage() {
               <ImageCarousel
                 images={[
                   "/alfen/s1.png",
-                  "/alfen/s2.webp",
-                  "/alfen/d1.jpeg",
+                  "/alfen/s2.png",
+                  "/alfen/d1.png",
                   "/alfen/d2.webp",
                   "/alfen/d3.webp",
                 ]}

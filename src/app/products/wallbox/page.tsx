@@ -90,8 +90,8 @@ export default function ProductPage() {
               <ImageCarousel
                 images={[
                   "/wallbox/w1.webp",
-                  "/wallbox/w2.webp",
-                  "/wallbox/w3.webp",
+                  "/wallbox/w2.png",
+                  "/wallbox/w3.png",
                   "/wallbox/w4.webp",
                 ]}
               />
