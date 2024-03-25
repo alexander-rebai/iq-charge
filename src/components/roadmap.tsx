@@ -5,7 +5,7 @@ import { Car, Plug } from "lucide-react";
 
 const steps = [
   {
-    name: "GratisOfferte",
+    name: "Gratis Offerte",
     description: "Vraag eenvoudig een offerte aan via onze website.",
     number: 1,
   },
