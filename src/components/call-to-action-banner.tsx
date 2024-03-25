@@ -1,26 +1,23 @@
 "use client";
 
-import Image from "next/image";
-import { Container } from "./container";
 import "aos/dist/aos.css";
+import Image from "next/image";
 import { cn } from "~/lib/utils";
+import { Container } from "./container";
 
 export default function CallToActionBanner({
   title,
   info,
   isFluvius,
+  isIQSolar,
 }: {
   title: string;
   info: string;
   isFluvius?: boolean;
+  isIQSolar?: boolean;
 }) {
   return (
-    <div
-      className={cn(
-        "relative overflow-hidden rounded-xl py-32",
-        !isFluvius && "rounded-b-none",
-      )}
-    >
+    <div className={cn("relative overflow-hidden py-32")}>
       <Image
         className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
         src={"/gradient.jpeg"}
@@ -62,6 +59,20 @@ export default function CallToActionBanner({
               Laadpaal aanmelden
             </a>
           </div>
+        ) : isIQSolar ? (
+          <div
+            className="mt-10 flex items-center justify-center gap-x-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-easing="ease-in-out"
+          >
+            <a
+              href="#"
+              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              Ontdek IQ Solar
+            </a>
+          </div>
         ) : (
           <div
             className="mt-10 flex items-center justify-center gap-x-6"
@@ -79,7 +90,7 @@ export default function CallToActionBanner({
               href="#"
               className="text-sm font-semibold leading-6 text-white transition-all duration-300 ease-in-out hover:scale-110"
             >
-              Contact us <span aria-hidden="true">→</span>
+              Contacteer ons <span aria-hidden="true">→</span>
             </a>
           </div>
         )}

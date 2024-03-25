@@ -5,33 +5,31 @@ import { Car, Plug } from "lucide-react";
 
 const steps = [
   {
-    name: "Online offerte aanvragen",
-    description: "Vraag gratis en eenvoudig een offerte aan via onze website.",
+    name: "GratisOfferte",
+    description: "Vraag eenvoudig een offerte aan via onze website.",
     number: 1,
   },
   {
-    name: "Bevestig uw offerte",
-    description:
-      "U ontvangt een offerte per mail. Bevestig deze en wij gaan voor u aan de slag.",
+    name: "Bevestig je offerte",
+    description: "Bevestig offerte via mail en wij gaan voor jou aan de slag.",
     number: 2,
   },
   {
-    name: "Installatie van uw laadstation",
-    description:
-      "Plan een datum in en wij komen bij u langs voor de installatie.",
+    name: "Installatie",
+    description: "Wij komen langs voor de installatie.",
     number: 3,
   },
   {
-    name: "Onafhankelijke keuring van uw installatie",
+    name: "Keuring",
     description:
-      "Na de installatie wordt uw laadstation gekeurd door een onafhankelijke expert.",
+      "Na de installatie wordt je laadstation gekeurd door een expert.",
     number: 4,
   },
 ];
 
 export default function RoadMap() {
   return (
-    <section className="bg-primary-background relative overflow-hidden rounded-b-xl">
+    <section className="relative overflow-hidden rounded-b-xl bg-primary-background">
       <div className="mx-auto max-w-7xl px-8 py-24 md:px-12 lg:px-36">
         <div data-aos="fade-up">
           <h3 className="text-4xl">This is how it works</h3>
@@ -57,7 +55,7 @@ export default function RoadMap() {
                 data-aos="fade-up"
               >
                 <span
-                  className={`bg-primary-light mb-5 flex h-16 w-16 items-center justify-center rounded-xl border border-primary-foreground text-primary-foreground lg:mb-16`}
+                  className={`mb-5 flex h-16 w-16 items-center justify-center rounded-xl border border-primary-foreground bg-primary-light text-primary-foreground lg:mb-16`}
                 >
                   {step.number}
                 </span>
@@ -75,7 +73,7 @@ export default function RoadMap() {
         </div>
         <div
           data-aos="fade-up"
-          className="rounded-4xl bg-primary-light relative mt-24 h-full rounded-xl border border-primary-foreground p-8 text-center shadow-lg ring-primary lg:col-span-full lg:px-20"
+          className="rounded-4xl relative mt-24 h-full rounded-xl border border-primary-foreground bg-primary-light p-8 text-center shadow-lg ring-primary lg:col-span-full lg:px-20"
         >
           <h4 className="lg:text-3xl">
             &quot;IQ Charge has a team of experts

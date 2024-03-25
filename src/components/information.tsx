@@ -22,8 +22,8 @@ export default function Information({
 }) {
   return (
     <Container
-      className="m bg-primary-background my-4 overflow-hidden rounded-xl p-12"
-      data-aos={reverse ? "fade-left" : "fade-right"}
+      className="my-4 overflow-hidden rounded-xl bg-primary-background p-12"
+      data-aos={"fade-right"}
     >
       <div className="grid items-center gap-8 md:grid-flow-col-dense md:grid-cols-2 md:gap-12">
         <div className={cn(reverse ? "lg:col-start-2" : "lg:col-start-1")}>
@@ -37,7 +37,7 @@ export default function Information({
             <div className="mt-10 flex w-full items-center justify-center gap-x-6">
               <a
                 href={`/offerte`}
-                className="bg-primary-light rounded-lg border-2 border-primary-foreground px-3.5 py-2 font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="rounded-lg border-2 border-primary-foreground bg-primary-light px-3.5 py-2 font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Vraag uw offerte op maat <span aria-hidden="true">→</span>
               </a>

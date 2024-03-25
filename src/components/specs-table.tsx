@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { type ReactNode } from "react";
 import { cn } from "~/lib/utils";
 
 export default function Specs({
@@ -33,11 +33,25 @@ export default function Specs({
             <col
               className={cn("w-1/6 bg-primary md:w-1/5", image4 && "w-1/5")}
             />
-            <col className={cn("w-1/3", image4 && "w-1/5")} />
+            <col
+              className={cn(
+                "w-1/3",
+                image4 && "w-1/5",
+                image3 && !image4 && "w-1/4",
+              )}
+            />
             {specs.some((spec) => spec.value2) && (
-              <col className={cn("w-1/3", image4 && "w-1/5")} />
+              <col
+                className={cn(
+                  "w-1/3",
+                  image4 && "w-1/5",
+                  image3 && !image4 && "w-1/4",
+                )}
+              />
             )}
-            {specs.some((spec) => spec.value3) && <col className="w-1/5" />}
+            {specs.some((spec) => spec.value3) && (
+              <col className={cn("w-1/5", image3 && !image4 && "w-1/4")} />
+            )}
             {specs.some((spec) => spec.value4) && <col className="w-1/5" />}
           </colgroup>
           <tbody>
@@ -86,7 +100,7 @@ export default function Specs({
                       <img
                         src={image2}
                         alt="Product"
-                        className="absolute -top-40 left-1/2 h-32 w-36 -translate-x-1/2"
+                        className="absolute -top-40 left-1/2 h-32 w-24 -translate-x-1/2"
                       />
                     )}
                   </td>

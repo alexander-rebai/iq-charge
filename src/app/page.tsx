@@ -1,3 +1,4 @@
+import Banner from "~/components/banner";
 import CallToActionBanner from "~/components/call-to-action-banner";
 import Contact from "~/components/contact";
 import { Footer } from "~/components/footer";
@@ -75,16 +76,29 @@ export default function Home() {
       <Header />
       <main className="mt-36 md:mt-28">
         <Hero />
+        <Banner />
+
+        <section id="products">
+          <div className="flex flex-col gap-8 bg-primary-background pb-10 pt-20">
+            <h2 className="text-center text-5xl font-semibold">
+              Onze Laadoplossingen
+            </h2>
+            <Products products={products} />
+          </div>
+        </section>
+
         <CallToActionBanner
-          title="Samen naar een duurzame toekomst met de juiste laadoplossing"
-          info="Vraag een offerte aan of neem contact met ons op voor meer informatie."
+          title="Bespaar tijd en geld met onze efficiënte laadoplossingen."
+          info="Vraag een offerte aan of neem contact met ons op voor meer informatie"
         />
-
-        <Products products={products} />
         <RoadMap />
-
+        <CallToActionBanner
+          title="IQ Charge by IQ Solar"
+          info="IQ Solar biedt een compleet aanbod van zonnepanelen tot thuisbatterijen voor zowel particulieren als bedrijven."
+          isIQSolar
+        />
         <section id="over">
-          <div className="mb-10 mt-20 flex flex-col gap-8">
+          <div className="mb-10 mt-20 flex flex-col gap-8 p-2 md:p-0">
             <h2 className="text-center text-5xl font-semibold">Over ons</h2>
             {information.map((info, i) => (
               <Information

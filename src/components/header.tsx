@@ -96,31 +96,31 @@ function MobileNavigation() {
             <MobileNavLink href="/#contact">Contact</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 rounded-lg px-2 py-1 text-lg text-slate-700 outline-none hover:bg-muted hover:bg-slate-100 hover:text-slate-900">
+              <DropdownMenuTrigger className="flex items-center gap-1 rounded-lg px-2 py-1 text-lg text-slate-700 outline-none hover:bg-primary-light hover:text-slate-900">
                 Onze laadoplossingen <ChevronDown />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-80">
                 <DropdownMenuItem
                   asChild
-                  className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground hover:bg-slate-100 hover:text-slate-900"
+                  className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground hover:bg-primary-light hover:text-slate-900"
                 >
                   <a href="/products/alfen">Alfen</a>
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   asChild
-                  className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground hover:bg-slate-100 hover:text-slate-900"
+                  className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground hover:bg-primary-light hover:text-slate-900"
                 >
                   <a href="/products/huawei">Huawei</a>
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   asChild
-                  className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground hover:bg-slate-100 hover:text-slate-900"
+                  className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground hover:bg-primary-light hover:text-slate-900"
                 >
                   <a href="/products/wallbox">Wallbox</a>
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   asChild
-                  className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground hover:bg-slate-100 hover:text-slate-900"
+                  className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground hover:bg-primary-light hover:text-slate-900"
                 >
                   <a href="/products/smappee">Smappee</a>
                 </DropdownMenuItem>
@@ -135,7 +135,7 @@ function MobileNavigation() {
 
 export function Header({ empty }: { empty?: boolean }) {
   return (
-    <header className="bg-primary-background/90 fixed left-0 right-0 top-0 z-50 h-28 w-screen bg-opacity-90 shadow-sm backdrop-blur-sm">
+    <header className="fixed left-0 right-0 top-0 z-50 h-28 w-screen bg-primary-background/90 bg-opacity-90 shadow-sm backdrop-blur-sm">
       <Container>
         <nav className="relative z-50 flex select-none justify-between">
           <div className="flex items-center md:gap-x-12">
@@ -145,7 +145,7 @@ export function Header({ empty }: { empty?: boolean }) {
             {!empty && (
               <div className="hidden items-center md:gap-x-6 lg:flex">
                 <DropdownMenu>
-                  <DropdownMenuTrigger className="flex items-center gap-1 rounded-lg px-2 py-1 text-lg text-slate-700 outline-none hover:bg-muted hover:bg-slate-100 hover:text-slate-900">
+                  <DropdownMenuTrigger className="flex items-center gap-1 rounded-lg px-2 py-1 text-lg text-slate-700 outline-none hover:bg-primary-light hover:text-slate-900">
                     Onze laadoplossingen <ChevronDown />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-52">
@@ -206,7 +206,7 @@ export function Header({ empty }: { empty?: boolean }) {
               <>
                 <a
                   href="/offerte"
-                  className="bg-primary-light rounded-3xl border-2 border-primary-foreground  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="rounded-3xl border-2 border-primary-foreground bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   Vraag een offerte
                 </a>

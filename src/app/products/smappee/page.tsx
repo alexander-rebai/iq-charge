@@ -122,7 +122,7 @@ export default function ProductPage() {
               className="mb-8 max-w-xl text-center text-5xl font-bold tracking-tight text-slate-900 md:text-[64px] lg:text-left"
               data-aos="fade-up"
             >
-              Huawei
+              Smappee
             </h1>
             <p
               className="desc text-md mb-8 max-w-lg self-center text-center text-slate-700 lg:self-auto lg:pr-4 lg:text-left"
@@ -141,7 +141,7 @@ export default function ProductPage() {
             >
               <a
                 href="/offerte"
-                className="bg-primary-light rounded-3xl border-2 border-primary-foreground  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="rounded-3xl border-2 border-primary-foreground bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Vraag een offerte
               </a>
@@ -155,8 +155,8 @@ export default function ProductPage() {
             <div className="flex items-center justify-center p-10 lg:p-0">
               <ImageCarousel
                 images={[
-                  "/smappee/s1.png",
                   "/smappee/s2.png",
+                  "/smappee/s1.png",
                   "/smappee/s3.png",
                   "/smappee/s4.png",
                 ]}
