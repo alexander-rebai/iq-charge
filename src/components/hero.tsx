@@ -24,7 +24,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-black opacity-50" />
       </div>
 
-      <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white sm:px-6 lg:p-0">
+      <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white lg:p-0">
         <div className="flex w-full flex-col items-center justify-center md:items-start md:justify-start">
           <h1
             className="mb-8 max-w-2xl text-left text-5xl font-medium tracking-tight text-white md:text-start md:text-[64px]"
