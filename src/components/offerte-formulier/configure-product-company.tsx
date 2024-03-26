@@ -48,9 +48,7 @@ export default function ConfigureProductCompany() {
     <div className="flex flex-col items-center justify-center gap-4 p-6">
       <CardContent>
         <div className="flex flex-col items-center gap-4">
-          <h1 className="text-4xl font-extrabold text-primary">
-            Configureer uw product
-          </h1>
+          <h1 className="text-4xl font-medium">Configureer uw product</h1>
         </div>
       </CardContent>
       <div className="flex w-full flex-col gap-8">
@@ -60,7 +58,8 @@ export default function ConfigureProductCompany() {
               key={tier.name}
               className={cn(
                 "cursor-pointer select-none hover:bg-muted md:w-1/3",
-                selectedTier === tier && "border-2 border-primary text-primary",
+                selectedTier === tier &&
+                  "border-2 border-primary text-primary-foreground",
               )}
               onClick={() => setSelectedTier(tier)}
             >
@@ -93,7 +92,7 @@ export default function ConfigureProductCompany() {
       <div className="mt-8 flex justify-end">
         <Button
           variant={"outline"}
-          className="text-lg font-bold"
+          className="text-lg font-medium"
           onClick={submit}
         >
           Volgende

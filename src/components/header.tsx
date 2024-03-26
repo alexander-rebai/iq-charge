@@ -3,9 +3,10 @@
 import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
 import Link from "next/link";
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 import { ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { Container } from "~/components/container";
 import { Logo } from "~/components/logo";
 import { NavLink } from "./nav-link";
@@ -134,14 +135,38 @@ function MobileNavigation() {
 }
 
 export function Header({ empty }: { empty?: boolean }) {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const path = usePathname();
+  const isHome = path === "/";
+  const [visible, setVisible] = useState(!isHome);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!isHome) return;
+      const currentScrollPos = window.scrollY;
+      setVisible(prevScrollPos > currentScrollPos);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos, visible, isHome]);
+
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 h-28 w-screen bg-primary-background/90 bg-opacity-90 shadow-sm backdrop-blur-sm">
+    <header
+      className={`fixed left-0 top-0 z-50 h-28 w-screen bg-gray-100 bg-opacity-90 shadow-sm backdrop-blur-sm transition-opacity ${
+        visible ? "opacity-100" : "pointer-events-none hidden opacity-0"
+      }`}
+    >
       <Container>
         <nav className="relative z-50 flex select-none justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="/" aria-label="Home">
               <Logo />
             </Link>
+          </div>
+          <div className="flex items-center gap-x-5 md:gap-x-8">
             {!empty && (
               <div className="hidden items-center md:gap-x-6 lg:flex">
                 <DropdownMenu>
@@ -200,15 +225,13 @@ export function Header({ empty }: { empty?: boolean }) {
                 <NavLink href="/#contact">Contact</NavLink>
               </div>
             )}
-          </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
             {!empty && (
               <>
                 <a
                   href="/offerte"
-                  className="rounded-3xl border-2 border-primary-foreground bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="rounded-xl  bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
-                  Vraag een offerte
+                  Gratis offerte
                 </a>
                 <div className="-mr-1 lg:hidden">
                   <MobileNavigation />

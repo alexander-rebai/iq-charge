@@ -67,7 +67,9 @@ export default function Specs({
                         : undefined,
                   )}
                 >
-                  <div className="font-bold text-gray-100">{spec.category}</div>
+                  <div className="font-medium text-gray-100">
+                    {spec.category}
+                  </div>
                 </td>
 
                 <td

@@ -93,14 +93,14 @@ export default function ConfigureProduct() {
         <div className="flex flex-col">
           <CardContent>
             <div className="flex flex-col items-center gap-4">
-              <h1 className="text-center text-4xl font-extrabold text-primary">
+              <h1 className="text-center text-4xl font-medium">
                 Onze producten
               </h1>
             </div>
           </CardContent>
           <div className="isolate mx-auto mt-4 grid max-w-md grid-cols-1 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             {tiers.map((tier) => (
-              <div key={tier.name} className="rounded-3xl p-8 xl:p-10">
+              <div key={tier.name} className="rounded-xl p-8 xl:p-10">
                 <div className="aspect-h-1 aspect-w-1 lg:aspect-none w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-44">
                   <Image
                     src={tier.img}
@@ -110,7 +110,7 @@ export default function ConfigureProduct() {
                     height={200}
                   />
                 </div>
-                <div className="mt-6 block rounded-md px-3 py-2 text-center text-3xl font-semibold leading-6 text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                <div className="mt-6 block rounded-md px-3 py-2 text-center text-xl font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
                   {tier.name}
                 </div>
                 <ul
@@ -120,7 +120,7 @@ export default function ConfigureProduct() {
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex gap-x-3">
                       <Check
-                        className="h-6 w-5 flex-none text-primary"
+                        className="h-6 w-5 flex-none text-primary-foreground"
                         aria-hidden="true"
                       />
                       {feature}
@@ -128,8 +128,8 @@ export default function ConfigureProduct() {
                   ))}
                 </ul>
 
-                <div className="mt-6 flex flex-col rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-                  <span className="text-2xl font-bold tracking-tight text-primary-foreground">
+                <div className="mt-6 flex flex-col rounded-md px-3 py-2 text-center text-sm font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                  <span className="text-2xl font-medium tracking-tight">
                     {tier.price}
                   </span>
                   <Button
@@ -169,14 +169,14 @@ export default function ConfigureProduct() {
           </div>
           <CardContent>
             <div className="flex flex-col items-center gap-4">
-              <h1 className="text-4xl font-extrabold text-primary">
+              <h1 className="text-4xl font-medium">
                 {selectedTier
                   ? `Configureer uw ${selectedTier.name}`
                   : "Onze producten"}
               </h1>
             </div>
           </CardContent>
-          <div className="rounded-3xl lg:p-8 xl:p-10">
+          <div className="rounded-xl lg:p-8 xl:p-10">
             <div className="flex items-center justify-center gap-6">
               <div className="h-32 w-1/2 overflow-hidden rounded-md border-2 border-primary p-4 lg:h-48">
                 <Image
@@ -188,10 +188,8 @@ export default function ConfigureProduct() {
                 />
               </div>
               <div className="flex h-32 w-1/2 flex-col items-center justify-center overflow-hidden rounded-md border-2 border-primary p-4 lg:h-48">
-                <h2 className="text font-extrabold text-primary">
-                  Min. prijs:
-                </h2>
-                <p className="text-2xl font-bold tracking-tight text-primary-foreground">
+                <h2 className="text font-medium text-primary">Min. prijs:</h2>
+                <p className="text-2xl font-medium tracking-tight">
                   {selectedTier.price}
                 </p>
               </div>
@@ -199,13 +197,11 @@ export default function ConfigureProduct() {
             <hr className="my-6 border-t border-primary" />
             <div className="mt-6 flex flex-col gap-8">
               <div className="flex gap-4">
-                <div className="flex h-8 w-8 items-center justify-center gap-x-3 rounded-full bg-primary text-lg font-semibold text-white">
+                <div className="flex h-8 w-8 items-center justify-center gap-x-3 rounded-full bg-primary text-lg font-medium text-white">
                   1
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span className="text-lg font-semibold text-primary">
-                    Inbegrepen
-                  </span>
+                  <span className="text-lg font-medium">Inbegrepen</span>
                   <ul className="list-disc text-slate-600">
                     <li>Standaardinstallatie</li>
                     <li>Solar</li>
@@ -216,12 +212,10 @@ export default function ConfigureProduct() {
               </div>
               <div className="flex flex-col gap-2">
                 <div className="flex gap-4">
-                  <div className="flex h-8 w-8 items-center justify-center gap-x-3 rounded-full bg-primary text-lg font-semibold text-white">
+                  <div className="flex h-8 w-8 items-center justify-center gap-x-3 rounded-full bg-primary text-lg font-medium text-white">
                     2
                   </div>
-                  <span className="text-lg font-semibold text-primary">
-                    Uitrusting
-                  </span>
+                  <span className="text-lg font-medium">Uitrusting</span>
                 </div>
                 <span className="list-disc text-slate-600">
                   Heeft u een slimme meter?
@@ -231,7 +225,7 @@ export default function ConfigureProduct() {
                     className={cn(
                       "hover:border-2 hover:border-primary-foreground hover:opacity-90",
                       hasSmartMeter &&
-                        "bg-primary-light border-2 border-primary-foreground text-primary-foreground",
+                        " bg-primary-light text-primary-foreground",
                     )}
                   >
                     <CardContent
@@ -239,7 +233,7 @@ export default function ConfigureProduct() {
                       onClick={() => setHasSmartMeter(true)}
                     >
                       <div className="flex flex-col items-center">
-                        <h1 className="text-xl font-semibold text-primary">
+                        <h1 className="text-xl font-medium text-primary-foreground">
                           Ja
                         </h1>
                       </div>
@@ -249,7 +243,7 @@ export default function ConfigureProduct() {
                     className={cn(
                       "hover:border-2 hover:border-primary-foreground",
                       !hasSmartMeter &&
-                        "bg-primary-light border-2 border-primary-foreground text-primary-foreground hover:opacity-90",
+                        " bg-primary-light text-primary-foreground hover:opacity-90",
                     )}
                   >
                     <CardContent
@@ -257,7 +251,7 @@ export default function ConfigureProduct() {
                       onClick={() => setHasSmartMeter(false)}
                     >
                       <div className="flex flex-col items-center">
-                        <h1 className="text-xl font-semibold text-primary">
+                        <h1 className="text-xl font-medium text-primary-foreground">
                           Nee
                         </h1>
                       </div>
@@ -267,13 +261,11 @@ export default function ConfigureProduct() {
               </div>
               {selectedTier.models && (
                 <div className="flex flex-col gap-2">
-                  <div className="flex flex-col gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center gap-x-3 rounded-full bg-primary text-lg font-semibold text-white">
+                  <div className="flex gap-4">
+                    <div className="flex h-8 w-8 items-center justify-center gap-x-3 rounded-full bg-primary text-lg font-medium text-white">
                       3
                     </div>
-                    <span className="text-lg font-semibold text-primary">
-                      Model
-                    </span>
+                    <span className="text-lg font-medium">Model</span>
                   </div>
 
                   <div className="mt-4 flex flex-col gap-4 md:flex-row md:gap-8">
@@ -283,7 +275,7 @@ export default function ConfigureProduct() {
                         className={cn(
                           "hover:border-2 hover:border-primary-foreground hover:opacity-90",
                           selectedModel === model &&
-                            "bg-primary-light border-2 border-primary-foreground text-primary-foreground",
+                            " bg-primary-light text-primary-foreground",
                         )}
                       >
                         <CardContent
@@ -291,7 +283,7 @@ export default function ConfigureProduct() {
                           onClick={() => setSelectedModel(model)}
                         >
                           <div className="flex flex-col items-center">
-                            <h1 className="text-xl font-semibold text-primary">
+                            <h1 className="text-xl font-medium text-primary-foreground">
                               {model}
                             </h1>
                           </div>
@@ -302,13 +294,11 @@ export default function ConfigureProduct() {
                 </div>
               )}
               <div className="flex gap-4">
-                <div className="flex h-8 w-8 items-center justify-center gap-x-3 rounded-full bg-primary text-lg font-semibold text-white">
+                <div className="flex h-8 w-8 items-center justify-center gap-x-3 rounded-full bg-primary text-lg font-medium text-white">
                   {selectedTier.models ? 4 : 3}
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span className="text-lg font-semibold text-primary">
-                    Opties
-                  </span>
+                  <span className="text-lg font-medium">Opties</span>
                   <div className="flex items-center space-x-2 text-lg text-slate-600">
                     <Switch
                       id="vaste-kabel"

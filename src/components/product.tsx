@@ -20,7 +20,7 @@ export default function Product({
     <Container className="overflow-hidden">
       <div className="grid items-center gap-8 md:grid-flow-col-dense md:grid-cols-2 md:gap-12">
         <div className={cn(reverse ? "md:col-start-2" : "md:col-start-1")}>
-          <p className="mt-2 text-3xl font-semibold tracking-tight text-gray-900 text-primary-foreground sm:text-4xl">
+          <p className="mt-2 text-xl font-medium tracking-tight text-gray-900 text-primary-foreground sm:text-4xl">
             {product.name}
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -33,7 +33,7 @@ export default function Product({
           <div className="mt-10 flex w-full items-center justify-center gap-x-6">
             <a
               href={`/products/${product.path}`}
-              className="bg-primary-light rounded-lg border-2 border-primary-foreground px-3.5 py-2 font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              className="rounded-lg  bg-primary-light px-3.5 py-2 font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               Meer weten <span aria-hidden="true">→</span>
             </a>

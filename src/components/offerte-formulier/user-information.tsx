@@ -87,9 +87,7 @@ export default function UserInformation() {
       <div className="flex w-full flex-col">
         <CardContent>
           <div className="flex flex-col items-center gap-4">
-            <h1 className="text-4xl font-extrabold text-primary">
-              Bevestig uw gegevens
-            </h1>
+            <h1 className="text-4xl font-medium">Bevestig uw gegevens</h1>
           </div>
         </CardContent>
         <Form {...form}>

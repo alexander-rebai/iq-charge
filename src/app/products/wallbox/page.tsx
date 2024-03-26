@@ -53,10 +53,10 @@ export default function ProductPage() {
         <div className="lg:grid lg:grid-cols-3 lg:gap-x-4">
           <div className="-md:mt-16 col-span-2 mt-6 flex flex-col items-center justify-center lg:items-start lg:text-left">
             <h1
-              className="mb-8 max-w-xl text-center text-5xl font-bold tracking-tight text-slate-900 md:text-[64px] lg:text-left"
+              className="mb-8 max-w-xl text-center text-5xl font-medium tracking-tight text-slate-900 md:text-[64px] lg:text-left"
               data-aos="fade-up"
             >
-              Huawei
+              Wallbox
             </h1>
             <p
               className="desc text-md mb-8 max-w-lg self-center text-center text-slate-700 lg:self-auto lg:pr-4 lg:text-left"
@@ -75,7 +75,7 @@ export default function ProductPage() {
             >
               <a
                 href="/offerte"
-                className="bg-primary-light rounded-3xl border-2 border-primary-foreground  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="rounded-xl  bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Vraag een offerte
               </a>
@@ -109,10 +109,10 @@ export default function ProductPage() {
           />
         ))}
       </div>
-      <div className="bg-primary-background py-12 lg:py-16" data-aos="fade-up">
+      <div className="bg-gray-100 py-12 lg:py-16" data-aos="fade-up">
         <div className="px-4 md:px-6">
           <div className="flex flex-col items-center justify-center gap-12">
-            <h2 className="text-center text-4xl font-bold text-primary">
+            <h2 className="text-center text-4xl font-medium text-primary">
               Specificaties
             </h2>
             <Specs specs={specifications} image1="/wallbox/w1.webp" />

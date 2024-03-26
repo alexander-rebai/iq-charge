@@ -1,4 +1,3 @@
-import Banner from "~/components/banner";
 import CallToActionBanner from "~/components/call-to-action-banner";
 import Contact from "~/components/contact";
 import { Footer } from "~/components/footer";
@@ -10,12 +9,13 @@ import Information, {
 import { type Product as ProductType } from "~/components/product";
 import Products from "~/components/products";
 import RoadMap from "~/components/roadmap";
+import { TracingBeam } from "~/components/ui/tracing-beam";
 
 const products: ProductType[] = [
   {
     name: "Alfen",
     path: "alfen",
-    img: "/alfen/s1.png",
+    img: "/products/alfen_prod.jpeg",
     features: [
       "U kunt de kosten van elke laadsessie opvolgen. Dankzij de optie split-billing kunt u de laadkosten van uw voertuig scheiden van het huishoudelijk energieverbruik en rechtstreeks factureren aan uw werkgever of uw bedrijf.",
     ],
@@ -23,7 +23,7 @@ const products: ProductType[] = [
   {
     name: "Huawei",
     path: "huawei",
-    img: "/huawei/h1.png",
+    img: "/products/huawei_prod.jpeg",
     features: [
       "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik.",
       "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
@@ -33,7 +33,7 @@ const products: ProductType[] = [
   {
     name: "Wallbox",
     path: "wallbox",
-    img: "/wallbox/w2.png",
+    img: "/products/wallbox_prod.jpeg",
     features: [
       "De Wallbox Pulsar Plus is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik.",
       "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
@@ -43,7 +43,8 @@ const products: ProductType[] = [
   {
     name: "Smappee",
     path: "smappee",
-    img: "/smappee/s2.png",
+    img: "/products/smappee_prod.jpeg",
+
     features: [
       "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik.",
       "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
@@ -74,52 +75,57 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="mt-36 md:mt-28">
-        <Hero />
-        <Banner />
+      <main>
+        <TracingBeam>
+          <Hero />
 
-        <section id="products">
-          <div className="flex flex-col gap-8 bg-primary-background pb-10 pt-20">
-            <h2 className="text-center text-5xl font-semibold">
-              Onze Laadoplossingen
-            </h2>
-            <Products products={products} />
-          </div>
-        </section>
+          <section id="products">
+            <div className="flex flex-col gap-8 bg-gray-100 pb-10 pt-20">
+              <h2 className="text-center text-4xl" data-aos="fade-up">
+                Onze Laadoplossingen
+              </h2>
+              <Products products={products} />
+            </div>
+          </section>
 
-        <CallToActionBanner
-          title="Bespaar tijd en geld met onze efficiënte laadoplossingen."
-          info="Vraag een offerte aan of neem contact met ons op voor meer informatie"
-        />
-        <RoadMap />
-        <CallToActionBanner
-          title="IQ Charge by IQ Solar"
-          info="IQ Solar biedt een compleet aanbod van zonnepanelen tot thuisbatterijen voor zowel particulieren als bedrijven."
-          isIQSolar
-        />
-        <section id="over">
-          <div className="mb-10 mt-20 flex flex-col gap-8 p-2 md:p-0">
-            <h2 className="text-center text-5xl font-semibold">Over ons</h2>
-            {information.map((info, i) => (
-              <Information
-                key={i}
-                information={info}
-                reverse={i % 2 ? true : false}
-              />
-            ))}
-          </div>
-        </section>
-        <CallToActionBanner
-          title="Meld uw laadpaal aan bij Fluvius"
-          info="Het is verplicht om uw private laadpaal aangesloten op het laagspanningsnet met een vermogen van 5 kVA of meer aan te melden bij Fluvius."
-          isFluvius
-        />
-        <section id="contact">
-          <div className="mb-10 mt-20 flex flex-col gap-8">
-            <h2 className="text-center text-5xl font-semibold">Contact</h2>
-            <Contact />
-          </div>
-        </section>
+          <CallToActionBanner
+            title="Bespaar tijd en geld met onze efficiënte laadoplossingen."
+            info="Vraag een offerte aan of neem contact met ons op voor meer informatie"
+          />
+          <RoadMap />
+          <CallToActionBanner
+            title="IQ Charge by IQ Solar"
+            info="IQ Solar biedt een compleet aanbod van zonnepanelen tot thuisbatterijen voor zowel particulieren als bedrijven."
+            isIQSolar
+          />
+          <section id="over">
+            <div className="mb-10 mt-20 flex flex-col gap-8 p-2 md:p-0">
+              <h2 className="text-center text-4xl" data-aos="fade-up">
+                Over ons
+              </h2>
+              {information.map((info, i) => (
+                <Information
+                  key={i}
+                  information={info}
+                  reverse={i % 2 ? true : false}
+                />
+              ))}
+            </div>
+          </section>
+          <CallToActionBanner
+            title="Meld uw laadpaal aan bij Fluvius"
+            info="Het is verplicht om uw private laadpaal aangesloten op het laagspanningsnet met een vermogen van 5 kVA of meer aan te melden bij Fluvius."
+            isFluvius
+          />
+          <section id="contact">
+            <div className="mb-10 mt-20 flex flex-col gap-8">
+              <h2 className="text-center text-4xl" data-aos="fade-up">
+                Contact
+              </h2>
+              <Contact />
+            </div>
+          </section>
+        </TracingBeam>
       </main>
       <Footer />
     </>

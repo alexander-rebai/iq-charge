@@ -29,10 +29,10 @@ const steps = [
 
 export default function RoadMap() {
   return (
-    <section className="relative overflow-hidden rounded-b-xl bg-primary-background">
+    <section className="relative overflow-hidden rounded-b-xl p-24">
       <div className="mx-auto max-w-7xl px-8 py-24 md:px-12 lg:px-36">
         <div data-aos="fade-up">
-          <h3 className="text-4xl">This is how it works</h3>
+          <h3 className="text-4xl">Hoe het werkt</h3>
         </div>
         <div className="relative mt-24 flex flex-wrap">
           <div className="-z-1 absolute left-0 right-0 top-8 hidden h-[1px] lg:block">
@@ -60,7 +60,7 @@ export default function RoadMap() {
                   {step.number}
                 </span>
                 <div className="flex flex-col">
-                  <p className="mt-12 h-20 text-xl font-medium leading-6">
+                  <p className="mt-12 h-8 text-xl font-medium leading-6">
                     {step.name}
                   </p>
                   <p className="mt-4 text-base text-muted-foreground">
@@ -70,20 +70,6 @@ export default function RoadMap() {
               </div>
             ))}
           </div>
-        </div>
-        <div
-          data-aos="fade-up"
-          className="rounded-4xl relative mt-24 h-full rounded-xl border border-primary-foreground bg-primary-light p-8 text-center shadow-lg ring-primary lg:col-span-full lg:px-20"
-        >
-          <h4 className="lg:text-3xl">
-            &quot;IQ Charge has a team of experts
-            <span className="md:block">
-              who are ready to help at any moment.&quot;
-            </span>
-          </h4>
-          <p className="mt-6 text-xl font-medium uppercase italic text-primary-foreground">
-            Alexander Rebai
-          </p>
         </div>
       </div>
     </section>
