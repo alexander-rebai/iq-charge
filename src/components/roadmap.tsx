@@ -29,8 +29,8 @@ const steps = [
 
 export default function RoadMap() {
   return (
-    <section className="relative overflow-hidden rounded-b-xl p-24">
-      <div className="mx-auto max-w-7xl px-8 py-24 md:px-12 lg:px-36">
+    <section className="relative overflow-hidden rounded-b-xl p-8 md:p-24">
+      <div className="mx-auto max-w-7xl md:px-12 md:py-24 lg:px-36">
         <div data-aos="fade-up">
           <h3 className="text-4xl">Hoe het werkt</h3>
         </div>

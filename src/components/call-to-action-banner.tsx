@@ -19,11 +19,11 @@ export default function CallToActionBanner({
   return (
     <div className={cn("relative overflow-hidden py-12")}>
       <Image
-        className="absolute left-1/2 top-1/2 w-screen max-w-none -translate-x-1/2 -translate-y-1/2"
+        className="absolute left-1/2 top-1/2 h-full w-screen max-w-none -translate-x-1/2 -translate-y-1/2"
         src={"/gradient.jpeg"}
         alt=""
         width={2347}
-        height={1244}
+        height={2044}
         unoptimized
       />
       <Container className="relative">

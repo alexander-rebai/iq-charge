@@ -24,10 +24,10 @@ export function Hero() {
         <div className="absolute inset-0 bg-black opacity-50" />
       </div>
 
-      <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center text-center text-white sm:px-6 lg:p-0">
-        <div className="flex w-full flex-col items-start justify-start">
+      <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white sm:px-6 lg:p-0">
+        <div className="flex w-full flex-col items-center justify-center md:items-start md:justify-start">
           <h1
-            className="mb-8 max-w-2xl text-start text-5xl font-medium tracking-tight text-white md:text-[64px]"
+            className="mb-8 max-w-2xl text-left text-5xl font-medium tracking-tight text-white md:text-start md:text-[64px]"
             data-aos="fade-up"
           >
             Met <span className="text-primary-light"> IQ Charge</span> kies je
@@ -35,7 +35,7 @@ export function Hero() {
           </h1>
 
           <p
-            className="desc text-md mb-8 max-w-lg text-start text-white lg:self-auto lg:pr-4"
+            className="desc text-md mb-8 max-w-lg text-left text-white md:text-start lg:self-auto lg:pr-4"
             data-aos="fade-up"
             data-aos-delay="100"
           >
