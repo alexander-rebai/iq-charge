@@ -3,10 +3,9 @@
 import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
 import Link from "next/link";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 
 import { ChevronDown } from "lucide-react";
-import { usePathname } from "next/navigation";
 import { Container } from "~/components/container";
 import { Logo } from "~/components/logo";
 import { NavLink } from "./nav-link";
@@ -198,29 +197,27 @@ function MobileNavigation() {
 }
 
 export function Header({ empty }: { empty?: boolean }) {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const path = usePathname();
-  const isHome = path === "/" || path === "/particulier" || path === "/bedrijf";
-  const [visible, setVisible] = useState(!isHome);
+  // const [prevScrollPos, setPrevScrollPos] = useState(0);
+  // const path = usePathname();
+  // const isHome = path === "/" || path === "/particulier" || path === "/bedrijf";
+  // const [visible, setVisible] = useState(!isHome);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!isHome) return;
-      const currentScrollPos = window.scrollY;
-      setVisible(prevScrollPos > currentScrollPos);
-      setPrevScrollPos(currentScrollPos);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (!isHome) return;
+  //     const currentScrollPos = window.scrollY;
+  //     setVisible(prevScrollPos > currentScrollPos);
+  //     setPrevScrollPos(currentScrollPos);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos, visible, isHome]);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, [prevScrollPos, visible, isHome]);
 
   return (
     <header
-      className={`baxkdrop-blur-sm fixed left-0 top-0 z-50 h-28 w-screen bg-gray-100 bg-opacity-90 shadow-sm transition-opacity ${
-        visible ? "opacity-100" : "pointer-events-none hidden opacity-0"
-      }`}
+      className={`fixed left-0 top-0 z-50 h-28 w-screen bg-gray-100 bg-opacity-90 shadow-sm backdrop-blur-sm transition-opacity`}
     >
       <Container>
         <nav className="relative z-50 flex select-none justify-between">
