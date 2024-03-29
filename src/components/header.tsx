@@ -3,11 +3,13 @@
 import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
 import Link from "next/link";
-import { Fragment } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 
 import { ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { Container } from "~/components/container";
 import { Logo } from "~/components/logo";
+import { cn } from "~/lib/utils";
 import { NavLink } from "./nav-link";
 import {
   DropdownMenu,
@@ -89,14 +91,14 @@ function MobileNavigation() {
         >
           <Popover.Panel
             as="div"
-            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
+            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
             <MobileNavLink href="/#over">Over ons</MobileNavLink>
             <MobileNavLink href="/realisaties">Realisaties</MobileNavLink>
             <MobileNavLink href="/#contact">Contact</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 rounded-lg px-2 py-1 text-lg text-slate-700 outline-none hover:bg-primary-light hover:text-slate-900">
+              <DropdownMenuTrigger className="flex items-center gap-1 rounded-xl px-2 py-1 text-lg text-slate-700 outline-none hover:bg-primary-light hover:text-slate-900">
                 Onze laadoplossingen <ChevronDown />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-80 ">
@@ -107,7 +109,7 @@ function MobileNavigation() {
                     </h2>
                     <DropdownMenuItem
                       asChild
-                      className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
                     >
                       <a href="/particulier">
                         Residentieel{" "}
@@ -118,7 +120,7 @@ function MobileNavigation() {
                     </DropdownMenuItem>
                     <DropdownMenuItem
                       asChild
-                      className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
                     >
                       <a href="/bedrijf">
                         Kantoor{" "}
@@ -129,7 +131,7 @@ function MobileNavigation() {
                     </DropdownMenuItem>
                     <DropdownMenuItem
                       asChild
-                      className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
                     >
                       <a
                         href="/offerte"
@@ -143,7 +145,7 @@ function MobileNavigation() {
                     <h2 className="m-2 text-center font-medium">Producten</h2>
                     <DropdownMenuItem
                       asChild
-                      className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
                     >
                       <a href="/products/alfen">
                         Alfen{" "}
@@ -154,7 +156,7 @@ function MobileNavigation() {
                     </DropdownMenuItem>
                     <DropdownMenuItem
                       asChild
-                      className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
                     >
                       <a href="/products/huawei">
                         Huawei{" "}
@@ -165,7 +167,7 @@ function MobileNavigation() {
                     </DropdownMenuItem>
                     <DropdownMenuItem
                       asChild
-                      className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
                     >
                       <a href="/products/wallbox">
                         Wallbox
@@ -176,7 +178,7 @@ function MobileNavigation() {
                     </DropdownMenuItem>{" "}
                     <DropdownMenuItem
                       asChild
-                      className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
                     >
                       <a href="/products/smappee">
                         Smappee
@@ -197,27 +199,31 @@ function MobileNavigation() {
 }
 
 export function Header({ empty }: { empty?: boolean }) {
-  // const [prevScrollPos, setPrevScrollPos] = useState(0);
-  // const path = usePathname();
-  // const isHome = path === "/" || path === "/particulier" || path === "/bedrijf";
-  // const [visible, setVisible] = useState(!isHome);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const path = usePathname();
+  const isHome = path === "/" || path === "/particulier" || path === "/bedrijf";
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (!isHome) return;
-  //     const currentScrollPos = window.scrollY;
-  //     setVisible(prevScrollPos > currentScrollPos);
-  //     setPrevScrollPos(currentScrollPos);
-  //   };
+  const shouldShow = useMemo(() => {
+    return prevScrollPos < 350 && isHome;
+  }, [prevScrollPos, isHome]);
 
-  //   window.addEventListener("scroll", handleScroll);
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setPrevScrollPos(currentScrollPos);
+    };
 
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, [prevScrollPos, visible, isHome]);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
 
   return (
     <header
-      className={`fixed left-0 top-0 z-50 h-28 w-screen bg-gray-100 bg-opacity-90 shadow-sm backdrop-blur-sm transition-opacity`}
+      className={cn(
+        "fixed left-0 top-0 z-50 h-28 w-screen bg-gray-100 bg-opacity-80 shadow-xl backdrop-blur-lg",
+        shouldShow && "bg-gray-100/10 bg-opacity-100 backdrop-blur-none",
+      )}
     >
       <Container>
         <nav className="relative z-50 flex select-none justify-between">
@@ -228,9 +234,14 @@ export function Header({ empty }: { empty?: boolean }) {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             {!empty && (
-              <div className="hidden items-center md:gap-x-6 lg:flex">
+              <div className="hidden items-center md:gap-x-6 lg:flex lg:items-center">
                 <DropdownMenu>
-                  <DropdownMenuTrigger className="flex items-center gap-1 rounded-lg px-2 py-1 text-lg text-slate-700 outline-none hover:bg-primary-light hover:text-slate-900">
+                  <DropdownMenuTrigger
+                    className={cn(
+                      "flex items-center gap-1 rounded-xl px-2 py-1 text-lg text-slate-700 outline-none hover:bg-primary-light hover:text-slate-900",
+                      shouldShow && "text-white",
+                    )}
+                  >
                     Onze laadoplossingen <ChevronDown />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-96">
@@ -241,7 +252,7 @@ export function Header({ empty }: { empty?: boolean }) {
                         </h2>
                         <DropdownMenuItem
                           asChild
-                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                          className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
                         >
                           <a href="/particulier">
                             Residentieel{" "}
@@ -252,24 +263,13 @@ export function Header({ empty }: { empty?: boolean }) {
                         </DropdownMenuItem>
                         <DropdownMenuItem
                           asChild
-                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                          className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
                         >
                           <a href="/bedrijf">
                             Kantoor{" "}
                             <span aria-hidden="true" className="ml-2">
                               →
                             </span>
-                          </a>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem
-                          asChild
-                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
-                        >
-                          <a
-                            href="/offerte"
-                            className="mx-auto mt-4 w-3/4 rounded-xl border-2 border-primary px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90"
-                          >
-                            Gratis offerte
                           </a>
                         </DropdownMenuItem>
                       </div>
@@ -279,7 +279,7 @@ export function Header({ empty }: { empty?: boolean }) {
                         </h2>
                         <DropdownMenuItem
                           asChild
-                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                          className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
                         >
                           <a href="/products/alfen">
                             Alfen{" "}
@@ -290,7 +290,7 @@ export function Header({ empty }: { empty?: boolean }) {
                         </DropdownMenuItem>
                         <DropdownMenuItem
                           asChild
-                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                          className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
                         >
                           <a href="/products/huawei">
                             Huawei{" "}
@@ -301,7 +301,7 @@ export function Header({ empty }: { empty?: boolean }) {
                         </DropdownMenuItem>
                         <DropdownMenuItem
                           asChild
-                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                          className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
                         >
                           <a href="/products/wallbox">
                             Wallbox
@@ -312,7 +312,7 @@ export function Header({ empty }: { empty?: boolean }) {
                         </DropdownMenuItem>{" "}
                         <DropdownMenuItem
                           asChild
-                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                          className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
                         >
                           <a href="/products/smappee">
                             Smappee
@@ -325,16 +325,26 @@ export function Header({ empty }: { empty?: boolean }) {
                     </div>
                   </DropdownMenuContent>
                 </DropdownMenu>
-                <NavLink href="/#over">Over ons</NavLink>
-                <NavLink href="/realisaties">Realisaties</NavLink>
-                <NavLink href="/#contact">Contact</NavLink>
+                <NavLink shouldShow={shouldShow} href="/#over">
+                  Over ons
+                </NavLink>
+                <NavLink shouldShow={shouldShow} href="/realisaties">
+                  Realisaties
+                </NavLink>
+                <NavLink shouldShow={shouldShow} href="/#contact">
+                  Contact
+                </NavLink>
               </div>
             )}
             {!empty && (
               <>
                 <a
                   href="/offerte"
-                  className="border border-primary-foreground bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className={cn(
+                    "flex justify-center rounded-xl border-2 border-primary px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:bg-primary-light",
+                    shouldShow &&
+                      "border-primary-light text-primary-light hover:bg-primary-light hover:text-primary-foreground",
+                  )}
                 >
                   Gratis offerte
                 </a>

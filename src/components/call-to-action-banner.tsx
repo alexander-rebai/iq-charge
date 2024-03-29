@@ -59,7 +59,7 @@ export default function CallToActionBanner({
             <a
               href="https://www.fluvius.be/nl/duurzame-mobiliteit/laadpaal-melden"
               target="_blank"
-              className="black bg-white px-3.5 py-2.5 text-sm font-medium shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="black rounded-xl bg-white px-3.5 py-2.5 text-sm font-medium shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Laadpaal aanmelden
             </a>
@@ -73,7 +73,7 @@ export default function CallToActionBanner({
           >
             <a
               href="#"
-              className="black bg-white px-3.5 py-2.5 text-sm font-medium shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="black rounded-xl bg-white px-3.5 py-2.5 text-sm font-medium shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Ontdek IQ Solar
             </a>
@@ -87,7 +87,7 @@ export default function CallToActionBanner({
           >
             <a
               href="#"
-              className="black bg-white px-3.5 py-2.5 text-sm font-medium shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="black rounded-xl bg-white px-3.5 py-2.5 text-sm font-medium shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Vraag een offerte
             </a>

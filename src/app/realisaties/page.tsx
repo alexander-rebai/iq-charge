@@ -52,10 +52,10 @@ const Realisations = () => {
           {images.length >= 1 &&
             images.map((image, idx) => (
               <Dialog key={idx}>
-                <DialogTrigger className="after:content after:shadow-highlight group relative mb-5 block w-full cursor-zoom-in outline-none after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
+                <DialogTrigger className="after:content after:shadow-highlight group relative mb-5 block w-full cursor-zoom-in outline-none after:pointer-events-none after:absolute after:inset-0 after:rounded-xl">
                   <Image
                     alt="Realisatie IQ-Charge"
-                    className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
+                    className="transform rounded-xl brightness-90 transition will-change-auto group-hover:brightness-110"
                     style={{ transform: "translate3d(0, 0, 0)" }}
                     src={image}
                     width={720}
@@ -69,7 +69,7 @@ const Realisations = () => {
                 <DialogContent>
                   <Image
                     alt="Realisatie IQ-Charge"
-                    className="rounded-lg"
+                    className="rounded-xl"
                     src={image}
                     width={720}
                     height={480}

@@ -18,7 +18,7 @@ export default function Stats() {
               Kijk wat we hebben bereikt en hoe we het hebben gedaan.
             </p>
           </div>
-          <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-xl text-center sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.id} className="flex flex-col bg-muted p-8">
                 <dt className="text-sm font-semibold leading-6 text-gray-600">

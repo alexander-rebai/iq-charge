@@ -86,7 +86,7 @@ export default function ConfigureProduct() {
           {/* <div className="isolate mx-auto mt-4 grid max-w-md grid-cols-1 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             {tiers.map((tier) => (
               <div key={tier.name} className="rounded-xl p-8 xl:p-10">
-                <div className="aspect-h-1 aspect-w-1 lg:aspect-none w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-44">
+                <div className="aspect-h-1 aspect-w-1 lg:aspect-none w-full overflow-hidden rounded-xl group-hover:opacity-75 lg:h-44">
                   <Image
                     src={tier.img}
                     className="h-full w-full object-contain object-center lg:h-full lg:w-full"
@@ -95,7 +95,7 @@ export default function ConfigureProduct() {
                     height={200}
                   />
                 </div>
-                <div className="mt-6 block rounded-md px-3 py-2 text-center text-xl font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                <div className="mt-6 block rounded-xl px-3 py-2 text-center text-xl font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
                   {tier.name}
                 </div>
                 <ul
@@ -113,7 +113,7 @@ export default function ConfigureProduct() {
                   ))}
                 </ul>
 
-                <div className="mt-6 flex flex-col rounded-md px-3 py-2 text-center text-sm font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                <div className="mt-6 flex flex-col rounded-xl px-3 py-2 text-center text-sm font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
                   <span className="text-2xl font-medium tracking-tight">
                     {tier.price}
                   </span>
@@ -179,7 +179,7 @@ export default function ConfigureProduct() {
           </CardContent>
           <div className="rounded-xl lg:p-8 xl:p-10">
             <div className="flex items-center justify-center gap-6">
-              <div className="h-32 w-1/2 overflow-hidden rounded-md border-2 border-primary p-4 lg:h-48">
+              <div className="h-32 w-1/2 overflow-hidden rounded-xl border-2 border-primary p-4 lg:h-48">
                 <Image
                   src={selectedTier.img}
                   className="h-full w-full object-contain object-center lg:h-full lg:w-full"
@@ -188,7 +188,7 @@ export default function ConfigureProduct() {
                   height={600}
                 />
               </div>
-              <div className="flex h-32 w-1/2 flex-col items-center justify-center overflow-hidden rounded-md border-2 border-primary p-4 lg:h-48">
+              <div className="flex h-32 w-1/2 flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-primary p-4 lg:h-48">
                 <h2 className="text font-medium text-primary">Min. prijs:</h2>
                 <p className="text-2xl font-medium tracking-tight">
                   {selectedTier.price}

@@ -43,7 +43,7 @@ export default function Information({
             <div className="mt-10 flex w-full items-center justify-center gap-x-6">
               <a
                 href={`/offerte`}
-                className="bg-primary-light px-3.5 py-2 font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="flex w-fit justify-center rounded-xl bg-primary-light px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:text-primary-foreground hover:opacity-90"
               >
                 Vraag uw offerte op maat <span aria-hidden="true">→</span>
               </a>
@@ -60,7 +60,7 @@ export default function Information({
             <div className="mt-10 flex w-full items-center justify-center gap-x-6">
               <a
                 href={`/products/${information.path}`}
-                className="bg-primary-light px-3.5 py-2 font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="flex w-fit justify-center rounded-xl bg-primary-light px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:text-primary-foreground hover:opacity-90"
               >
                 Meer info
               </a>

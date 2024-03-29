@@ -47,7 +47,7 @@ export default function RoadMap() {
           <div className="absolute -top-6 right-0" data-aos="fade-left">
             <Car className="hidden h-12 w-12 text-primary lg:block" />
           </div>
-          <div className="relative ml-[12.5%] mr-[12.5%] grid grid-cols-2 gap-6 lg:grid-cols-4">
+          <div className="relative ml-[12.5%] grid grid-cols-2 gap-6 lg:grid-cols-4">
             {steps.map((step) => (
               <div
                 className="w-full border-b border-primary-foreground pb-4"

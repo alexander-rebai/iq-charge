@@ -1,12 +1,14 @@
 import "~/styles/globals.css";
 
-import { Inter as FontSans } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 import { cn } from "~/lib/utils";
 
-const fontSans = FontSans({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-sans",
+  display: "swap",
+  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata = {
@@ -24,8 +26,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
+          "min-h-screen bg-background antialiased",
+          poppins.className,
         )}
       >
         {children}

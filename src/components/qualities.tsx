@@ -26,7 +26,7 @@ export default function Qualities({
             </p>
           </div>
           <dl
-            className={`mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center lg:grid-cols-${stats.length}`}
+            className={`mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-xl text-center lg:grid-cols-${stats.length}`}
           >
             {stats.map((stat) => (
               <div

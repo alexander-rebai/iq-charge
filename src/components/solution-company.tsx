@@ -5,7 +5,7 @@ const SolutionCompany = () => {
   return (
     <Container className="mb-20">
       <div className="grid h-[32rem] grid-cols-1 gap-8 md:grid-cols-3">
-        <div className="flex flex-col items-start justify-between rounded-lg bg-muted-foreground p-8 md:col-span-1">
+        <div className="flex flex-col items-start justify-between rounded-xl bg-muted-foreground p-8 md:col-span-1">
           <h2 className="text-xl font-medium text-white" data-aos="fade-up">
             Business Charging
           </h2>
@@ -19,7 +19,7 @@ const SolutionCompany = () => {
             </p>
           </div>
         </div>
-        <div className="relative flex flex-col items-start justify-end overflow-hidden rounded-lg p-8 md:col-span-2">
+        <div className="relative flex flex-col items-start justify-end overflow-hidden rounded-xl p-8 md:col-span-2">
           <Image
             className="absolute left-1/2 top-1/2 h-full -translate-x-1/2 -translate-y-1/2 object-cover"
             src={"/info2.jpg"}
@@ -35,7 +35,7 @@ const SolutionCompany = () => {
             </h2>
             <a
               href="/bedrijf"
-              className="flex w-fit justify-center bg-gray-100 px-3.5 py-2 text-lg shadow-sm hover:bg-primary-light hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              className="flex w-fit justify-center rounded-xl bg-muted px-3.5 py-2 text-lg font-medium shadow-sm hover:bg-primary-light hover:text-primary-foreground"
             >
               Ontdek onze producten
             </a>
