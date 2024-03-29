@@ -1,8 +1,8 @@
 "use client";
 
-import { Check } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import Information from "~/components/information";
 import { useOfferte } from "~/context/offerte-context";
 import { cn } from "~/lib/utils";
 import { Button } from "../ui/button";
@@ -15,47 +15,27 @@ const tiers = [
     name: "Alfen",
     price: "$1500",
     img: "/alfen/s1.png",
-    features: [
-      "5 products",
-      "Up to 1,000 subscribers",
-      "Basic analytics",
-      "48-hour support response time",
-    ],
+    info: "De Alfen Eve Pro is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik. Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
     models: ["Eve Pro Single-Line", "Eve Pro Double-line"],
   },
   {
     name: "Huawei",
     price: "$1500",
     img: "/huawei/h1.png",
-    features: [
-      "5 products",
-      "Up to 1,000 subscribers",
-      "Basic analytics",
-      "48-hour support response time",
-    ],
+    info: "De Huawei Smart Charger 7KS-S0 is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik. Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
     models: ["Smart Charger 7KS-S0", "Smart Charger 22KT-S0"],
   },
   {
     name: "Wallbox",
     price: "$1500",
     img: "/wallbox/w1.webp",
-    features: [
-      "5 products",
-      "Up to 1,000 subscribers",
-      "Basic analytics",
-      "48-hour support response time",
-    ],
+    info: "De Wallbox Pulsar Plus is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik. Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
   },
   {
     name: "Smappee",
     price: "$1500",
     img: "/smappee/s2.png",
-    features: [
-      "5 products",
-      "Up to 1,000 subscribers",
-      "Basic analytics",
-      "48-hour support response time",
-    ],
+    info: "De Smappee EV Base is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik. Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
     models: ["Smart Charger 7KS-S0", "Smart Charger 22KT-S0", "test"],
   },
 ];
@@ -70,6 +50,11 @@ export default function ConfigureProduct() {
   const [selectedModel, setSelectedModel] = useState<string>();
 
   const { handleNext, handleSubmitStep } = useOfferte();
+
+  const selectTier = (tier: Tier) => {
+    setSelectedTier(tier);
+    window.scrollTo(0, 0);
+  };
 
   const submit = () => {
     if (!selectedTier) return;
@@ -98,7 +83,7 @@ export default function ConfigureProduct() {
               </h1>
             </div>
           </CardContent>
-          <div className="isolate mx-auto mt-4 grid max-w-md grid-cols-1 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          {/* <div className="isolate mx-auto mt-4 grid max-w-md grid-cols-1 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             {tiers.map((tier) => (
               <div key={tier.name} className="rounded-xl p-8 xl:p-10">
                 <div className="aspect-h-1 aspect-w-1 lg:aspect-none w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-44">
@@ -144,6 +129,22 @@ export default function ConfigureProduct() {
                   </Button>
                 </div>
               </div>
+            ))}
+          </div> */}
+          <div>
+            {tiers.map((product, i) => (
+              <Information
+                key={i}
+                information={{
+                  title: product.name,
+                  info: product.info,
+                  image: product.img,
+                }}
+                isProduct
+                reverse={i % 2 ? true : false}
+                isOfferte
+                onSelect={() => selectTier(product)}
+              />
             ))}
           </div>
         </div>

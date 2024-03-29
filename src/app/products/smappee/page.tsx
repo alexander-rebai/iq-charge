@@ -119,7 +119,7 @@ export default function ProductPage() {
         <div className="lg:grid lg:grid-cols-3 lg:gap-x-4">
           <div className="-md:mt-16 col-span-2 mt-6 flex flex-col items-center justify-center lg:items-start lg:text-left">
             <h1
-              className="mb-8 max-w-xl text-center text-5xl font-medium tracking-tight text-slate-900 md:text-[64px] lg:text-left"
+              className="mb-8 max-w-xl text-center text-5xl font-medium tracking-tight text-slate-900  lg:text-left"
               data-aos="fade-up"
             >
               Smappee
@@ -141,7 +141,7 @@ export default function ProductPage() {
             >
               <a
                 href="/offerte"
-                className="rounded-xl  bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Vraag een offerte
               </a>
@@ -162,6 +162,19 @@ export default function ProductPage() {
                 ]}
               />
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex w-screen justify-center bg-muted-foreground">
+        <div className="flex max-w-7xl items-center justify-center py-12">
+          <div className="max-w-2xl text-center">
+            <h2
+              className="text-xl font-medium tracking-tight text-white sm:text-4xl"
+              data-aos="fade-up"
+              data-aos-easing="ease-in-out"
+            >
+              Smappee laadpalen zijn goedkoop en energiezuinig
+            </h2>
           </div>
         </div>
       </div>

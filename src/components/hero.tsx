@@ -21,13 +21,13 @@ export function Hero() {
           />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-black opacity-50" />
+        <div className="absolute inset-0 bg-black opacity-40" />
       </div>
 
       <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white lg:p-0">
         <div className="flex w-full flex-col items-center justify-center md:items-start md:justify-start">
           <h1
-            className="mb-8 max-w-2xl text-left text-5xl font-medium tracking-tight text-white md:text-start md:text-[64px]"
+            className="mb-8 max-w-2xl text-left text-5xl font-medium tracking-tight text-white md:text-start "
             data-aos="fade-up"
           >
             Met <span className="text-primary-light"> IQ Charge</span> kies je
@@ -49,14 +49,14 @@ export function Hero() {
             data-aos-delay="200"
           >
             <a
-              href="/offerte?userType=bedrijf"
-              className="flex w-40 justify-center rounded-xl bg-gray-100 px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:bg-primary-light hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              href="/bedrijf"
+              className="flex w-40 justify-center bg-gray-100 px-3.5 py-2 text-lg font-medium text-black shadow-sm hover:bg-primary-light hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               Bedrijf
             </a>
             <a
-              href="/offerte?userType=particulier"
-              className="flex w-40 justify-center rounded-xl bg-gray-100 px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm transition duration-200 ease-in-out hover:bg-primary-light hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              href="/particulier"
+              className="flex w-40 justify-center bg-gray-100 px-3.5 py-2 text-lg font-medium text-black shadow-sm transition duration-200 ease-in-out hover:bg-primary-light hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               Particulier
             </a>

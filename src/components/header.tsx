@@ -100,80 +100,48 @@ function MobileNavigation() {
               <DropdownMenuTrigger className="flex items-center gap-1 rounded-lg px-2 py-1 text-lg text-slate-700 outline-none hover:bg-primary-light hover:text-slate-900">
                 Onze laadoplossingen <ChevronDown />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-80">
-                <DropdownMenuItem
-                  asChild
-                  className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground hover:bg-primary-light hover:text-slate-900"
-                >
-                  <a href="/products/alfen">Alfen</a>
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  asChild
-                  className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground hover:bg-primary-light hover:text-slate-900"
-                >
-                  <a href="/products/huawei">Huawei</a>
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  asChild
-                  className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground hover:bg-primary-light hover:text-slate-900"
-                >
-                  <a href="/products/wallbox">Wallbox</a>
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  asChild
-                  className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground hover:bg-primary-light hover:text-slate-900"
-                >
-                  <a href="/products/smappee">Smappee</a>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </Popover.Panel>
-        </Transition.Child>
-      </Transition.Root>
-    </Popover>
-  );
-}
-
-export function Header({ empty }: { empty?: boolean }) {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const path = usePathname();
-  const isHome = path === "/";
-  const [visible, setVisible] = useState(!isHome);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!isHome) return;
-      const currentScrollPos = window.scrollY;
-      setVisible(prevScrollPos > currentScrollPos);
-      setPrevScrollPos(currentScrollPos);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos, visible, isHome]);
-
-  return (
-    <header
-      className={`fixed left-0 top-0 z-50 h-28 w-screen bg-gray-100 bg-opacity-90 shadow-sm backdrop-blur-sm transition-opacity ${
-        visible ? "opacity-100" : "pointer-events-none hidden opacity-0"
-      }`}
-    >
-      <Container>
-        <nav className="relative z-50 flex select-none justify-between">
-          <div className="flex items-center md:gap-x-12">
-            <Link href="/" aria-label="Home">
-              <Logo />
-            </Link>
-          </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
-            {!empty && (
-              <div className="hidden items-center md:gap-x-6 lg:flex">
-                <DropdownMenu>
-                  <DropdownMenuTrigger className="flex items-center gap-1 rounded-lg px-2 py-1 text-lg text-slate-700 outline-none hover:bg-primary-light hover:text-slate-900">
-                    Onze laadoplossingen <ChevronDown />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-52">
+              <DropdownMenuContent className="w-80 ">
+                <div className="grid grid-cols-2">
+                  <div>
+                    <h2 className="m-2 text-center font-medium">
+                      Locatie van Installatie
+                    </h2>
+                    <DropdownMenuItem
+                      asChild
+                      className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                    >
+                      <a href="/particulier">
+                        Residentieel{" "}
+                        <span aria-hidden="true" className="ml-2">
+                          →
+                        </span>
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem
+                      asChild
+                      className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                    >
+                      <a href="/bedrijf">
+                        Kantoor{" "}
+                        <span aria-hidden="true" className="ml-2">
+                          →
+                        </span>
+                      </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem
+                      asChild
+                      className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                    >
+                      <a
+                        href="/offerte"
+                        className="mt-4 rounded-xl border-2 border-primary px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90"
+                      >
+                        Gratis offerte
+                      </a>
+                    </DropdownMenuItem>
+                  </div>
+                  <div>
+                    <h2 className="m-2 text-center font-medium">Producten</h2>
                     <DropdownMenuItem
                       asChild
                       className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
@@ -218,6 +186,146 @@ export function Header({ empty }: { empty?: boolean }) {
                         </span>
                       </a>
                     </DropdownMenuItem>{" "}
+                  </div>
+                </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </Popover.Panel>
+        </Transition.Child>
+      </Transition.Root>
+    </Popover>
+  );
+}
+
+export function Header({ empty }: { empty?: boolean }) {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const path = usePathname();
+  const isHome = path === "/" || path === "/particulier" || path === "/bedrijf";
+  const [visible, setVisible] = useState(!isHome);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!isHome) return;
+      const currentScrollPos = window.scrollY;
+      setVisible(prevScrollPos > currentScrollPos);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos, visible, isHome]);
+
+  return (
+    <header
+      className={`fixed left-0 top-0 z-50 h-28 w-screen bg-gray-100 bg-opacity-90 shadow-sm backdrop-blur-sm transition-opacity ${
+        visible ? "opacity-100" : "pointer-events-none hidden opacity-0"
+      }`}
+    >
+      <Container>
+        <nav className="relative z-50 flex select-none justify-between">
+          <div className="flex items-center md:gap-x-12">
+            <Link href="/" aria-label="Home">
+              <Logo />
+            </Link>
+          </div>
+          <div className="flex items-center gap-x-5 md:gap-x-8">
+            {!empty && (
+              <div className="hidden items-center md:gap-x-6 lg:flex">
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="flex items-center gap-1 rounded-lg px-2 py-1 text-lg text-slate-700 outline-none hover:bg-primary-light hover:text-slate-900">
+                    Onze laadoplossingen <ChevronDown />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-96">
+                    <div className="grid w-full grid-cols-2">
+                      <div>
+                        <h2 className="m-2 text-center font-medium">
+                          Locatie van Installatie
+                        </h2>
+                        <DropdownMenuItem
+                          asChild
+                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                        >
+                          <a href="/particulier">
+                            Residentieel{" "}
+                            <span aria-hidden="true" className="ml-2">
+                              →
+                            </span>
+                          </a>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          asChild
+                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                        >
+                          <a href="/bedrijf">
+                            Kantoor{" "}
+                            <span aria-hidden="true" className="ml-2">
+                              →
+                            </span>
+                          </a>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          asChild
+                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                        >
+                          <a
+                            href="/offerte"
+                            className="mx-auto mt-4 w-3/4 rounded-xl border-2 border-primary px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90"
+                          >
+                            Gratis offerte
+                          </a>
+                        </DropdownMenuItem>
+                      </div>
+                      <div>
+                        <h2 className="m-2 text-center font-medium">
+                          Producten
+                        </h2>
+                        <DropdownMenuItem
+                          asChild
+                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                        >
+                          <a href="/products/alfen">
+                            Alfen{" "}
+                            <span aria-hidden="true" className="ml-2">
+                              →
+                            </span>
+                          </a>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          asChild
+                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                        >
+                          <a href="/products/huawei">
+                            Huawei{" "}
+                            <span aria-hidden="true" className="ml-2">
+                              →
+                            </span>
+                          </a>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          asChild
+                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                        >
+                          <a href="/products/wallbox">
+                            Wallbox
+                            <span aria-hidden="true" className="ml-2">
+                              →
+                            </span>
+                          </a>
+                        </DropdownMenuItem>{" "}
+                        <DropdownMenuItem
+                          asChild
+                          className="cursor-pointer justify-start rounded-lg px-2 py-3 font-medium text-muted-foreground"
+                        >
+                          <a href="/products/smappee">
+                            Smappee
+                            <span aria-hidden="true" className="ml-2">
+                              →
+                            </span>
+                          </a>
+                        </DropdownMenuItem>{" "}
+                      </div>
+                    </div>
                   </DropdownMenuContent>
                 </DropdownMenu>
                 <NavLink href="/#over">Over ons</NavLink>
@@ -229,7 +337,7 @@ export function Header({ empty }: { empty?: boolean }) {
               <>
                 <a
                   href="/offerte"
-                  className="rounded-xl  bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="border border-primary-foreground bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   Gratis offerte
                 </a>

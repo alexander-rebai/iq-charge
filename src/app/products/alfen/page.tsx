@@ -4,10 +4,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { CheckCircle, XCircle } from "lucide-react";
 import { useEffect } from "react";
+import { Kwaliteit, LoadBalancing, Mid, Small } from "~/assets/assets";
+
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
 import ImageCarousel from "~/components/image-carousel";
 import Information from "~/components/information";
+import Qualities from "~/components/qualities";
 import Specs from "~/components/specs-table";
 
 const specifications = [
@@ -100,17 +103,17 @@ const specifications = [
 const products = [
   {
     title: "Alfen Eve Single S-line",
-    info: "De Eve Single S-line is ontworpen om slimme functies voor thuis opladen te bieden. De compacte behuizing bevat een laadindicatielamp en kan aan een muur of paal worden gemonteerd om een plug & play oplossing te bieden.",
+    info: "De Eve Single S-line is ontworpen om slimme functies voor thuis opladen te bieden. De compacte behuizing bevat een laadindicatielamp en kan aan een muur of paal worden gemonteerd om een plug & play oplossing te bieden.De S-Line is beschikbaar als laadcontact, of verbonden met een kabel inclusief kabelopslag. Internetverbinding verloopt via ethernet met online gebruiksgegevens vanaf ons eigen managementsysteem of een vrij gekozen systeem van derden.",
     image: "/alfen/s1.png",
   },
   {
     title: "Alfen Eve Single Pro-line",
-    info: "De Eve Single Pro-line van Alfen, geschikt voor zowel zakelijk als thuisgebruik, biedt een compact ontwerp met verscheidene functies, zoals een gebruiksvriendelijk kleurenscherm voor logo-upload en RFID voor eenvoudige identificatie.",
+    info: "Een compact, enkel oplaadpunt met geavanceerde slimme functies voor gebruik thuis of op de zaak. De Eve Single Pro-line van Alfen, geschikt voor zowel zakelijk als thuisgebruik, biedt een compact ontwerp met verscheidene functies, zoals een gebruiksvriendelijk kleurenscherm voor logo-upload en RFID voor eenvoudige identificatie. Het is makkelijk te installeren aan de muur of op een paal. Een MID-gecertificeerde meter zorgt voor financiële duidelijkheid, terwijl LTE/Ethernet-connectiviteit uitgebreide systeembeheer via derden toelaat.",
     image: "/alfen/s1.png",
   },
   {
     title: "Alfen Eve Double Pro-line",
-    info: "De Eve Double Pro-line is een ideale laadpaal voor semi-openbare plaatsen zoals bedrijfs- en winkelparkeerterreinen. Deze stevige paal is gemaakt voor veelvuldig gebruik en snelle gebruikerswisselingen, met montageopties voor zowel muur als paal.",
+    info: "De Eve Double Pro-line is een ideale laadpaal voor semi-openbare plaatsen zoals bedrijfs- en winkelparkeerterreinen. Deze stevige paal is gemaakt voor veelvuldig gebruik en snelle gebruikerswisselingen, met montageopties voor zowel muur als paal. De Double Pro-Line biedt twee laadpunten met optionele lastverdeling voor efficiënt energiegebruik. Het kleurenscherm maakt het mogelijk een persoonlijk logo te tonen, terwijl de RFID-lezer en MID-meter zorgen voor gemakkelijke identificatie van gebruikers en transparante financiële transacties. Connectiviteit is gegarandeerd via LTE/ethernet, met ondersteuning voor externe beheersystemen naar keuze.",
     image: "/alfen/d1.png",
   },
 ];
@@ -125,17 +128,18 @@ export default function ProductPage() {
   return (
     <main>
       <Header />
-      <div className="mx-auto mb-10 mt-36 max-w-7xl px-4 pb-10 text-center sm:px-6 md:mt-28 lg:p-16">
+      <div className="relative mx-auto mb-10 mt-36 max-w-7xl px-4 pb-10 text-center sm:px-6 md:mt-28 lg:p-16">
         <div className="items-center justify-around lg:flex lg:grid-cols-3 lg:gap-x-4">
           <div className="col-span-2 mt-6 flex flex-col items-center justify-center lg:items-start lg:text-left">
             <h1
-              className="mb-8 max-w-xl text-center text-5xl font-medium tracking-tight text-slate-900 md:text-[64px] lg:text-left"
+              className="mb-8 max-w-xl text-center text-5xl font-medium tracking-tight text-slate-900  lg:text-left"
               data-aos="fade-up"
             >
               Alfen
             </h1>
+
             <p
-              className="desc text-md mb-8 max-w-lg self-center text-center text-slate-700 lg:self-auto lg:pr-4 lg:text-left"
+              className="desc text-md mb-4 max-w-lg self-center text-center text-slate-700 lg:self-auto lg:pr-4 lg:text-left"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -145,7 +149,7 @@ export default function ProductPage() {
               bekend om zijn gebruiksvriendelijkheid en betrouwbaarheid.
             </p>
             <p
-              className="desc text-md mb-8 max-w-lg self-center text-center text-slate-700 lg:self-auto lg:pr-4 lg:text-left"
+              className="desc text-md mb-4 max-w-lg self-center text-center text-slate-700 lg:self-auto lg:pr-4 lg:text-left"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -171,7 +175,7 @@ export default function ProductPage() {
             >
               <a
                 href="/offerte"
-                className="rounded-xl  bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Vraag een offerte
               </a>
@@ -196,6 +200,21 @@ export default function ProductPage() {
           </div>
         </div>
       </div>
+      <Qualities
+        stats={[
+          { id: 1, name: "Compacte behuizing", icon: <Small /> },
+          { id: 2, name: "Montage aan wand of losstaand", icon: <Mid /> },
+          { id: 3, name: "Europese A-kwaliteit", icon: <Kwaliteit /> },
+          {
+            id: 4,
+            name: "Dynamic load balancing",
+            icon: <LoadBalancing />,
+          },
+        ]}
+        title="Waarom kiezen voor Alfen?"
+        description="Alfen is een toonaangevende specialist in energieoplossingen voor de toekomst. Met meer dan 80 jaar ervaring in het ontwerpen, ontwikkelen en bouwen van elektrische energieproducten, is Alfen een betrouwbare partner voor het opladen van elektrische voertuigen."
+      />
+
       <div className="mb-10 mt-20 flex flex-col px-2 md:gap-8">
         {products.map((product, i) => (
           <Information

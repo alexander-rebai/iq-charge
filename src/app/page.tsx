@@ -6,10 +6,18 @@ import { Hero } from "~/components/hero";
 import Information, {
   type Information as InformationType,
 } from "~/components/information";
-import { type Product as ProductType } from "~/components/product";
-import Products from "~/components/products";
 import RoadMap from "~/components/roadmap";
+import SolutionCompany from "~/components/solution-company";
+import SolutionHome from "~/components/solution-home";
+import Stats from "~/components/stats";
 import { TracingBeam } from "~/components/ui/tracing-beam";
+
+type ProductType = {
+  name: string;
+  path: string;
+  img: string;
+  features: string[];
+};
 
 const products: ProductType[] = [
   {
@@ -61,7 +69,7 @@ const information: InformationType[] = [
   },
   {
     title: "Seamless integration for Life and Work",
-    info: "Q Charge herdefinieert de oplaad ervaring door naadloos te integreren in zowel uw persoonlijke als professionele leven. Onze geavanceerde oplossingen zorgen ervoor dat uw voertuig, of uw hele vloot, altijd klaar en opgeladen is, zonder uw dag- of werkproces te onderbreken. Ervaar het gemak van een laadoplossing die zich aan u aanpast, waardoor elke dag efficiënter wordt en elke operatie soepeler verloopt.",
+    info: "IQ Charge herdefinieert de oplaad ervaring door naadloos te integreren in zowel uw persoonlijke als professionele leven. Onze geavanceerde oplossingen zorgen ervoor dat uw voertuig, of uw hele vloot, altijd klaar en opgeladen is, zonder uw dag- of werkproces te onderbreken. Ervaar het gemak van een laadoplossing die zich aan u aanpast, waardoor elke dag efficiënter wordt en elke operatie soepeler verloopt.",
     image: "/info3.jpg",
   },
   {
@@ -78,26 +86,46 @@ export default function Home() {
       <main>
         <TracingBeam>
           <Hero />
+          <Stats />
 
-          <section id="products">
+          {/* <section id="products">
             <div className="flex flex-col gap-8 bg-gray-100 pb-10 pt-20">
               <h2 className="text-center text-4xl" data-aos="fade-up">
                 Onze Laadoplossingen
               </h2>
-              <Products products={products} />
+              {products.map((product, i) => (
+                <Information
+                  key={i}
+                  information={{
+                    title: product.name,
+                    info: product.features.join(" "),
+                    image: product.img,
+                    path: product.path,
+                  }}
+                  isProduct
+                  reverse={i % 2 ? true : false}
+                />
+              ))}
             </div>
-          </section>
+          </section> */}
 
           <CallToActionBanner
             title="Bespaar tijd en geld met onze efficiënte laadoplossingen."
             info="Vraag een offerte aan of neem contact met ons op voor meer informatie"
           />
+
           <RoadMap />
+
+          <SolutionCompany />
+
           <CallToActionBanner
             title="IQ Charge by IQ Solar"
             info="IQ Solar biedt een compleet aanbod van zonnepanelen tot thuisbatterijen voor zowel particulieren als bedrijven."
             isIQSolar
           />
+
+          <SolutionHome />
+
           <section id="over">
             <div className="mb-10 mt-20 flex flex-col gap-8 p-2 md:p-0">
               <h2 className="text-center text-4xl" data-aos="fade-up">

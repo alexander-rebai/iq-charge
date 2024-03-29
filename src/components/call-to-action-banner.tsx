@@ -17,17 +17,19 @@ export default function CallToActionBanner({
   isIQSolar?: boolean;
 }) {
   return (
-    <div className={cn("relative overflow-hidden py-12")}>
+    <div className={cn("relative overflow-hidden py-36")}>
       <Image
-        className="absolute left-1/2 top-1/2 h-full w-screen max-w-none -translate-x-1/2 -translate-y-1/2"
-        src={"/gradient.jpeg"}
+        className="absolute left-1/2 top-1/2 h-full w-screen max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-bottom"
+        src={"/info3.jpg"}
         alt=""
         width={2347}
         height={2044}
         unoptimized
       />
+      <div className="absolute inset-0 bg-black opacity-40" />
+
       <Container className="relative">
-        <div className="mx-auto max-w-xl text-center">
+        <div className={cn("mx-auto text-left", isIQSolar && "text-right")}>
           <h2
             className="text-xl font-medium tracking-tight text-white sm:text-4xl"
             data-aos="fade-up"
@@ -36,7 +38,10 @@ export default function CallToActionBanner({
             {title}
           </h2>
           <p
-            className="mx-auto mt-6 max-w-xl text-lg leading-8 text-indigo-200"
+            className={cn(
+              "mt-2 max-w-xl text-lg leading-8 text-white",
+              isIQSolar && "ml-auto",
+            )}
             data-aos="fade-up"
             data-aos-delay="100"
             data-aos-easing="ease-in-out"
@@ -46,7 +51,7 @@ export default function CallToActionBanner({
         </div>
         {isFluvius ? (
           <div
-            className="mt-10 flex items-center justify-center"
+            className="mt-10 flex items-center justify-start"
             data-aos="fade-up"
             data-aos-delay="100"
             data-aos-easing="ease-in-out"
@@ -54,35 +59,35 @@ export default function CallToActionBanner({
             <a
               href="https://www.fluvius.be/nl/duurzame-mobiliteit/laadpaal-melden"
               target="_blank"
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-medium text-primary-foreground shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="black bg-white px-3.5 py-2.5 text-sm font-medium shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Laadpaal aanmelden
             </a>
           </div>
         ) : isIQSolar ? (
           <div
-            className="mt-10 flex items-center justify-center gap-x-6"
+            className="mt-10 flex items-center justify-end gap-x-6"
             data-aos="fade-up"
             data-aos-delay="100"
             data-aos-easing="ease-in-out"
           >
             <a
               href="#"
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-medium text-primary-foreground shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="black bg-white px-3.5 py-2.5 text-sm font-medium shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Ontdek IQ Solar
             </a>
           </div>
         ) : (
           <div
-            className="mt-10 flex items-center justify-center gap-x-6"
+            className="mt-10 flex items-center justify-start gap-x-6"
             data-aos="fade-up"
             data-aos-delay="100"
             data-aos-easing="ease-in-out"
           >
             <a
               href="#"
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-medium text-primary-foreground shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="black bg-white px-3.5 py-2.5 text-sm font-medium shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Vraag een offerte
             </a>
