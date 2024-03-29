@@ -26,6 +26,7 @@ const PartiulierHero = () => {
           layout="fill"
           objectFit="cover"
           alt="Hero image"
+          priority
         />
         <div className="absolute inset-0 bg-black opacity-40" />
       </div>

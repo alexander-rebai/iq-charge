@@ -218,7 +218,7 @@ export function Header({ empty }: { empty?: boolean }) {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-50 h-28 w-screen bg-gray-100 bg-opacity-90 shadow-sm backdrop-blur-sm transition-opacity ${
+      className={`baxkdrop-blur-sm fixed left-0 top-0 z-50 h-28 w-screen bg-gray-100 bg-opacity-90 shadow-sm transition-opacity ${
         visible ? "opacity-100" : "pointer-events-none hidden opacity-0"
       }`}
     >
