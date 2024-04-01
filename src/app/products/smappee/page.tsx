@@ -4,10 +4,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { CheckCircle } from "lucide-react";
 import { useEffect } from "react";
+import { Kwaliteit, LoadBalancing, Mid, Small } from "~/assets/assets";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
 import ImageCarousel from "~/components/image-carousel";
 import Information from "~/components/information";
+import Qualities from "~/components/qualities";
 import Specs from "~/components/specs-table";
 
 const specifications = [
@@ -141,7 +143,7 @@ export default function ProductPage() {
             >
               <a
                 href="/offerte"
-                className="bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="rounded-xl bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Vraag een offerte
               </a>
@@ -165,19 +167,20 @@ export default function ProductPage() {
           </div>
         </div>
       </div>
-      <div className="flex w-screen justify-center bg-muted-foreground">
-        <div className="flex max-w-7xl items-center justify-center py-12">
-          <div className="max-w-2xl text-center">
-            <h2
-              className="text-xl font-medium tracking-tight text-white sm:text-4xl"
-              data-aos="fade-up"
-              data-aos-easing="ease-in-out"
-            >
-              Smappee laadpalen zijn goedkoop en energiezuinig
-            </h2>
-          </div>
-        </div>
-      </div>
+      <Qualities
+        stats={[
+          { id: 1, name: "Compacte behuizing", icon: <Small /> },
+          { id: 2, name: "Montage aan wand of losstaand", icon: <Mid /> },
+          { id: 3, name: "Europese A-kwaliteit", icon: <Kwaliteit /> },
+          {
+            id: 4,
+            name: "Dynamic load balancing",
+            icon: <LoadBalancing />,
+          },
+        ]}
+        title="Waarom kiezen voor Smappee?"
+        description="Smappee is een toonaangevende specialist in energieoplossingen voor de toekomst. Met meer dan 80 jaar ervaring in het ontwerpen, ontwikkelen en bouwen van elektrische energieproducten, is Smappee een betrouwbare partner voor het opladen van elektrische voertuigen."
+      />
       <div className="mb-10 mt-20 flex flex-col px-2 md:gap-8">
         {products.map((product, i) => (
           <Information

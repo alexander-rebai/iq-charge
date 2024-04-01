@@ -18,7 +18,8 @@ export type ProductParticulier = {
 
 export type ProductCompany = {
   name: string;
-  amount: number;
+  amount: string;
+  location: string;
 };
 
 export type Profile = {

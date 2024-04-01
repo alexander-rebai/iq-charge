@@ -29,7 +29,7 @@ const UserType = () => {
           </CardContent>
           <div className="flex h-96 flex-col gap-x-12 gap-y-6 md:flex-row">
             <div
-              className="group relative flex w-1/2 cursor-pointer  flex-col items-start justify-end overflow-hidden rounded-xl bg-primary-light p-8"
+              className="group relative flex cursor-pointer flex-col  items-start justify-end overflow-hidden rounded-xl bg-muted-foreground p-8 md:w-1/2"
               onClick={() => onSelectUserType("bedrijf")}
             >
               <Image
@@ -51,7 +51,7 @@ const UserType = () => {
               </div>
             </div>
             <div
-              className="group relative flex w-1/2 cursor-pointer flex-col items-start justify-end overflow-hidden rounded-xl bg-primary-light p-8"
+              className="group relative flex cursor-pointer flex-col items-start justify-end overflow-hidden rounded-xl bg-muted-foreground p-8 md:w-1/2"
               onClick={() => onSelectUserType("particulier")}
             >
               <Image

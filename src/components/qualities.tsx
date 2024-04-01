@@ -31,7 +31,7 @@ export default function Qualities({
             {stats.map((stat) => (
               <div
                 key={stat.id}
-                className="flex flex-col gap-2 bg-primary-light p-8"
+                className="flex flex-col gap-2 bg-primary-background p-8"
               >
                 <dt className="text-sm font-medium leading-6 text-gray-600">
                   {stat.name}

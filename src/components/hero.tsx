@@ -27,15 +27,16 @@ export function Hero() {
       <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white md:py-32">
         <div className="flex h-full w-full flex-col items-center justify-center md:items-start lg:justify-end">
           <h1
-            className="mb-8 max-w-2xl text-left text-6xl font-medium tracking-tight text-white md:text-start "
+            className="mb-4 max-w-2xl text-left text-3xl font-medium tracking-tight text-white md:mb-8 md:text-start md:text-6xl "
             data-aos="fade-up"
           >
             Met <span className="text-primary-light"> IQ Charge</span> kies je
-            voor gemak, veiligheid <br /> en efficiëntie.
+            voor gemak, veiligheid <br className="hidden md:block" /> en
+            efficiëntie.
           </h1>
 
           <p
-            className="desc mb-8 max-w-lg text-left text-lg text-white md:text-start lg:self-auto lg:pr-4"
+            className="desc text-md mb-8 max-w-lg text-left text-white md:text-start md:text-lg lg:self-auto lg:pr-4"
             data-aos="fade-up"
             data-aos-delay="100"
           >

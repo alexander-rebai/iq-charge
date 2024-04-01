@@ -263,12 +263,7 @@ export default function UserInformation() {
               </div>
 
               <div className="mt-8 flex justify-center">
-                <Button
-                  variant={"outline"}
-                  type="submit"
-                  disabled={loading}
-                  className="w-1/3"
-                >
+                <Button type="submit" disabled={loading} className="w-1/3">
                   Bevestigen
                 </Button>
               </div>

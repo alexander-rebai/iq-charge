@@ -9,11 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-white hover:bg-primary/90",
+        default:
+          "flex w-fit justify-center rounded-xl px-3.5 py-2 text-lg font-medium shadow-sm hover:bg-muted border-2 border-black",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
           "flex w-fit justify-center rounded-xl bg-primary-light px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 hover:text-primary-foreground",
+        carousel:
+          "bg-primary-light text-primary-foreground hover:bg-primary/80",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",

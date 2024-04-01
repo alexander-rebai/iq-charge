@@ -19,7 +19,8 @@ const FormValues = z.object({
   productCompany: z
     .object({
       name: z.string(),
-      amount: z.number(),
+      amount: z.string(),
+      location: z.string(),
     })
     .optional(),
   profile: z.object({
