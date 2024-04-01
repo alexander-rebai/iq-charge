@@ -79,7 +79,7 @@ export default function ConfigureProduct() {
   };
 
   return (
-    <div className="flex items-center justify-center gap-4 p-6">
+    <div className="flex items-center justify-center gap-4">
       {!selectedTier && (
         <div className="flex flex-col">
           <CardContent>
@@ -108,10 +108,10 @@ export default function ConfigureProduct() {
         </div>
       )}
       {selectedTier && (
-        <div className="relative flex w-full flex-col md:w-4/5">
+        <div className="relative flex w-full flex-col p-6 md:w-4/5">
           <div
             onClick={() => setSelectedTier(undefined)}
-            className="focus:shadow-outline-blue absolute -left-5 -top-14 inline-block cursor-pointer rounded-full bg-muted-foreground px-2 py-2 text-white hover:opacity-90 focus:outline-none md:left-0 md:top-0"
+            className="focus:shadow-outline-blue absolute -left-2 top-0 inline-block cursor-pointer rounded-full bg-muted-foreground px-2 py-2 text-white hover:opacity-90 focus:outline-none md:left-0 md:top-0"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +155,7 @@ export default function ConfigureProduct() {
             </div>
             <hr className="my-6 border-t border-muted-foreground" />
             <div className="mt-16 flex flex-col gap-12">
-              <div className="flex justify-around">
+              <div className="flex flex-col gap-12 md:flex-row md:justify-around md:gap-0">
                 <div className="flex gap-4">
                   <div className="flex h-8 w-8 items-center justify-center gap-x-3 rounded-full bg-muted-foreground text-lg font-medium text-white">
                     1
@@ -205,7 +205,7 @@ export default function ConfigureProduct() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-around">
+              <div className="flex flex-col gap-12 md:flex-row md:justify-around md:gap-0">
                 {selectedTier.models && (
                   <div className="flex flex-col gap-6">
                     <div>
