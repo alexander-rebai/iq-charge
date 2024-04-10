@@ -89,9 +89,10 @@ export default function ConfigureProduct() {
               </h1>
             </div>
           </CardContent>
-          <div>
+          <div className="flex flex-col lg:flex-row lg:gap-2">
             {tiers.map((product, i) => (
               <Information
+                isColumn
                 key={i}
                 information={{
                   title: product.name,

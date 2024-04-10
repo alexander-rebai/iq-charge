@@ -62,13 +62,11 @@ export default function Home() {
       <main>
         <BedrijfHero />
 
-        {/* <Qualities /> */}
-
         <SpecificInfo
           information={{
             title: "Opladen van elektrische auto's voor je bedrijf",
             info: "Je moet succesvol zijn in een voortdurend veranderende omgeving. Maar anticiperen op toekomstige behoeften kan een uitdaging zijn. Ons laadnetwerk past zich aan de specifieke behoeften van je bedrijf en groeit met je mee. Hiermee kan je het laden beheren via een cloudplatform waardoor je inzicht en controle krijgt.",
-            image: "/info3.jpg",
+            image: "/images/night6.jpg",
           }}
         />
 

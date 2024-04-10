@@ -3,7 +3,7 @@
 import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
 import Link from "next/link";
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 import { ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -101,7 +101,7 @@ function MobileNavigation() {
               <DropdownMenuTrigger className="flex items-center gap-1 rounded-xl px-2 py-1 text-lg text-slate-700 outline-none hover:bg-primary-light hover:text-slate-900">
                 Onze laadoplossingen <ChevronDown />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-80 ">
+              <DropdownMenuContent className="w-screen">
                 <div className="grid grid-cols-2">
                   <div>
                     <h2 className="m-2 text-center font-medium">
@@ -127,17 +127,6 @@ function MobileNavigation() {
                         <span aria-hidden="true" className="ml-2">
                           →
                         </span>
-                      </a>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      asChild
-                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
-                    >
-                      <a
-                        href="/offerte"
-                        className="mt-4 rounded-xl border-2 border-primary px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90"
-                      >
-                        Gratis offerte
                       </a>
                     </DropdownMenuItem>
                   </div>
@@ -201,11 +190,6 @@ function MobileNavigation() {
 export function Header({ empty }: { empty?: boolean }) {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const path = usePathname();
-  const isHome = path === "/" || path === "/particulier" || path === "/bedrijf";
-
-  const shouldShow = useMemo(() => {
-    return prevScrollPos < 350 && isHome;
-  }, [prevScrollPos, isHome]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -221,8 +205,7 @@ export function Header({ empty }: { empty?: boolean }) {
   return (
     <header
       className={cn(
-        "fixed left-0 top-0 z-50 h-28 w-screen bg-gray-100 bg-opacity-80 shadow-xl backdrop-blur-lg",
-        shouldShow && "bg-gray-100/10 bg-opacity-100 backdrop-blur-none",
+        "fixed left-0 top-0 z-50 h-28 w-screen bg-gray-100 bg-opacity-100 shadow-xl backdrop-blur-lg",
       )}
     >
       <Container>
@@ -239,12 +222,11 @@ export function Header({ empty }: { empty?: boolean }) {
                   <DropdownMenuTrigger
                     className={cn(
                       "flex items-center gap-1 rounded-xl px-2 py-1 text-lg text-slate-700 outline-none hover:bg-primary-light hover:text-slate-900",
-                      shouldShow && "text-white",
                     )}
                   >
                     Onze laadoplossingen <ChevronDown />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-96">
+                  <DropdownMenuContent className="w-[28rem]">
                     <div className="grid w-full grid-cols-2">
                       <div>
                         <h2 className="m-2 text-center font-medium">
@@ -325,15 +307,9 @@ export function Header({ empty }: { empty?: boolean }) {
                     </div>
                   </DropdownMenuContent>
                 </DropdownMenu>
-                <NavLink shouldShow={shouldShow} href="/#over">
-                  Over ons
-                </NavLink>
-                <NavLink shouldShow={shouldShow} href="/realisaties">
-                  Realisaties
-                </NavLink>
-                <NavLink shouldShow={shouldShow} href="/#contact">
-                  Contact
-                </NavLink>
+                <NavLink href="/#over">Over ons</NavLink>
+                <NavLink href="/realisaties">Realisaties</NavLink>
+                <NavLink href="/#contact">Contact</NavLink>
               </div>
             )}
             {!empty && (
@@ -341,9 +317,7 @@ export function Header({ empty }: { empty?: boolean }) {
                 <a
                   href="/offerte"
                   className={cn(
-                    "flex justify-center rounded-xl border-2 border-primary px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:bg-primary-light",
-                    shouldShow &&
-                      "border-primary-light text-primary-light hover:bg-primary-light hover:text-primary-foreground",
+                    "flex justify-center rounded-xl border-2 border-primary px-3.5 py-2 text-lg font-medium text-black shadow-sm hover:bg-primary-light",
                   )}
                 >
                   Gratis offerte

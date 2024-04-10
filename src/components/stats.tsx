@@ -11,12 +11,13 @@ export default function Stats() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Wij hebben aanzienlijke resultaten behaald
+            <h2 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">
+              Jouw weg naar{" "}
+              <span className="bg-primary-light/60 font-semibold">
+                duurzame mobiliteit
+              </span>{" "}
+              begint hier.
             </h2>
-            <p className="mt-4 text-lg leading-8 text-gray-600">
-              Kijk wat we hebben bereikt en hoe we het hebben gedaan.
-            </p>
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-xl text-center sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (

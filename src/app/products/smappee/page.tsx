@@ -143,7 +143,7 @@ export default function ProductPage() {
             >
               <a
                 href="/offerte"
-                className="rounded-xl bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="rounded-xl bg-primary-light  px-3.5 py-2 text-lg font-medium text-black shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Vraag een offerte
               </a>
@@ -179,7 +179,7 @@ export default function ProductPage() {
           },
         ]}
         title="Waarom kiezen voor Smappee?"
-        description="Smappee is een toonaangevende specialist in energieoplossingen voor de toekomst. Met meer dan 80 jaar ervaring in het ontwerpen, ontwikkelen en bouwen van elektrische energieproducten, is Smappee een betrouwbare partner voor het opladen van elektrische voertuigen."
+        description="Smappee is een toonaangevende specialist in energieoplossingen voor de toekomst. Met meer dan 80 jaar ervaring in het ontwerpen, ontwikkelen en bouwen van elektrische energieproducten, is Alfen een betrouwbare partner voor het opladen van elektrische voertuigen."
       />
       <div className="mb-10 mt-20 flex flex-col px-2 md:gap-8">
         {products.map((product, i) => (

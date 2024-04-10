@@ -34,7 +34,7 @@ const UserType = () => {
             >
               <Image
                 className="absolute left-1/2 top-1/2 h-full -translate-x-1/2 -translate-y-1/2 object-cover group-hover:scale-95"
-                src={"/info1.jpg"}
+                src={"/images/night3.jpg"}
                 alt=""
                 width={2347}
                 height={2044}
@@ -56,7 +56,7 @@ const UserType = () => {
             >
               <Image
                 className="absolute left-1/2 top-1/2 h-full -translate-x-1/2 -translate-y-1/2 object-cover group-hover:scale-95"
-                src={"/info2.jpg"}
+                src={"/images/road_lights.jpg"}
                 alt=""
                 width={2347}
                 height={2044}

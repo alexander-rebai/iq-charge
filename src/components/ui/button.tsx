@@ -14,7 +14,7 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "flex w-fit justify-center rounded-xl bg-primary-light px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 hover:text-primary-foreground",
+          "flex w-fit justify-center rounded-xl bg-primary-light px-3.5 py-2 text-lg font-medium text-black shadow-sm hover:opacity-90",
         carousel:
           "bg-primary-light text-primary-foreground hover:bg-primary/80",
         secondary:

@@ -22,7 +22,7 @@ const BedrijfHero = () => {
     <div className="relative mb-20 h-screen">
       <div className="absolute inset-0 z-0 h-full w-full">
         <Image
-          src="/info3.jpg"
+          src="/images/night3.jpg"
           layout="fill"
           objectFit="cover"
           alt="Hero image"

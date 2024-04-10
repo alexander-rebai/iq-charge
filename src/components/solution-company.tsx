@@ -35,7 +35,7 @@ const SolutionCompany = () => {
             </h2>
             <a
               href="/bedrijf"
-              className="flex w-fit justify-center rounded-xl bg-muted px-3.5 py-2 text-lg font-medium shadow-sm hover:bg-primary-light hover:text-primary-foreground"
+              className="flex w-fit justify-center rounded-xl bg-muted px-3.5 py-2 text-lg font-medium shadow-sm hover:bg-primary-light"
             >
               Ontdek onze producten
             </a>

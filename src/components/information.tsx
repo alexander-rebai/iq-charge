@@ -19,37 +19,54 @@ export default function Information({
   isProduct,
   isOfferte,
   onSelect,
+  isColumn,
 }: {
   information: Information;
   reverse?: boolean;
   isProduct?: boolean;
   isOfferte?: boolean;
   onSelect?: () => void;
+  isColumn?: boolean;
 }) {
   return (
     <Container
       className={cn("my-4 overflow-hidden rounded-xl bg-muted p-12")}
       data-aos={isOfferte ? null : "fade-right"}
     >
-      <div className="grid items-center gap-8 md:grid-flow-col-dense md:grid-cols-2 md:gap-12">
-        <div className={cn(reverse ? "lg:col-start-2" : "lg:col-start-1")}>
+      <div
+        className={
+          isColumn
+            ? "gap-8 lg:flex lg:flex-col lg:gap-12"
+            : "grid items-center gap-8 md:grid-flow-col-dense md:grid-cols-2 md:gap-12"
+        }
+      >
+        <div
+          className={cn(
+            reverse && !isColumn ? "lg:col-start-2" : "lg:col-start-1",
+          )}
+        >
           <p className="mt-2 text-xl font-medium tracking-tight sm:text-4xl">
             {information.title}
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p
+            className={cn(
+              "mt-6 text-lg leading-8 text-gray-600",
+              isColumn && "xl:h-96",
+            )}
+          >
             {information.info}
           </p>
-          {!isProduct ? (
+          {isProduct && !isOfferte ? (
             <div className="mt-10 flex w-full items-center justify-center gap-x-6">
               <a
                 href={`/offerte`}
-                className="flex w-fit justify-center rounded-xl bg-primary-light px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:text-primary-foreground hover:opacity-90"
+                className="flex w-fit justify-center rounded-xl bg-primary-light px-3.5 py-2 text-lg font-medium text-black shadow-sm hover:opacity-90"
               >
                 Vraag uw offerte op maat <span aria-hidden="true">→</span>
               </a>
             </div>
           ) : isOfferte ? (
-            <div className="mt-10 flex w-full items-center justify-center gap-x-6">
+            <div className="mt-10 flex w-full items-center justify-center gap-x-6 ">
               <Button variant={"outline"} onClick={onSelect}>
                 <span>
                   Configureer <span aria-hidden="true">→</span>
@@ -60,7 +77,7 @@ export default function Information({
             <div className="mt-10 flex w-full items-center justify-center gap-x-6">
               <a
                 href={`/products/${information.path}`}
-                className="flex w-fit justify-center rounded-xl bg-primary-light px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:text-primary-foreground hover:opacity-90"
+                className="flex w-fit justify-center rounded-xl bg-primary-light px-3.5 py-2 text-lg font-medium text-black shadow-sm hover:opacity-90"
               >
                 Meer info
               </a>
@@ -68,7 +85,7 @@ export default function Information({
           )}
         </div>
         {isProduct ? (
-          <div className="relative h-64 overflow-hidden rounded-xl lg:h-96">
+          <div className="relative mt-10 h-64 overflow-hidden rounded-xl lg:mt-0 lg:h-96">
             <Image
               priority
               src={information.image}

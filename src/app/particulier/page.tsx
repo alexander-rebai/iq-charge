@@ -66,7 +66,7 @@ export default function Home() {
           information={{
             title: "Een opgeladen auto, wanneer jij het nodig hebt",
             info: "Met onze laadoplossingen voor thuis is het tanken van je auto moeiteloos. Plan je oplaadsessie en je auto zal automatisch laden terwijl je slaapt of aan het eten bent. Waarom zou je tijd verspillen aan het opladen als je wilt focussen op wat echt belangrijk is als je thuis bent?",
-            image: "/info3.jpg",
+            image: "/images/charging.jpg",
           }}
         />
 

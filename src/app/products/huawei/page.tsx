@@ -108,7 +108,7 @@ export default function ProductPage() {
             >
               <a
                 href="/offerte"
-                className="rounded-xl bg-primary-light  px-3.5 py-2 text-lg font-medium text-primary-foreground shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="rounded-xl bg-primary-light  px-3.5 py-2 text-lg font-medium text-black shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Vraag een offerte
               </a>
