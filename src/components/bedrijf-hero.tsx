@@ -54,7 +54,8 @@ const BedrijfHero = () => {
             className="mb-8 max-w-2xl text-left text-6xl font-medium tracking-tight text-white md:text-start "
             data-aos="fade-up"
           >
-            <span className="text-primary-light">IQ Charge</span> voor bedrijven
+            <span className="text-primary-light">Laadexpert</span> voor
+            bedrijven
           </h1>
 
           <p

@@ -55,7 +55,7 @@ export default function RoadMap() {
                 data-aos="fade-up"
               >
                 <span
-                  className={`mb-5 flex h-16 w-16 items-center justify-center rounded-xl border border-primary-foreground bg-primary-light text-primary-foreground lg:mb-16`}
+                  className={`mb-5 flex h-16 w-16 items-center justify-center rounded-xl border border-primary-foreground bg-primary-light text-primary lg:mb-16`}
                 >
                   {step.number}
                 </span>

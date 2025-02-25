@@ -1,29 +1,98 @@
-# Create T3 App
+# Laadexpert Style Guide & Implementation Plan
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+## Design Overview
 
-## What's next? How do I make an app with this?
+Based on the Bright Energy website example, we aim to implement a clean, modern and minimalist design language focusing on:
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+### Navigation
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+- Compact, sticky navbar with height of 48px (3rem)
+- Clean white background with subtle blur effect
+- Simple logo on left
+- Primary actions (Contact sales, Login) on right
+- Optional dropdown menus for Products/Company sections
+- No visible borders in default state
+- Subtle bottom border on scroll
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+### Button Styles
 
-## Learn More
+1. Primary Button
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+- Background: zinc-800/90 (90% opacity)
+- Text: white
+- Height: 44px (2.75rem)
+- Rounded corners
+- Hover: solid zinc-800
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+2. Secondary Button
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+- Background: gray-100
+- Border: gray-200
+- Text: gray-800
+- Height: 44px (2.75rem)
+- Rounded corners
+- Shadow: subtle
+- Hover: bg-gray-200
 
-## How do I deploy this?
+### Typography
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+- Headings: font-semibold
+- Body: Regular weight
+- Colors:
+  - Primary text: gray-800
+  - Secondary text: gray-400/500
+  - Accent: Brand colors
+
+### Spacing
+
+- Consistent padding: px-6 (1.5rem)
+- Navbar height: h-12 (3rem)
+- Button height: h-11 (2.75rem)
+- Gaps between elements: space-x-3/4
+
+## Implementation Plan
+
+1. Navigation Updates
+
+- Refactor Header component
+- Implement sticky behavior
+- Add blur effect
+- Simplify mobile menu
+- Add dropdown functionality
+
+2. Button Component Updates
+
+- Create reusable button components
+- Implement primary/secondary variants
+- Add hover states
+- Standardize sizes
+
+3. Layout & Spacing
+
+- Update container widths
+- Implement consistent spacing
+- Fix responsive behaviors
+
+4. Typography & Colors
+
+- Update text styles
+- Implement color system
+- Add hover states
+
+## Key Focus Areas
+
+1. Simplicity & Cleanliness
+2. Consistent Spacing
+3. Clear Visual Hierarchy
+4. Smooth Interactions
+5. Mobile Responsiveness
+
+## Components to Update
+
+1. Header.tsx
+2. Button.tsx (create new component)
+3. Navigation.tsx
+4. Layout.tsx
+5. Hero.tsx
+
+This style guide serves as the foundation for implementing a clean, modern interface matching the Bright Energy example while maintaining our brand identity.

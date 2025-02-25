@@ -2,7 +2,10 @@
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 import { useEffect } from "react";
+import { CardCarousel } from "./card-carousel";
+import { Button } from "./ui/button";
 
 export function Hero() {
   useEffect(() => {
@@ -12,65 +15,55 @@ export function Hero() {
   }, []);
 
   return (
-    <div className="relative h-screen">
-      <div className="absolute inset-0 z-0 h-full w-full">
-        <video autoPlay muted loop className="h-full w-full object-cover">
-          <source
-            src="https://res.cloudinary.com/dnc1cyqbv/video/upload/v1711449457/EV_Fuel_Plugging_3840x2160_2_owmgmc.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 bg-black opacity-40" />
+    <section className="relative h-[calc(100vh-48px)] w-screen overflow-hidden">
+      <div className="relative h-full overflow-hidden">
+        <Image
+          src="https://bright-energy.eu/_vercel/image?url=%2Fimages%2Fhomepage-hero-sm.jpg&w=1536&q=100"
+          alt="Hero cover"
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 1600px, 4800px"
+          className="h-full w-screen object-cover"
+        />
       </div>
 
-      <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white md:py-32">
-        <div className="flex h-full w-full flex-col items-center justify-center md:items-start lg:justify-end">
-          <div>
-            <h1
-              className="mb-2 max-w-2xl text-left text-5xl font-medium tracking-tight text-white md:text-start md:text-6xl "
-              data-aos="fade-up"
-            >
-              Met <span className="text-primary-light"> IQ Charge</span> kies je
-              voor gemak, veiligheid
-            </h1>
-            <h1
-              className="mb-4 max-w-2xl text-left text-5xl font-medium tracking-tight text-white md:mb-8 md:text-start md:text-6xl "
-              data-aos="fade-up"
-            >
-              en efficiëntie.
-            </h1>
-          </div>
-
-          <p
-            className="desc text-md mb-8 max-w-lg text-left text-white md:text-start md:text-lg lg:self-auto lg:pr-4"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            Of je nu thuis oplaadt of op het werk, wij bieden de{" "}
-            <span className="text-primary-light"> perfecte laadoplossing</span>{" "}
-            voor iedere elektrische autobezitter.
-          </p>
-          <div
-            className="flex items-center justify-center gap-6"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <a
-              href="/bedrijf"
-              className="flex justify-center rounded-xl border-2 border-primary-light px-3.5 py-2 text-lg font-medium text-primary-light shadow-sm hover:bg-primary-light hover:text-primary-foreground"
-            >
-              Bedrijf
-            </a>
-            <a
-              href="/particulier"
-              className="flex justify-center rounded-xl border-2 border-primary-light px-3.5 py-2 text-lg font-medium text-primary-light shadow-sm hover:bg-primary-light hover:text-primary-foreground"
-            >
-              Particulier
-            </a>
+      {/* Content */}
+      <div className="absolute inset-0">
+        <div className="mx-40 h-full max-w-7xl px-8">
+          <div className="flex h-full flex-col justify-end pb-80">
+            {/* Left content */}
+            <div className="flex max-w-xl flex-col space-y-6">
+              <h1
+                className="text-5xl font-semibold text-white md:text-[64px]"
+                data-aos="fade-up"
+              >
+                Met <span className="text-primary-light">Laadexpert</span> kies
+                je voor gemak
+              </h1>
+              <p
+                className="text-lg text-gray-300 md:text-[24px]"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                Of je nu thuis oplaadt of op het werk, wij bieden de perfecte
+                laadoplossing
+              </p>
+              <div
+                className="flex flex-col space-y-4 pt-4 md:flex-row md:space-x-4 md:space-y-0"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <Button variant="secondary" className="!h-11 w-full md:w-64">
+                  <a href="/particulier">Call To Action</a>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Carousel */}
+        <CardCarousel />
       </div>
-    </div>
+    </section>
   );
 }

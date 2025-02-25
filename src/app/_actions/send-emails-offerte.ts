@@ -66,7 +66,7 @@ export async function sendEmailsOfferte({
       from: "admin@socialize-ugc.com",
       to: profile.email,
       subject: `Offerte aanvraag bij IQ-Charge`,
-      text: "Bedankt voor uw offerte aanvraag bij IQ Charge. Wij nemen zo snel mogelijk contact met u op.",
+      text: "Bedankt voor uw offerte aanvraag bij Laadexpert. Wij nemen zo snel mogelijk contact met u op.",
       react: OfferteMailKlant({
         productParticulier,
         productCompany,

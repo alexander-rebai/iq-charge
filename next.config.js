@@ -11,6 +11,9 @@ const config = {
       {
         hostname: 'res.cloudinary.com',
       },
+      {
+        hostname: 'bright-energy.eu',
+      },
     ]
   },
   experimental: {

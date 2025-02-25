@@ -4,11 +4,11 @@ export function Logo(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <Image
       src="/logo.png"
-      width="105"
-      height="105"
       alt="iq-charge-logo"
+      width={105}
+      height={105}
       priority
-      className=" cursor-pointer"
+      className="h-full w-auto cursor-pointer object-contain"
     />
   );
 }

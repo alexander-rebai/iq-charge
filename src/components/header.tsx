@@ -6,11 +6,10 @@ import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 
 import { ChevronDown } from "lucide-react";
-import { usePathname } from "next/navigation";
-import { Container } from "~/components/container";
 import { Logo } from "~/components/logo";
 import { cn } from "~/lib/utils";
 import { NavLink } from "./nav-link";
+import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -189,7 +188,6 @@ function MobileNavigation() {
 
 export function Header({ empty }: { empty?: boolean }) {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const path = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -205,26 +203,32 @@ export function Header({ empty }: { empty?: boolean }) {
   return (
     <header
       className={cn(
-        "fixed left-0 top-0 z-50 h-28 w-screen bg-gray-100 bg-opacity-100 shadow-xl backdrop-blur-lg",
+        "sticky top-0 z-50 flex h-12 w-full items-center",
+        "border-b border-gray-200 bg-white/90 backdrop-blur-sm",
       )}
     >
-      <Container>
-        <nav className="relative z-50 flex select-none justify-between">
-          <div className="flex items-center md:gap-x-12">
-            <Link href="/" aria-label="Home">
+      <nav
+        aria-label="Global"
+        className="mx-auto flex h-full max-w-5xl flex-1 items-center justify-between px-6 lg:justify-start lg:px-0"
+      >
+        <div className="flex h-full items-center">
+          <div className="mr-10 flex h-full items-center">
+            <Link href="/" aria-label="Home" className="h-8">
               <Logo />
             </Link>
           </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
-            {!empty && (
-              <div className="hidden items-center md:gap-x-6 lg:flex lg:items-center">
+        </div>
+        <div className="hidden space-x-3 lg:flex lg:flex-1 lg:justify-end">
+          {!empty && (
+            <>
+              <div className="flex items-center md:gap-x-6">
                 <DropdownMenu>
                   <DropdownMenuTrigger
                     className={cn(
-                      "flex items-center gap-1 rounded-xl px-2 py-1 text-lg text-slate-700 outline-none hover:bg-primary-light hover:text-slate-900",
+                      "flex items-center gap-1 rounded text-sm font-medium text-gray-700 hover:text-gray-900",
                     )}
                   >
-                    Onze laadoplossingen <ChevronDown />
+                    Onze laadoplossingen <ChevronDown className="h-4 w-4" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-[28rem]">
                     <div className="grid w-full grid-cols-2">
@@ -309,27 +313,19 @@ export function Header({ empty }: { empty?: boolean }) {
                 </DropdownMenu>
                 <NavLink href="/#over">Over ons</NavLink>
                 <NavLink href="/realisaties">Realisaties</NavLink>
-                <NavLink href="/#contact">Contact</NavLink>
               </div>
-            )}
-            {!empty && (
-              <>
-                <a
-                  href="/offerte"
-                  className={cn(
-                    "flex justify-center rounded-xl border-2 border-primary px-3.5 py-2 text-lg font-medium text-black shadow-sm hover:bg-primary-light",
-                  )}
-                >
-                  Gratis offerte
-                </a>
-                <div className="-mr-1 lg:hidden">
-                  <MobileNavigation />
-                </div>
-              </>
-            )}
+              <Button variant="fancy" size="sm">
+                Contact sales
+              </Button>
+            </>
+          )}
+        </div>
+        {!empty && (
+          <div className="flex lg:hidden">
+            <MobileNavigation />
           </div>
-        </nav>
-      </Container>
+        )}
+      </nav>
     </header>
   );
 }
