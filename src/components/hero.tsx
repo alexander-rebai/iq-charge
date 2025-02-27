@@ -18,7 +18,7 @@ export function Hero() {
     <section className="relative h-[calc(100vh-48px)] w-full overflow-hidden">
       <div className="relative h-full overflow-hidden">
         <Image
-          src="https://bright-energy.eu/_vercel/image?url=%2Fimages%2Fhomepage-hero-sm.jpg&w=1536&q=100"
+          src="/cover.webp"
           alt="Hero cover"
           fill
           priority

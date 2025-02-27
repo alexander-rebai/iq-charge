@@ -4,7 +4,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import { useEffect } from "react";
-import { CardCarousel } from "./card-carousel";
 
 const stats = [
   { id: 1, name: "Company Installations", value: "3,000+" },
@@ -12,7 +11,7 @@ const stats = [
   { id: 4, name: "Revenue", value: "$70M" },
 ];
 
-const ProductsHero = () => {
+const OverOnsHero = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -38,7 +37,7 @@ const ProductsHero = () => {
             className="mb-8 max-w-2xl text-left text-6xl font-medium tracking-tight text-white md:text-start "
             data-aos="fade-up"
           >
-            Aanbod van top merken
+            Over ons
           </h1>
 
           <p
@@ -51,12 +50,9 @@ const ProductsHero = () => {
             voor iedere elektrische autobezitter.
           </p>
         </div>
-        <CardCarousel />
       </div>
-
-      {/* Carousel */}
     </div>
   );
 };
 
-export default ProductsHero;
+export default OverOnsHero;

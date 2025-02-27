@@ -313,6 +313,8 @@ export function Header({ empty }: { empty?: boolean }) {
                 </DropdownMenu> */}
                 <NavLink href="/bedrijf">Zakelijk</NavLink>
                 <NavLink href="/thuis">Thuis</NavLink>
+                <NavLink href="/over-ons">Over ons</NavLink>
+
                 <NavLink href="/products">Producten</NavLink>
                 {/* <NavLink href="/realisaties">Realisaties</NavLink> */}
               </div>
