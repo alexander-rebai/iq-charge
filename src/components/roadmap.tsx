@@ -29,10 +29,10 @@ const steps = [
 
 export default function RoadMap() {
   return (
-    <section className="relative overflow-hidden rounded-b-xl p-8 md:p-24">
-      <div className="mx-auto max-w-7xl md:px-12 md:py-24 lg:px-36">
+    <section className="relative overflow-hidden rounded-b-xl p-8 md:p-12">
+      <div className="mx-auto max-w-7xl pb-12 md:px-12 lg:px-36">
         <div data-aos="fade-up">
-          <h3 className="text-4xl">Hoe het werkt</h3>
+          <h3 className="text-4xl font-semibold">Hoe het werkt</h3>
         </div>
         <div className="relative mt-24 flex flex-wrap">
           <div className="-z-1 absolute left-0 right-0 top-8 hidden h-[1px] lg:block">

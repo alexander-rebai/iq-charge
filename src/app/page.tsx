@@ -3,12 +3,8 @@ import Contact from "~/components/contact";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
 import { Hero } from "~/components/hero";
-import Information, {
-  type Information as InformationType,
-} from "~/components/information";
+import { type Information as InformationType } from "~/components/information";
 import RoadMap from "~/components/roadmap";
-import SolutionCompany from "~/components/solution-company";
-import SolutionHome from "~/components/solution-home";
 import Stats from "~/components/stats";
 import { TracingBeam } from "~/components/ui/tracing-beam";
 
@@ -38,25 +34,24 @@ export default function Home() {
         <TracingBeam>
           <Hero />
           <Stats />
+          <RoadMap />
 
           <CallToActionBanner
             title="Bespaar tijd en geld met onze efficiënte laadoplossingen."
             info="Vraag een offerte aan of neem contact met ons op voor meer informatie"
           />
 
-          <RoadMap />
-
-          <SolutionCompany />
-
+          {/* <SolutionCompany /> */}
+          {/* 
           <CallToActionBanner
             title="Laadexpert by IQ Solar"
             info="IQ Solar biedt een compleet aanbod van zonnepanelen tot thuisbatterijen voor zowel particulieren als bedrijven."
             isIQSolar
-          />
+          /> */}
 
-          <SolutionHome />
+          {/* <SolutionHome /> */}
 
-          <section id="over" className="pt-28">
+          {/* <section id="over" className="pt-28">
             <div className="mb-10 mt-20 flex flex-col gap-8 p-2 md:p-0">
               <h2 className="text-center text-4xl" data-aos="fade-up">
                 Over ons
@@ -69,12 +64,12 @@ export default function Home() {
                 />
               ))}
             </div>
-          </section>
-          <CallToActionBanner
+          </section> */}
+          {/* <CallToActionBanner
             title="Meld uw laadpaal aan bij Fluvius"
             info="Het is verplicht om uw private laadpaal aangesloten op het laagspanningsnet met een vermogen van 5 kVA of meer aan te melden bij Fluvius."
             isFluvius
-          />
+          /> */}
           <section id="contact">
             <div className="mb-10 mt-20 flex flex-col gap-8">
               <h2 className="text-center text-4xl" data-aos="fade-up">

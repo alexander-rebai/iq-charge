@@ -15,7 +15,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[calc(100vh-48px)] w-screen overflow-hidden">
+    <section className="relative h-[calc(100vh-48px)] w-full overflow-hidden">
       <div className="relative h-full overflow-hidden">
         <Image
           src="https://bright-energy.eu/_vercel/image?url=%2Fimages%2Fhomepage-hero-sm.jpg&w=1536&q=100"
@@ -23,7 +23,7 @@ export function Hero() {
           fill
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 1600px, 4800px"
-          className="h-full w-screen object-cover"
+          className="h-full w-full object-cover"
         />
       </div>
 

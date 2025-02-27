@@ -222,7 +222,7 @@ export function Header({ empty }: { empty?: boolean }) {
           {!empty && (
             <>
               <div className="flex items-center md:gap-x-6">
-                <DropdownMenu>
+                {/* <DropdownMenu>
                   <DropdownMenuTrigger
                     className={cn(
                       "flex items-center gap-1 rounded text-sm font-medium text-gray-700 hover:text-gray-900",
@@ -310,11 +310,13 @@ export function Header({ empty }: { empty?: boolean }) {
                       </div>
                     </div>
                   </DropdownMenuContent>
-                </DropdownMenu>
-                <NavLink href="/#over">Over ons</NavLink>
-                <NavLink href="/realisaties">Realisaties</NavLink>
+                </DropdownMenu> */}
+                <NavLink href="/bedrijf">Zakelijk</NavLink>
+                <NavLink href="/thuis">Thuis</NavLink>
+                <NavLink href="/products">Producten</NavLink>
+                {/* <NavLink href="/realisaties">Realisaties</NavLink> */}
               </div>
-              <Button variant="fancy" size="sm">
+              <Button variant="secondary" size="sm">
                 Contact sales
               </Button>
             </>

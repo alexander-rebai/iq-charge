@@ -1,8 +1,6 @@
-import CallToActionBanner from "~/components/call-to-action-banner";
 import Contact from "~/components/contact";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
-import Information from "~/components/information";
 import PartiulierHero from "~/components/particulier-hero";
 import SpecificInfo from "~/components/specific-info";
 
@@ -70,8 +68,17 @@ export default function Home() {
           }}
         />
 
-        <section id="products">
-          <div className="flex flex-col gap-8 px-4 pb-10 pt-20">
+        <SpecificInfo
+          isReverse
+          information={{
+            title: "Een opgeladen auto, wanneer jij het nodig hebt",
+            info: "Met onze laadoplossingen voor thuis is het tanken van je auto moeiteloos. Plan je oplaadsessie en je auto zal automatisch laden terwijl je slaapt of aan het eten bent. Waarom zou je tijd verspillen aan het opladen als je wilt focussen op wat echt belangrijk is als je thuis bent?",
+            image: "/images/charging.jpg",
+          }}
+        />
+
+        {/* <section id="products"> */}
+        {/* <div className="flex flex-col gap-8 px-4 pb-10 pt-20">
             <h2 className="text-center text-4xl" data-aos="fade-up">
               Onze Laadoplossingen
             </h2>
@@ -90,12 +97,12 @@ export default function Home() {
               />
             ))}
           </div>
-        </section>
+        </section> */}
 
-        <CallToActionBanner
+        {/* <CallToActionBanner
           title="Bespaar tijd en geld met onze efficiënte laadoplossingen."
           info="Vraag een offerte aan of neem contact met ons op voor meer informatie"
-        />
+        /> */}
 
         <section id="contact">
           <div className="mb-10 mt-20 flex flex-col gap-8">

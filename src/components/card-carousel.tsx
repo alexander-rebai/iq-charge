@@ -55,7 +55,7 @@ export function CardCarousel() {
             return (
               <div
                 key={index}
-                className={`duration-1200 absolute right-96 top-1/2 h-[280px] w-[220px] -translate-y-1/2 transform cursor-pointer rounded-xl bg-cover bg-center shadow-lg transition-all ease-in-out hover:border-2 hover:border-primary-foreground ${
+                className={`duration-2400 absolute right-96 top-1/2 h-[280px] w-[220px] -translate-y-1/2 transform cursor-pointer rounded-xl bg-cover bg-center shadow-lg transition-all ease-in-out hover:border-2 hover:border-primary-foreground ${
                   isActive ? "z-20" : "z-10"
                 }`}
                 style={{
@@ -81,7 +81,7 @@ export function CardCarousel() {
         </div>
 
         {/* Controls Container */}
-        <div className="absolute -bottom-16 right-32 flex items-center gap-8">
+        <div className="absolute -bottom-8 right-32 flex items-center gap-8">
           {/* Navigation */}
           <div className="z-50 flex items-center gap-5">
             <button
@@ -104,7 +104,7 @@ export function CardCarousel() {
           <div className="flex h-12 w-[320px] items-center">
             <div className="h-[3px] w-full bg-white/20">
               <div
-                className="duration-1200 h-full bg-primary-light transition-all ease-in-out"
+                className="duration-2400 h-full bg-primary-light transition-all ease-in-out"
                 style={{
                   width: `${((currentSlide + 1) / carouselData.length) * 100}%`,
                 }}
