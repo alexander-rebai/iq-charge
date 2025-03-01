@@ -40,7 +40,7 @@ export function ProductsCarousel() {
         clearInterval(progressRef.current);
       }
     };
-  }, []);
+  }, [handlePagination]);
 
   return (
     <div className="absolute bottom-12 right-16">

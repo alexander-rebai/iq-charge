@@ -1,4 +1,4 @@
-import { categoryType } from "../content";
+import type { categoryType } from "../content";
 
 // This is the category badge that appears in the article cards
 const BadgeCategory = ({ category }: { category: categoryType }) => {

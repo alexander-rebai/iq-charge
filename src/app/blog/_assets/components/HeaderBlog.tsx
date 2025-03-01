@@ -7,7 +7,17 @@ import { Fragment } from "react";
 // @ts-expect-error - Module '"../content"' has no exported member 'categories'
 import { categories } from "../content";
 
+// Define proper type for categories
+type Category = {
+  slug: string;
+  title: string;
+  description: string;
+};
+
 const HeaderBlog = () => {
+  // Cast categories to the proper type
+  const categoriesData = categories as Category[];
+
   return (
     <header className="bg-base-100 border-base-300 sticky top-0 z-30 w-full border-b">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 sm:px-10">
@@ -68,8 +78,7 @@ const HeaderBlog = () => {
                   <Popover.Panel className="absolute right-0 mt-3 w-screen max-w-xs transform px-2 sm:px-0">
                     <div className="ring-base-content overflow-hidden rounded-lg shadow-lg ring-1 ring-opacity-5">
                       <div className="bg-base-100 relative grid gap-6 p-6">
-                        {/* @ts-expect-error - Parameter 'category' implicitly has an 'any' type */}
-                        {categories.map((category) => (
+                        {categoriesData.map((category) => (
                           <Link
                             key={category.slug}
                             href={`/blog/category/${category.slug}`}

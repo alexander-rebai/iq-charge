@@ -11,7 +11,7 @@ type ProductType = {
   features: string[];
 };
 
-const products: ProductType[] = [
+const _products: ProductType[] = [
   {
     name: "Alfen",
     path: "alfen",
@@ -25,9 +25,9 @@ const products: ProductType[] = [
     path: "huawei",
     img: "/products/huawei_prod.jpeg",
     features: [
-      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik.",
+      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
       "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
-      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik.",
+      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
     ],
   },
   {
@@ -35,9 +35,9 @@ const products: ProductType[] = [
     path: "wallbox",
     img: "/products/wallbox_prod.jpeg",
     features: [
-      "De Wallbox Pulsar Plus is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik.",
+      "De Wallbox Pulsar Plus is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
       "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
-      "De Wallbox Pulsar Plus is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik.",
+      "De Wallbox Pulsar Plus is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
     ],
   },
   {
@@ -46,9 +46,9 @@ const products: ProductType[] = [
     img: "/products/smappee_prod.jpeg",
 
     features: [
-      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik.",
+      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
       "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
-      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV’s) die is ontworpen voor thuisgebruik.",
+      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
     ],
   },
 ];

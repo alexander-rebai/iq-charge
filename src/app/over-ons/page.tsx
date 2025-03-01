@@ -4,13 +4,6 @@ import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
 import OverOnsHero from "~/components/over-ons-hero";
 
-type ProductType = {
-  name: string;
-  path: string;
-  img: string;
-  features: string[];
-};
-
 const teamMembers = [
   {
     quote:

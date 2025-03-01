@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { JSX } from "react";
-import { articleType } from "../content";
+import type { articleType } from "../content";
 import BadgeCategory from "./BadgeCategory";
 
 // This is the article card that appears in the blog page and category pages

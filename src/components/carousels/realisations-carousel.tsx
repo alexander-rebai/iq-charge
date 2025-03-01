@@ -3,7 +3,8 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { articleType, articles } from "~/app/blog/_assets/content";
+import type { articleType } from "~/app/blog/_assets/content";
+import { articles } from "~/app/blog/_assets/content";
 
 export function RealisationsCarousel() {
   // Filter articles to only show those with "Realisaties" category
@@ -46,7 +47,7 @@ export function RealisationsCarousel() {
         clearInterval(progressRef.current);
       }
     };
-  }, []);
+  }, [handlePagination]);
 
   // Function to safely get image URL
   const getImageUrl = (article: articleType) => {
