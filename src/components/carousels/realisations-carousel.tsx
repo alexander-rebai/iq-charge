@@ -1,10 +1,16 @@
 "use client";
 
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { realisationsCarouselData } from "~/data/carouselData";
+import { articleType, articles } from "~/app/blog/_assets/content";
 
 export function RealisationsCarousel() {
+  // Filter articles to only show those with "Realisaties" category
+  const filteredArticles = articles.filter((article) =>
+    article.categories?.some((category) => category.title === "Realisaties"),
+  );
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const progressRef = useRef<NodeJS.Timeout | null>(null);
@@ -21,9 +27,9 @@ export function RealisationsCarousel() {
 
     const newSlide =
       direction === "right"
-        ? (slideRef.current + 1) % realisationsCarouselData.length
-        : (slideRef.current - 1 + realisationsCarouselData.length) %
-          realisationsCarouselData.length;
+        ? (slideRef.current + 1) % filteredArticles.length
+        : (slideRef.current - 1 + filteredArticles.length) %
+          filteredArticles.length;
 
     setCurrentSlide(newSlide);
     setTimeout(() => setIsAnimating(false), 800);
@@ -42,41 +48,77 @@ export function RealisationsCarousel() {
     };
   }, []);
 
+  // Function to safely get image URL
+  const getImageUrl = (article: articleType) => {
+    return article?.image?.urlRelative ?? "";
+  };
+
+  // Function to format title for display in carousel
+  const formatTitle = (title: string) => {
+    const words = title.split(" ");
+
+    // For first line, take first 2 words or fewer if title is shorter
+    const firstLine = words.slice(0, Math.min(2, words.length)).join(" ");
+
+    // For second line, take next 2 words and add ellipsis if there are more words
+    let secondLine = "";
+    if (words.length > 2) {
+      secondLine = words.slice(2, 4).join(" ");
+      if (words.length > 4) {
+        secondLine += "...";
+      }
+    }
+
+    return { firstLine, secondLine };
+  };
+
+  // If no articles with "Realisaties" category, don't render the carousel
+  if (filteredArticles.length === 0) {
+    return null;
+  }
+
   return (
     <div className="absolute bottom-12 right-16">
       <div className="relative flex h-[400px] items-center">
         <div className="relative h-full">
-          {realisationsCarouselData.map((item, index) => {
+          {filteredArticles.map((article, index) => {
             const isActive = index === currentSlide;
             const offset =
-              ((index - currentSlide + realisationsCarouselData.length) %
-                realisationsCarouselData.length) *
+              ((index - currentSlide + filteredArticles.length) %
+                filteredArticles.length) *
               240;
 
+            const { firstLine, secondLine } = formatTitle(article.title);
+
             return (
-              <div
+              <Link
                 key={index}
+                href={`/blog/${article.slug}`}
                 className={`duration-2400 absolute right-96 top-1/2 h-[280px] w-[220px] -translate-y-1/2 transform cursor-pointer rounded-xl bg-cover bg-center shadow-lg transition-all ease-in-out hover:border-2 hover:border-primary-foreground ${
                   isActive ? "z-20" : "z-10"
                 }`}
                 style={{
-                  backgroundImage: `url(${item.image})`,
+                  backgroundImage: `url(${getImageUrl(article)})`,
                   transform: `translate(${offset}px, -50%) scale(${isActive ? 1 : 0.95})`,
                   opacity: offset > 960 ? 0 : 1,
                 }}
               >
                 <div className="absolute bottom-0 left-0 w-full rounded-b-xl bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                  <p className="text-sm font-medium text-gray-300">
-                    {item.place}
-                  </p>
-                  <h3 className="text-2xl font-bold leading-tight">
-                    {item.title}
+                  {article.categories?.length > 0 && (
+                    <p className="text-sm font-medium text-gray-300">
+                      {article.categories?.[0]?.title}
+                    </p>
+                  )}
+                  <h3 className="truncate text-2xl font-bold leading-tight">
+                    {firstLine}
                   </h3>
-                  <h3 className="text-2xl font-bold leading-tight">
-                    {item.title2}
-                  </h3>
+                  {secondLine && (
+                    <h3 className="truncate text-2xl font-bold leading-tight">
+                      {secondLine}
+                    </h3>
+                  )}
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -107,7 +149,7 @@ export function RealisationsCarousel() {
               <div
                 className="duration-2400 h-full bg-primary-light transition-all ease-in-out"
                 style={{
-                  width: `${((currentSlide + 1) / realisationsCarouselData.length) * 100}%`,
+                  width: `${((currentSlide + 1) / filteredArticles.length) * 100}%`,
                 }}
               />
             </div>

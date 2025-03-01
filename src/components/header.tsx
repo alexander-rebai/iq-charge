@@ -5,17 +5,10 @@ import clsx from "clsx";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 
-import { ChevronDown } from "lucide-react";
 import { Logo } from "~/components/logo";
 import { cn } from "~/lib/utils";
 import { NavLink } from "./nav-link";
 import { Button } from "./ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
 
 function MobileNavIcon({
   open,
@@ -98,93 +91,11 @@ function MobileNavigation({ isScrolled }: { isScrolled?: boolean }) {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="/#over">Over ons</MobileNavLink>
-            <MobileNavLink href="/realisaties">Realisaties</MobileNavLink>
-            <MobileNavLink href="/#contact">Contact</MobileNavLink>
+            <MobileNavLink href="/blog">Blog</MobileNavLink>
+            <MobileNavLink href="/over-ons">Over ons</MobileNavLink>
+            <MobileNavLink href="/products">Producten</MobileNavLink>
+            <MobileNavLink href="/contact">Contact</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 rounded-xl px-2 py-1 text-lg text-slate-700 outline-none hover:bg-primary-light hover:text-slate-900">
-                Onze laadoplossingen <ChevronDown />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-screen">
-                <div className="grid grid-cols-2">
-                  <div>
-                    <h2 className="m-2 text-center font-medium">
-                      Locatie van Installatie
-                    </h2>
-                    <DropdownMenuItem
-                      asChild
-                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
-                    >
-                      <a href="/particulier">
-                        Residentieel{" "}
-                        <span aria-hidden="true" className="ml-2">
-                          →
-                        </span>
-                      </a>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      asChild
-                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
-                    >
-                      <a href="/bedrijf">
-                        Kantoor{" "}
-                        <span aria-hidden="true" className="ml-2">
-                          →
-                        </span>
-                      </a>
-                    </DropdownMenuItem>
-                  </div>
-                  <div>
-                    <h2 className="m-2 text-center font-medium">Producten</h2>
-                    <DropdownMenuItem
-                      asChild
-                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
-                    >
-                      <a href="/products/alfen">
-                        Alfen{" "}
-                        <span aria-hidden="true" className="ml-2">
-                          →
-                        </span>
-                      </a>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      asChild
-                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
-                    >
-                      <a href="/products/huawei">
-                        Huawei{" "}
-                        <span aria-hidden="true" className="ml-2">
-                          →
-                        </span>
-                      </a>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      asChild
-                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
-                    >
-                      <a href="/products/wallbox">
-                        Wallbox
-                        <span aria-hidden="true" className="ml-2">
-                          →
-                        </span>
-                      </a>
-                    </DropdownMenuItem>{" "}
-                    <DropdownMenuItem
-                      asChild
-                      className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
-                    >
-                      <a href="/products/smappee">
-                        Smappee
-                        <span aria-hidden="true" className="ml-2">
-                          →
-                        </span>
-                      </a>
-                    </DropdownMenuItem>{" "}
-                  </div>
-                </div>
-              </DropdownMenuContent>
-            </DropdownMenu>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -232,6 +143,7 @@ export function Header({ empty }: { empty?: boolean }) {
                 <NavLink href="/thuis">Thuis</NavLink>
                 <NavLink href="/over-ons">Over ons</NavLink>
                 <NavLink href="/products">Producten</NavLink>
+                <NavLink href="/blog">Blog</NavLink>
               </div>
               <Button variant="secondary" size="sm">
                 Contact sales
