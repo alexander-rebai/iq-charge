@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { Poppins } from "next/font/google";
 
+import { LandbotProvider } from "~/components/landbot-provider";
 import { cn } from "~/lib/utils";
 
 const poppins = Poppins({
@@ -32,6 +33,7 @@ export default function RootLayout({
         )}
       >
         {children}
+        <LandbotProvider />
       </body>
     </html>
   );

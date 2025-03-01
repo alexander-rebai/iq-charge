@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 
 import { Logo } from "~/components/logo";
+import { useLandbot } from "~/hooks/useLandbot";
 import { cn } from "~/lib/utils";
 import { NavLink } from "./nav-link";
 import { Button } from "./ui/button";
@@ -58,6 +59,8 @@ function MobileNavLink({
 }
 
 function MobileNavigation({ isScrolled }: { isScrolled?: boolean }) {
+  const { openChat } = useLandbot();
+
   return (
     <Popover>
       <Popover.Button
@@ -96,6 +99,16 @@ function MobileNavigation({ isScrolled }: { isScrolled?: boolean }) {
             <MobileNavLink href="/products">Producten</MobileNavLink>
             <MobileNavLink href="/contact">Contact</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
+            <div className="p-2">
+              <Button
+                variant="secondary"
+                size="sm"
+                className="w-full"
+                onClick={openChat}
+              >
+                Contact sales
+              </Button>
+            </div>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -105,6 +118,7 @@ function MobileNavigation({ isScrolled }: { isScrolled?: boolean }) {
 
 export function Header({ empty }: { empty?: boolean }) {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const { openChat } = useLandbot();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -141,12 +155,12 @@ export function Header({ empty }: { empty?: boolean }) {
               <div className="flex items-center md:gap-x-6">
                 <NavLink href="/bedrijf">Zakelijk</NavLink>
                 <NavLink href="/thuis">Thuis</NavLink>
-                <NavLink href="/over-ons">Over ons</NavLink>
                 <NavLink href="/products">Producten</NavLink>
+                <NavLink href="/over-ons">Over ons</NavLink>
                 <NavLink href="/blog">Blog</NavLink>
               </div>
-              <Button variant="secondary" size="sm">
-                Contact sales
+              <Button variant="secondary" size="sm" onClick={openChat}>
+                Gratis offerte
               </Button>
             </>
           )}
