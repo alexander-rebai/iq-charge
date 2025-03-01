@@ -51,7 +51,7 @@ const BedrijfHero = () => {
       <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white lg:p-0">
         <div className="flex w-full flex-col items-center justify-center md:items-start md:justify-start">
           <h1
-            className="mb-8 max-w-2xl text-left text-6xl font-medium tracking-tight text-white md:text-start "
+            className="mb-8 max-w-2xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
             data-aos="fade-up"
           >
             <span className="text-primary-light">Laadexpert</span> voor
@@ -59,7 +59,7 @@ const BedrijfHero = () => {
           </h1>
 
           <p
-            className="desc mb-8 max-w-lg text-left text-lg text-white md:text-start lg:self-auto lg:pr-4"
+            className="mb-8 max-w-lg text-left text-base text-white drop-shadow-md md:text-start md:text-lg lg:self-auto lg:pr-4 lg:text-[24px]"
             data-aos="fade-up"
             data-aos-delay="100"
           >

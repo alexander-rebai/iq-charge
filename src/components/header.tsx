@@ -94,10 +94,11 @@ function MobileNavigation({ isScrolled }: { isScrolled?: boolean }) {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="/blog">Blog</MobileNavLink>
-            <MobileNavLink href="/over-ons">Over ons</MobileNavLink>
+            <MobileNavLink href="/bedrijf">Zakelijk</MobileNavLink>
+            <MobileNavLink href="/thuis">Thuis</MobileNavLink>
             <MobileNavLink href="/products">Producten</MobileNavLink>
-            <MobileNavLink href="/contact">Contact</MobileNavLink>
+            <MobileNavLink href="/over-ons">Over ons</MobileNavLink>
+            <MobileNavLink href="/blog">Blog</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
             <div className="p-2">
               <Button
@@ -106,7 +107,7 @@ function MobileNavigation({ isScrolled }: { isScrolled?: boolean }) {
                 className="w-full"
                 onClick={openChat}
               >
-                Contact sales
+                Gratis offerte
               </Button>
             </div>
           </Popover.Panel>

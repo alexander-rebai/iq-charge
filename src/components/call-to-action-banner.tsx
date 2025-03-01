@@ -2,8 +2,10 @@
 
 import "aos/dist/aos.css";
 import Image from "next/image";
+import { useLandbot } from "~/hooks/useLandbot";
 import { cn } from "~/lib/utils";
 import { Container } from "./container";
+import { Button } from "./ui/button";
 
 export default function CallToActionBanner({
   title,
@@ -16,6 +18,8 @@ export default function CallToActionBanner({
   isFluvius?: boolean;
   isIQSolar?: boolean;
 }) {
+  const { openChat } = useLandbot();
+
   return (
     <div className={cn("relative overflow-hidden py-36")}>
       <Image
@@ -85,12 +89,9 @@ export default function CallToActionBanner({
             data-aos-delay="100"
             data-aos-easing="ease-in-out"
           >
-            <a
-              href="#"
-              className="black rounded-xl bg-white px-3.5 py-2.5 text-sm font-medium shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              Vraag een offerte
-            </a>
+            <Button variant="secondary" onClick={openChat}>
+              Vraag een gratis offerte
+            </Button>
             <a
               href="#"
               className="text-sm font-medium leading-6 text-white transition-all duration-300 ease-in-out hover:scale-110"

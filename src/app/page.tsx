@@ -37,8 +37,9 @@ export default function Home() {
           <RoadMap />
 
           <CallToActionBanner
-            title="Bespaar tijd en geld met onze efficiënte laadoplossingen."
-            info="Vraag een offerte aan of neem contact met ons op voor meer informatie"
+            title="Klaar om tijd én geld te besparen?"
+            info="Vraag je gratis offerte en plan een adviesgesprek op maat. Wij regelen alles feilloos, zodat jij
+zorgeloos kan laden."
           />
 
           {/* <SolutionCompany /> */}
@@ -73,7 +74,7 @@ export default function Home() {
           <section id="contact">
             <div className="mb-10 mt-20 flex flex-col gap-8">
               <h2 className="text-center text-4xl" data-aos="fade-up">
-                Contact
+                Neem vandaag nog contact op
               </h2>
               <Contact />
             </div>

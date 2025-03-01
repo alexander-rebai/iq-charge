@@ -20,7 +20,7 @@ const ProductsHero = () => {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden pt-16">
       <div className="relative h-full overflow-hidden">
         <Image
           src="/images/night3.jpg"
@@ -36,12 +36,13 @@ const ProductsHero = () => {
 
       {/* Content */}
       <div className="absolute inset-0">
-        <div className="mx-40 h-full max-w-7xl px-8">
-          <div className="flex h-full flex-col justify-end pb-96">
-            {/* Left content */}
-            <div className="flex max-w-xl flex-col space-y-6">
+        <div className="mx-auto h-full max-w-7xl px-4 sm:px-6 md:mx-40 md:px-8">
+          {/* Mobile: centered content, Desktop: bottom-aligned content */}
+          <div className="flex h-full flex-col justify-center md:justify-end md:pb-96">
+            {/* Content container - centered on mobile, left-aligned on desktop */}
+            <div className="flex flex-col space-y-6 text-center md:max-w-xl md:text-left">
               <h1
-                className="text-5xl font-semibold text-white drop-shadow-lg md:text-[64px]"
+                className="text-4xl font-semibold text-white drop-shadow-lg md:text-5xl lg:text-[64px]"
                 data-aos="fade-up"
               >
                 Ons aanbod
@@ -50,8 +51,10 @@ const ProductsHero = () => {
           </div>
         </div>
 
-        {/* Carousel */}
-        <ProductsCarousel />
+        {/* Carousel - hidden on mobile */}
+        <div className="hidden xl:block">
+          <ProductsCarousel />
+        </div>
       </div>
     </section>
   );

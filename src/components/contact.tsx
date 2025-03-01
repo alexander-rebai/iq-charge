@@ -183,7 +183,7 @@ export default function Contact() {
                 />
               </div>
               <div className="mt-8 flex justify-center">
-                <Button type="submit" disabled={loading} variant={"outline"}>
+                <Button type="submit" disabled={loading} variant={"secondary"}>
                   Send message
                 </Button>
               </div>

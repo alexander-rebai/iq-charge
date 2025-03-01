@@ -4,7 +4,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import { useEffect } from "react";
+import { useLandbot } from "~/hooks/useLandbot";
 import { RealisationsCarousel } from "./carousels/realisations-carousel";
+import { FlipWords } from "./flip-words";
 import { Button } from "./ui/button";
 
 export function Hero() {
@@ -13,6 +15,10 @@ export function Hero() {
       duration: 800,
     });
   }, []);
+
+  const words = ["laadexpert.", "gemak."];
+
+  const { openChat } = useLandbot();
 
   return (
     <section className="relative h-screen w-full overflow-hidden pt-16">
@@ -31,40 +37,47 @@ export function Hero() {
 
       {/* Content */}
       <div className="absolute inset-0">
-        <div className="mx-40 h-full max-w-7xl px-8">
-          <div className="flex h-full flex-col justify-end pb-80">
-            {/* Left content */}
-            <div className="flex max-w-xl flex-col space-y-6">
+        <div className="mx-auto h-full max-w-7xl px-4 sm:px-6 md:mx-40 md:px-8">
+          {/* Mobile: centered content, Desktop: bottom-aligned content */}
+          <div className="flex h-full flex-col justify-center md:justify-end md:pb-80">
+            {/* Content container - centered on mobile, left-aligned on desktop */}
+            <div className="flex flex-col space-y-6 text-center md:max-w-xl md:text-left">
               <h1
-                className="text-5xl font-semibold text-white drop-shadow-lg md:text-[64px]"
+                className="text-4xl font-semibold text-white drop-shadow-lg md:text-5xl lg:text-[64px]"
                 data-aos="fade-up"
               >
-                Met <span className="text-primary-light">Laadexpert</span> kies
-                je voor gemak
+                Kies voor <br />
+                <FlipWords words={words} />
               </h1>
               <p
-                className="text-lg text-white drop-shadow-md md:text-[24px]"
+                className="text-base text-white drop-shadow-md md:text-lg lg:text-[24px]"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                Of je nu thuis oplaadt of op het werk, wij bieden de perfecte
-                laadoplossing
+                Of je nu thuis of op je werk wilt laden: wij regelen de perfecte
+                laadoplossing. Snel, zorgeloos en op maat.
               </p>
               <div
                 className="flex flex-col space-y-4 pt-4 md:flex-row md:space-x-4 md:space-y-0"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <Button variant="secondary" className="!h-11 w-full md:w-64">
-                  <a href="/particulier">Call To Action</a>
+                <Button
+                  variant="secondary"
+                  className="mx-auto !h-11 w-full md:mx-0 md:w-64"
+                  onClick={openChat}
+                >
+                  Gratis offerte & adviesgesprek
                 </Button>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Carousel */}
-        <RealisationsCarousel />
+        {/* Carousel - hidden on mobile */}
+        <div className="hidden xl:block">
+          <RealisationsCarousel />
+        </div>
       </div>
     </section>
   );

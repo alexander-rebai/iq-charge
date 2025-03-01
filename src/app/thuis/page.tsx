@@ -107,7 +107,7 @@ export default function Home() {
         <section id="contact">
           <div className="mb-10 mt-20 flex flex-col gap-8">
             <h2 className="text-center text-4xl" data-aos="fade-up">
-              Contact
+              Neem vandaag nog contact op
             </h2>
             <Contact />
           </div>

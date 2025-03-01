@@ -6,23 +6,26 @@ import { Car, Plug } from "lucide-react";
 const steps = [
   {
     name: "Gratis Offerte",
-    description: "Vraag eenvoudig een offerte aan via onze website.",
+    description:
+      "We luisteren naar jouw behoeften en geven direct helder advies over de beste laadoplossing.",
     number: 1,
   },
   {
-    name: "Bevestig je offerte",
-    description: "Bevestig offerte via mail en wij gaan voor jou aan de slag.",
+    name: "Installatie",
+    description:
+      "Onze expert regelt alles van A tot Z, zodat jouw laadpaal er staat voor je het weet.",
     number: 2,
   },
   {
-    name: "Installatie",
-    description: "Wij komen langs voor de installatie.",
+    name: "Je laadt nu elektrisch",
+    description:
+      "Sluit je auto aan, ga gerust slapen en word wakker met een volle batterij.",
     number: 3,
   },
   {
-    name: "Keuring",
+    name: "24/7 afterservice",
     description:
-      "Na de installatie wordt je laadstation gekeurd door een expert.",
+      "Bij vragen staan we altijd voor je klaar - jouw gemoedsrust is onze prioriteit.",
     number: 4,
   },
 ];
@@ -30,9 +33,11 @@ const steps = [
 export default function RoadMap() {
   return (
     <section className="relative overflow-hidden rounded-b-xl p-8 md:p-12">
-      <div className="mx-auto max-w-7xl pb-12 md:px-12 lg:px-36">
+      <div className="mx-auto max-w-7xl pb-12 md:px-12 lg:px-12">
         <div data-aos="fade-up">
-          <h3 className="text-4xl font-semibold">Hoe het werkt</h3>
+          <h3 className="text-4xl font-semibold">
+            Snel, feilloos en efficiënt.
+          </h3>
         </div>
         <div className="relative mt-24 flex flex-wrap">
           <div className="-z-1 absolute left-0 right-0 top-8 hidden h-[1px] lg:block">
@@ -55,12 +60,12 @@ export default function RoadMap() {
                 data-aos="fade-up"
               >
                 <span
-                  className={`mb-5 flex h-16 w-16 items-center justify-center rounded-xl border border-primary-foreground bg-primary-light text-primary lg:mb-16`}
+                  className={`mb-6 flex h-16 w-16 items-center justify-center rounded-xl border border-primary-foreground bg-primary-light text-primary`}
                 >
                   {step.number}
                 </span>
                 <div className="flex flex-col">
-                  <p className="mt-12 h-8 text-xl font-medium leading-6">
+                  <p className="mt-4 h-8 text-xl font-medium leading-6">
                     {step.name}
                   </p>
                   <p className="mt-4 text-base text-muted-foreground">
