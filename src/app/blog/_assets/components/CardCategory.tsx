@@ -20,6 +20,7 @@ const CardCategory = ({
       rel="tag"
     >
       <TitleTag className="font-medium md:text-lg">
+        {/* @ts-ignore - titleShort property might not exist on categoryType */}
         {category?.titleShort ?? category.title}
       </TitleTag>
     </Link>
