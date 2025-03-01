@@ -1,4 +1,4 @@
-export const carouselData = [
+export const realisationsCarouselData = [
   {
     place: "Antwerpen - België",
     title: "KANTOOR",
@@ -30,5 +30,16 @@ export const carouselData = [
     description:
       "Winkelcentrum voorzien van snellaadstations voor bezoekers. Strategisch geplaatst voor maximale toegankelijkheid en gebruiksgemak.",
     image: "/cover.jpeg",
+  },
+];
+
+export const productsCarouselData = [
+  {
+    title: "SMAPPEE",
+    image: "/smapppee_prodimg4.jpg",
+  },
+  {
+    title: "WALLBOX",
+    image: "/wallbox/w4.webp",
   },
 ];

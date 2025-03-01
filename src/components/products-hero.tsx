@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import { useEffect } from "react";
-import { CardCarousel } from "./card-carousel";
+import { ProductsCarousel } from "./carousels/products-carousel";
 
 const stats = [
   { id: 1, name: "Company Installations", value: "3,000+" },
@@ -20,42 +20,40 @@ const ProductsHero = () => {
   }, []);
 
   return (
-    <div className="relative mb-20 h-screen">
-      <div className="absolute inset-0 z-0 h-full w-full">
+    <section className="relative h-screen w-full overflow-hidden">
+      <div className="relative h-full overflow-hidden">
         <Image
           src="/images/night3.jpg"
-          layout="fill"
-          objectFit="cover"
-          alt="Hero image"
+          alt="Hero cover"
+          fill
           priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 1600px, 4800px"
+          className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-black opacity-50" />
+        {/* Dark overlay for better text contrast */}
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white lg:p-0">
-        <div className="flex w-full flex-col items-center justify-center md:items-start md:justify-start">
-          <h1
-            className="mb-8 max-w-2xl text-left text-6xl font-medium tracking-tight text-white md:text-start "
-            data-aos="fade-up"
-          >
-            Aanbod van top merken
-          </h1>
-
-          <p
-            className="desc mb-8 max-w-lg text-left text-lg text-white md:text-start lg:self-auto lg:pr-4"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            Of je nu thuis oplaadt of op het werk, wij bieden de{" "}
-            <span className="text-primary-light"> perfecte laadoplossing</span>{" "}
-            voor iedere elektrische autobezitter.
-          </p>
+      {/* Content */}
+      <div className="absolute inset-0">
+        <div className="mx-40 h-full max-w-7xl px-8">
+          <div className="flex h-full flex-col justify-end pb-96">
+            {/* Left content */}
+            <div className="flex max-w-xl flex-col space-y-6">
+              <h1
+                className="text-5xl font-semibold text-white drop-shadow-lg md:text-[64px]"
+                data-aos="fade-up"
+              >
+                Ons aanbod
+              </h1>
+            </div>
+          </div>
         </div>
-        <CardCarousel />
-      </div>
 
-      {/* Carousel */}
-    </div>
+        {/* Carousel */}
+        <ProductsCarousel />
+      </div>
+    </section>
   );
 };
 

@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import { useEffect } from "react";
-import { CardCarousel } from "./card-carousel";
+import { RealisationsCarousel } from "./carousels/realisations-carousel";
 import { Button } from "./ui/button";
 
 export function Hero() {
@@ -15,16 +15,18 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[calc(100vh-48px)] w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden pt-16">
       <div className="relative h-full overflow-hidden">
         <Image
-          src="/cover.webp"
+          src="/cover-test.jpg"
           alt="Hero cover"
           fill
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 1600px, 4800px"
           className="h-full w-full object-cover"
         />
+        {/* Dark overlay for better text contrast */}
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Content */}
@@ -34,14 +36,14 @@ export function Hero() {
             {/* Left content */}
             <div className="flex max-w-xl flex-col space-y-6">
               <h1
-                className="text-5xl font-semibold text-white md:text-[64px]"
+                className="text-5xl font-semibold text-white drop-shadow-lg md:text-[64px]"
                 data-aos="fade-up"
               >
                 Met <span className="text-primary-light">Laadexpert</span> kies
                 je voor gemak
               </h1>
               <p
-                className="text-lg text-gray-300 md:text-[24px]"
+                className="text-lg text-white drop-shadow-md md:text-[24px]"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
@@ -62,7 +64,7 @@ export function Hero() {
         </div>
 
         {/* Carousel */}
-        <CardCarousel />
+        <RealisationsCarousel />
       </div>
     </section>
   );

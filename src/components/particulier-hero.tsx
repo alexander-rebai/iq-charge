@@ -31,7 +31,7 @@ const PartiulierHero = () => {
         <div className="absolute inset-0 bg-black opacity-50" />
       </div>
 
-      <div className="absolute bottom-0 left-1/2 max-w-7xl -translate-x-1/2 translate-y-1/3 px-6 md:w-3/4 lg:px-8">
+      <div className="absolute bottom-0 left-1/2 max-w-7xl -translate-x-1/2 translate-y-1/4 px-6 md:w-3/4 lg:px-8">
         <div className="mx-auto max-w-2xl md:max-w-none">
           <dl className="mt-16 hidden overflow-hidden rounded-xl text-center md:grid md:grid-cols-3">
             {stats.map((stat) => (

@@ -19,7 +19,7 @@ const OverOnsHero = () => {
   }, []);
 
   return (
-    <div className="relative mb-20 h-screen">
+    <div className="relative h-screen">
       <div className="absolute inset-0 z-0 h-full w-full">
         <Image
           src="/images/night3.jpg"
@@ -39,17 +39,23 @@ const OverOnsHero = () => {
           >
             Over ons
           </h1>
-
-          <p
-            className="desc mb-8 max-w-lg text-left text-lg text-white md:text-start lg:self-auto lg:pr-4"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            Of je nu thuis oplaadt of op het werk, wij bieden de{" "}
-            <span className="text-primary-light"> perfecte laadoplossing</span>{" "}
-            voor iedere elektrische autobezitter.
-          </p>
         </div>
+      </div>
+
+      <div className="absolute bottom-12 left-0 right-0 z-10 mx-auto max-w-3xl px-8 text-center">
+        <p
+          className="rounded-lg bg-black/40 p-6 text-lg leading-relaxed text-white backdrop-blur-sm"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          Bij Laadexpert zijn we gepassioneerd over het faciliteren van de
+          transitie naar elektrisch rijden. Als specialist in laadoplossingen
+          voor elektrische voertuigen, combineren we technische expertise met
+          persoonlijke service om voor elke situatie de beste laadoplossing te
+          vinden. Ons team van experts staat klaar om u te begeleiden bij het
+          hele proces - van advies en installatie tot onderhoud en beheer van uw
+          laadstation.
+        </p>
       </div>
     </div>
   );

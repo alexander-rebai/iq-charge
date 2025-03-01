@@ -17,7 +17,13 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 
-function MobileNavIcon({ open }: { open: boolean }) {
+function MobileNavIcon({
+  open,
+  isScrolled,
+}: {
+  open: boolean;
+  isScrolled?: boolean;
+}) {
   return (
     <svg
       aria-hidden="true"
@@ -58,14 +64,14 @@ function MobileNavLink({
   );
 }
 
-function MobileNavigation() {
+function MobileNavigation({ isScrolled }: { isScrolled?: boolean }) {
   return (
     <Popover>
       <Popover.Button
         className="ui-not-focus-visible:outline-none relative z-10 flex h-8 w-8 items-center justify-center"
         aria-label="Toggle Navigation"
       >
-        {({ open }) => <MobileNavIcon open={open} />}
+        {({ open }) => <MobileNavIcon open={open} isScrolled={isScrolled} />}
       </Popover.Button>
       <Transition.Root>
         <Transition.Child
@@ -198,13 +204,13 @@ export function Header({ empty }: { empty?: boolean }) {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+  }, []);
 
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 flex h-12 w-full items-center",
-        "border-b border-gray-200 bg-white/90 backdrop-blur-sm",
+        "fixed top-0 z-50 flex h-16 w-full items-center transition-all duration-300",
+        "bg-white/80 shadow-sm backdrop-blur-md",
       )}
     >
       <nav
@@ -222,101 +228,10 @@ export function Header({ empty }: { empty?: boolean }) {
           {!empty && (
             <>
               <div className="flex items-center md:gap-x-6">
-                {/* <DropdownMenu>
-                  <DropdownMenuTrigger
-                    className={cn(
-                      "flex items-center gap-1 rounded text-sm font-medium text-gray-700 hover:text-gray-900",
-                    )}
-                  >
-                    Onze laadoplossingen <ChevronDown className="h-4 w-4" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-[28rem]">
-                    <div className="grid w-full grid-cols-2">
-                      <div>
-                        <h2 className="m-2 text-center font-medium">
-                          Locatie van Installatie
-                        </h2>
-                        <DropdownMenuItem
-                          asChild
-                          className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
-                        >
-                          <a href="/particulier">
-                            Residentieel{" "}
-                            <span aria-hidden="true" className="ml-2">
-                              →
-                            </span>
-                          </a>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem
-                          asChild
-                          className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
-                        >
-                          <a href="/bedrijf">
-                            Kantoor{" "}
-                            <span aria-hidden="true" className="ml-2">
-                              →
-                            </span>
-                          </a>
-                        </DropdownMenuItem>
-                      </div>
-                      <div>
-                        <h2 className="m-2 text-center font-medium">
-                          Producten
-                        </h2>
-                        <DropdownMenuItem
-                          asChild
-                          className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
-                        >
-                          <a href="/products/alfen">
-                            Alfen{" "}
-                            <span aria-hidden="true" className="ml-2">
-                              →
-                            </span>
-                          </a>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem
-                          asChild
-                          className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
-                        >
-                          <a href="/products/huawei">
-                            Huawei{" "}
-                            <span aria-hidden="true" className="ml-2">
-                              →
-                            </span>
-                          </a>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem
-                          asChild
-                          className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
-                        >
-                          <a href="/products/wallbox">
-                            Wallbox
-                            <span aria-hidden="true" className="ml-2">
-                              →
-                            </span>
-                          </a>
-                        </DropdownMenuItem>{" "}
-                        <DropdownMenuItem
-                          asChild
-                          className="cursor-pointer justify-start rounded-xl px-2 py-3 font-medium text-muted-foreground"
-                        >
-                          <a href="/products/smappee">
-                            Smappee
-                            <span aria-hidden="true" className="ml-2">
-                              →
-                            </span>
-                          </a>
-                        </DropdownMenuItem>{" "}
-                      </div>
-                    </div>
-                  </DropdownMenuContent>
-                </DropdownMenu> */}
                 <NavLink href="/bedrijf">Zakelijk</NavLink>
                 <NavLink href="/thuis">Thuis</NavLink>
                 <NavLink href="/over-ons">Over ons</NavLink>
-
                 <NavLink href="/products">Producten</NavLink>
-                {/* <NavLink href="/realisaties">Realisaties</NavLink> */}
               </div>
               <Button variant="secondary" size="sm">
                 Contact sales

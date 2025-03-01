@@ -14,6 +14,9 @@ const config = {
       {
         hostname: 'bright-energy.eu',
       },
+      {
+        hostname: 'images.unsplash.com',
+      },
     ]
   },
   experimental: {

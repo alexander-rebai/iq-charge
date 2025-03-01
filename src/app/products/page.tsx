@@ -5,13 +5,6 @@ import ProductsHero from "~/components/products-hero";
 import SpecificInfo from "~/components/specific-info";
 import Specs from "~/components/specs-table";
 
-type ProductType = {
-  name: string;
-  path: string;
-  img: string;
-  features: string[];
-};
-
 const specifications = [
   {
     category: "Model",
@@ -87,21 +80,21 @@ export default function Home() {
               <div className="grid grid-cols-3 gap-8">
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <img
-                    src="/smappee/s1.png"
+                    src="/smappee-prodimg.png"
                     alt="Smappee"
                     className="h-full w-full object-cover object-center"
                   />
                 </div>
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <img
-                    src="/smappee/s2.png"
+                    src="/smapppee_prodimg4.jpg"
                     alt="Smappee"
                     className="h-full w-full object-cover object-center"
                   />
                 </div>
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <img
-                    src="/smappee/s3.png"
+                    src="/smappee_prodimg2.webp"
                     alt="Smappee"
                     className="h-full w-full object-cover object-center"
                   />
@@ -121,7 +114,7 @@ export default function Home() {
         />
 
         <div className="bg-gray-100 py-12 lg:py-16" data-aos="fade-up">
-          <div className="px-4 md:px-6">
+          <div className=" px-4 md:px-6">
             <div className="flex flex-col items-center justify-center gap-12">
               <h2 className="text-center text-4xl font-medium text-primary">
                 Specificaties

@@ -21,12 +21,7 @@ export default function Specs({
   image4?: string;
 }) {
   return (
-    <div
-      className={cn(
-        "w-full overflow-x-scroll pt-32 lg:w-3/4 lg:px-8",
-        image4 && "lg:w-full",
-      )}
-    >
+    <div className={cn("w-full overflow-x-scroll pt-32 lg:px-8")}>
       <div className="mx-0 mt-8 flow-root">
         <table className="min-w-max md:min-w-full">
           <colgroup>
