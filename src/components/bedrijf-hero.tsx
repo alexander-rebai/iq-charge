@@ -7,9 +7,24 @@ import { useEffect } from "react";
 import { FlipWords } from "./flip-words";
 
 const stats = [
-  { id: 1, name: "Company Installations", value: "3,000+" },
-  { id: 3, name: "Love our work", value: "99.9%" },
-  { id: 4, name: "Revenue", value: "$70M" },
+  {
+    id: 1,
+    name: "Comfort en gemak voor werknemers",
+    iconSrc: "/icons/voordelen zakelijk laden/comfort en gemak voor WN.png",
+    iconAlt: "Comfort en gemak voor werknemers",
+  },
+  {
+    id: 2,
+    name: "Fiscale voordelen",
+    iconSrc: "/icons/voordelen zakelijk laden/fiscale voordelen.png",
+    iconAlt: "Fiscale voordelen",
+  },
+  {
+    id: 3,
+    name: "Groen imago",
+    iconSrc: "/icons/voordelen zakelijk laden/groen imago.png",
+    iconAlt: "Groen imago",
+  },
 ];
 
 const BedrijfHero = () => {
@@ -25,7 +40,7 @@ const BedrijfHero = () => {
     <div className="relative mb-20 h-screen">
       <div className="absolute inset-0 z-0 h-full w-full">
         <Image
-          src="/images/night3.jpg"
+          src="/fotos/zakelijk.jpg"
           layout="fill"
           objectFit="cover"
           alt="Hero image"
@@ -39,11 +54,18 @@ const BedrijfHero = () => {
           <dl className="mt-16 hidden overflow-hidden rounded-xl text-center md:grid md:grid-cols-3">
             {stats.map((stat) => (
               <div key={stat.id} className="flex flex-col bg-muted p-8">
-                <dt className="text-sm font-semibold leading-6 text-gray-600">
+                <dt className="mt-4 text-sm font-semibold leading-6 text-gray-600">
                   {stat.name}
                 </dt>
-                <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">
-                  {stat.value}
+                <dd className="order-first flex h-24 items-center justify-center">
+                  <div className="relative h-20 w-20">
+                    <Image
+                      src={stat.iconSrc}
+                      alt={stat.iconAlt}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 </dd>
               </div>
             ))}

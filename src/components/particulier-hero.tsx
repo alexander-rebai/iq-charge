@@ -22,7 +22,7 @@ const PartiulierHero = () => {
     <div className="relative mb-20 h-screen">
       <div className="absolute inset-0 z-0 h-full w-full">
         <Image
-          src="/products/alfen_prod.jpeg"
+          src="/fotos/thuis.jpeg"
           layout="fill"
           objectFit="cover"
           alt="Hero image"

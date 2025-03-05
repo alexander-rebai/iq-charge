@@ -69,7 +69,7 @@ snel rendement willen halen uit hun laadinfrastructuur, vastgoedbeheerders
 die de waarde van hun panden willen verhogen, of projectontwikkelaars die
 duurzaamheid vroegtijdig willen integreren - wij maken elektrisch laden
 eenvoudig, rendabel en toekomstbestendig voor jouw organisatie.`,
-            image: "/images/night6.jpg",
+            image: "/fotos/zakelijk 2.jpg",
           }}
         />
 
@@ -83,7 +83,7 @@ toekomstbestendig is. Onze laadinfrastructuur sluit perfect aan bij de
 behoeften van uw organisatie, medewerkers en bezoekers - of je nu één
 laadpunt wilt installeren of een compleet netwerk zoekt. Wij regelen alles
 efficiënt, zodat u zich kunt focussen op uw kernactiviteiten.`,
-            image: "/images/night6.jpg",
+            image: "/fotos/zakelijk 3.jpg",
           }}
         />
 

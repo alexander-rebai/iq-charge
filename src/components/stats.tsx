@@ -1,8 +1,30 @@
+import Image from "next/image";
+
 const stats = [
-  { id: 1, name: "Focus op laadpalen", value: "100%" },
-  { id: 2, name: "Persoonlijke aanpak", value: "❤️" },
-  { id: 3, name: "Service op maat", value: "📏" },
-  { id: 4, name: "Snel geinstalleerd", value: "⚡️" },
+  {
+    id: 1,
+    name: "Focus op laadpalen",
+    iconSrc: "/icons/USPs/focus op laadpalen.png",
+    iconAlt: "100% focus op laadpalen",
+  },
+  {
+    id: 2,
+    name: "Persoonlijke aanpak",
+    iconSrc: "/icons/USPs/Persoonlijke aanpak.png",
+    iconAlt: "Persoonlijke aanpak",
+  },
+  {
+    id: 3,
+    name: "Service op maat",
+    iconSrc: "/icons/USPs/Service op maat.png",
+    iconAlt: "Service op maat",
+  },
+  {
+    id: 4,
+    name: "Snel en zorgeloos",
+    iconSrc: "/icons/USPs/Snel en zorgeloos.png",
+    iconAlt: "Snel en zorgeloos",
+  },
 ];
 
 export default function Stats() {
@@ -25,11 +47,18 @@ export default function Stats() {
                 key={stat.id}
                 className="flex flex-col items-center justify-center bg-muted p-8"
               >
-                <dt className="text-sm font-semibold leading-6 text-gray-600">
+                <dt className="mt-4 text-sm font-semibold leading-6 text-gray-600">
                   {stat.name}
                 </dt>
-                <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">
-                  {stat.value}
+                <dd className="order-first flex h-24 items-center justify-center">
+                  <div className="relative h-20 w-20">
+                    <Image
+                      src={stat.iconSrc}
+                      alt={stat.iconAlt}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 </dd>
               </div>
             ))}

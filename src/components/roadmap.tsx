@@ -2,6 +2,7 @@
 
 import "aos/dist/aos.css";
 import { Car, Plug } from "lucide-react";
+import Image from "next/image";
 
 const steps = [
   {
@@ -9,24 +10,28 @@ const steps = [
     description:
       "We luisteren naar jouw wensen en geven helder advies over de beste laadoplossing voor jouw situatie en budget.",
     number: 1,
+    image: "/icons/Steps/(1) offerte.png",
   },
   {
     name: "Snelle installatie",
     description:
       "Onze gecertificeerde experts regelen alles van A tot Z, zonder gedoe. Binnen 2 weken staat jouw laadpaal gebruiksklaar.",
     number: 2,
+    image: "/icons/Steps/(2) Installatie.png",
   },
   {
     name: "Dagelijks opladen",
     description:
       "Sluit 's avonds je auto aan, ga gerust slapen en start elke dag met een volle batterij. Zo bespaar je tijd én geld.",
     number: 3,
+    image: "/icons/Steps/3 laadt elektrisch.png",
   },
   {
     name: "24/7 afterservice",
     description:
       "Bij vragen of storingen staan onze experts altijd voor je klaar – dag en nacht.",
     number: 4,
+    image: "/icons/Steps/24:7.png",
   },
 ];
 
@@ -59,11 +64,14 @@ export default function RoadMap() {
                 key={step.number}
                 data-aos="fade-up"
               >
-                <span
-                  className={`mb-6 flex h-16 w-16 items-center justify-center rounded-xl border border-primary-foreground bg-primary-light text-primary`}
-                >
-                  {step.number}
-                </span>
+                <div className="relative mb-6 h-16 w-16">
+                  <Image
+                    src={step.image}
+                    alt={step.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <div className="flex flex-col">
                   <p className="mt-4 h-8 text-xl font-medium leading-6">
                     {step.name}

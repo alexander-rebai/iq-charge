@@ -6,12 +6,6 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { ProductsCarousel } from "./carousels/products-carousel";
 
-const stats = [
-  { id: 1, name: "Company Installations", value: "3,000+" },
-  { id: 3, name: "Love our work", value: "99.9%" },
-  { id: 4, name: "Revenue", value: "$70M" },
-];
-
 const ProductsHero = () => {
   useEffect(() => {
     AOS.init({

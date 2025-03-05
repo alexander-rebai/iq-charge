@@ -21,7 +21,7 @@ voordelige manier om je elektrische auto op te laden. Thuis kan je eenvoudig
 laatste puzzelstuk van je duurzame energieplan. Geen gedoe met installaties
 of onduidelijke kosten: je hoeft enkel in te pluggen en je auto laadt terwijl jij je
 bezighoudt met wat er écht toe doet.`,
-            image: "/images/charging.jpg",
+            image: "/fotos/zakelijk 2.jpg",
           }}
         />
 
@@ -36,7 +36,7 @@ of Liam tot het vakkundig plaatsen van je laadpunt door Robin en Dennis.`,
             info2: `Zo ben je in één keer klaar voor jouw elektrische toekomst. Met één klik vraag
 je een vrijblijvende offerte aan, en nemen we de volledige klus van je over. Dat
 betekent geen frustratie, geen tijdverlies, maar puur laadgemak aan huis.`,
-            image: "/images/charging.jpg",
+            image: "/fotos/zakelijk 3.jpg",
           }}
         />
 
