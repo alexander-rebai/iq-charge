@@ -54,8 +54,7 @@ const PartiulierHero = () => {
             className="mb-8 max-w-2xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
             data-aos="fade-up"
           >
-            <span className="text-primary-light">Laadexpert</span> voor
-            particulieren
+            Zorgeloos wegrijden met een volle batterij?
           </h1>
 
           <p
@@ -63,9 +62,10 @@ const PartiulierHero = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Of je nu thuis oplaadt of op het werk, wij bieden de{" "}
-            <span className="text-primary-light"> perfecte laadoplossing</span>{" "}
-            voor iedere elektrische autobezitter.
+            Met onze{" "}
+            <span className="text-primary-light">slimme laadoplossingen</span>{" "}
+            maak je elektrisch rijden eenvoudiger dan ooit. Start elke dag met
+            100% energie - zonder wachtrijen of omwegen langs het tankstation.
           </p>
         </div>
       </div>

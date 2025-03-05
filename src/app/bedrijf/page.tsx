@@ -62,8 +62,13 @@ export default function Home() {
 
         <SpecificInfo
           information={{
-            title: "Opladen van elektrische auto's voor je bedrijf",
-            info: "Je moet succesvol zijn in een voortdurend veranderende omgeving. Maar anticiperen op toekomstige behoeften kan een uitdaging zijn. Ons laadnetwerk past zich aan de specifieke behoeften van je bedrijf en groeit met je mee. Hiermee kan je het laden beheren via een cloudplatform waardoor je inzicht en controle krijgt.",
+            title: "Een oplossing voor elk type onderneming",
+            info: `Wij bieden voor iedere zakelijke situatie een passende oplossing. Of het nu
+gaat om grote bedrijven die maximale energiebesparing zoeken, KMO's die
+snel rendement willen halen uit hun laadinfrastructuur, vastgoedbeheerders
+die de waarde van hun panden willen verhogen, of projectontwikkelaars die
+duurzaamheid vroegtijdig willen integreren - wij maken elektrisch laden
+eenvoudig, rendabel en toekomstbestendig voor jouw organisatie.`,
             image: "/images/night6.jpg",
           }}
         />
@@ -71,8 +76,13 @@ export default function Home() {
         <SpecificInfo
           isReverse
           information={{
-            title: "Opladen van elektrische auto's voor je bedrijf",
-            info: "Je moet succesvol zijn in een voortdurend veranderende omgeving. Maar anticiperen op toekomstige behoeften kan een uitdaging zijn. Ons laadnetwerk past zich aan de specifieke behoeften van je bedrijf en groeit met je mee. Hiermee kan je het laden beheren via een cloudplatform waardoor je inzicht en controle krijgt.",
+            title: "Volledige ontzorging voor uw bedrijf",
+            info: `We begeleiden je bij elke stap, van het eerste overleg tot de uiteindelijke
+implementatie. Zo weet u zeker dat jouw investering rendeert en
+toekomstbestendig is. Onze laadinfrastructuur sluit perfect aan bij de
+behoeften van uw organisatie, medewerkers en bezoekers - of je nu één
+laadpunt wilt installeren of een compleet netwerk zoekt. Wij regelen alles
+efficiënt, zodat u zich kunt focussen op uw kernactiviteiten.`,
             image: "/images/night6.jpg",
           }}
         />

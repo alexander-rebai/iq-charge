@@ -62,17 +62,24 @@ export default function Home() {
             <div className="mx-auto max-w-2xl">
               <div className="text-center">
                 <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
-                  Uitgelicht product:{" "}
                   <span className="bg-primary-light/60 font-semibold">
-                    Smappee
+                    Smappee:
                   </span>{" "}
+                  De slimste all-in one laadoplossing.
                 </h2>
                 <p className="pt-4 text-gray-500">
-                  De Smappee EV Base is een laadpaal met een maximaal vermogen
-                  van 2 x 22 kW. De laadpaal is voorzien van een
-                  gebruikersinterface via een app en is geschikt voor
-                  muurmontage. De laadpaal is voorzien van 2 x Type 2 stekkers
-                  en heeft een afmeting van 1200 × 600 × 150 mm.
+                  Met Smappee laad je veilig en kostenefficiënt dankzij overload
+                  beveiliging en geïntegreerd energiemanagement. Je hebt zowel
+                  real-time als historisch inzicht in je verbruik en je kan
+                  prioriteiten instellen of kortingen toekennen aan specifieke
+                  gebruikers.
+                </p>
+                <p className="pt-4 text-gray-500">
+                  Geschikt voor elke elektrische of hybride wagen, combineert
+                  Smappee functionaliteit met een elegant design en instelbare
+                  sfeerverlichting. Als Smappee Certified Partner zorgen wij
+                  voor een snelle, veilige plaatsing, zodat jij zorgeloos kunt
+                  laden.
                 </p>
               </div>
             </div>
@@ -107,8 +114,13 @@ export default function Home() {
         <SpecificInfo
           isReverse
           information={{
-            title: "Opladen van elektrische auto's voor je bedrijf",
-            info: "Je moet succesvol zijn in een voortdurend veranderende omgeving. Maar anticiperen op toekomstige behoeften kan een uitdaging zijn. Ons laadnetwerk past zich aan de specifieke behoeften van je bedrijf en groeit met je mee. Hiermee kan je het laden beheren via een cloudplatform waardoor je inzicht en controle krijgt.",
+            title: "Brede keuze, één doel: jouw zorgeloze laadervaring",
+            info: `We bieden een compleet scala aan laadoplossingen - van basisstations tot
+geavanceerde slimme laadsystemen - zodat je altijd krijgt wat perfect bij jouw
+situatie past. We werken met toonaangevende merken zoals Smappee,
+Wallbox en Huawei, maar installeren ook moeiteloos jouw favoriete merk als
+je daar de voorkeur aan geeft. Bij LaadExpert draait alles om één ding: jouw
+overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
             image: "/images/night6.jpg",
           }}
         />

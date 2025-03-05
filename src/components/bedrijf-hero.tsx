@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import { useEffect } from "react";
+import { FlipWords } from "./flip-words";
 
 const stats = [
   { id: 1, name: "Company Installations", value: "3,000+" },
@@ -17,6 +18,8 @@ const BedrijfHero = () => {
       duration: 800,
     });
   }, []);
+
+  const words = ["Bedrijf", "KMO", "Vastgoedproject", "Bedrijf", "KMO"];
 
   return (
     <div className="relative mb-20 h-screen">
@@ -54,8 +57,10 @@ const BedrijfHero = () => {
             className="mb-8 max-w-2xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
             data-aos="fade-up"
           >
-            <span className="text-primary-light">Laadexpert</span> voor
-            bedrijven
+            Laadoplossingen op maat voor jouw{" "}
+            <span className="text-primary-light">
+              <FlipWords words={words} />
+            </span>
           </h1>
 
           <p
@@ -63,9 +68,9 @@ const BedrijfHero = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Of je nu thuis oplaadt of op het werk, wij bieden de{" "}
-            <span className="text-primary-light"> perfecte laadoplossing</span>{" "}
-            voor iedere elektrische autobezitter.
+            Of je nu 10 of 50 laadpunten nodig hebt: wij installeren snel en
+            efficiënt wat bij jouw bedrijf past. Betrouwbare technologie,
+            optimaal beheer en minimale kosten.
           </p>
         </div>
       </div>

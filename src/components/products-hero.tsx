@@ -47,6 +47,9 @@ const ProductsHero = () => {
               >
                 Ons aanbod
               </h1>
+              <p className="text-base text-white drop-shadow-md md:text-lg lg:text-[24px]">
+                Wij werken niet voor een merk, maar voor jou.
+              </p>
             </div>
           </div>
         </div>

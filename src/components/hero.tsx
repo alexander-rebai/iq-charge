@@ -54,8 +54,9 @@ export function Hero() {
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                Of je nu thuis of op je werk wilt laden: wij regelen de perfecte
-                laadoplossing. Snel, zorgeloos en op maat.
+                Of je nu thuis, op het werk of onderweg wilt laden: wij regelen
+                jouw perfecte laadoplossing. Snel geïnstalleerd, zorgeloos in
+                gebruik en precies afgestemd op jouw behoeften en budget.
               </p>
               <div
                 className="flex flex-col space-y-4 pt-4 md:flex-row md:space-x-4 md:space-y-0"
@@ -64,10 +65,11 @@ export function Hero() {
               >
                 <Button
                   variant="secondary"
-                  className="mx-auto !h-11 w-full md:mx-0 md:w-64"
+                  className="mx-auto md:mx-0"
                   onClick={openChat}
+                  size="lg"
                 >
-                  Gratis offerte & adviesgesprek
+                  Vraag je gratis adviesgesprek aan
                 </Button>
               </div>
             </div>

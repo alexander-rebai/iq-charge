@@ -6,32 +6,37 @@ import OverOnsHero from "~/components/over-ons-hero";
 
 const teamMembers = [
   {
-    quote: `Ik ben iemand die geen drempels kent: ik wil trots zijn op wat ik doe en een stevige
-carrière uitbouwen. Ik heb de evolutie naar elektrisch rijden zien aankomen en daarom
-besloot ik op het juiste moment in te stappen. Met alle ervaring die ik opdeed -
-bijvoorbeeld bij installaties en klantbegeleiding - weet ik exact hoe ik je op weg kan
-helpen.`,
+    quote: `Door mijn jarenlange ervaring met installaties en persoonlijke
+klantbegeleiding ken ik alle uitdagingen én oplossingen rondom elektrisch
+laden. Ik weet precies welke laadpaal bij jouw situatie past en hoe we die
+perfect kunnen integreren in je dagelijks leven.`,
     name: "Liam",
-    designation: "Voldoening en Groei",
+    designation: "Elke tevreden klant geeft mij energie.",
     src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    quote: `Elk project, elke laadpaal is voor mij een bouwsteen in het groter geheel. Dankzij mijn
-ruime ervaring weet ik de kneepjes van het vak. Ik heb maar één visie: het elektrisch laden
-toegankelijk en zorgeloos maken voor iedereen. Zo bouw ik mee aan een duurzaam
-België waar iedereen vol vertrouwen elektrisch rijdt.`,
+    quote: `Mijn missie is helder: elektrisch laden zo eenvoudig en zorgeloos mogelijk
+maken. Want alleen als we de drempel verlagen, kunnen we samen bouwen
+aan een duurzaam België waar elektrisch rijden de standaard wordt.`,
     name: "Noam",
-    designation: "Groot Denken, Duurzame Toekomst",
+    designation: "Ik bouw mee aan een elektrische toekomst voor iedereen.",
     src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    quote: `Jouw laadpaal-installatie ligt in mijn handen - en dat is voor mij de perfecte kans om te
-laten zien dat Laadexpert.be écht het verschil maakt. Met mijn passie voor innovatie zorg
-ik ervoor dat we altijd met de nieuwste trends meegaan, zonder dat onze klanten daar
-hoofdpijn van krijgen. Wij kennen de skipiste van elektrische installaties inmiddels als
-geen ander - en zorgen dat jij vlot én veilig naar beneden glijdt.`,
+    quote: `Als technisch expert bij Laadexpert.be zorg ik dat jouw laadpaal perfect
+geïnstalleerd wordt. Elke installatie bewijst dat we écht het verschil maken in
+service en kwaliteit.`,
     name: "Robin",
     designation: "Innoveren en Vooruit Gaan",
+    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    quote: `Of het nu gaat om een eenvoudige thuislaadpaal of een complexe
+bedrijfsoplossing - Dennis levert technische perfectie zonder compromissen.
+Zijn klanten waarderen vooral zijn oog voor detail en de rust die hij uitstraalt
+tijdens het hele installatieproces.`,
+    name: "Dennis",
+    designation: "Perfectie zit in de details",
     src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
@@ -46,29 +51,41 @@ export default function Home() {
         <div className="bg-white py-12 sm:py-12">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl">
-              <div className="mb-10  flex flex-col gap-8" data-aos="fade-up">
-                <h2 className="text-center text-4xl">Wat wij doen</h2>
-                <p className="pt-4 text-center text-gray-500">
-                  Bij Laadexpert.be geloven we dat elektrisch rijden véél meer
+              <div className="mb-10 flex flex-col gap-2" data-aos="fade-up">
+                <h2 className="text-4xl">
+                  Jouw partner in elektrische vrijheid
+                </h2>
+                <p className="pt-4  text-gray-500">
+                  Bij Laadexpert.be geloven we dat elektrisch rijden veel meer
                   is dan alleen een groene keuze - het is pure vrijheid. Met een
-                  laadpaal bij je thuis of op je werk verlies je nooit meer tijd
-                  aan de pomp.
+                  laadpaal bij je thuis of op je werk verlies je nooit meer
+                  kostbare tijd aan de pomp en start je elke dag met een volle
+                  batterij.
                 </p>
-                <p className="pt-4 text-center text-gray-500">
-                  Wij willen de hele rompslomp rond laden voor jou wegwerken,
-                  zodat je zorgeloos de weg op kunt. Of je nu pas een
-                  elektrische wagen hebt gekocht of all-in gaat met zonnepanelen
-                  en een thuisbatterij: wij zorgen dat jouw laad ervaring
-                  vlekkeloos verloopt. In ons team vind je gepassioneerde
-                  experts die elk aspect van jouw laadoplossing verzorgen. We
-                  luisteren, adviseren, installeren en bieden 24/7 service. Zo
-                  krijg je niet alleen een laadpaal - je krijgt gemoedsrust.
+
+                <h3 className="pt-4  text-2xl">
+                  Persoonlijke aanpak als fundament
+                </h3>
+                <p className="pt-2  text-gray-500">
+                  Of je nu net je eerste elektrische wagen hebt aangeschaft of
+                  jouw woning volledig verduurzaamt met zonnepanelen en een
+                  thuisbatterij: wij zorgen dat jouw laadervaring perfect
+                  aansluit bij jouw levensstijl.
                 </p>
-                <p className="pt-4 text-center text-gray-500">
-                  Stel dat je ‘s ochtends een storing ervaart, dan staan wij
-                  dezelfde dag nog aan je deur. Die persoonlijke aanpak is voor
-                  ons heilig. Want als je vandaag voor Laadexpert.be kiest,
-                  verdien je ook vandaag een oplossing.
+
+                <h3 className="pt-4  text-2xl">
+                  Snel, deskundig en betrouwbaar
+                </h3>
+                <p className="pt-2  text-gray-500">
+                  Kies je vandaag voor LaadExpert, dan krijg je vandaag nog een
+                  oplossing. Ons team van gecertificeerde experts luistert naar
+                  je wensen, adviseert de beste oplossing voor jouw situatie en
+                  installeert alles vakkundig - meestal binnen twee weken.
+                </p>
+
+                <h3 className="pt-4  text-2xl">Vragen of storingen?</h3>
+                <p className="pt-2  text-gray-500">
+                  Onze helpdesk staat 24/7 voor je klaar.
                 </p>
               </div>
             </div>

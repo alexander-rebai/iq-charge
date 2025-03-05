@@ -4,55 +4,6 @@ import { Header } from "~/components/header";
 import PartiulierHero from "~/components/particulier-hero";
 import SpecificInfo from "~/components/specific-info";
 
-type ProductType = {
-  name: string;
-  path: string;
-  img: string;
-  features: string[];
-};
-
-const _products: ProductType[] = [
-  {
-    name: "Alfen",
-    path: "alfen",
-    img: "/products/alfen_prod.jpeg",
-    features: [
-      "U kunt de kosten van elke laadsessie opvolgen. Dankzij de optie split-billing kunt u de laadkosten van uw voertuig scheiden van het huishoudelijk energieverbruik en rechtstreeks factureren aan uw werkgever of uw bedrijf.",
-    ],
-  },
-  {
-    name: "Huawei",
-    path: "huawei",
-    img: "/products/huawei_prod.jpeg",
-    features: [
-      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
-      "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
-      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
-    ],
-  },
-  {
-    name: "Wallbox",
-    path: "wallbox",
-    img: "/products/wallbox_prod.jpeg",
-    features: [
-      "De Wallbox Pulsar Plus is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
-      "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
-      "De Wallbox Pulsar Plus is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
-    ],
-  },
-  {
-    name: "Smappee",
-    path: "smappee",
-    img: "/products/smappee_prod.jpeg",
-
-    features: [
-      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
-      "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
-      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
-    ],
-  },
-];
-
 export default function Home() {
   return (
     <>
@@ -62,8 +13,14 @@ export default function Home() {
 
         <SpecificInfo
           information={{
-            title: "Een opgeladen auto, wanneer jij het nodig hebt",
-            info: "Met onze laadoplossingen voor thuis is het tanken van je auto moeiteloos. Plan je oplaadsessie en je auto zal automatisch laden terwijl je slaapt of aan het eten bent. Waarom zou je tijd verspillen aan het opladen als je wilt focussen op wat echt belangrijk is als je thuis bent?",
+            title: "Waarom kiezen voor een laadpaal thuis?",
+            info: `Een eigen laadpaal is méér dan gemak - het is de meest efficiënte en
+voordelige manier om je elektrische auto op te laden. Thuis kan je eenvoudig
+'s nachts of tijdens daluren laden tegen het laagste tarief.`,
+            info2: `Heb je al zonnepanelen of een thuisbatterij? Dan vormt de laadpaal het
+laatste puzzelstuk van je duurzame energieplan. Geen gedoe met installaties
+of onduidelijke kosten: je hoeft enkel in te pluggen en je auto laadt terwijl jij je
+bezighoudt met wat er écht toe doet.`,
             image: "/images/charging.jpg",
           }}
         />
@@ -71,8 +28,14 @@ export default function Home() {
         <SpecificInfo
           isReverse
           information={{
-            title: "Een opgeladen auto, wanneer jij het nodig hebt",
-            info: "Met onze laadoplossingen voor thuis is het tanken van je auto moeiteloos. Plan je oplaadsessie en je auto zal automatisch laden terwijl je slaapt of aan het eten bent. Waarom zou je tijd verspillen aan het opladen als je wilt focussen op wat echt belangrijk is als je thuis bent?",
+            title: "Waarom Laadexpert.be?",
+            info: `Wij hebben één focus: laadpalen. We adviseren je persoonlijk op basis van je
+behoeften, budget, elektrische aansluiting en automerk. Ook de installatie
+pakken we professioneel voor je op - van het eerste adviesgesprek met Noam
+of Liam tot het vakkundig plaatsen van je laadpunt door Robin en Dennis.`,
+            info2: `Zo ben je in één keer klaar voor jouw elektrische toekomst. Met één klik vraag
+je een vrijblijvende offerte aan, en nemen we de volledige klus van je over. Dat
+betekent geen frustratie, geen tijdverlies, maar puur laadgemak aan huis.`,
             image: "/images/charging.jpg",
           }}
         />

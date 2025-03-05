@@ -7,6 +7,7 @@ import { Container } from "./container";
 export type Information = {
   title: string;
   info: string;
+  info2?: string;
   image: string;
   path?: string;
 };
@@ -32,6 +33,11 @@ export default function SpecificInfo({
           <p className="mt-6 text-lg leading-8 text-gray-600">
             {information.info}
           </p>
+          {information.info2 && (
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              {information.info2}
+            </p>
+          )}
         </div>
 
         <div className="relative block h-64 overflow-hidden rounded-xl md:hidden">
@@ -68,6 +74,11 @@ export default function SpecificInfo({
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 {information.info}
               </p>
+              {information.info2 && (
+                <p className="mt-6 text-lg leading-8 text-gray-600">
+                  {information.info2}
+                </p>
+              )}
             </div>
           </>
         ) : (
@@ -79,6 +90,11 @@ export default function SpecificInfo({
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 {information.info}
               </p>
+              {information.info2 && (
+                <p className="mt-6 text-lg leading-8 text-gray-600">
+                  {information.info2}
+                </p>
+              )}
             </div>
 
             <div className="relative hidden h-64 overflow-hidden rounded-xl md:block lg:h-96">

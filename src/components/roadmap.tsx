@@ -7,25 +7,25 @@ const steps = [
   {
     name: "Gratis Offerte",
     description:
-      "We luisteren naar jouw behoeften en geven direct helder advies over de beste laadoplossing.",
+      "We luisteren naar jouw wensen en geven helder advies over de beste laadoplossing voor jouw situatie en budget.",
     number: 1,
   },
   {
-    name: "Installatie",
+    name: "Snelle installatie",
     description:
-      "Onze expert regelt alles van A tot Z, zodat jouw laadpaal er staat voor je het weet.",
+      "Onze gecertificeerde experts regelen alles van A tot Z, zonder gedoe. Binnen 2 weken staat jouw laadpaal gebruiksklaar.",
     number: 2,
   },
   {
-    name: "Je laadt nu elektrisch",
+    name: "Dagelijks opladen",
     description:
-      "Sluit je auto aan, ga gerust slapen en word wakker met een volle batterij.",
+      "Sluit 's avonds je auto aan, ga gerust slapen en start elke dag met een volle batterij. Zo bespaar je tijd én geld.",
     number: 3,
   },
   {
     name: "24/7 afterservice",
     description:
-      "Bij vragen staan we altijd voor je klaar - jouw gemoedsrust is onze prioriteit.",
+      "Bij vragen of storingen staan onze experts altijd voor je klaar – dag en nacht.",
     number: 4,
   },
 ];
