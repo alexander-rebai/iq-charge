@@ -8,7 +8,8 @@ export type Information = {
   title: string;
   info: string;
   info2?: string;
-  image: string;
+  image?: string;
+  video?: string;
   path?: string;
 };
 
@@ -41,30 +42,54 @@ export default function SpecificInfo({
         </div>
 
         <div className="relative block h-64 overflow-hidden rounded-xl md:hidden">
-          <Image
-            priority
-            src={information.image}
-            alt="Product screenshot"
-            className="rounded-xl object-cover shadow-xl"
-            fill
-            sizes="100vw"
-          />
+          {information.video ? (
+            <video
+              className="h-full w-full rounded-xl object-cover"
+              controls
+              autoPlay
+              muted
+              loop
+            >
+              <source src={information.video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : information.image ? (
+            <Image
+              priority
+              src={information.image}
+              alt="Product screenshot"
+              className="rounded-xl object-cover shadow-xl"
+              fill
+              sizes="100vw"
+            />
+          ) : null}
         </div>
 
         {/* Desktop layout (respects isReverse) */}
         {isReverse ? (
           <>
             <div className="relative hidden h-64 overflow-hidden rounded-xl md:block lg:h-96">
-              <Image
-                priority
-                src={information.image}
-                alt="Product screenshot"
-                className="rounded-xl object-cover shadow-xl"
-                fill
-                sizes="(max-width: 1280px) 50vw,
-                (max-width: 1536px) 33vw,
-                25vw"
-              />
+              {information.video ? (
+                <video
+                  className="h-full w-full rounded-xl object-cover"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                >
+                  <source src={information.video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : information.image ? (
+                <Image
+                  priority
+                  src={information.image}
+                  alt="Product screenshot"
+                  className="rounded-xl object-cover shadow-xl"
+                  fill
+                  sizes="(max-width: 1280px) 50vw, (max-width: 1536px) 33vw, 25vw"
+                />
+              ) : null}
             </div>
 
             <div className="hidden md:block">
@@ -98,16 +123,27 @@ export default function SpecificInfo({
             </div>
 
             <div className="relative hidden h-64 overflow-hidden rounded-xl md:block lg:h-96">
-              <Image
-                priority
-                src={information.image}
-                alt="Product screenshot"
-                className="rounded-xl object-cover shadow-xl"
-                fill
-                sizes="(max-width: 1280px) 50vw,
-                (max-width: 1536px) 33vw,
-                25vw"
-              />
+              {information.video ? (
+                <video
+                  className="h-full w-full rounded-xl object-cover"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                >
+                  <source src={information.video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : information.image ? (
+                <Image
+                  priority
+                  src={information.image}
+                  alt="Product screenshot"
+                  className="rounded-xl object-cover shadow-xl"
+                  fill
+                  sizes="(max-width: 1280px) 50vw, (max-width: 1536px) 33vw, 25vw"
+                />
+              ) : null}
             </div>
           </>
         )}
