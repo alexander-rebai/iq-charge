@@ -9,44 +9,38 @@ const specifications = [
   {
     category: "Model",
     value: <span className="font-medium">EV Base</span>,
-    value2: <span className="font-medium">EV Ultra</span>,
-    value3: <span className="font-medium">EV One</span>,
-    value4: <span className="font-medium">EV Wall</span>,
+    value2: <span className="font-medium">EV One</span>,
+    value3: <span className="font-medium">EV Wall</span>,
   },
   {
     category: "Max. vermogen",
     value: "2 x 22kw",
-    value2: "2 x 240 kW",
-    value3: "22 kW",
-    value4: "2 x 240 kW",
+    value2: "22 kW",
+    value3: "2 x 240 kW",
   },
   {
     category: "Gebruikersinterface",
     value: "App",
-    value2: "2 dynamische displays",
+    value2: "App",
     value3: "App",
-    value4: "App",
   },
   {
     category: "Montage",
     value: "Muur",
     value2: "Muur",
     value3: "Muur",
-    value4: "Muur",
   },
   {
     category: "Type stekker",
     value: "2 x Type 2",
-    value2: "2 x Type 2",
-    value3: "Type 2",
-    value4: "2 x Type 2",
+    value2: "Type 2",
+    value3: "2 x Type 2",
   },
   {
     category: "Afmetingen (mm) HxLxD",
     value: "1200 × 600 × 150 mm ",
-    value2: "1870 x 920 x 650 mm",
-    value3: "1100 × 120 × 120 mm",
-    value4: "300 × 300 × 110  mm",
+    value2: "1100 × 120 × 120 mm",
+    value3: "300 × 300 × 110  mm",
   },
 ];
 
@@ -60,7 +54,21 @@ export default function Home() {
         <div className="bg-white py-12 sm:py-12">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl">
-              <div className="text-center">
+              <div className="relative text-center">
+                <div className="absolute -right-72 top-14 hidden h-64 w-64 rotate-12 lg:block">
+                  <img
+                    src="/fotos/smappee-certified.png"
+                    alt="Smappee Certified"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <div className="mx-auto mb-6 h-24 w-64 lg:hidden">
+                  <img
+                    src="/fotos/smappee-certified.png"
+                    alt="Smappee Certified"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
                 <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
                   <span className="bg-primary-light/60 font-semibold">
                     Smappee:
@@ -77,9 +85,12 @@ export default function Home() {
                 <p className="pt-4 text-gray-500">
                   Geschikt voor elke elektrische of hybride wagen, combineert
                   Smappee functionaliteit met een elegant design en instelbare
-                  sfeerverlichting. Als Smappee Certified Partner zorgen wij
-                  voor een snelle, veilige plaatsing, zodat jij zorgeloos kunt
-                  laden.
+                  sfeerverlichting. Als{" "}
+                  <span className="bg-primary-light/60 font-semibold">
+                    Smappee Certified Partner
+                  </span>{" "}
+                  zorgen wij voor een snelle, veilige plaatsing, zodat jij
+                  zorgeloos kunt laden.
                 </p>
               </div>
             </div>
@@ -118,8 +129,7 @@ export default function Home() {
             info: `We bieden een compleet scala aan laadoplossingen - van basisstations tot
 geavanceerde slimme laadsystemen - zodat je altijd krijgt wat perfect bij jouw
 situatie past. We werken met toonaangevende merken zoals Smappee,
-Wallbox en Huawei, maar installeren ook moeiteloos jouw favoriete merk als
-je daar de voorkeur aan geeft. Bij LaadExpert draait alles om één ding: jouw
+Wallbox en Huawei. Bij LaadExpert draait alles om één ding: jouw
 overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
             image: "/images/night6.jpg",
           }}
@@ -134,9 +144,8 @@ overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
               <Specs
                 specs={specifications}
                 image1="/smappee/s1.png"
-                image2="/smappee/s2.png"
-                image3="/smappee/s3.png"
-                image4="/smappee/s4.png"
+                image2="/smappee/s3.png"
+                image3="/smappee/s4.png"
               />
             </div>
           </div>

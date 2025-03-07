@@ -23,12 +23,12 @@ export const getSEOTags = ({
     description: description,
     // some keywords separated by commas. by default it will be your app name
     keywords: keywords,
-    applicationName: "Laadexpert",
+    applicationName: "LaadExpert",
     // set a base URL prefix for other fields that require a fully qualified URL (.e.g og:image: og:image: 'https://yourdomain.com/share.png' => '/share.png')
     metadataBase: new URL(
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000/"
-        : `https://www.laadexpert.be/`,
+        : `https://www.LaadExpert/`,
     ),
 
     openGraph: {
@@ -82,11 +82,11 @@ export const renderSchemaTags = () => {
         __html: JSON.stringify({
           "@context": "http://schema.org",
           "@type": "SoftwareApplication",
-          name: "Laadexpert",
+          name: "LaadExpert",
           description:
-            "Laadexpert is een platform voor laadoplossingen voor elektrische voertuigen.",
-          image: `https://www.laadexpert.be/icon.png`,
-          url: `https://www.laadexpert.be/`,
+            "LaadExpert is een platform voor laadoplossingen voor elektrische voertuigen.",
+          image: `https://www.LaadExpert/icon.png`,
+          url: `https://www.LaadExpert/`,
           author: {
             "@type": "Person",
             name: "Marc Lou",

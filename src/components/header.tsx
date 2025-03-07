@@ -10,6 +10,11 @@ import { useLandbot } from "~/hooks/useLandbot";
 import { cn } from "~/lib/utils";
 import { NavLink } from "./nav-link";
 import { Button } from "./ui/button";
+import {
+  Popover as PopoverComponent,
+  PopoverContent,
+  PopoverTrigger,
+} from "./ui/popover";
 
 function MobileNavIcon({
   open,
@@ -94,11 +99,10 @@ function MobileNavigation({ isScrolled }: { isScrolled?: boolean }) {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="/bedrijf">Zakelijk</MobileNavLink>
             <MobileNavLink href="/thuis">Thuis</MobileNavLink>
+            <MobileNavLink href="/bedrijf">Zakelijk</MobileNavLink>
             <MobileNavLink href="/products">Producten</MobileNavLink>
-            <MobileNavLink href="/over-ons">Over ons</MobileNavLink>
-            <MobileNavLink href="/blog">Blog</MobileNavLink>
+            <OverOnsNavMobile />
             <hr className="m-2 border-slate-300/40" />
             <div className="p-2">
               <Button
@@ -114,6 +118,42 @@ function MobileNavigation({ isScrolled }: { isScrolled?: boolean }) {
         </Transition.Child>
       </Transition.Root>
     </Popover>
+  );
+}
+
+function OverOnsNav() {
+  return (
+    <PopoverComponent>
+      <PopoverTrigger className="w-fit">
+        <div
+          className={cn(
+            "inline-flex items-center rounded px-2 py-1.5 text-sm font-medium text-gray-700",
+            "transition-colors duration-200 ease-in-out",
+            "hover:bg-gray-50 hover:text-gray-900",
+          )}
+        >
+          Over ons
+        </div>
+      </PopoverTrigger>
+      <PopoverContent className="flex w-full flex-col items-start md:gap-x-6">
+        <NavLink href="/over-ons">Over LaadExpert</NavLink>
+        <NavLink href="/realisaties">Realisaties</NavLink>
+        <NavLink href="/blog">Blog</NavLink>
+      </PopoverContent>
+    </PopoverComponent>
+  );
+}
+
+function OverOnsNavMobile() {
+  return (
+    <PopoverComponent>
+      <PopoverTrigger className="block w-fit p-2">Over Ons</PopoverTrigger>
+      <PopoverContent className="flex w-full flex-col items-start md:gap-x-6">
+        <MobileNavLink href="/over-ons">Over LaadExpert</MobileNavLink>
+        <MobileNavLink href="/realisaties">Realisaties</MobileNavLink>
+        <MobileNavLink href="/blog">Blog</MobileNavLink>
+      </PopoverContent>
+    </PopoverComponent>
   );
 }
 
@@ -154,11 +194,10 @@ export function Header({ empty }: { empty?: boolean }) {
           {!empty && (
             <>
               <div className="flex items-center md:gap-x-6">
-                <NavLink href="/bedrijf">Zakelijk</NavLink>
                 <NavLink href="/thuis">Thuis</NavLink>
+                <NavLink href="/bedrijf">Zakelijk</NavLink>
                 <NavLink href="/products">Producten</NavLink>
-                <NavLink href="/over-ons">Over ons</NavLink>
-                <NavLink href="/blog">Blog</NavLink>
+                <OverOnsNav />
               </div>
               <Button variant="secondary" size="sm" onClick={openChat}>
                 Gratis offerte

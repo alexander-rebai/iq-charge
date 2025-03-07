@@ -12,7 +12,7 @@ laden. Ik weet precies welke laadpaal bij jouw situatie past en hoe we die
 perfect kunnen integreren in je dagelijks leven.`,
     name: "Liam",
     designation: "Elke tevreden klant geeft mij energie.",
-    src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/team/Liam.png",
   },
   {
     quote: `Mijn missie is helder: elektrisch laden zo eenvoudig en zorgeloos mogelijk
@@ -20,15 +20,15 @@ maken. Want alleen als we de drempel verlagen, kunnen we samen bouwen
 aan een duurzaam België waar elektrisch rijden de standaard wordt.`,
     name: "Noam",
     designation: "Ik bouw mee aan een elektrische toekomst voor iedereen.",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/team/Noam.png",
   },
   {
-    quote: `Als technisch expert bij Laadexpert.be zorg ik dat jouw laadpaal perfect
+    quote: `Als technisch expert bij LaadExpert zorg ik dat jouw laadpaal perfect
 geïnstalleerd wordt. Elke installatie bewijst dat we écht het verschil maken in
 service en kwaliteit.`,
     name: "Robin",
     designation: "Innoveren en Vooruit Gaan",
-    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/team/Robin.png",
   },
   {
     quote: `Of het nu gaat om een eenvoudige thuislaadpaal of een complexe
@@ -37,7 +37,7 @@ Zijn klanten waarderen vooral zijn oog voor detail en de rust die hij uitstraalt
 tijdens het hele installatieproces.`,
     name: "Dennis",
     designation: "Perfectie zit in de details",
-    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/team/Dennis.png",
   },
 ];
 
@@ -48,6 +48,14 @@ export default function Home() {
       <main>
         <OverOnsHero />
 
+        <section
+          className="flex flex-col items-center justify-center py-12"
+          data-aos="fade-up"
+        >
+          <h2 className="text-center text-4xl">Ons team</h2>
+          <TeamCards testimonials={teamMembers} autoplay />
+        </section>
+
         <div className="bg-white py-12 sm:py-12">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl">
@@ -56,8 +64,8 @@ export default function Home() {
                   Jouw partner in elektrische vrijheid
                 </h2>
                 <p className="pt-4  text-gray-500">
-                  Bij Laadexpert.be geloven we dat elektrisch rijden veel meer
-                  is dan alleen een groene keuze - het is pure vrijheid. Met een
+                  Bij LaadExpert geloven we dat elektrisch rijden veel meer is
+                  dan alleen een groene keuze - het is pure vrijheid. Met een
                   laadpaal bij je thuis of op je werk verlies je nooit meer
                   kostbare tijd aan de pomp en start je elke dag met een volle
                   batterij.
@@ -91,14 +99,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        <section
-          className="flex flex-col items-center justify-center py-12"
-          data-aos="fade-up"
-        >
-          <h2 className="text-center text-4xl">Ons team</h2>
-          <TeamCards testimonials={teamMembers} />
-        </section>
 
         <section id="contact">
           <div className="mb-10  flex flex-col gap-8">

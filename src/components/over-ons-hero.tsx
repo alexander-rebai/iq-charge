@@ -34,7 +34,7 @@ const OverOnsHero = () => {
       <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white lg:p-0">
         <div className="flex w-full flex-col items-center justify-center md:items-start md:justify-start">
           <h1
-            className="mb-8 max-w-2xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
+            className="text-4xl font-semibold text-primary-foreground drop-shadow-lg md:text-5xl lg:text-[64px]"
             data-aos="fade-up"
           >
             Over ons

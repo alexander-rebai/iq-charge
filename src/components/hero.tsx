@@ -32,7 +32,7 @@ export function Hero() {
           className="h-full w-full object-cover"
         />
         {/* Dark overlay for better text contrast */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
       {/* Content */}
@@ -42,21 +42,27 @@ export function Hero() {
           <div className="flex h-full flex-col justify-center md:justify-end md:pb-80">
             {/* Content container - centered on mobile, left-aligned on desktop */}
             <div className="flex flex-col space-y-6 text-center md:max-w-xl md:text-left">
-              <h1
-                className="text-4xl font-semibold text-white drop-shadow-lg md:text-5xl lg:text-[64px]"
-                data-aos="fade-up"
-              >
-                Kies voor <br />
-                <FlipWords words={words} />
-              </h1>
+              <div className="flex flex-col gap-1">
+                <h1
+                  className="text-4xl font-semibold text-white drop-shadow-lg md:text-5xl lg:text-[64px]"
+                  data-aos="fade-up"
+                >
+                  Kies voor <br />
+                </h1>
+                <h1
+                  className="text-4xl font-semibold text-white drop-shadow-lg md:text-5xl lg:text-[64px]"
+                  data-aos="fade-up"
+                >
+                  <FlipWords words={words} />
+                </h1>
+              </div>
               <p
                 className="text-base text-white drop-shadow-md md:text-lg lg:text-[24px]"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
                 Of je nu thuis, op het werk of onderweg wilt laden: wij regelen
-                jouw perfecte laadoplossing. Snel geïnstalleerd, zorgeloos in
-                gebruik en precies afgestemd op jouw behoeften en budget.
+                jouw perfecte laadoplossing.
               </p>
               <div
                 className="flex flex-col space-y-4 pt-4 md:flex-row md:space-x-4 md:space-y-0"

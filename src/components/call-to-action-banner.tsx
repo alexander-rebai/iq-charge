@@ -10,13 +10,9 @@ import { Button } from "./ui/button";
 export default function CallToActionBanner({
   title,
   info,
-  isFluvius,
-  isIQSolar,
 }: {
   title: string;
   info: string;
-  isFluvius?: boolean;
-  isIQSolar?: boolean;
 }) {
   const { openChat } = useLandbot();
 
@@ -33,7 +29,7 @@ export default function CallToActionBanner({
       <div className="absolute inset-0 bg-black opacity-40" />
 
       <Container className="relative">
-        <div className={cn("mx-auto text-left", isIQSolar && "text-right")}>
+        <div className={cn("mx-auto text-left")}>
           <h2
             className="text-xl font-medium tracking-tight text-white sm:text-4xl"
             data-aos="fade-up"
@@ -42,10 +38,7 @@ export default function CallToActionBanner({
             {title}
           </h2>
           <p
-            className={cn(
-              "mt-2 max-w-xl text-lg leading-8 text-white",
-              isIQSolar && "ml-auto",
-            )}
+            className={cn("mt-2 max-w-xl text-lg leading-6 text-white")}
             data-aos="fade-up"
             data-aos-delay="100"
             data-aos-easing="ease-in-out"
@@ -53,53 +46,17 @@ export default function CallToActionBanner({
             {info}
           </p>
         </div>
-        {isFluvius ? (
-          <div
-            className="mt-10 flex items-center justify-start"
-            data-aos="fade-up"
-            data-aos-delay="100"
-            data-aos-easing="ease-in-out"
-          >
-            <a
-              href="https://www.fluvius.be/nl/duurzame-mobiliteit/laadpaal-melden"
-              target="_blank"
-              className="black rounded-xl bg-white px-3.5 py-2.5 text-sm font-medium shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              Laadpaal aanmelden
-            </a>
-          </div>
-        ) : isIQSolar ? (
-          <div
-            className="mt-10 flex items-center justify-end gap-x-6"
-            data-aos="fade-up"
-            data-aos-delay="100"
-            data-aos-easing="ease-in-out"
-          >
-            <a
-              href="#"
-              className="black rounded-xl bg-white px-3.5 py-2.5 text-sm font-medium shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              Ontdek IQ Solar
-            </a>
-          </div>
-        ) : (
-          <div
-            className="mt-10 flex items-center justify-start gap-x-6"
-            data-aos="fade-up"
-            data-aos-delay="100"
-            data-aos-easing="ease-in-out"
-          >
-            <Button variant="secondary" onClick={openChat}>
-              Vraag een gratis offerte
-            </Button>
-            <a
-              href="#"
-              className="text-sm font-medium leading-6 text-white transition-all duration-300 ease-in-out hover:scale-110"
-            >
-              Contacteer ons <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        )}
+
+        <div
+          className="mt-10 flex items-center justify-start gap-x-6"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-easing="ease-in-out"
+        >
+          <Button variant="secondary" onClick={openChat}>
+            Vraag een gratis offerte
+          </Button>
+        </div>
       </Container>
     </div>
   );

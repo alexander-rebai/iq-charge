@@ -10,7 +10,7 @@ export const metadata = {
   },
 };
 
-export default async function Blog() {
+export default async function Realisaties() {
   // Sort articles by date (newest first) and display the first 6
   const articlesToDisplay = articles
     .sort(
@@ -23,11 +23,10 @@ export default async function Blog() {
     <>
       <section className="mx-auto mb-16 max-w-xl text-center md:mb-24">
         <h1 className="mb-6 text-3xl font-extrabold tracking-tight lg:text-5xl">
-          Onze blog
+          Onze Realisaties
         </h1>
         <p className="text-lg leading-relaxed opacity-80">
-          Hier vindt u alle informatie over laadoplossingen voor elektrische
-          voertuigen
+          Hier vindt u alle onze realisaties.
         </p>
       </section>
 

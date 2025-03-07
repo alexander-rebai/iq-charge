@@ -46,10 +46,7 @@ export default function RoadMap() {
         </div>
         <div className="relative mt-24 flex flex-wrap">
           <div className="-z-1 absolute left-0 right-0 top-8 hidden h-[1px] lg:block">
-            <div
-              className="h-[1px] w-full bg-primary"
-              data-aos="fade-left"
-            ></div>
+            <div className="h-[1px] w-full bg-primary" data-aos="fade-left" />
           </div>
           <div className="absolute -top-6 left-0" data-aos="fade-right">
             <Plug className="hidden h-12 w-12 rotate-90 text-primary lg:block" />
@@ -64,12 +61,12 @@ export default function RoadMap() {
                 key={step.number}
                 data-aos="fade-up"
               >
-                <div className="relative mb-6 h-16 w-16">
+                <div className="relative mb-6 h-16 w-16 ">
                   <Image
                     src={step.image}
                     alt={step.name}
                     fill
-                    className="object-contain"
+                    className="bg-background object-contain px-2"
                   />
                 </div>
                 <div className="flex flex-col">

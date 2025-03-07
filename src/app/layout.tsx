@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { Poppins } from "next/font/google";
 
+import { ChatBubbleBanner } from "~/components/ChatBubbleBanner";
 import { LandbotProvider } from "~/components/landbot-provider";
 import { cn } from "~/lib/utils";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         )}
       >
         {children}
+        <ChatBubbleBanner />
         <LandbotProvider />
       </body>
     </html>

@@ -11,48 +11,6 @@ type ProductType = {
   features: string[];
 };
 
-const _products: ProductType[] = [
-  {
-    name: "Alfen",
-    path: "alfen",
-    img: "/products/alfen_prod.jpeg",
-    features: [
-      "U kunt de kosten van elke laadsessie opvolgen. Dankzij de optie split-billing kunt u de laadkosten van uw voertuig scheiden van het huishoudelijk energieverbruik en rechtstreeks factureren aan uw werkgever of uw bedrijf.",
-    ],
-  },
-  {
-    name: "Huawei",
-    path: "huawei",
-    img: "/products/huawei_prod.jpeg",
-    features: [
-      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
-      "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
-      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
-    ],
-  },
-  {
-    name: "Wallbox",
-    path: "wallbox",
-    img: "/products/wallbox_prod.jpeg",
-    features: [
-      "De Wallbox Pulsar Plus is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
-      "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
-      "De Wallbox Pulsar Plus is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
-    ],
-  },
-  {
-    name: "Smappee",
-    path: "smappee",
-    img: "/products/smappee_prod.jpeg",
-
-    features: [
-      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
-      "Deze laadoplossing is compatibel met alle elektrische voertuigen en plug-in hybride elektrische voertuigen.",
-      "De Huawei Smart Charger 7KS-SO is een slimme laadoplossing voor elektrische voertuigen (EV's) die is ontworpen voor thuisgebruik.",
-    ],
-  },
-];
-
 export default function Home() {
   return (
     <>
@@ -80,8 +38,7 @@ eenvoudig, rendabel en toekomstbestendig voor jouw organisatie.`,
             info: `We begeleiden je bij elke stap, van het eerste overleg tot de uiteindelijke
 implementatie. Zo weet u zeker dat jouw investering rendeert en
 toekomstbestendig is. Onze laadinfrastructuur sluit perfect aan bij de
-behoeften van uw organisatie, medewerkers en bezoekers - of je nu één
-laadpunt wilt installeren of een compleet netwerk zoekt. Wij regelen alles
+behoeften van uw organisatie, medewerkers en bezoekers. Wij regelen alles
 efficiënt, zodat u zich kunt focussen op uw kernactiviteiten.`,
             image: "/fotos/zakelijk 3.jpg",
           }}

@@ -34,7 +34,7 @@ export const TeamCards = ({
 
   useEffect(() => {
     if (autoplay) {
-      const interval = setInterval(handleNext, 5000);
+      const interval = setInterval(handleNext, 7000);
       return () => clearInterval(interval);
     }
   }, [autoplay, handleNext]);
@@ -85,7 +85,7 @@ export const TeamCards = ({
                     width={500}
                     height={500}
                     draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
+                    className="h-full w-full rounded-3xl object-contain object-center"
                   />
                 </motion.div>
               ))}

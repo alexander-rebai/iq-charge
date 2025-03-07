@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import { useEffect } from "react";
-import { ProductsCarousel } from "./carousels/products-carousel";
+import { FlipWords } from "./flip-words";
 
 const ProductsHero = () => {
   useEffect(() => {
@@ -12,6 +12,8 @@ const ProductsHero = () => {
       duration: 800,
     });
   }, []);
+
+  const words = ["Smappee", "Huawei", "Wallbox"];
 
   return (
     <section className="relative h-screen w-full overflow-hidden pt-16">
@@ -35,22 +37,25 @@ const ProductsHero = () => {
           <div className="flex h-full flex-col justify-center md:justify-end md:pb-96">
             {/* Content container - centered on mobile, left-aligned on desktop */}
             <div className="flex flex-col space-y-6 text-center md:max-w-xl md:text-left">
-              <h1
-                className="text-4xl font-semibold text-white drop-shadow-lg md:text-5xl lg:text-[64px]"
-                data-aos="fade-up"
-              >
-                Ons aanbod
-              </h1>
+              <div className="flex flex-col gap-1">
+                <h1
+                  className="max-w-3xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
+                  data-aos="fade-up"
+                >
+                  Ons aanbod:
+                </h1>
+                <h1
+                  className="mb-8 max-w-3xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
+                  data-aos="fade-up"
+                >
+                  <FlipWords words={words} />
+                </h1>
+              </div>
               <p className="text-base text-white drop-shadow-md md:text-lg lg:text-[24px]">
                 Wij werken niet voor een merk, maar voor jou.
               </p>
             </div>
           </div>
-        </div>
-
-        {/* Carousel - hidden on mobile */}
-        <div className="hidden xl:block">
-          <ProductsCarousel />
         </div>
       </div>
     </section>
