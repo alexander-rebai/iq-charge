@@ -4,7 +4,6 @@ import type { JSX } from "react";
 import type { articleType } from "../content";
 import BadgeCategory from "./BadgeCategory";
 
-// This is the article card that appears in the blog page and category pages
 const CardArticle = ({
   article,
   tag = "h2",
@@ -21,7 +20,7 @@ const CardArticle = ({
   return (
     <article className="max-w-sm overflow-hidden rounded shadow-lg">
       <Link
-        href={`/blog/${article.slug}`}
+        href={`/realisaties/${article.slug}`}
         className="link link-hover hover:link-primary"
         title={article.title}
         rel="bookmark"
@@ -41,7 +40,7 @@ const CardArticle = ({
         {/* TITLE WITH RIGHT TAG */}
         <TitleTag className="mb-2 text-xl font-bold">
           <Link
-            href={`/blog/${article.slug}`}
+            href={`/realisaties/${article.slug}`}
             className="link link-hover hover:link-primary"
             title={article.title}
             rel="bookmark"

@@ -13,7 +13,7 @@ const ProductsHero = () => {
     });
   }, []);
 
-  const words = ["Smappee", "Huawei", "Wallbox"];
+  const words = ["Smappee", "Wallbox", "Peblar", "Easee"];
 
   return (
     <section className="relative h-screen w-full overflow-hidden pt-16">
@@ -26,8 +26,7 @@ const ProductsHero = () => {
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 1600px, 4800px"
           className="h-full w-full object-cover"
         />
-        {/* Dark overlay for better text contrast */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
       {/* Content */}
@@ -51,9 +50,6 @@ const ProductsHero = () => {
                   <FlipWords words={words} />
                 </h1>
               </div>
-              <p className="text-base text-white drop-shadow-md md:text-lg lg:text-[24px]">
-                Wij werken niet voor een merk, maar voor jou.
-              </p>
             </div>
           </div>
         </div>

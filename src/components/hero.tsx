@@ -31,7 +31,6 @@ export function Hero() {
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 1600px, 4800px"
           className="h-full w-full object-cover"
         />
-        {/* Dark overlay for better text contrast */}
         <div className="absolute inset-0 bg-black/20"></div>
       </div>
 

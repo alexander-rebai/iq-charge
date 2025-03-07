@@ -51,21 +51,21 @@ const zakelijkStats = [
 const thuisStats = [
   {
     id: 1,
-    name: "Comfort en gemak voor werknemers",
-    iconSrc: "/icons/voordelen zakelijk laden/comfort en gemak voor WN.png",
-    iconAlt: "Comfort en gemak voor werknemers",
+    name: "Zonne-energie: Maximaal laden met je zonnepanelen",
+    iconSrc: "/fotos/sun-energy.png",
+    iconAlt: "Zonne-energie: Maximaal laden met je zonnepanelen",
   },
   {
     id: 2,
-    name: "Fiscale voordelen",
-    iconSrc: "/icons/voordelen zakelijk laden/fiscale voordelen.png",
-    iconAlt: "Fiscale voordelen",
+    name: "Capaciteitstarief: Beperk jouw piekverbuik",
+    iconSrc: "/fotos/full-charge.png",
+    iconAlt: "Capaciteitstarief: Beperk jouw piekverbuik",
   },
   {
     id: 3,
-    name: "Groen imago",
-    iconSrc: "/icons/voordelen zakelijk laden/groen imago.png",
-    iconAlt: "Groen imago",
+    name: "⁠Load balancing: Gebruik zorgeloos andere apparaten in huis",
+    iconSrc: "/fotos/load-balance.png",
+    iconAlt: "⁠⁠Load balancing: Gebruik zorgeloos andere apparaten in huis",
   },
 ];
 

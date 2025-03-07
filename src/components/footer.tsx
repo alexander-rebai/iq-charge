@@ -16,9 +16,10 @@ type ContactPerson = {
 };
 
 const contacts: ContactPerson[] = [
-  { name: "Noam", email: "noam@laadexpert.nl", title: "Co-founder" },
-  { name: "Liam", email: "liam@laadexpert.nl", title: "Co-founder" },
-  { name: "Robin", email: "robin@laadexpert.nl", title: "Co-founder" },
+  { name: "Noam", email: "noam@laadexpert.be", title: "Adviseur" },
+  { name: "Liam", email: "liam@laadexpert.be", title: "Adviseur" },
+  { name: "Robin", email: "robin@laadexpert.be", title: "Technisch expert" },
+  { name: "Dennis", email: "dennis@laadexpert.be", title: "Technisch expert" },
 ];
 
 const navigation = {
@@ -31,7 +32,7 @@ const navigation = {
   social: [
     {
       name: "Facebook",
-      href: "#",
+      href: "https://www.instagram.com/laadexpert.be?igsh=MTI3d25qOWNoYmMxOQ%3D%3D&utm_source=qr",
       icon: (props: IconProps) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -44,7 +45,7 @@ const navigation = {
     },
     {
       name: "Instagram",
-      href: "#",
+      href: "https://www.instagram.com/laadexpert.be?igsh=MTI3d25qOWNoYmMxOQ%3D%3D&utm_source=qr",
       icon: (props: IconProps) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -60,8 +61,12 @@ const navigation = {
 
 export function Footer({ hideLinks }: { hideLinks?: boolean }) {
   return (
-    <footer className="bg-gray-100">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
+    <footer className="relative bg-gray-100">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 [transform:scaleX(-1)]"
+        style={{ backgroundImage: 'url("/fotos/footer-bg.jpeg")' }}
+      />
+      <div className="relative mx-auto max-w-7xl overflow-hidden px-6 py-12 lg:px-8">
         <Link href="/" className="flex justify-center">
           <Logo className="h-10 w-auto" />
         </Link>
@@ -109,13 +114,13 @@ export function Footer({ hideLinks }: { hideLinks?: boolean }) {
             </PopoverTrigger>
             <PopoverContent className="w-64">
               <div className="space-y-4">
-                <h3 className="font-medium text-gray-900">Contact us</h3>
+                <h3 className="font-medium text-gray-900">Contacteer ons</h3>
                 <div className="divide-y divide-gray-200">
                   {contacts.map((person) => (
                     <a
                       key={person.email}
                       href={`mailto:${person.email}`}
-                      className="block py-2 hover:text-blue-600"
+                      className="block py-2 hover:text-primary-foreground"
                     >
                       <div className="font-medium">{person.name}</div>
                       <div className="text-sm text-gray-500">
@@ -128,10 +133,6 @@ export function Footer({ hideLinks }: { hideLinks?: boolean }) {
             </PopoverContent>
           </Popover>
         </div>
-
-        <p className="mt-10 text-center text-sm/6 text-gray-600">
-          &copy; {new Date().getFullYear()} LaadExpert. All rights reserved.
-        </p>
       </div>
     </footer>
   );

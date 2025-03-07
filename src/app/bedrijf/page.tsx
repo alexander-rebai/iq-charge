@@ -4,13 +4,6 @@ import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
 import SpecificInfo from "~/components/specific-info";
 
-type ProductType = {
-  name: string;
-  path: string;
-  img: string;
-  features: string[];
-};
-
 export default function Home() {
   return (
     <>
@@ -40,7 +33,7 @@ implementatie. Zo weet u zeker dat jouw investering rendeert en
 toekomstbestendig is. Onze laadinfrastructuur sluit perfect aan bij de
 behoeften van uw organisatie, medewerkers en bezoekers. Wij regelen alles
 efficiënt, zodat u zich kunt focussen op uw kernactiviteiten.`,
-            image: "/fotos/zakelijk 3.jpg",
+            image: "/images/zakelijk2.jpg",
           }}
         />
 

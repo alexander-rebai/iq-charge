@@ -28,7 +28,7 @@ const OverOnsHero = () => {
           alt="Hero image"
           priority
         />
-        <div className="absolute inset-0 bg-black opacity-50" />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white lg:p-0">

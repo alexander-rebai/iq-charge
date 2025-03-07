@@ -3,8 +3,7 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import type { articleType } from "~/app/blog/_assets/content";
-import { articles } from "~/app/blog/_assets/content";
+import { articles, type articleType } from "~/app/realisaties/_assets/content";
 
 export function RealisationsCarousel() {
   // Filter articles to only show those with "Realisaties" category
@@ -94,7 +93,7 @@ export function RealisationsCarousel() {
             return (
               <Link
                 key={index}
-                href={`/blog/${article.slug}`}
+                href={`/realisaties/${article.slug}`}
                 className={`duration-2400 absolute right-96 top-1/2 h-[280px] w-[220px] -translate-y-1/2 transform cursor-pointer rounded-xl bg-cover bg-center shadow-lg transition-all ease-in-out hover:border-2 hover:border-primary-foreground ${
                   isActive ? "z-20" : "z-10"
                 }`}

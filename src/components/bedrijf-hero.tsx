@@ -29,7 +29,7 @@ const BedrijfHero = () => {
           alt="Hero image"
           priority
         />
-        <div className="absolute inset-0 bg-black opacity-50" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       <div className="lg:px-8q absolute bottom-0 left-1/2 max-w-7xl -translate-x-1/2 translate-y-1/4 px-6 md:w-3/4">

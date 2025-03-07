@@ -3,10 +3,10 @@
 import { useEffect, useRef } from "react";
 
 const logos = [
-  { src: "/fotos/smappee-certified.png", alt: "Partner 1" },
-  { src: "/fotos/smappee-certified.png", alt: "Partner 2" },
-  { src: "/fotos/smappee-certified.png", alt: "Partner 3" },
-  { src: "/fotos/smappee-certified.png", alt: "Partner 4" },
+  { src: "/fotos/brands/smappee.jpeg", alt: "Partner 1" },
+  { src: "/fotos/brands/wallbox.jpeg", alt: "Partner 4" },
+  { src: "/fotos/brands/peblar.jpeg", alt: "Partner 3" },
+  { src: "/fotos/brands/easee.jpeg", alt: "Partner 2" },
 ];
 
 export default function LogoCloud() {
@@ -27,7 +27,7 @@ export default function LogoCloud() {
         <div className="inline-flex w-full flex-nowrap overflow-hidden">
           <ul
             ref={logoRef}
-            className="animate-infinite-scroll flex items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8"
+            className="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8"
           >
             {logos.map((logo, idx) => (
               <li key={`logo-${idx}`}>

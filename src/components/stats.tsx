@@ -9,7 +9,7 @@ export default function Stats() {
             <h2 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">
               Een slimme laadpaal - het laatste puzzelstuk van jouw{"   "}
               <span className="bg-primary-light/60 font-semibold">
-                duurzame levensstijl
+                duurzame transitie
               </span>
             </h2>
           </div>

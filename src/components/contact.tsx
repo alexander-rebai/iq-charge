@@ -60,27 +60,27 @@ export default function Contact() {
         <div className="relative px-6 pt-6 lg:static lg:px-8">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h2 className="text-center text-xl font-medium tracking-tight lg:text-start">
-              Leave us a message
+              Laat een berichtje achter
             </h2>
 
             <dl className="mb-5 mt-5 flex flex-col items-center space-y-4 text-base leading-7 text-gray-600 lg:mt-10 lg:items-start">
               <div className="flex gap-x-4">
                 <dt className="flex-none">
-                  <span className="sr-only">Address</span>
+                  <span className="sr-only">Adres</span>
                   <Building
                     className="h-7 w-6 text-gray-400"
                     aria-hidden="true"
                   />
                 </dt>
                 <dd>
-                  545 Mavis Island
+                  Beertegemstraat 45B
                   <br />
-                  Chicago, IL 99191
+                  9750 Kruisem
                 </dd>
               </div>
               <div className="flex gap-x-4">
                 <dt className="flex-none">
-                  <span className="sr-only">Telephone</span>
+                  <span className="sr-only">Telefoon</span>
                   <Phone className="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
                 <dd>
@@ -88,13 +88,13 @@ export default function Contact() {
                     className="hover:text-gray-900"
                     href="tel:+1 (555) 234-5678"
                   >
-                    +1 (555) 234-5678
+                    +32 472 83 75 40
                   </a>
                 </dd>
               </div>
               <div className="flex gap-x-4">
                 <dt className="flex-none">
-                  <span className="sr-only">Email</span>
+                  <span className="sr-only">E-mail</span>
                   <Mail className="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
                 <dd>
@@ -102,7 +102,7 @@ export default function Contact() {
                     className="hover:text-gray-900"
                     href="mailto:hello@Contact.com"
                   >
-                    hello@Contact.com
+                    info@laadexpert.be{" "}
                   </a>
                 </dd>
               </div>
@@ -121,9 +121,9 @@ export default function Contact() {
                   name="firstname"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>First name</FormLabel>
+                      <FormLabel>Voornaam</FormLabel>
                       <FormControl>
-                        <Input placeholder="First name" {...field} />
+                        <Input placeholder="Voornaam" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -134,9 +134,9 @@ export default function Contact() {
                   name="lastname"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Last name</FormLabel>
+                      <FormLabel>Achternaam</FormLabel>
                       <FormControl>
-                        <Input placeholder="Last name" {...field} />
+                        <Input placeholder="Achternaam" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -160,7 +160,7 @@ export default function Contact() {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Phone</FormLabel>
+                      <FormLabel>Telefoon</FormLabel>
                       <FormControl>
                         <Input placeholder="+32 485 96 72 92" {...field} />
                       </FormControl>
@@ -173,9 +173,9 @@ export default function Contact() {
                   name="message"
                   render={({ field }) => (
                     <FormItem className="col-span-2">
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>Bericht</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Message" {...field} />
+                        <Textarea placeholder="Bericht" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -184,7 +184,7 @@ export default function Contact() {
               </div>
               <div className="mt-8 flex justify-center">
                 <Button type="submit" disabled={loading} variant={"secondary"}>
-                  Send message
+                  Verstuur bericht
                 </Button>
               </div>
             </div>

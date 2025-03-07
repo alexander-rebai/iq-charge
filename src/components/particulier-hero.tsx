@@ -8,12 +8,6 @@ import { useLandbot } from "~/hooks/useLandbot";
 import StatsComponent from "./stats-component";
 import { Button } from "./ui/button";
 
-const stats = [
-  { id: 1, name: "Home Installations", value: "3,000+" },
-  { id: 3, name: "Love our work", value: "99.9%" },
-  { id: 4, name: "Revenue", value: "$70M" },
-];
-
 const PartiulierHero = () => {
   useEffect(() => {
     AOS.init({
@@ -33,7 +27,7 @@ const PartiulierHero = () => {
           alt="Hero image"
           priority
         />
-        <div className="absolute inset-0 bg-black opacity-50" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       <div className="absolute bottom-0 left-1/2 max-w-7xl -translate-x-1/2 translate-y-1/4 px-6 md:w-3/4 lg:px-8">

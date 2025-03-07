@@ -63,9 +63,16 @@ export const FlipWords = ({
           opacity: 0,
           y: -40,
           x: 40,
-          filter: "blur(8px)",
           scale: 2,
+          filter: "blur(8px)",
           position: "absolute",
+          transition: {
+            opacity: { duration: 0.3 },
+            y: { type: "spring", stiffness: 100, damping: 10 },
+            x: { type: "spring", stiffness: 100, damping: 10 },
+            scale: { type: "spring", stiffness: 100, damping: 10 },
+            filter: { duration: 0.2 },
+          },
         }}
         className={cn(
           "relative z-10 inline-block text-left text-primary-foreground",

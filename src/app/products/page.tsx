@@ -70,9 +70,11 @@ export default function Home() {
                   />
                 </div>
                 <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                  Uitgelicht product:{" "}
                   <span className="bg-primary-light/60 font-semibold">
-                    Smappee:
+                    Smappee
                   </span>{" "}
+                  <br />
                   De slimste all-in one laadoplossing.
                 </h2>
                 <p className="pt-4 text-gray-500">
@@ -145,7 +147,7 @@ overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
                 specs={specifications}
                 image1="/smappee/s1.png"
                 image2="/smappee/s3.png"
-                image3="/smappee/s4.png"
+                image3="/images/ev-wall.png"
               />
             </div>
           </div>

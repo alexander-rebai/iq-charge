@@ -6,7 +6,7 @@ export const metadata = {
   description:
     "Ontdek alles over laadoplossingen voor elektrische voertuigen, van thuisladen tot zakelijke laadinfrastructuur",
   alternates: {
-    canonical: "/blog",
+    canonical: "/realisaties",
   },
 };
 

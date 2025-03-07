@@ -22,7 +22,7 @@ const steps = [
   {
     name: "Dagelijks opladen",
     description:
-      "Sluit 's avonds je auto aan, ga gerust slapen en start elke dag met een volle batterij. Zo bespaar je tijd én geld.",
+      "Sluit je auto overdag aan, benut je zonne-energie optimaal en vertrek altijd met een volle batterij. Zo bespaar je maximaal op je energiekosten.",
     number: 3,
     image: "/icons/Steps/3 laadt elektrisch.png",
   },

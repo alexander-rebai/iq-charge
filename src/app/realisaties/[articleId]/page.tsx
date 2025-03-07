@@ -70,9 +70,9 @@ export default async function Article({
       {/* GO BACK LINK */}
       <div className="mb-8">
         <Link
-          href="/blog"
+          href="/realisaties"
           className="text-base-content/80 hover:text-base-content inline-flex items-center gap-1"
-          title="Terug naar Blog"
+          title="Terug naar Realisaties"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ export default async function Article({
               clipRule="evenodd"
             />
           </svg>
-          Terug naar Blog
+          Terug naar Realisaties
         </Link>
       </div>
 

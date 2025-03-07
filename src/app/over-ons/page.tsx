@@ -59,7 +59,10 @@ export default function Home() {
         <div className="bg-white py-12 sm:py-12">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl">
-              <div className="mb-10 flex flex-col gap-2" data-aos="fade-up">
+              <div
+                className="mb-10 flex flex-col gap-2 text-center"
+                data-aos="fade-up"
+              >
                 <h2 className="text-4xl">
                   Jouw partner in elektrische vrijheid
                 </h2>
@@ -71,28 +74,28 @@ export default function Home() {
                   batterij.
                 </p>
 
-                <h3 className="pt-4  text-2xl">
+                <h3 className="pt-6  text-2xl">
                   Persoonlijke aanpak als fundament
                 </h3>
-                <p className="pt-2  text-gray-500">
+                <p className="pt-1  text-gray-500">
                   Of je nu net je eerste elektrische wagen hebt aangeschaft of
                   jouw woning volledig verduurzaamt met zonnepanelen en een
                   thuisbatterij: wij zorgen dat jouw laadervaring perfect
                   aansluit bij jouw levensstijl.
                 </p>
 
-                <h3 className="pt-4  text-2xl">
+                <h3 className="pt-6  text-2xl">
                   Snel, deskundig en betrouwbaar
                 </h3>
-                <p className="pt-2  text-gray-500">
+                <p className="pt-1  text-gray-500">
                   Kies je vandaag voor LaadExpert, dan krijg je vandaag nog een
                   oplossing. Ons team van gecertificeerde experts luistert naar
                   je wensen, adviseert de beste oplossing voor jouw situatie en
                   installeert alles vakkundig - meestal binnen twee weken.
                 </p>
 
-                <h3 className="pt-4  text-2xl">Vragen of storingen?</h3>
-                <p className="pt-2  text-gray-500">
+                <h3 className="pt-6  text-2xl">Vragen of storingen?</h3>
+                <p className="pt-1  text-gray-500">
                   Onze helpdesk staat 24/7 voor je klaar.
                 </p>
               </div>
