@@ -2,7 +2,7 @@ import CardArticle from "./_assets/components/CardArticle";
 import { articles } from "./_assets/content";
 
 export const metadata = {
-  title: "LaadExpert Blog | Laadoplossingen voor Elektrische Voertuigen",
+  title: "Laadexpert Blog | Laadoplossingen voor Elektrische Voertuigen",
   description:
     "Ontdek alles over laadoplossingen voor elektrische voertuigen, van thuisladen tot zakelijke laadinfrastructuur",
   alternates: {

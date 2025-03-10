@@ -23,7 +23,7 @@ const BedrijfHero = () => {
     <div className="relative mb-20 h-screen">
       <div className="absolute inset-0 z-0 h-full w-full">
         <Image
-          src="/fotos/zakelijk.jpg"
+          src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/zakelijk.jpg"
           layout="fill"
           objectFit="cover"
           alt="Hero image"
@@ -32,7 +32,7 @@ const BedrijfHero = () => {
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      <div className="lg:px-8q absolute bottom-0 left-1/2 max-w-7xl -translate-x-1/2 translate-y-1/4 px-6 md:w-3/4">
+      <div className="lg:px-8q absolute bottom-0 left-1/2 hidden max-w-7xl -translate-x-1/2 translate-y-1/4 px-6 md:w-3/4 lg:block">
         <div className="mx-auto max-w-2xl md:max-w-none">
           <StatsComponent variant={"zakelijk"} />
         </div>
@@ -60,9 +60,9 @@ const BedrijfHero = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            50 of 10 laadpuntent, voor ons geen probleem. Wij installeren snel
-            en efficiënt wat bij jouw bedrijf past. Betrouwbare technologie,
-            optimaal beheer en minimale kosten.
+            10 tot 50 laadpunten? Voor ons vormt dat geen probleem! Wij
+            installeren snel en efficiënt wat bij jouw bedrijf past. Betrouwbare
+            technologie, optimaal beheer en minimale kosten.
           </p>
           <div
             className="flex flex-col space-y-4 pt-4 md:flex-row md:space-x-4 md:space-y-0"

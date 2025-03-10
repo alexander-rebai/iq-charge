@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const steps = [
   {
-    name: "Gratis Offerte",
+    name: "Gratis offerte",
     description:
       "We luisteren naar jouw wensen en geven helder advies over de beste laadoplossing voor jouw situatie en budget.",
     number: 1,

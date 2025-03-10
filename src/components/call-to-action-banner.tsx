@@ -20,7 +20,7 @@ export default function CallToActionBanner({
     <div className={cn("relative overflow-hidden py-36")}>
       <Image
         className="absolute left-1/2 top-1/2 h-full w-screen max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-bottom"
-        src={"/images/bridge.jpg"}
+        src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/images/bridge.jpg"
         alt=""
         width={2347}
         height={2044}
@@ -31,14 +31,14 @@ export default function CallToActionBanner({
       <Container className="relative">
         <div className={cn("mx-auto text-left")}>
           <h2
-            className="text-xl font-medium tracking-tight text-white sm:text-4xl"
+            className="text-4xl font-medium tracking-tight text-white"
             data-aos="fade-up"
             data-aos-easing="ease-in-out"
           >
             {title}
           </h2>
           <p
-            className={cn("mt-2 max-w-xl text-lg leading-6 text-white")}
+            className={cn("mt-4 max-w-xl text-lg leading-6 text-white")}
             data-aos="fade-up"
             data-aos-delay="100"
             data-aos-easing="ease-in-out"

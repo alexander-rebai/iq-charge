@@ -22,7 +22,7 @@ const OverOnsHero = () => {
     <div className="relative h-screen">
       <div className="absolute inset-0 z-0 h-full w-full">
         <Image
-          src="/images/night3.jpg"
+          src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/images/night3.jpg"
           layout="fill"
           objectFit="cover"
           alt="Hero image"

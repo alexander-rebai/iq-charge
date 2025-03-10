@@ -24,7 +24,7 @@ export function Hero() {
     <section className="relative h-screen w-full overflow-hidden pt-16">
       <div className="relative h-full overflow-hidden">
         <Image
-          src="/fotos/hero.jpg"
+          src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/hero.jpg"
           alt="Hero cover"
           fill
           priority

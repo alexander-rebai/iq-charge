@@ -79,7 +79,7 @@ export default function Specs({
                       src={image1}
                       alt="Product"
                       className={cn(
-                        "absolute -top-40 left-1/2 h-32 w-24 -translate-x-1/2",
+                        "absolute -top-40 left-1/2 h-32 w-32 -translate-x-1/2 py-2",
                         image1 === "/wallbox/w1.webp" && "w-32",
                       )}
                     />

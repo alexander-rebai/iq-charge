@@ -12,8 +12,8 @@ export async function generateMetadata({
 
   if (!article) {
     return {
-      title: "Artikel niet gevonden | LaadExpert Blog",
-      description: "Dit artikel bestaat niet in de LaadExpert Blog",
+      title: "Artikel niet gevonden | Laadexpert Blog",
+      description: "Dit artikel bestaat niet in de Laadexpert Blog",
     };
   }
 

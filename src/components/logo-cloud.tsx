@@ -3,10 +3,22 @@
 import { useEffect, useRef } from "react";
 
 const logos = [
-  { src: "/fotos/brands/smappee.jpeg", alt: "Partner 1" },
-  { src: "/fotos/brands/wallbox.jpeg", alt: "Partner 4" },
-  { src: "/fotos/brands/peblar.jpeg", alt: "Partner 3" },
-  { src: "/fotos/brands/easee.jpeg", alt: "Partner 2" },
+  {
+    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/brands/smappee.jpeg",
+    alt: "Partner 1",
+  },
+  {
+    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/brands/wallbox.jpeg",
+    alt: "Partner 4",
+  },
+  {
+    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/brands/peblar.jpeg",
+    alt: "Partner 3",
+  },
+  {
+    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/brands/easee.jpeg",
+    alt: "Partner 2",
+  },
 ];
 
 export default function LogoCloud() {

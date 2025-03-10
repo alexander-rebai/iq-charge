@@ -5,7 +5,6 @@ import "aos/dist/aos.css";
 import Image from "next/image";
 import { useEffect } from "react";
 import { useLandbot } from "~/hooks/useLandbot";
-import StatsComponent from "./stats-component";
 import { Button } from "./ui/button";
 
 const PartiulierHero = () => {
@@ -21,7 +20,7 @@ const PartiulierHero = () => {
     <div className="relative mb-20 h-screen">
       <div className="absolute inset-0 z-0 h-full w-full">
         <Image
-          src="/fotos/thuis.jpeg"
+          src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/thuis.jpeg"
           layout="fill"
           objectFit="cover"
           alt="Hero image"
@@ -30,9 +29,9 @@ const PartiulierHero = () => {
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      <div className="absolute bottom-0 left-1/2 max-w-7xl -translate-x-1/2 translate-y-1/4 px-6 md:w-3/4 lg:px-8">
+      {/* <div className="absolute bottom-0 left-1/2 max-w-7xl -translate-x-1/2 translate-y-1/4 px-6 md:w-3/4 lg:px-8">
         <StatsComponent variant={"thuis"} />
-      </div>
+      </div> */}
 
       <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white lg:p-0">
         <div className="flex w-full flex-col items-center justify-center md:items-start md:justify-start">
@@ -50,8 +49,7 @@ const PartiulierHero = () => {
           >
             Met onze{" "}
             <span className="text-primary-light">slimme laadoplossingen</span>{" "}
-            maak je elektrisch rijden eenvoudiger dan ooit. Start elke dag met
-            100% energie - zonder wachtrijen of omwegen langs het tankstation.
+            maak je elektrisch rijden eenvoudiger dan ooit.
           </p>
           <div
             className="flex flex-col space-y-4 pt-4 md:flex-row md:space-x-4 md:space-y-0"

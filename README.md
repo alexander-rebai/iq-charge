@@ -1,4 +1,4 @@
-# LaadExpert Style Guide & Implementation Plan
+# Laadexpert Style Guide & Implementation Plan
 
 ## Design Overview
 

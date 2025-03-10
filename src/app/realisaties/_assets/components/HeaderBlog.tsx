@@ -24,13 +24,13 @@ const HeaderBlog = () => {
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/logo.png"
-            alt="LaadExpert Logo"
+            src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/logo.png"
+            alt="Laadexpert Logo"
             width={40}
             height={40}
             className="h-10 w-10"
           />
-          <span className="text-xl font-bold">LaadExpert</span>
+          <span className="text-xl font-bold">Laadexpert</span>
         </Link>
 
         {/* NAVIGATION */}

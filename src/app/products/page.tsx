@@ -1,6 +1,7 @@
 import Contact from "~/components/contact";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
+import LogoCloud from "~/components/logo-cloud";
 import ProductsHero from "~/components/products-hero";
 import SpecificInfo from "~/components/specific-info";
 import Specs from "~/components/specs-table";
@@ -51,20 +52,22 @@ export default function Home() {
       <main>
         <ProductsHero />
 
+        <LogoCloud />
+
         <div className="bg-white py-12 sm:py-12">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl">
               <div className="relative text-center">
                 <div className="absolute -right-72 top-14 hidden h-64 w-64 rotate-12 lg:block">
                   <img
-                    src="/fotos/smappee-certified.png"
+                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/smappee-certified.png"
                     alt="Smappee Certified"
                     className="h-full w-full object-contain"
                   />
                 </div>
                 <div className="mx-auto mb-6 h-24 w-64 lg:hidden">
                   <img
-                    src="/fotos/smappee-certified.png"
+                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/smappee-certified.png"
                     alt="Smappee Certified"
                     className="h-full w-full object-contain"
                   />
@@ -100,21 +103,21 @@ export default function Home() {
               <div className="grid grid-cols-3 gap-8">
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <img
-                    src="/smappee-prodimg.png"
+                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/images/ev-one.jpeg"
                     alt="Smappee"
                     className="h-full w-full object-cover object-center"
                   />
                 </div>
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <img
-                    src="/smapppee_prodimg4.jpg"
+                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/brands/smappee.jpeg"
                     alt="Smappee"
-                    className="h-full w-full object-cover object-center"
+                    className="h-full w-full object-contain object-center p-2"
                   />
                 </div>
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <img
-                    src="/smappee_prodimg2.webp"
+                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/images/ev-wall.png"
                     alt="Smappee"
                     className="h-full w-full object-cover object-center"
                   />
@@ -131,9 +134,10 @@ export default function Home() {
             info: `We bieden een compleet scala aan laadoplossingen - van basisstations tot
 geavanceerde slimme laadsystemen - zodat je altijd krijgt wat perfect bij jouw
 situatie past. We werken met toonaangevende merken zoals Smappee,
-Wallbox en Huawei. Bij LaadExpert draait alles om één ding: jouw
+Wallbox en Huawei. Bij Laadexpert draait alles om één ding: jouw
 overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
-            image: "/smappee/s1.png",
+            video:
+              "https://laadexpert.s3.eu-north-1.amazonaws.com/public/videoo.mp4",
           }}
         />
 
@@ -145,9 +149,9 @@ overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
               </h2>
               <Specs
                 specs={specifications}
-                image1="/smappee/s1.png"
-                image2="/smappee/s3.png"
-                image3="/images/ev-wall.png"
+                image1="https://laadexpert.s3.eu-north-1.amazonaws.com/public/smappee/s1.png"
+                image2="https://laadexpert.s3.eu-north-1.amazonaws.com/public/smappee/s3.png"
+                image3="https://laadexpert.s3.eu-north-1.amazonaws.com/public/images/ev-wall.png"
               />
             </div>
           </div>

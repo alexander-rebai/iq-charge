@@ -8,7 +8,7 @@ const SolutionHome = () => {
         <div className="relative flex flex-col items-start justify-end overflow-hidden rounded-xl p-8 md:col-span-2">
           <Image
             className="absolute left-1/2 top-1/2 h-full -translate-x-1/2 -translate-y-1/2 object-cover"
-            src={"/info2.jpg"}
+            src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/info2.jpg"
             alt=""
             width={2347}
             height={2044}

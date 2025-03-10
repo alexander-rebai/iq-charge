@@ -136,7 +136,7 @@ function OverOnsNav() {
         </div>
       </PopoverTrigger>
       <PopoverContent className="flex w-full flex-col items-start md:gap-x-6">
-        <NavLink href="/over-ons">Over LaadExpert</NavLink>
+        <NavLink href="/over-ons">Over Laadexpert</NavLink>
         <NavLink href="/realisaties">Realisaties</NavLink>
         <NavLink href="/blog">Blog</NavLink>
       </PopoverContent>
@@ -149,7 +149,7 @@ function OverOnsNavMobile() {
     <PopoverComponent>
       <PopoverTrigger className="block w-fit p-2">Over Ons</PopoverTrigger>
       <PopoverContent className="flex w-full flex-col items-start md:gap-x-6">
-        <MobileNavLink href="/over-ons">Over LaadExpert</MobileNavLink>
+        <MobileNavLink href="/over-ons">Over Laadexpert</MobileNavLink>
         <MobileNavLink href="/realisaties">Realisaties</MobileNavLink>
         <MobileNavLink href="/blog">Blog</MobileNavLink>
       </PopoverContent>

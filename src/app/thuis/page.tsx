@@ -18,21 +18,23 @@ export default function Home() {
 voordelige manier om je elektrische auto op te laden.`,
             info2: `Heb je al zonnepanelen of een thuisbatterij? Dan vormt de laadpaal het
 laatste puzzelstuk van je duurzame energieplan.`,
-            image: "/fotos/home1.jpg",
+            image:
+              "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/home1.jpg",
           }}
         />
 
         <SpecificInfo
           isReverse
           information={{
-            title: "Waarom LaadExpert?",
+            title: "Waarom Laadexpert?",
             info: `Wij hebben één focus: laadpalen. We adviseren je persoonlijk op basis van je
 behoeften, budget, elektrische aansluiting en automerk. Ook de installatie
 pakken we professioneel voor je aan - van het eerste adviesgesprek met Noam
 of Liam tot het vakkundig plaatsen van je laadpunt door Robin en Dennis.`,
             info2: `Zo ben je in één keer klaar voor jouw elektrische toekomst. Met één klik vraag
 je een vrijblijvende offerte aan, en nemen we de volledige klus van je over.`,
-            image: "/fotos/home2.jpg",
+            image:
+              "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/home2.jpg",
           }}
         />
 

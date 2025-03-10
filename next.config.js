@@ -17,11 +17,14 @@ const config = {
       {
         hostname: 'images.unsplash.com',
       },
-    ]
+      {
+        hostname: "laadexpert.s3.eu-north-1.amazonaws.com",
+      },
+    ],
   },
   experimental: {
-    missingSuspenseWithCSRBailout: false
-  }
+    missingSuspenseWithCSRBailout: false,
+  },
 };
 
 export default config;

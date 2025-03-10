@@ -12,7 +12,7 @@ laden. Ik weet precies welke laadpaal bij jouw situatie past en hoe we die
 perfect kunnen integreren in je dagelijks leven.`,
     name: "Liam",
     designation: "Elke tevreden klant geeft mij energie.",
-    src: "/team/Liam.png",
+    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/team/Liam.png",
   },
   {
     quote: `Mijn missie is helder: elektrisch laden zo eenvoudig en zorgeloos mogelijk
@@ -20,15 +20,15 @@ maken. Want alleen als we de drempel verlagen, kunnen we samen bouwen
 aan een duurzaam België waar elektrisch rijden de standaard wordt.`,
     name: "Noam",
     designation: "Ik bouw mee aan een elektrische toekomst voor iedereen.",
-    src: "/team/Noam.png",
+    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/team/Noam.png",
   },
   {
-    quote: `Als technisch expert bij LaadExpert zorg ik dat jouw laadpaal perfect
+    quote: `Als technisch expert bij Laadexpert zorg ik dat jouw laadpaal perfect
 geïnstalleerd wordt. Elke installatie bewijst dat we écht het verschil maken in
 service en kwaliteit.`,
     name: "Robin",
     designation: "Innoveren en Vooruit Gaan",
-    src: "/team/Robin.png",
+    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/team/Robin.png",
   },
   {
     quote: `Of het nu gaat om een eenvoudige thuislaadpaal of een complexe
@@ -37,7 +37,7 @@ Zijn klanten waarderen vooral zijn oog voor detail en de rust die hij uitstraalt
 tijdens het hele installatieproces.`,
     name: "Dennis",
     designation: "Perfectie zit in de details",
-    src: "/team/Dennis.png",
+    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/team/Dennis.png",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function Home() {
                   Jouw partner in elektrische vrijheid
                 </h2>
                 <p className="pt-4  text-gray-500">
-                  Bij LaadExpert geloven we dat elektrisch rijden veel meer is
+                  Bij Laadexpert geloven we dat elektrisch rijden veel meer is
                   dan alleen een groene keuze - het is pure vrijheid. Met een
                   laadpaal bij je thuis of op je werk verlies je nooit meer
                   kostbare tijd aan de pomp en start je elke dag met een volle
@@ -88,7 +88,7 @@ export default function Home() {
                   Snel, deskundig en betrouwbaar
                 </h3>
                 <p className="pt-1  text-gray-500">
-                  Kies je vandaag voor LaadExpert, dan krijg je vandaag nog een
+                  Kies je vandaag voor Laadexpert, dan krijg je vandaag nog een
                   oplossing. Ons team van gecertificeerde experts luistert naar
                   je wensen, adviseert de beste oplossing voor jouw situatie en
                   installeert alles vakkundig - meestal binnen twee weken.
