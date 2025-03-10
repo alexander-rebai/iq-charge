@@ -30,6 +30,12 @@ const formSchema = z.object({
 
 type ContactFormType = z.infer<typeof formSchema>;
 
+interface ApiResponse {
+  success: boolean;
+  data?: unknown;
+  error?: string;
+}
+
 export default function Contact() {
   const [loading, setLoading] = useState(false);
 
@@ -57,14 +63,12 @@ export default function Contact() {
         body: JSON.stringify(values),
       });
 
-      const data = await response.json();
+      const data = (await response.json()) as ApiResponse;
 
       if (data.success) {
-        // You might want to add a toast notification here
         resetForm();
       } else {
-        // Handle error - maybe show a toast notification
-        console.error("Failed to send message");
+        console.error("Failed to send message:", data.error);
       }
     } catch (error) {
       console.error("Error sending message:", error);
