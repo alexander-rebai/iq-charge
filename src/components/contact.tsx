@@ -48,10 +48,29 @@ export default function Contact() {
 
   const onSubmit = async (values: ContactFormType) => {
     setLoading(true);
-    console.log(values);
-    // await sendContactFormMail(values)
-    resetForm();
-    setLoading(false);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // You might want to add a toast notification here
+        resetForm();
+      } else {
+        // Handle error - maybe show a toast notification
+        console.error("Failed to send message");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
