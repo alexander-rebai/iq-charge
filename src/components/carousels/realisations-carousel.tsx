@@ -1,18 +1,28 @@
 "use client";
 
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { articles, type articleType } from "~/app/realisaties/_assets/content";
+import {
+  imageOnlyArticles,
+  type articleType,
+} from "~/app/realisaties/_assets/content";
 
-export function RealisationsCarousel() {
-  // Filter articles to only show those with "Realisaties" category
-  const filteredArticles = articles.filter((article) =>
-    article.categories?.some((category) => category.title === "Realisaties"),
-  );
+export function RealisationsCarousel({
+  variant,
+}: {
+  variant: "desktop" | "mobile";
+}) {
+  // // Filter articles to only show those with "Realisaties" category
+  // const filteredArticles = articles.filter((article) =>
+  //   article.categories?.some((category) => category.title === "Realisaties"),
+  // );
+
+  const images = imageOnlyArticles.map((image) => ({
+    image,
+    title: "Realisatie",
+  }));
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
   const progressRef = useRef<NodeJS.Timeout | null>(null);
   const slideRef = useRef(currentSlide);
 
@@ -22,23 +32,27 @@ export function RealisationsCarousel() {
   }, [currentSlide]);
 
   const handlePagination = (direction: "left" | "right") => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-
+    // Remove the isAnimating check since we'll make transitions instant
     const newSlide =
       direction === "right"
-        ? (slideRef.current + 1) % filteredArticles.length
-        : (slideRef.current - 1 + filteredArticles.length) %
-          filteredArticles.length;
+        ? (slideRef.current + 1) % images.length
+        : (slideRef.current - 1 + images.length) % images.length;
 
     setCurrentSlide(newSlide);
-    setTimeout(() => setIsAnimating(false), 800);
+
+    // Reset the auto-advance timer when user manually changes slides
+    if (progressRef.current) {
+      clearInterval(progressRef.current);
+      progressRef.current = setInterval(() => {
+        setCurrentSlide((curr) => (curr + 1) % images.length);
+      }, 5000);
+    }
   };
 
   useEffect(() => {
     // Auto advance slides every 5 seconds
     progressRef.current = setInterval(() => {
-      handlePagination("right");
+      setCurrentSlide((curr) => (curr + 1) % images.length);
     }, 5000);
 
     return () => {
@@ -46,7 +60,7 @@ export function RealisationsCarousel() {
         clearInterval(progressRef.current);
       }
     };
-  }, [handlePagination]);
+  }, []); // Remove handlePagination dependency since we're using setCurrentSlide directly
 
   // Function to safely get image URL
   const getImageUrl = (article: articleType) => {
@@ -73,37 +87,41 @@ export function RealisationsCarousel() {
   };
 
   // If no articles with "Realisaties" category, don't render the carousel
-  if (filteredArticles.length === 0) {
+  if (images.length === 0) {
     return null;
   }
 
   return (
-    <div className="absolute bottom-12 right-16">
+    <div
+      className={`${variant === "desktop" ? "absolute bottom-12 right-16" : "w-full p-4"}`}
+    >
       <div className="relative flex h-[400px] items-center">
         <div className="relative h-full">
-          {filteredArticles.map((article, index) => {
+          {images.map((image, index) => {
             const isActive = index === currentSlide;
             const offset =
-              ((index - currentSlide + filteredArticles.length) %
-                filteredArticles.length) *
-              240;
+              ((index - currentSlide + images.length) % images.length) * 240;
 
-            const { firstLine, secondLine } = formatTitle(article.title);
+            // const { firstLine, secondLine } = formatTitle(image.title);
 
             return (
-              <Link
+              <div
                 key={index}
-                href={`/realisaties/${article.slug}`}
-                className={`duration-2400 absolute right-96 top-1/2 h-[280px] w-[220px] -translate-y-1/2 transform cursor-pointer rounded-xl bg-cover bg-center shadow-lg transition-all ease-in-out hover:border-2 hover:border-primary-foreground ${
+                // href={`/realisaties/${article.slug}`}
+                className={`z-[999] duration-300 ${
+                  variant === "desktop"
+                    ? "absolute right-96"
+                    : "absolute right-0"
+                } top-1/2 h-[280px] w-[220px] -translate-y-1/2 transform cursor-pointer rounded-xl bg-cover bg-center shadow-lg transition-all ease-in-out hover:border-2 hover:border-primary-foreground ${
                   isActive ? "z-20" : "z-10"
                 }`}
                 style={{
-                  backgroundImage: `url(${getImageUrl(article)})`,
+                  backgroundImage: `url(${image.image})`,
                   transform: `translate(${offset}px, -50%) scale(${isActive ? 1 : 0.95})`,
                   opacity: offset > 960 ? 0 : 1,
                 }}
               >
-                <div className="absolute bottom-0 left-0 w-full rounded-b-xl bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
+                {/* <div className="absolute bottom-0 left-0 w-full rounded-b-xl bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
                   {article.categories?.length > 0 && (
                     <p className="text-sm font-medium text-gray-300">
                       {article.categories?.[0]?.title}
@@ -117,42 +135,61 @@ export function RealisationsCarousel() {
                       {secondLine}
                     </h3>
                   )}
-                </div>
-              </Link>
+                </div> */}
+              </div>
             );
           })}
         </div>
 
         {/* Controls Container */}
-        <div className="absolute -bottom-8 right-32 flex items-center gap-8">
+        <div
+          className={`${
+            variant === "desktop"
+              ? "absolute -bottom-8 right-32"
+              : "absolute -bottom-8 right-4"
+          } flex items-center gap-8`}
+        >
           {/* Navigation */}
           <div className="z-50 flex items-center gap-5">
             <button
               onClick={() => handlePagination("left")}
-              className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white/30 transition-colors hover:border-white/50"
-              disabled={isAnimating}
+              className={`flex h-12 w-12 items-center justify-center rounded-full border-2 ${
+                variant === "desktop"
+                  ? "border-white/30 hover:border-white/50"
+                  : "border-gray-700 hover:border-gray-600"
+              }`}
             >
-              <ChevronLeftIcon className="h-6 w-6 text-white/60" />
+              <ChevronLeftIcon
+                className={`h-6 w-6 ${
+                  variant === "desktop" ? "text-white/60" : "text-gray-700"
+                }`}
+              />
             </button>
             <button
               onClick={() => handlePagination("right")}
-              className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white/30 transition-colors hover:border-white/50"
-              disabled={isAnimating}
+              className={`flex h-12 w-12 items-center justify-center rounded-full border-2 ${
+                variant === "desktop"
+                  ? "border-white/30 hover:border-white/50"
+                  : "border-gray-700 hover:border-gray-600"
+              }`}
             >
-              <ChevronRightIcon className="h-6 w-6 text-white/60" />
+              <ChevronRightIcon
+                className={`h-6 w-6 ${
+                  variant === "desktop" ? "text-white/60" : "text-gray-700"
+                }`}
+              />
             </button>
           </div>
 
           {/* Progress Bar */}
           <div className="flex h-12 w-[320px] items-center">
-            <div className="h-[3px] w-full bg-white/20">
-              <div
-                className="duration-2400 h-full bg-primary-light transition-all ease-in-out"
-                style={{
-                  width: `${((currentSlide + 1) / filteredArticles.length) * 100}%`,
-                }}
-              />
-            </div>
+            <p
+              className={`${
+                variant === "desktop" ? "text-muted" : "text-gray-700"
+              }`}
+            >
+              Onze realisaties
+            </p>
           </div>
         </div>
       </div>

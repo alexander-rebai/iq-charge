@@ -44,12 +44,19 @@ const ProductsHero = () => {
                   Ons aanbod:
                 </h1>
                 <h1
-                  className="mb-8 max-w-3xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
+                  className="mb-4 max-w-3xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
                   data-aos="fade-up"
                 >
                   <FlipWords words={words} />
                 </h1>
               </div>
+              <p
+                className="max-w-lg text-left text-base text-white drop-shadow-md md:text-start md:text-lg lg:self-auto lg:pr-4 lg:text-[24px]"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                Wij werken niet voor een merk maar voor jou.
+              </p>
             </div>
           </div>
         </div>

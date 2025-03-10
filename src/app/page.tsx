@@ -1,4 +1,5 @@
 import CallToActionBanner from "~/components/call-to-action-banner";
+import { RealisationsCarousel } from "~/components/carousels/realisations-carousel";
 import Contact from "~/components/contact";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
@@ -17,6 +18,16 @@ export default function Home() {
           <Hero />
           <LogoCloud />
           <Stats />
+
+          <section className="block xl:hidden">
+            <div className="mb-6 mt-6 flex flex-col gap-8">
+              <h2 className="text-center text-4xl" data-aos="fade-up">
+                Onze realisaties
+              </h2>
+              <RealisationsCarousel variant="mobile" />
+            </div>
+          </section>
+
           <RoadMap />
 
           <CallToActionBanner

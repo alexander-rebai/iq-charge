@@ -83,7 +83,7 @@ export function Hero() {
 
         {/* Carousel - hidden on mobile */}
         <div className="hidden xl:block">
-          <RealisationsCarousel />
+          <RealisationsCarousel variant="desktop" />
         </div>
       </div>
     </section>

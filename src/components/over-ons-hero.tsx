@@ -32,13 +32,20 @@ const OverOnsHero = () => {
       </div>
 
       <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white lg:p-0">
-        <div className="flex w-full flex-col items-center justify-center md:items-start md:justify-start">
+        <div className="flex w-full flex-col items-center justify-center gap-6 md:items-start md:justify-start">
           <h1
             className="text-4xl font-semibold text-primary-foreground drop-shadow-lg md:text-5xl lg:text-[64px]"
             data-aos="fade-up"
           >
             Over ons
           </h1>
+          <p
+            className="max-w-lg text-left text-base text-white drop-shadow-md md:text-start md:text-lg lg:self-auto lg:pr-4 lg:text-[24px]"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Leer meer over ons en onze missie.
+          </p>
         </div>
       </div>
     </div>

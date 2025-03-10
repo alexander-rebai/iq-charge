@@ -19,6 +19,10 @@ const logos = [
     src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/brands/easee.jpeg",
     alt: "Partner 2",
   },
+  {
+    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/zaptec.png",
+    alt: "Partner 5",
+  },
 ];
 
 export default function LogoCloud() {
