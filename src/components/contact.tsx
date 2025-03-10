@@ -32,7 +32,12 @@ type ContactFormType = z.infer<typeof formSchema>;
 
 interface ApiResponse {
   success: boolean;
-  data?: unknown;
+  data?: {
+    id: string;
+    from: string;
+    to: string[];
+    created_at: string;
+  };
   error?: string;
 }
 
@@ -63,12 +68,12 @@ export default function Contact() {
         body: JSON.stringify(values),
       });
 
-      const data = (await response.json()) as ApiResponse;
+      const responseData = (await response.json()) as ApiResponse;
 
-      if (data.success) {
+      if (responseData.success) {
         resetForm();
       } else {
-        console.error("Failed to send message:", data.error);
+        console.error("Failed to send message:", responseData.error);
       }
     } catch (error) {
       console.error("Error sending message:", error);

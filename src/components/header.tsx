@@ -158,7 +158,8 @@ function OverOnsNavMobile() {
 }
 
 export function Header({ empty }: { empty?: boolean }) {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [_isScrolled, setIsScrolled] = useState(false);
+  const [_prevScrollPos, setPrevScrollPos] = useState(0);
   const { openChat } = useLandbot();
 
   useEffect(() => {
