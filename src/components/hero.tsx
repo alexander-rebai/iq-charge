@@ -23,14 +23,20 @@ export function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden pt-16">
       <div className="relative h-full overflow-hidden">
-        <Image
-          src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/hero.jpg"
-          alt="Hero cover"
-          fill
-          priority
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 1600px, 4800px"
-          className="h-full w-full object-cover"
-        />
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcSet="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/hero-mobile.jpg"
+          />
+          <Image
+            src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/hero.jpg"
+            alt="Hero cover"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 1600px, 4800px"
+            className="h-full w-full object-cover"
+          />
+        </picture>
         <div className="absolute inset-0 bg-black/20"></div>
       </div>
 

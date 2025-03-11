@@ -7,9 +7,9 @@ export default function Stats() {
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">
-              Een slimme laadpaal - het laatste puzzelstuk van jouw{"   "}
+              Een slimme laadpaal - het laatste puzzelstuk van jouw{" "}
               <span className="bg-primary-light/60 font-semibold">
-                duurzame transitie
+                <span className="whitespace-nowrap">duurzame transitie</span>
               </span>
             </h2>
           </div>

@@ -44,9 +44,8 @@ export default function SpecificInfo({
         <div className="relative block h-64 overflow-hidden rounded-xl md:hidden">
           {information.video ? (
             <video
-              className="h-full w-full rounded-xl object-cover"
+              className="h-full w-full rounded-xl object-contain"
               controls
-              autoPlay
               muted
               loop
             >
@@ -58,7 +57,7 @@ export default function SpecificInfo({
               priority
               src={information.image}
               alt="Product screenshot"
-              className="rounded-xl object-cover shadow-xl"
+              className="rounded-xl object-cover object-left shadow-xl"
               fill
               sizes="100vw"
             />
@@ -71,9 +70,8 @@ export default function SpecificInfo({
             <div className="relative hidden h-64 overflow-hidden rounded-xl md:block lg:h-96">
               {information.video ? (
                 <video
-                  className="h-full w-full rounded-xl object-cover"
+                  className="h-full w-full rounded-xl object-contain"
                   controls
-                  autoPlay
                   muted
                   loop
                 >
@@ -85,7 +83,7 @@ export default function SpecificInfo({
                   priority
                   src={information.image}
                   alt="Product screenshot"
-                  className="rounded-xl object-cover shadow-xl"
+                  className="rounded-xl object-cover object-left shadow-xl"
                   fill
                   sizes="(max-width: 1280px) 50vw, (max-width: 1536px) 33vw, 25vw"
                 />
@@ -125,9 +123,8 @@ export default function SpecificInfo({
             <div className="relative hidden h-64 overflow-hidden rounded-xl md:block lg:h-96">
               {information.video ? (
                 <video
-                  className="h-full w-full rounded-xl object-cover"
+                  className="h-full w-full rounded-xl object-contain"
                   controls
-                  autoPlay
                   muted
                   loop
                 >
@@ -139,7 +136,7 @@ export default function SpecificInfo({
                   priority
                   src={information.image}
                   alt="Product screenshot"
-                  className="rounded-xl object-cover shadow-xl"
+                  className="rounded-xl object-cover object-left shadow-xl"
                   fill
                   sizes="(max-width: 1280px) 50vw, (max-width: 1536px) 33vw, 25vw"
                 />

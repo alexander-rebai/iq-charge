@@ -58,20 +58,6 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl">
               <div className="relative text-center">
-                <div className="absolute -right-72 top-14 hidden h-64 w-64 rotate-12 lg:block">
-                  <img
-                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/smappee-certified.png"
-                    alt="Smappee Certified"
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-                <div className="mx-auto mb-6 h-24 w-64 lg:hidden">
-                  <img
-                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/smappee-certified.png"
-                    alt="Smappee Certified"
-                    className="h-full w-full object-contain"
-                  />
-                </div>
                 <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
                   Uitgelicht product:{" "}
                   <span className="bg-primary-light/60 font-semibold">
@@ -112,17 +98,24 @@ export default function Home() {
                   <img
                     src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/p3.jpg"
                     alt="Smappee"
-                    className="h-full w-full object-cover object-center"
+                    className="h-full w-full object-cover object-left"
                   />
                 </div>
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <img
                     src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/p2.jpg"
                     alt="Smappee"
-                    className="h-full w-full object-cover object-center"
+                    className="h-full w-full object-cover object-right"
                   />
                 </div>
               </div>
+            </div>
+            <div className="mx-auto mt-6 h-24 w-64">
+              <img
+                src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/smappee-certified.png"
+                alt="Smappee Certified"
+                className="h-full w-full object-contain"
+              />
             </div>
           </div>
         </div>

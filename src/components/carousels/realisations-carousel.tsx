@@ -93,14 +93,25 @@ export function RealisationsCarousel({
 
   return (
     <div
-      className={`${variant === "desktop" ? "absolute bottom-12 right-16" : "relative w-full p-4"}`}
+      className={`${
+        variant === "desktop"
+          ? "absolute bottom-12 right-16"
+          : "relative h-[450px] w-full overflow-x-hidden"
+      }`}
     >
-      <div className="relative flex h-[400px] items-center">
+      <div
+        className={`relative flex h-[350px] items-center ${
+          variant === "mobile" ? "justify-center" : ""
+        }`}
+      >
         <div className="relative h-full">
           {images.map((image, index) => {
             const isActive = index === currentSlide;
             const offset =
-              ((index - currentSlide + images.length) % images.length) * 240;
+              variant === "desktop"
+                ? ((index - currentSlide + images.length) % images.length) * 240
+                : ((index - currentSlide + images.length) % images.length) *
+                  200;
 
             // const { firstLine, secondLine } = formatTitle(image.title);
 
@@ -111,14 +122,19 @@ export function RealisationsCarousel({
                 className={`z-[999] duration-300 ${
                   variant === "desktop"
                     ? "absolute right-96"
-                    : "absolute right-0"
-                } top-1/2 h-[280px] w-[220px] -translate-y-1/2 transform cursor-pointer rounded-xl bg-cover bg-center shadow-lg transition-all ease-in-out hover:border-2 hover:border-primary-foreground ${
+                    : "absolute left-1/2"
+                } top-1/2 transform cursor-pointer rounded-xl bg-cover bg-center shadow-lg transition-all ease-in-out hover:border-2 hover:border-primary-foreground ${
                   isActive ? "z-20" : "z-10"
                 }`}
                 style={{
                   backgroundImage: `url(${image.image})`,
-                  transform: `translate(${offset}px, -50%) scale(${isActive ? 1 : 0.95})`,
-                  opacity: offset > 960 ? 0 : 1,
+                  transform:
+                    variant === "desktop"
+                      ? `translate(${offset}px, -50%) scale(${isActive ? 1 : 0.95})`
+                      : `translate(calc(-50% + ${offset}px), -50%) scale(${isActive ? 1 : 0.95})`,
+                  opacity: offset > (variant === "desktop" ? 960 : 800) ? 0 : 1,
+                  height: variant === "desktop" ? "280px" : "240px",
+                  width: variant === "desktop" ? "220px" : "180px",
                 }}
               >
                 {/* <div className="absolute bottom-0 left-0 w-full rounded-b-xl bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
@@ -146,7 +162,7 @@ export function RealisationsCarousel({
           className={`${
             variant === "desktop"
               ? "absolute -bottom-8 right-32"
-              : "absolute -bottom-8 left-0 right-0 mx-auto flex justify-center"
+              : "absolute -bottom-16 left-0 right-0 mx-auto flex justify-center"
           } flex items-center gap-8`}
         >
           {/* Navigation */}

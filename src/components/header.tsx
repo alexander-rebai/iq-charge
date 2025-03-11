@@ -164,10 +164,14 @@ function OverOnsNavMobile() {
   return (
     <PopoverComponent>
       <PopoverTrigger className="block w-fit p-2">Over Ons</PopoverTrigger>
-      <PopoverContent className="flex w-full flex-col items-start md:gap-x-6">
-        <MobileNavLink href="/over-ons">Over Laadexpert</MobileNavLink>
+      <PopoverContent className="z-[9999] flex w-full flex-col items-start md:gap-x-6">
+        <MobileNavLink href="/over-ons" className="text-gray-800">
+          Over Laadexpert
+        </MobileNavLink>
         {/* <MobileNavLink href="/realisaties">Realisaties</MobileNavLink> */}
-        <MobileNavLink href="/blog">Blog</MobileNavLink>
+        <MobileNavLink href="/blog" className="text-gray-800">
+          Blog
+        </MobileNavLink>
       </PopoverContent>
     </PopoverComponent>
   );

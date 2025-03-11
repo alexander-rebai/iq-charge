@@ -22,7 +22,7 @@ export default async function Blog() {
   return (
     <>
       <section className="mx-auto mb-16 max-w-xl text-center md:mb-24">
-        <h1 className="mb-6 text-3xl font-extrabold tracking-tight lg:text-5xl">
+        <h1 className="mb-6 text-3xl font-bold tracking-tight lg:text-5xl">
           Onze blog
         </h1>
         <p className="text-lg leading-relaxed opacity-80">
