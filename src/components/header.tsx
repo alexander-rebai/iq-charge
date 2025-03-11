@@ -26,7 +26,7 @@ function MobileNavIcon({
   return (
     <svg
       aria-hidden="true"
-      className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
+      className="h-3.5 w-3.5 overflow-visible stroke-white"
       fill="none"
       strokeWidth={2}
       strokeLinecap="round"
@@ -52,15 +52,17 @@ function MobileNavIcon({
 function MobileNavLink({
   href,
   children,
+  className,
 }: {
   href: string;
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
     <Popover.Button
       as={Link}
       href={href}
-      className="block w-full p-2 text-white"
+      className={cn("block w-full p-2 text-white", className)}
     >
       {children}
     </Popover.Button>
@@ -101,11 +103,17 @@ function MobileNavigation({ isScrolled }: { isScrolled?: boolean }) {
         >
           <Popover.Panel
             as="div"
-            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
+            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-xl bg-white p-4 text-lg tracking-tight text-primary shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="/thuis">Thuis</MobileNavLink>
-            <MobileNavLink href="/bedrijf">Zakelijk</MobileNavLink>
-            <MobileNavLink href="/products">Producten</MobileNavLink>
+            <MobileNavLink className="text-primary" href="/thuis">
+              Thuis
+            </MobileNavLink>
+            <MobileNavLink className="text-primary" href="/bedrijf">
+              Zakelijk
+            </MobileNavLink>
+            <MobileNavLink className="text-primary" href="/products">
+              Producten
+            </MobileNavLink>
             <OverOnsNavMobile />
             <hr className="m-2 border-slate-300/40" />
             <div className="p-2">

@@ -93,7 +93,7 @@ export function RealisationsCarousel({
 
   return (
     <div
-      className={`${variant === "desktop" ? "absolute bottom-12 right-16" : "w-full p-4"}`}
+      className={`${variant === "desktop" ? "absolute bottom-12 right-16" : "relative w-full p-4"}`}
     >
       <div className="relative flex h-[400px] items-center">
         <div className="relative h-full">
@@ -146,7 +146,7 @@ export function RealisationsCarousel({
           className={`${
             variant === "desktop"
               ? "absolute -bottom-8 right-32"
-              : "absolute -bottom-8 right-4"
+              : "absolute -bottom-8 left-0 right-0 mx-auto flex justify-center"
           } flex items-center gap-8`}
         >
           {/* Navigation */}
@@ -182,7 +182,7 @@ export function RealisationsCarousel({
           </div>
 
           {/* Progress Bar */}
-          <div className="flex h-12 w-[320px] items-center">
+          <div className="hidden h-12 w-[320px] items-center md:flex">
             <p
               className={`${
                 variant === "desktop" ? "text-muted" : "text-gray-700"
