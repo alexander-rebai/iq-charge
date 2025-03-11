@@ -61,7 +61,7 @@ const navigation = {
 
 export function Footer({ hideLinks }: { hideLinks?: boolean }) {
   return (
-    <footer className="relative bg-gray-100">
+    <footer className="relative bg-[#1C3C36]">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 [transform:scaleX(-1)]"
         style={{ backgroundImage: 'url("/fotos/footer-bg.jpeg")' }}
@@ -80,7 +80,7 @@ export function Footer({ hideLinks }: { hideLinks?: boolean }) {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 hover:text-gray-900"
+                className="text-white hover:text-gray-300"
               >
                 {item.name}
               </Link>
@@ -93,14 +93,14 @@ export function Footer({ hideLinks }: { hideLinks?: boolean }) {
             <Link
               key={item.name}
               href={item.href}
-              className="text-gray-600 hover:text-gray-800"
+              className="text-white hover:text-gray-300"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </Link>
           ))}
           <Popover>
-            <PopoverTrigger className="text-gray-600 hover:text-gray-800">
+            <PopoverTrigger className="text-white hover:text-gray-300">
               <span className="sr-only">Email</span>
               <svg
                 className="h-6 w-6"

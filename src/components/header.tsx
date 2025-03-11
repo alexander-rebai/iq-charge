@@ -57,7 +57,11 @@ function MobileNavLink({
   children: React.ReactNode;
 }) {
   return (
-    <Popover.Button as={Link} href={href} className="block w-full p-2">
+    <Popover.Button
+      as={Link}
+      href={href}
+      className="block w-full p-2 text-white"
+    >
       {children}
     </Popover.Button>
   );
@@ -127,7 +131,7 @@ function OverOnsNav() {
       <PopoverTrigger className="w-fit">
         <div
           className={cn(
-            "inline-flex items-center rounded px-2 py-1.5 text-sm font-medium text-gray-700",
+            "inline-flex items-center rounded px-2 py-1.5 text-sm font-medium text-white",
             "transition-colors duration-200 ease-in-out",
             "hover:bg-gray-50 hover:text-gray-900",
           )}
@@ -136,9 +140,13 @@ function OverOnsNav() {
         </div>
       </PopoverTrigger>
       <PopoverContent className="flex w-full flex-col items-start md:gap-x-6">
-        <NavLink href="/over-ons">Over Laadexpert</NavLink>
+        <NavLink className="text-gray-800" href="/over-ons">
+          Over Laadexpert
+        </NavLink>
         {/* <NavLink href="/realisaties">Realisaties</NavLink> */}
-        <NavLink href="/blog">Blog</NavLink>
+        <NavLink className="text-gray-800" href="/blog">
+          Blog
+        </NavLink>
       </PopoverContent>
     </PopoverComponent>
   );
@@ -158,13 +166,14 @@ function OverOnsNavMobile() {
 }
 
 export function Header({ empty }: { empty?: boolean }) {
-  const [_isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [_prevScrollPos, setPrevScrollPos] = useState(0);
   const { openChat } = useLandbot();
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
+      setIsScrolled(currentScrollPos > 0);
       setPrevScrollPos(currentScrollPos);
     };
 
@@ -176,8 +185,9 @@ export function Header({ empty }: { empty?: boolean }) {
   return (
     <header
       className={cn(
-        "fixed top-0 z-50 flex h-16 w-full items-center transition-all duration-300",
-        "bg-white/80 shadow-sm backdrop-blur-md",
+        "fixed top-0 z-[9999] flex h-16 w-full items-center transition-all duration-300",
+        isScrolled ? "bg-[#1C3C36]/80" : "bg-[#1C3C36]",
+        "shadow-sm backdrop-blur-lg",
       )}
     >
       <nav

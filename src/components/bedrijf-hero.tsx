@@ -23,7 +23,7 @@ const BedrijfHero = () => {
     <div className="relative mb-20 h-screen">
       <div className="absolute inset-0 z-0 h-full w-full">
         <Image
-          src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/zakelijk.jpg"
+          src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/zakelijk-hero.jpg"
           layout="fill"
           objectFit="cover"
           alt="Hero image"
@@ -61,8 +61,7 @@ const BedrijfHero = () => {
             data-aos-delay="100"
           >
             10 tot 50 laadpunten? Voor ons vormt dat geen probleem! Wij
-            installeren snel en efficiënt wat bij jouw bedrijf past. Betrouwbare
-            technologie, optimaal beheer en minimale kosten.
+            installeren snel en efficiënt wat bij jouw bedrijf past.
           </p>
           <div
             className="flex flex-col space-y-4 pt-4 md:flex-row md:space-x-4 md:space-y-0"

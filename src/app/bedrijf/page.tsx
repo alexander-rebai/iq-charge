@@ -21,7 +21,7 @@ die de waarde van hun panden willen verhogen, of projectontwikkelaars die
 duurzaamheid vroegtijdig willen integreren - wij maken elektrisch laden
 eenvoudig, rendabel en toekomstbestendig voor jouw organisatie.`,
             image:
-              "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/zakelijk 2.jpg",
+              "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/zakelijk1.jpg",
           }}
         />
 
@@ -35,14 +35,14 @@ toekomstbestendig is. Onze laadinfrastructuur sluit perfect aan bij de
 behoeften van uw organisatie, medewerkers en bezoekers. Wij regelen alles
 efficiënt, zodat u zich kunt focussen op uw kernactiviteiten.`,
             image:
-              "https://laadexpert.s3.eu-north-1.amazonaws.com/public/images/zakelijk2.jpg",
+              "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/zakelijk22.jpg",
           }}
         />
 
         <section id="contact">
           <div className="mb-10 mt-20 flex flex-col gap-8">
             <h2 className="text-center text-4xl" data-aos="fade-up">
-              Neem vandaag nog contact op
+              Vraag hier je persoonlijke adviesgesprek aan
             </h2>
             <Contact />
           </div>

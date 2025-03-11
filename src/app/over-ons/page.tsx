@@ -2,7 +2,6 @@ import { TeamCards } from "~/components/animated-team-card";
 import Contact from "~/components/contact";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
-import OverOnsHero from "~/components/over-ons-hero";
 
 const teamMembers = [
   {
@@ -45,11 +44,11 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
-        <OverOnsHero />
+      <main className="pt-24 ">
+        {/* <OverOnsHero /> */}
 
         <section
-          className="flex flex-col items-center justify-center py-12"
+          className="flex flex-col items-center justify-center"
           data-aos="fade-up"
         >
           <h2 className="text-center text-4xl">Ons team</h2>
@@ -106,7 +105,7 @@ export default function Home() {
         <section id="contact">
           <div className="mb-10  flex flex-col gap-8">
             <h2 className="text-center text-4xl" data-aos="fade-up">
-              Neem vandaag nog contact op
+              Vraag hier je persoonlijke adviesgesprek aan
             </h2>
             <Contact />
           </div>

@@ -39,7 +39,7 @@ export default function LogoCloud() {
 
   return (
     <div className="bg-white pt-12">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="z-[999] mx-auto min-w-full px-6 lg:px-8">
         <div className="inline-flex w-full flex-nowrap overflow-hidden">
           <ul
             ref={logoRef}
@@ -50,7 +50,7 @@ export default function LogoCloud() {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="w-64 object-contain"
+                  className="z-50 w-64 object-contain"
                 />
               </li>
             ))}

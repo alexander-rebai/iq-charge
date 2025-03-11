@@ -40,7 +40,7 @@ binnen twee weken zorgeloos elektrisch kunt laden."
           <section id="contact">
             <div className="mb-10 mt-20 flex flex-col gap-8">
               <h2 className="text-center text-4xl" data-aos="fade-up">
-                Neem vandaag nog contact met ons op
+                Vraag hier je persoonlijke adviesgesprek aan
               </h2>
               <Contact />
             </div>

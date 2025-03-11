@@ -58,24 +58,24 @@ const zakelijkStats = [
 const thuisStats = [
   {
     id: 1,
-    name: "Zonne-energie: Maximaal laden met je zonnepanelen",
+    name: "Zonne-energie",
     iconSrc:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/sun-energy.png",
-    iconAlt: "Zonne-energie: Maximaal laden met je zonnepanelen",
+      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/Solar Energy Icon (1).png",
+    iconAlt: "Zonne-energie",
   },
   {
     id: 2,
-    name: "Capaciteitstarief: Beperk jouw piekverbuik",
+    name: "Capaciteitstarief",
     iconSrc:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/full-charge.png",
-    iconAlt: "Capaciteitstarief: Beperk jouw piekverbuik",
+      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/Battery Gradient Icon.png",
+    iconAlt: "Capaciteitstarief",
   },
   {
     id: 3,
-    name: "⁠Load balancing: Gebruik zorgeloos andere apparaten in huis",
+    name: "⁠Load balancing",
     iconSrc:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/load-balance.png",
-    iconAlt: "⁠⁠Load balancing: Gebruik zorgeloos andere apparaten in huis",
+      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/Battery Gradient Icon (1).png",
+    iconAlt: "⁠⁠Load balancing",
   },
 ];
 

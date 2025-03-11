@@ -17,7 +17,7 @@ const specifications = [
     category: "Max. vermogen",
     value: "2 x 22kw",
     value2: "22 kW",
-    value3: "2 x 240 kW",
+    value3: "7,4kW / 22 kW",
   },
   {
     category: "Gebruikersinterface",
@@ -27,15 +27,15 @@ const specifications = [
   },
   {
     category: "Montage",
-    value: "Muur",
-    value2: "Muur",
+    value: "Sokkel",
+    value2: "Sokkel",
     value3: "Muur",
   },
   {
     category: "Type stekker",
     value: "2 x Type 2",
     value2: "Type 2",
-    value3: "2 x Type 2",
+    value3: "Type 2",
   },
   {
     category: "Afmetingen (mm) HxLxD",
@@ -103,21 +103,21 @@ export default function Home() {
               <div className="grid grid-cols-3 gap-8">
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <img
-                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/images/ev-one.jpeg"
+                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/p1.jpg"
                     alt="Smappee"
                     className="h-full w-full object-cover object-center"
                   />
                 </div>
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <img
-                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/brands/smappee.jpeg"
+                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/p3.jpg"
                     alt="Smappee"
-                    className="h-full w-full object-contain object-center p-2"
+                    className="h-full w-full object-cover object-center"
                   />
                 </div>
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <img
-                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/images/ev-wall.png"
+                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/p2.jpg"
                     alt="Smappee"
                     className="h-full w-full object-cover object-center"
                   />
@@ -160,7 +160,7 @@ overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
         <section id="contact">
           <div className="mb-10 mt-20 flex flex-col gap-8">
             <h2 className="text-center text-4xl" data-aos="fade-up">
-              Neem vandaag nog contact op
+              Vraag hier je persoonlijke adviesgesprek aan
             </h2>
             <Contact />
           </div>
