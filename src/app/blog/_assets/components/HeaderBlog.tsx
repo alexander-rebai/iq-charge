@@ -24,7 +24,7 @@ const HeaderBlog = () => {
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/logo.png"
+            src="https://dx8uea1j8p9gd.cloudfront.net/public/logo.png"
             alt="Laadexpert Logo"
             width={40}
             height={40}

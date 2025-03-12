@@ -5,28 +5,28 @@ const landingStats = [
     id: 1,
     name: "Focus op laadpalen",
     iconSrc:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/icons/USPs/focus op laadpalen.png",
+      "https://dx8uea1j8p9gd.cloudfront.net/public/icons/USPs/focus op laadpalen.png",
     iconAlt: "100% focus op laadpalen",
   },
   {
     id: 2,
     name: "Persoonlijke aanpak",
     iconSrc:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/icons/USPs/Persoonlijke aanpak.png",
+      "https://dx8uea1j8p9gd.cloudfront.net/public/icons/USPs/Persoonlijke aanpak.png",
     iconAlt: "Persoonlijke aanpak",
   },
   {
     id: 3,
     name: "Service op maat",
     iconSrc:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/icons/USPs/Service op maat.png",
+      "https://dx8uea1j8p9gd.cloudfront.net/public/icons/USPs/Service op maat.png",
     iconAlt: "Service op maat",
   },
   {
     id: 4,
     name: "Snel en zorgeloos",
     iconSrc:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/icons/USPs/Snel en zorgeloos.png",
+      "https://dx8uea1j8p9gd.cloudfront.net/public/icons/USPs/Snel en zorgeloos.png",
     iconAlt: "Snel en zorgeloos",
   },
 ];
@@ -36,21 +36,21 @@ const zakelijkStats = [
     id: 1,
     name: "Comfort en gemak voor werknemers",
     iconSrc:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/icons/voordelen zakelijk laden/comfort en gemak voor WN.png",
+      "https://dx8uea1j8p9gd.cloudfront.net/public/icons/voordelen zakelijk laden/comfort en gemak voor WN.png",
     iconAlt: "Comfort en gemak voor werknemers",
   },
   {
     id: 2,
     name: "Fiscale voordelen",
     iconSrc:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/icons/voordelen zakelijk laden/fiscale voordelen.png",
+      "https://dx8uea1j8p9gd.cloudfront.net/public/icons/voordelen zakelijk laden/fiscale voordelen.png",
     iconAlt: "Fiscale voordelen",
   },
   {
     id: 3,
     name: "Groen imago",
     iconSrc:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/icons/voordelen zakelijk laden/groen imago.png",
+      "https://dx8uea1j8p9gd.cloudfront.net/public/icons/voordelen zakelijk laden/groen imago.png",
     iconAlt: "Groen imago",
   },
 ];
@@ -60,21 +60,21 @@ const thuisStats = [
     id: 1,
     name: "Zonne-energie",
     iconSrc:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/Solar Energy Icon (1).png",
+      "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/Solar Energy Icon (1).png",
     iconAlt: "Zonne-energie",
   },
   {
     id: 2,
     name: "Capaciteitstarief",
     iconSrc:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/Battery Gradient Icon.png",
+      "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/Battery Gradient Icon.png",
     iconAlt: "Capaciteitstarief",
   },
   {
     id: 3,
     name: "⁠Load balancing",
     iconSrc:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/Battery Gradient Icon (1).png",
+      "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/Battery Gradient Icon (1).png",
     iconAlt: "⁠⁠Load balancing",
   },
 ];

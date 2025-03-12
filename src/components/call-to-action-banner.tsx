@@ -20,7 +20,7 @@ export default function CallToActionBanner({
     <div className={cn("relative z-[9999] overflow-hidden py-36")}>
       <Image
         className="absolute left-1/2 top-1/2 h-full w-screen max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-bottom"
-        src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/images/bridge.jpg"
+        src="https://dx8uea1j8p9gd.cloudfront.net/public/images/bridge.jpg"
         alt=""
         width={2347}
         height={2044}

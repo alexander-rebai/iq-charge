@@ -1,26 +1,27 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const logos = [
   {
-    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/brands/smappee.jpeg",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/brands/smappee.jpeg",
     alt: "Partner 1",
   },
   {
-    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/brands/wallbox.jpeg",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/brands/wallbox.jpeg",
     alt: "Partner 4",
   },
   {
-    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/brands/peblar.jpeg",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/brands/peblar.jpeg",
     alt: "Partner 3",
   },
   {
-    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/brands/easee.jpeg",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/brands/easee.jpeg",
     alt: "Partner 2",
   },
   {
-    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/zaptec.png",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/zaptec.png",
     alt: "Partner 5",
   },
 ];
@@ -47,10 +48,14 @@ export default function LogoCloud() {
           >
             {logos.map((logo, idx) => (
               <li key={`logo-${idx}`}>
-                <img
+                <Image
                   src={logo.src}
                   alt={logo.alt}
+                  width={256}
+                  height={128}
                   className="z-50 w-64 object-contain"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 50vw, 256px"
                 />
               </li>
             ))}

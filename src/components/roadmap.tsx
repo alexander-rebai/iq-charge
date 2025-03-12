@@ -11,7 +11,7 @@ const steps = [
       "We luisteren naar jouw wensen en geven helder advies over de beste laadoplossing voor jouw situatie en budget.",
     number: 1,
     image:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/icons/Steps/(1) offerte.png",
+      "https://dx8uea1j8p9gd.cloudfront.net/public/icons/Steps/(1) offerte.png",
   },
   {
     name: "Snelle installatie",
@@ -19,7 +19,7 @@ const steps = [
       "Onze gecertificeerde experts regelen alles van A tot Z, zonder gedoe. Binnen 2 weken staat jouw laadpaal gebruiksklaar.",
     number: 2,
     image:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/icons/Steps/(2) Installatie.png",
+      "https://dx8uea1j8p9gd.cloudfront.net/public/icons/Steps/(2) Installatie.png",
   },
   {
     name: "Dagelijks opladen",
@@ -27,15 +27,14 @@ const steps = [
       "Sluit je auto overdag aan, benut je zonne-energie optimaal en vertrek altijd met een volle batterij. Zo bespaar je maximaal op je energiekosten.",
     number: 3,
     image:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/icons/Steps/3 laadt elektrisch.png",
+      "https://dx8uea1j8p9gd.cloudfront.net/public/icons/Steps/3 laadt elektrisch.png",
   },
   {
     name: "24/7 afterservice",
     description:
       "Bij vragen of storingen staan onze experts altijd voor je klaar – dag en nacht.",
     number: 4,
-    image:
-      "https://laadexpert.s3.eu-north-1.amazonaws.com/public/icons/Steps/24:7.png",
+    image: "https://dx8uea1j8p9gd.cloudfront.net/public/icons/Steps/24:7.png",
   },
 ];
 

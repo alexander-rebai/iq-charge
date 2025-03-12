@@ -11,7 +11,7 @@ laden. Ik weet precies welke laadpaal bij jouw situatie past en hoe we die
 perfect kunnen integreren in je dagelijks leven.`,
     name: "Liam",
     designation: "Elke tevreden klant geeft mij energie.",
-    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/team/Liam.png",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/team/Liam.png",
   },
   {
     quote: `Mijn missie is helder: elektrisch laden zo eenvoudig en zorgeloos mogelijk
@@ -19,7 +19,7 @@ maken. Want alleen als we de drempel verlagen, kunnen we samen bouwen
 aan een duurzaam België waar elektrisch rijden de standaard wordt.`,
     name: "Noam",
     designation: "Ik bouw mee aan een elektrische toekomst voor iedereen.",
-    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/team/Noam.png",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/team/Noam.png",
   },
   {
     quote: `Als technisch expert bij Laadexpert zorg ik dat jouw laadpaal perfect
@@ -27,7 +27,7 @@ geïnstalleerd wordt. Elke installatie bewijst dat we écht het verschil maken i
 service en kwaliteit.`,
     name: "Robin",
     designation: "Innoveren en vooruit gaan",
-    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/team/Robin.png",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/team/Robin.png",
   },
   {
     quote: `Of het nu gaat om een eenvoudige thuislaadpaal of een complexe
@@ -35,7 +35,7 @@ bedrijfsoplossing - Ik streef naar technische perfectie zonder compromissen.
 Met mijn oog voor detail zorg ik ervoor dat elke installatie een succes is.`,
     name: "Dennis",
     designation: "Perfectie zit in de details",
-    src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/team/Dennis.png",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/team/Dennis.png",
   },
 ];
 

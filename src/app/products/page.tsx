@@ -1,10 +1,19 @@
-import Contact from "~/components/contact";
-import { Footer } from "~/components/footer";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import { Suspense } from "react";
 import { Header } from "~/components/header";
-import LogoCloud from "~/components/logo-cloud";
 import ProductsHero from "~/components/products-hero";
-import SpecificInfo from "~/components/specific-info";
-import Specs from "~/components/specs-table";
+
+// Dynamic imports for non-critical components
+const Contact = dynamic(() => import("~/components/contact"), {
+  loading: () => <div className="h-[400px]" />,
+});
+const Footer = dynamic(() =>
+  import("~/components/footer").then((mod) => mod.Footer),
+);
+const LogoCloud = dynamic(() => import("~/components/logo-cloud"));
+const SpecificInfo = dynamic(() => import("~/components/specific-info"));
+const Specs = dynamic(() => import("~/components/specs-table"));
 
 const specifications = [
   {
@@ -52,10 +61,12 @@ export default function Home() {
       <main>
         <ProductsHero />
 
-        <LogoCloud />
+        <Suspense fallback={<div className="h-[200px]" />}>
+          <LogoCloud />
+        </Suspense>
 
-        <div className="bg-white py-12 sm:py-12">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="bg-white py-8 sm:py-12">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl">
               <div className="relative text-center">
                 <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
@@ -85,36 +96,56 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto max-w-4xl pt-16">
-              <div className="grid grid-cols-3 gap-8">
+            <div className="mx-auto max-w-4xl pt-8 sm:pt-16">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-8">
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
-                  <img
-                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/p1.jpg"
+                  <Image
+                    src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/p1.jpg"
                     alt="Smappee"
+                    width={400}
+                    height={400}
                     className="h-full w-full object-cover object-center"
+                    loading="lazy"
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 33vw, 400px"
+                    quality={75}
                   />
                 </div>
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
-                  <img
-                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/p3.jpg"
+                  <Image
+                    src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/p3.jpg"
                     alt="Smappee"
+                    width={400}
+                    height={400}
                     className="h-full w-full object-cover object-left"
+                    loading="lazy"
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 33vw, 400px"
+                    quality={75}
                   />
                 </div>
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
-                  <img
-                    src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/p2.jpg"
+                  <Image
+                    src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/p2.jpg"
                     alt="Smappee"
+                    width={400}
+                    height={400}
                     className="h-full w-full object-cover object-right"
+                    loading="lazy"
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 33vw, 400px"
+                    quality={75}
                   />
                 </div>
               </div>
             </div>
-            <div className="mx-auto mt-6 h-24 w-64">
-              <img
-                src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/smappee-certified.png"
+            <div className="mx-auto mt-6 h-16 w-48 sm:h-24 sm:w-64">
+              <Image
+                src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/smappee-certified.png"
                 alt="Smappee Certified"
+                width={256}
+                height={96}
                 className="h-full w-full object-contain"
+                loading="lazy"
+                sizes="(max-width: 640px) 192px, 256px"
+                quality={90}
               />
             </div>
           </div>
@@ -129,8 +160,7 @@ geavanceerde slimme laadsystemen - zodat je altijd krijgt wat perfect bij jouw
 situatie past. We werken met toonaangevende merken zoals Smappee,
 Wallbox en Huawei. Bij Laadexpert draait alles om één ding: jouw
 overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
-            video:
-              "https://laadexpert.s3.eu-north-1.amazonaws.com/public/videoo.mp4",
+            video: "https://dx8uea1j8p9gd.cloudfront.net/public/videoo.mp4",
           }}
         />
 
@@ -142,9 +172,9 @@ overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
               </h2>
               <Specs
                 specs={specifications}
-                image1="https://laadexpert.s3.eu-north-1.amazonaws.com/public/smappee/s1.png"
-                image2="https://laadexpert.s3.eu-north-1.amazonaws.com/public/smappee/s3.png"
-                image3="https://laadexpert.s3.eu-north-1.amazonaws.com/public/images/ev-wall.png"
+                image1="https://dx8uea1j8p9gd.cloudfront.net/public/smappee/s1.png"
+                image2="https://dx8uea1j8p9gd.cloudfront.net/public/smappee/s3.png"
+                image3="https://dx8uea1j8p9gd.cloudfront.net/public/images/ev-wall.png"
               />
             </div>
           </div>
@@ -155,7 +185,9 @@ overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
             <h2 className="text-center text-4xl" data-aos="fade-up">
               Vraag hier je persoonlijk adviesgesprek aan{" "}
             </h2>
-            <Contact />
+            <Suspense fallback={<div className="h-[400px]" />}>
+              <Contact />
+            </Suspense>
           </div>
         </section>
       </main>

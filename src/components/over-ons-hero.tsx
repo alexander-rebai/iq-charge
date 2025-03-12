@@ -22,11 +22,13 @@ const OverOnsHero = () => {
     <div className="relative h-screen">
       <div className="absolute inset-0 z-0 h-full w-full">
         <Image
-          src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/images/night3.jpg"
-          layout="fill"
-          objectFit="cover"
+          src="https://dx8uea1j8p9gd.cloudfront.net/public/images/night3.jpg"
           alt="Hero image"
+          fill
           priority
+          sizes="100vw"
+          className="h-full w-full object-cover"
+          quality={90}
         />
         <div className="absolute inset-0 bg-black/20" />
       </div>

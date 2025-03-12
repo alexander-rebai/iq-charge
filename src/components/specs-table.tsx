@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { type ReactNode } from "react";
 import { cn } from "~/lib/utils";
 
@@ -75,13 +76,17 @@ export default function Specs({
                 >
                   {spec.value}
                   {idx === 0 && (
-                    <img
+                    <Image
                       src={image1}
                       alt="Product"
+                      width={128}
+                      height={128}
                       className={cn(
                         "absolute -top-40 left-1/2 h-32 w-32 -translate-x-1/2 py-2",
                         image1 === "/wallbox/w1.webp" && "w-32",
                       )}
+                      loading="lazy"
+                      sizes="128px"
                     />
                   )}
                 </td>
@@ -94,10 +99,14 @@ export default function Specs({
                   >
                     {spec.value2}
                     {idx === 0 && (
-                      <img
-                        src={image2}
+                      <Image
+                        src={image2!}
                         alt="Product"
+                        width={96}
+                        height={128}
                         className="absolute -top-40 left-1/2 h-32 w-24 -translate-x-1/2"
+                        loading="lazy"
+                        sizes="96px"
                       />
                     )}
                   </td>
@@ -111,10 +120,14 @@ export default function Specs({
                   >
                     {spec.value3}
                     {idx === 0 && (
-                      <img
-                        src={image3}
+                      <Image
+                        src={image3!}
                         alt="Product"
+                        width={144}
+                        height={128}
                         className="absolute -top-40 left-1/2 h-32 w-36 -translate-x-1/2"
+                        loading="lazy"
+                        sizes="144px"
                       />
                     )}
                   </td>
@@ -128,10 +141,14 @@ export default function Specs({
                   >
                     {spec.value4}
                     {idx === 0 && (
-                      <img
-                        src={image4}
+                      <Image
+                        src={image4!}
                         alt="Product"
+                        width={144}
+                        height={128}
                         className="absolute -top-28 left-1/2 h-32 w-36 -translate-x-1/2"
+                        loading="lazy"
+                        sizes="144px"
                       />
                     )}
                   </td>

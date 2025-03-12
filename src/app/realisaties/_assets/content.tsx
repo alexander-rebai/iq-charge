@@ -107,15 +107,15 @@ export const articles: articleType[] = [
 ];
 
 export const imageOnlyArticles: string[] = [
-  "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/realisaties/1.png",
-  "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/realisaties/2.png",
-  "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/realisaties/3.png",
-  "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/realisaties/4.png",
-  "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/realisaties/5.png",
-  "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/realisaties/6.png",
-  "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/realisaties/7.png",
-  "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/realisaties/8.png",
-  "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/realisaties/9.png",
-  "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/realisaties/10.png",
-  "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/realisaties/11.png",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/1.png",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/2.png",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/3.png",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/4.png",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/5.png",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/6.png",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/7.png",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/8.png",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/9.png",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/10.png",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/11.png",
 ];

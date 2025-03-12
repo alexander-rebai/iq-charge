@@ -1,31 +1,31 @@
 "use client";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
 import Image from "next/image";
-import { useEffect } from "react";
 import { FlipWords } from "./flip-words";
 
 const ProductsHero = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-    });
-  }, []);
-
   const words = ["Smappee", "Wallbox", "Peblar", "Easee"];
 
   return (
     <section className="relative h-screen w-full overflow-hidden pt-16">
       <div className="relative h-full overflow-hidden">
-        <Image
-          src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/products-hero.jpg"
-          alt="Hero cover"
-          fill
-          priority
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 1600px, 4800px"
-          className="h-full w-full object-cover"
-        />
+        <picture>
+          {/* Mobile optimized image */}
+          <source
+            media="(max-width: 640px)"
+            srcSet="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/products-hero-mobile.jpg"
+          />
+          <Image
+            src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/products-hero.jpg"
+            alt="Hero image"
+            fill
+            priority
+            fetchPriority="high"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+            className="h-full w-full object-cover"
+            quality={90}
+          />
+        </picture>
         <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
@@ -38,20 +38,20 @@ const ProductsHero = () => {
             <div className="flex flex-col space-y-6 text-center md:max-w-xl md:text-left">
               <div className="flex flex-col gap-1">
                 <h1
-                  className="max-w-3xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
+                  className="max-w-3xl text-left text-3xl font-semibold text-white drop-shadow-lg sm:text-4xl md:text-start md:text-5xl lg:text-[64px]"
                   data-aos="fade-up"
                 >
                   Ons aanbod:
                 </h1>
                 <h1
-                  className="mb-4 max-w-3xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
+                  className="mb-4 max-w-3xl text-left text-3xl font-semibold text-white drop-shadow-lg sm:text-4xl md:text-start md:text-5xl lg:text-[64px]"
                   data-aos="fade-up"
                 >
                   <FlipWords words={words} />
                 </h1>
               </div>
               <p
-                className="max-w-lg text-left text-base text-white drop-shadow-md md:text-start md:text-lg lg:self-auto lg:pr-4 lg:text-[24px]"
+                className="max-w-lg text-left text-sm text-white drop-shadow-md sm:text-base md:text-start md:text-lg lg:self-auto lg:pr-4 lg:text-[24px]"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
