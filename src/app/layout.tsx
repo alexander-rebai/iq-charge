@@ -17,9 +17,9 @@ const poppins = Poppins({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "IQ-Charge - Elektrische Laadpalen in Gent",
+  title: "Laadexpert - Jouw partner in elektrische vrijheid.",
   description:
-    "Verkoop van elektrische laadpalen, zonnepanelen en meer in Gent. Ontdek ons aanbod van Alfen, Huawei, Smappee en Wallbox producten.",
+    "Bij Laadexpert geloven geloven we dat elektrische rijden veel meer is dan alleen een groene keuze - het is pure vrijheid.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
