@@ -1,5 +1,6 @@
 "use client";
 
+import { useDrag } from "@use-gesture/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -23,8 +24,10 @@ export function RealisationsCarousel({
   }));
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
   const progressRef = useRef<NodeJS.Timeout | null>(null);
   const slideRef = useRef(currentSlide);
+  const dragStartRef = useRef(0);
 
   // Update the ref when currentSlide changes
   useEffect(() => {
@@ -32,7 +35,6 @@ export function RealisationsCarousel({
   }, [currentSlide]);
 
   const handlePagination = (direction: "left" | "right") => {
-    // Remove the isAnimating check since we'll make transitions instant
     const newSlide =
       direction === "right"
         ? (slideRef.current + 1) % images.length
@@ -49,6 +51,45 @@ export function RealisationsCarousel({
     }
   };
 
+  const bind = useDrag(
+    ({ down, movement: [mx], first, last, velocity: [vx] }) => {
+      if (first) {
+        setIsDragging(true);
+        dragStartRef.current = currentSlide;
+        if (progressRef.current) {
+          clearInterval(progressRef.current);
+        }
+      }
+
+      const slideWidth = variant === "desktop" ? 240 : 200;
+      const slideMove = -mx / slideWidth;
+      const slideMoveClamped = Math.min(
+        Math.max(dragStartRef.current + slideMove, 0),
+        images.length - 1,
+      );
+
+      if (down) {
+        setCurrentSlide(Math.round(slideMoveClamped));
+      }
+
+      if (last) {
+        setIsDragging(false);
+        const finalSlide = Math.round(slideMoveClamped);
+        setCurrentSlide(finalSlide);
+
+        // Restart auto-advance
+        progressRef.current = setInterval(() => {
+          setCurrentSlide((curr) => (curr + 1) % images.length);
+        }, 5000);
+      }
+    },
+    {
+      axis: "x",
+      filterTaps: true,
+      bounds: { left: -1000, right: 1000 },
+    },
+  );
+
   useEffect(() => {
     // Auto advance slides every 5 seconds
     progressRef.current = setInterval(() => {
@@ -60,7 +101,7 @@ export function RealisationsCarousel({
         clearInterval(progressRef.current);
       }
     };
-  }, []); // Remove handlePagination dependency since we're using setCurrentSlide directly
+  }, []);
 
   // Function to safely get image URL
   const getImageUrl = (article: articleType) => {
@@ -96,11 +137,11 @@ export function RealisationsCarousel({
       className={`${
         variant === "desktop"
           ? "absolute bottom-12 right-16"
-          : "relative h-[450px] w-full overflow-x-hidden"
+          : "relative h-[500px] w-full overflow-x-hidden"
       }`}
     >
       <div
-        className={`relative flex h-[350px] items-center ${
+        className={`relative flex h-[400px] touch-pan-y items-center ${
           variant === "mobile" ? "justify-center" : ""
         }`}
       >
@@ -109,32 +150,35 @@ export function RealisationsCarousel({
             const isActive = index === currentSlide;
             const offset =
               variant === "desktop"
-                ? ((index - currentSlide + images.length) % images.length) * 240
+                ? ((index - currentSlide + images.length) % images.length) * 320
                 : ((index - currentSlide + images.length) % images.length) *
-                  200;
+                  280;
 
             // const { firstLine, secondLine } = formatTitle(image.title);
 
             return (
               <div
                 key={index}
-                // href={`/realisaties/${article.slug}`}
+                {...bind()}
                 className={`z-[999] duration-300 ${
                   variant === "desktop"
                     ? "absolute right-96"
                     : "absolute left-1/2"
-                } top-1/2 transform cursor-pointer rounded-xl bg-cover bg-center shadow-lg transition-all ease-in-out hover:border-2 hover:border-primary-foreground ${
+                } top-1/2 transform rounded-xl bg-cover bg-center shadow-lg transition-all ease-in-out hover:border-2 hover:border-primary-foreground ${
                   isActive ? "z-20" : "z-10"
-                }`}
+                } ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
                 style={{
                   backgroundImage: `url(${image.image})`,
                   transform:
                     variant === "desktop"
                       ? `translate(${offset}px, -50%) scale(${isActive ? 1 : 0.95})`
                       : `translate(calc(-50% + ${offset}px), -50%) scale(${isActive ? 1 : 0.95})`,
-                  opacity: offset > (variant === "desktop" ? 960 : 800) ? 0 : 1,
-                  height: variant === "desktop" ? "280px" : "240px",
-                  width: variant === "desktop" ? "220px" : "180px",
+                  opacity:
+                    offset > (variant === "desktop" ? 1280 : 1120) ? 0 : 1,
+                  height: variant === "desktop" ? "340px" : "300px",
+                  width: variant === "desktop" ? "300px" : "260px",
+                  touchAction: "none", // Prevent default touch behaviors
+                  userSelect: "none", // Prevent text selection during drag
                 }}
               >
                 {/* <div className="absolute bottom-0 left-0 w-full rounded-b-xl bg-gradient-to-t from-black/80 to-transparent p-4 text-white">

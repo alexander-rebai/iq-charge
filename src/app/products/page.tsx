@@ -64,7 +64,7 @@ export default function Home() {
                     Smappee
                   </span>{" "}
                   <br />
-                  De slimste all-in one laadoplossing.
+                  De slimste all-in-one laadoplossing.
                 </h2>
                 <p className="pt-4 text-gray-500">
                   Met Smappee laad je veilig en kostenefficiënt dankzij overload
@@ -153,7 +153,7 @@ overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
         <section id="contact">
           <div className="mb-10 mt-20 flex flex-col gap-8">
             <h2 className="text-center text-4xl" data-aos="fade-up">
-              Vraag hier je persoonlijke adviesgesprek aan
+              Vraag hier je persoonlijk adviesgesprek aan{" "}
             </h2>
             <Contact />
           </div>

@@ -26,14 +26,13 @@ aan een duurzaam België waar elektrisch rijden de standaard wordt.`,
 geïnstalleerd wordt. Elke installatie bewijst dat we écht het verschil maken in
 service en kwaliteit.`,
     name: "Robin",
-    designation: "Innoveren en Vooruit Gaan",
+    designation: "Innoveren en vooruit gaan",
     src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/team/Robin.png",
   },
   {
     quote: `Of het nu gaat om een eenvoudige thuislaadpaal of een complexe
-bedrijfsoplossing - Dennis levert technische perfectie zonder compromissen.
-Zijn klanten waarderen vooral zijn oog voor detail en de rust die hij uitstraalt
-tijdens het hele installatieproces.`,
+bedrijfsoplossing - Ik streef naar technische perfectie zonder compromissen.
+Met mijn oog voor detail zorg ik ervoor dat elke installatie een succes is.`,
     name: "Dennis",
     designation: "Perfectie zit in de details",
     src: "https://laadexpert.s3.eu-north-1.amazonaws.com/public/team/Dennis.png",
@@ -87,8 +86,8 @@ export default function Home() {
                   Snel, deskundig en betrouwbaar
                 </h3>
                 <p className="pt-1  text-gray-500">
-                  Kies je vandaag voor Laadexpert, dan krijg je vandaag nog een
-                  oplossing. Ons team van gecertificeerde experts luistert naar
+                  Kies je vandaag nog voor Laadexpert, dan helpen we je zo snel
+                  mogelijk! Ons team van gecertificeerde experts luistert naar
                   je wensen, adviseert de beste oplossing voor jouw situatie en
                   installeert alles vakkundig - meestal binnen twee weken.
                 </p>
@@ -105,7 +104,7 @@ export default function Home() {
         <section id="contact">
           <div className="mb-10  flex flex-col gap-8">
             <h2 className="text-center text-4xl" data-aos="fade-up">
-              Vraag hier je persoonlijke adviesgesprek aan
+              Vraag hier je persoonlijk adviesgesprek aan{" "}
             </h2>
             <Contact />
           </div>

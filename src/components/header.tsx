@@ -5,7 +5,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 
-import { Logo } from "~/components/logo";
+import Image from "next/image";
 import { useLandbot } from "~/hooks/useLandbot";
 import { cn } from "~/lib/utils";
 import { NavLink } from "./nav-link";
@@ -26,7 +26,7 @@ function MobileNavIcon({
   return (
     <svg
       aria-hidden="true"
-      className="h-3.5 w-3.5 overflow-visible stroke-white"
+      className="h-3.5 w-3.5 overflow-visible stroke-slate-900"
       fill="none"
       strokeWidth={2}
       strokeLinecap="round"
@@ -62,7 +62,7 @@ function MobileNavLink({
     <Popover.Button
       as={Link}
       href={href}
-      className={cn("block w-full p-2 text-white", className)}
+      className={cn("block w-full p-2 text-slate-900", className)}
     >
       {children}
     </Popover.Button>
@@ -90,7 +90,7 @@ function MobileNavigation({ isScrolled }: { isScrolled?: boolean }) {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Popover.Overlay className="fixed inset-0 bg-slate-300/50" />
+          <Popover.Overlay className="fixed inset-0 bg-slate-300/20" />
         </Transition.Child>
         <Transition.Child
           as={Fragment}
@@ -103,15 +103,15 @@ function MobileNavigation({ isScrolled }: { isScrolled?: boolean }) {
         >
           <Popover.Panel
             as="div"
-            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-xl bg-white p-4 text-lg tracking-tight text-primary shadow-xl ring-1 ring-slate-900/5"
+            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink className="text-primary" href="/thuis">
+            <MobileNavLink className="text-slate-900" href="/thuis">
               Thuis
             </MobileNavLink>
-            <MobileNavLink className="text-primary" href="/bedrijf">
+            <MobileNavLink className="text-slate-900" href="/bedrijf">
               Zakelijk
             </MobileNavLink>
-            <MobileNavLink className="text-primary" href="/products">
+            <MobileNavLink className="text-slate-900" href="/products">
               Producten
             </MobileNavLink>
             <OverOnsNavMobile />
@@ -136,25 +136,23 @@ function MobileNavigation({ isScrolled }: { isScrolled?: boolean }) {
 function OverOnsNav() {
   return (
     <PopoverComponent>
-      <PopoverTrigger className="w-fit">
-        <div
-          className={cn(
-            "inline-flex items-center rounded px-2 py-1.5 text-sm font-medium text-white",
-            "transition-colors duration-200 ease-in-out",
-            "hover:bg-gray-50 hover:text-gray-900",
-          )}
-        >
-          Over ons
-        </div>
+      <PopoverTrigger
+        className={cn(
+          "inline-flex items-center rounded px-2 py-1.5 text-sm font-medium text-slate-900",
+          "transition-colors duration-200 ease-in-out",
+          "hover:bg-slate-100 hover:text-slate-900",
+        )}
+      >
+        Over ons
       </PopoverTrigger>
-      <PopoverContent className="flex w-full flex-col items-start md:gap-x-6">
+      <PopoverContent className="z-[9999] flex w-full flex-col items-start md:gap-x-6">
         <NavLink className="text-gray-800" href="/over-ons">
           Over Laadexpert
         </NavLink>
         {/* <NavLink href="/realisaties">Realisaties</NavLink> */}
-        <NavLink className="text-gray-800" href="/blog">
+        {/* <NavLink className="text-gray-800" href="/blog">
           Blog
-        </NavLink>
+        </NavLink> */}
       </PopoverContent>
     </PopoverComponent>
   );
@@ -165,13 +163,13 @@ function OverOnsNavMobile() {
     <PopoverComponent>
       <PopoverTrigger className="block w-fit p-2">Over Ons</PopoverTrigger>
       <PopoverContent className="z-[9999] flex w-full flex-col items-start md:gap-x-6">
-        <MobileNavLink href="/over-ons" className="text-gray-800">
+        <MobileNavLink href="/over-ons" className="text-slate-900">
           Over Laadexpert
         </MobileNavLink>
         {/* <MobileNavLink href="/realisaties">Realisaties</MobileNavLink> */}
-        <MobileNavLink href="/blog" className="text-gray-800">
+        {/* <MobileNavLink href="/blog" className="text-slate-900">
           Blog
-        </MobileNavLink>
+        </MobileNavLink> */}
       </PopoverContent>
     </PopoverComponent>
   );
@@ -197,8 +195,8 @@ export function Header({ empty }: { empty?: boolean }) {
   return (
     <header
       className={cn(
-        "fixed top-0 z-[9999] flex h-16 w-full items-center transition-all duration-300",
-        isScrolled ? "bg-[#1C3C36]/80" : "bg-[#1C3C36]",
+        "items-cen[#1C3C36]ition-all fixed top-0 z-[9999] flex h-16 w-full duration-300",
+        isScrolled ? "bg-white/80" : "bg-white",
         "shadow-sm backdrop-blur-lg",
       )}
     >
@@ -209,7 +207,14 @@ export function Header({ empty }: { empty?: boolean }) {
         <div className="flex h-full items-center">
           <div className="mr-10 flex h-full items-center">
             <Link href="/" aria-label="Home" className="h-8">
-              <Logo />
+              <Image
+                src="/navbar-logo.png"
+                alt="laadexpert-logo"
+                width={105}
+                height={105}
+                priority
+                className="h-full w-auto cursor-pointer object-contain"
+              />
             </Link>
           </div>
         </div>
@@ -217,9 +222,15 @@ export function Header({ empty }: { empty?: boolean }) {
           {!empty && (
             <>
               <div className="flex items-center md:gap-x-6">
-                <NavLink href="/thuis">Thuis</NavLink>
-                <NavLink href="/bedrijf">Zakelijk</NavLink>
-                <NavLink href="/products">Producten</NavLink>
+                <NavLink className="text-slate-900" href="/thuis">
+                  Thuis
+                </NavLink>
+                <NavLink className="text-slate-900" href="/bedrijf">
+                  Zakelijk
+                </NavLink>
+                <NavLink className="text-slate-900" href="/products">
+                  Producten
+                </NavLink>
                 <OverOnsNav />
               </div>
               <Button variant="secondary" size="sm" onClick={openChat}>

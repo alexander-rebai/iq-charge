@@ -41,7 +41,7 @@ je een vrijblijvende offerte aan, en nemen we de volledige klus van je over.`,
         <section id="contact">
           <div className="mb-10 mt-20 flex flex-col gap-8">
             <h2 className="text-center text-4xl" data-aos="fade-up">
-              Vraag hier je persoonlijke adviesgesprek aan
+              Vraag hier je persoonlijk adviesgesprek aan{" "}
             </h2>
             <Contact />
           </div>

@@ -34,7 +34,7 @@ export const TeamCards = ({
 
   useEffect(() => {
     if (autoplay) {
-      const interval = setInterval(handleNext, 7000);
+      const interval = setInterval(handleNext, 10000);
       return () => clearInterval(interval);
     }
   }, [autoplay, handleNext]);

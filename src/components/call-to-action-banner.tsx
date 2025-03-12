@@ -17,7 +17,7 @@ export default function CallToActionBanner({
   const { openChat } = useLandbot();
 
   return (
-    <div className={cn("relative overflow-hidden py-36")}>
+    <div className={cn("relative z-[9999] overflow-hidden py-36")}>
       <Image
         className="absolute left-1/2 top-1/2 h-full w-screen max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-bottom"
         src="https://laadexpert.s3.eu-north-1.amazonaws.com/public/images/bridge.jpg"

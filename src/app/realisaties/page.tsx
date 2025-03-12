@@ -26,7 +26,7 @@ export default async function Realisaties() {
           Onze Realisaties
         </h1>
         <p className="text-lg leading-relaxed opacity-80">
-          Hier vindt u alle onze realisaties.
+          Hier vind je alle onze realisaties.
         </p>
       </section>
 

@@ -62,7 +62,7 @@ export default function Information({
                 href={`/offerte`}
                 className="flex w-fit justify-center rounded-xl bg-primary-light px-3.5 py-2 text-lg font-medium text-black shadow-sm hover:opacity-90"
               >
-                Vraag uw offerte op maat <span aria-hidden="true">→</span>
+                Vraag jouw offerte op maat <span aria-hidden="true">→</span>
               </a>
             </div>
           ) : isOfferte ? (

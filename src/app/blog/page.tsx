@@ -26,7 +26,7 @@ export default async function Blog() {
           Onze blog
         </h1>
         <p className="text-lg leading-relaxed opacity-80">
-          Hier vindt u alle informatie over laadoplossingen voor elektrische
+          Hier vind je alle informatie over laadoplossingen voor elektrische
           voertuigen
         </p>
       </section>

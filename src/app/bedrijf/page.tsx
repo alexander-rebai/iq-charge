@@ -28,12 +28,12 @@ eenvoudig, rendabel en toekomstbestendig voor jouw organisatie.`,
         <SpecificInfo
           isReverse
           information={{
-            title: "Volledige ontzorging voor uw bedrijf",
+            title: "Volledige ontzorging voor jouw bedrijf",
             info: `We begeleiden je bij elke stap, van het eerste overleg tot de uiteindelijke
-implementatie. Zo weet u zeker dat jouw investering rendeert en
+implementatie. Zo weet je zeker dat jouw investering rendeert en
 toekomstbestendig is. Onze laadinfrastructuur sluit perfect aan bij de
-behoeften van uw organisatie, medewerkers en bezoekers. Wij regelen alles
-efficiënt, zodat u zich kunt focussen op uw kernactiviteiten.`,
+behoeften van jouw organisatie, medewerkers en bezoekers. Wij regelen alles
+efficiënt, zodat jij kan focussen op jouw kernactiviteiten.`,
             image:
               "https://laadexpert.s3.eu-north-1.amazonaws.com/public/fotos/zakelijk22.jpg",
           }}
@@ -42,7 +42,7 @@ efficiënt, zodat u zich kunt focussen op uw kernactiviteiten.`,
         <section id="contact">
           <div className="mb-10 mt-20 flex flex-col gap-8">
             <h2 className="text-center text-4xl" data-aos="fade-up">
-              Vraag hier je persoonlijke adviesgesprek aan
+              Vraag hier je persoonlijk adviesgesprek aan{" "}
             </h2>
             <Contact />
           </div>
