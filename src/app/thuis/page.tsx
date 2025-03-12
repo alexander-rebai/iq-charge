@@ -34,7 +34,7 @@ of Liam tot het vakkundig plaatsen van je laadpunt door Robin en Dennis.`,
             info2: `Zo ben je in één keer klaar voor jouw elektrische toekomst. Met één klik vraag
 je een vrijblijvende offerte aan, en nemen we de volledige klus van je over.`,
             image:
-              "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/home2 (1).webp",
+              "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/noam_home.png",
           }}
         />
 

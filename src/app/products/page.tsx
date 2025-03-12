@@ -174,7 +174,7 @@ overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
                 specs={specifications}
                 image1="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/s1.png"
                 image2="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/s2.png"
-                image3="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/ev-wall.webp"
+                image3="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/ev-wal.png"
               />
             </div>
           </div>
