@@ -21,7 +21,7 @@ const PartiulierHero = () => {
     <div className="relative mb-20 h-screen">
       <div className="absolute inset-0 z-0 h-full w-full">
         <Image
-          src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/thuis.jpg"
+          src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/thuis.webp"
           alt="Hero image"
           fill
           priority

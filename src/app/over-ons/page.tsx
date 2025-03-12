@@ -22,9 +22,7 @@ aan een duurzaam België waar elektrisch rijden de standaard wordt.`,
     src: "https://dx8uea1j8p9gd.cloudfront.net/public/team/Noam.png",
   },
   {
-    quote: `Als technisch expert bij Laadexpert zorg ik dat jouw laadpaal perfect
-geïnstalleerd wordt. Elke installatie bewijst dat we écht het verschil maken in
-service en kwaliteit.`,
+    quote: `Bij mij staat actie op nummer één. Als technisch expert en ervaen elektricien bij Laadexpert zorg ik dat jouw laadpaal perfect geïnstalleerd wordt én help ik je met deskundig advies. Met mijn ervaring weet ik precies wat werkt, en met mijn passie voor innovatie houden we onze oplossingen state-of-the-art. Elke installatie bewijst dat we écht het verschil maken - zodat jij zorgeloos kunt genieten van je laadpaal.`,
     name: "Robin",
     designation: "Innoveren en vooruit gaan",
     src: "https://dx8uea1j8p9gd.cloudfront.net/public/team/Robin.png",

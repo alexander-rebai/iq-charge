@@ -19,7 +19,7 @@ voordelige manier om je elektrische auto op te laden.`,
             info2: `Heb je al zonnepanelen of een thuisbatterij? Dan vormt de laadpaal het
 laatste puzzelstuk van je duurzame energieplan.`,
             video:
-              "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/video_uitleg.mp4",
+              "https://dx8uea1j8p9gd.cloudfront.net/public/UITLEG_NOAM.mp4",
           }}
         />
 
@@ -34,7 +34,7 @@ of Liam tot het vakkundig plaatsen van je laadpunt door Robin en Dennis.`,
             info2: `Zo ben je in één keer klaar voor jouw elektrische toekomst. Met één klik vraag
 je een vrijblijvende offerte aan, en nemen we de volledige klus van je over.`,
             image:
-              "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/home2.jpg",
+              "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/home2 (1).webp",
           }}
         />
 

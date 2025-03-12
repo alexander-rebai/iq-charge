@@ -26,10 +26,10 @@ export function Hero() {
         <picture>
           <source
             media="(max-width: 768px)"
-            srcSet="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/hero-mobile.jpg"
+            srcSet="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/hero-mobile.webp"
           />
           <Image
-            src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/hero.jpg"
+            src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/hero.webp"
             alt="Hero cover"
             fill
             priority

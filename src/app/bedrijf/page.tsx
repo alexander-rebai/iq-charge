@@ -21,7 +21,7 @@ die de waarde van hun panden willen verhogen, of projectontwikkelaars die
 duurzaamheid vroegtijdig willen integreren - wij maken elektrisch laden
 eenvoudig, rendabel en toekomstbestendig voor jouw organisatie.`,
             image:
-              "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/zakelijk1.jpg",
+              "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/zakelijk1 (1).webp",
           }}
         />
 
@@ -35,7 +35,7 @@ toekomstbestendig is. Onze laadinfrastructuur sluit perfect aan bij de
 behoeften van jouw organisatie, medewerkers en bezoekers. Wij regelen alles
 efficiënt, zodat jij kan focussen op jouw kernactiviteiten.`,
             image:
-              "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/zakelijk22.jpg",
+              "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/zakelijk22 (1).webp",
           }}
         />
 

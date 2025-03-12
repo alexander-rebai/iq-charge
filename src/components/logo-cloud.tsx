@@ -5,23 +5,23 @@ import { useEffect, useRef } from "react";
 
 const logos = [
   {
-    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/brands/smappee.jpeg",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/brands/smappee (1).webp",
     alt: "Partner 1",
   },
   {
-    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/brands/wallbox.jpeg",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/brands/wallbox (1).webp",
     alt: "Partner 4",
   },
   {
-    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/brands/peblar.jpeg",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/brands/peblar (1).webp",
     alt: "Partner 3",
   },
   {
-    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/brands/easee.jpeg",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/brands/easee (1).webp",
     alt: "Partner 2",
   },
   {
-    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/zaptec.png",
+    src: "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/zaptec (1).webp",
     alt: "Partner 5",
   },
 ];

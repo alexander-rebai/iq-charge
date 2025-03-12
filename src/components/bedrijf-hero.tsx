@@ -23,7 +23,7 @@ const BedrijfHero = () => {
     <div className="relative mb-20 h-screen">
       <div className="absolute inset-0 z-0 h-full w-full">
         <Image
-          src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/zakelijk-hero.jpg"
+          src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/zakelijk-hero (1).webp"
           alt="Hero image"
           fill
           priority

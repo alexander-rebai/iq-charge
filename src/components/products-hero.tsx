@@ -11,12 +11,8 @@ const ProductsHero = () => {
       <div className="relative h-full overflow-hidden">
         <picture>
           {/* Mobile optimized image */}
-          <source
-            media="(max-width: 640px)"
-            srcSet="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/products-hero-mobile.jpg"
-          />
           <Image
-            src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/products-hero.jpg"
+            src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/products-hero (1).webp"
             alt="Hero image"
             fill
             priority

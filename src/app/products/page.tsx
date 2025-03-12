@@ -100,7 +100,7 @@ export default function Home() {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-8">
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/p1.jpg"
+                    src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/p1 (1).webp"
                     alt="Smappee"
                     width={400}
                     height={400}
@@ -112,7 +112,7 @@ export default function Home() {
                 </div>
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/p3.jpg"
+                    src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/p3 (1).webp"
                     alt="Smappee"
                     width={400}
                     height={400}
@@ -124,7 +124,7 @@ export default function Home() {
                 </div>
                 <div className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/p2.jpg"
+                    src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/p2 (1).webp"
                     alt="Smappee"
                     width={400}
                     height={400}
@@ -138,7 +138,7 @@ export default function Home() {
             </div>
             <div className="mx-auto mt-6 h-16 w-48 sm:h-24 sm:w-64">
               <Image
-                src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/smappee-certified.png"
+                src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/smappee-certified.webp"
                 alt="Smappee Certified"
                 width={256}
                 height={96}
@@ -160,7 +160,7 @@ geavanceerde slimme laadsystemen - zodat je altijd krijgt wat perfect bij jouw
 situatie past. We werken met toonaangevende merken zoals Smappee,
 Wallbox en Huawei. Bij Laadexpert draait alles om één ding: jouw
 overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
-            video: "https://dx8uea1j8p9gd.cloudfront.net/public/videoo.mp4",
+            video: "https://dx8uea1j8p9gd.cloudfront.net/public/video_ad.mp4",
           }}
         />
 
@@ -172,9 +172,9 @@ overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
               </h2>
               <Specs
                 specs={specifications}
-                image1="https://dx8uea1j8p9gd.cloudfront.net/public/smappee/s1.png"
-                image2="https://dx8uea1j8p9gd.cloudfront.net/public/smappee/s3.png"
-                image3="https://dx8uea1j8p9gd.cloudfront.net/public/images/ev-wall.png"
+                image1="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/s1.png"
+                image2="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/s2.png"
+                image3="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/ev-wall.webp"
               />
             </div>
           </div>

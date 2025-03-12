@@ -107,15 +107,15 @@ export const articles: articleType[] = [
 ];
 
 export const imageOnlyArticles: string[] = [
-  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/1.png",
-  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/2.png",
-  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/3.png",
-  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/4.png",
-  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/5.png",
-  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/6.png",
-  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/7.png",
-  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/8.png",
-  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/9.png",
-  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/10.png",
-  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/11.png",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/1.webp",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/2.webp",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/3.webp",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/4.webp",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/5.webp",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/6.webp",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/7.webp",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/8.webp",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/9.webp",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/10.webp",
+  "https://dx8uea1j8p9gd.cloudfront.net/public/fotos/realisaties/11.webp",
 ];
