@@ -48,6 +48,7 @@ export default function SpecificInfo({
               controls
               muted
               loop
+              poster={information.video?.replace(".mp4", ".png")}
             >
               <source src={information.video} type="video/mp4" />
               Your browser does not support the video tag.
@@ -74,6 +75,7 @@ export default function SpecificInfo({
                   controls
                   muted
                   loop
+                  poster={information.video?.replace(".mp4", ".png")}
                 >
                   <source src={information.video} type="video/mp4" />
                   Your browser does not support the video tag.
@@ -127,6 +129,7 @@ export default function SpecificInfo({
                   controls
                   muted
                   loop
+                  poster={information.video?.replace(".mp4", ".png")}
                 >
                   <source src={information.video} type="video/mp4" />
                   Your browser does not support the video tag.
