@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 interface LandbotWindow extends Window {
   Landbot?: {
-    Livechat: new (config: { configUrl: string }) => {
+    Popup: new (config: { configUrl: string }) => {
       open: () => void;
       [key: string]: unknown;
     };
@@ -52,8 +52,8 @@ function initLandbot() {
     script.async = true;
     script.addEventListener("load", function () {
       const landbotWindow = window as unknown as LandbotWindow;
-      if (landbotWindow.Landbot?.Livechat) {
-        window.myLandbot = new landbotWindow.Landbot.Livechat({
+      if (landbotWindow.Landbot?.Popup) {
+        window.myLandbot = new landbotWindow.Landbot.Popup({
           configUrl:
             "https://storage.googleapis.com/landbot.online/v3/H-2798374-0G1QF00O8B7KZ9WO/index.json",
         });

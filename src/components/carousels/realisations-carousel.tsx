@@ -152,7 +152,7 @@ export function RealisationsCarousel({
               variant === "desktop"
                 ? ((index - currentSlide + images.length) % images.length) * 320
                 : ((index - currentSlide + images.length) % images.length) *
-                  280;
+                  295;
 
             // const { firstLine, secondLine } = formatTitle(image.title);
 
@@ -175,8 +175,8 @@ export function RealisationsCarousel({
                       : `translate(calc(-50% + ${offset}px), -50%) scale(${isActive ? 1 : 0.95})`,
                   opacity:
                     offset > (variant === "desktop" ? 1280 : 1120) ? 0 : 1,
-                  height: variant === "desktop" ? "340px" : "300px",
-                  width: variant === "desktop" ? "300px" : "260px",
+                  height: variant === "desktop" ? "400px" : "360px",
+                  width: variant === "desktop" ? "300px" : "275px",
                   touchAction: "none", // Prevent default touch behaviors
                   userSelect: "none", // Prevent text selection during drag
                 }}
