@@ -10,14 +10,17 @@ const ProductsHero = () => {
     <section className="relative h-screen w-full overflow-hidden pt-16">
       <div className="relative h-full overflow-hidden">
         <picture>
-          {/* Mobile optimized image */}
+          <source
+            media="(max-width: 768px)"
+            srcSet="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/product-mobile.webp"
+          />
           <Image
-            src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/products-hero (1).webp"
+            src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/product.webp"
             alt="Hero image"
             fill
             priority
             fetchPriority="high"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 1600px, 4800px"
             className="h-full w-full object-cover"
             quality={90}
           />
@@ -51,7 +54,7 @@ const ProductsHero = () => {
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                Wij werken niet voor een merk maar voor jou.
+                Wij selecteren wat écht bij jou past.
               </p>
             </div>
           </div>

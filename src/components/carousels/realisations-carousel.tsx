@@ -142,7 +142,7 @@ export function RealisationsCarousel({
     >
       <div
         className={`relative flex h-[400px] touch-pan-y items-center ${
-          variant === "mobile" ? "justify-center" : ""
+          variant === "mobile" ? "" : ""
         }`}
       >
         <div className="relative h-full">
@@ -163,13 +163,16 @@ export function RealisationsCarousel({
                 className={`z-[999] duration-300 ${
                   variant === "desktop"
                     ? "absolute right-96"
-                    : "absolute left-1/2"
+                    : "absolute left-0"
                 } top-1/2 transform rounded-xl bg-cover bg-center shadow-lg transition-all ease-in-out hover:border-2 hover:border-primary-foreground ${
                   isActive ? "z-20" : "z-10"
                 } ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
                 style={{
                   backgroundImage: `url(${image.image})`,
-                  transform: `translate(${((index - currentSlide + images.length) % images.length) * 260}px, -50%) scale(${isActive ? 1 : 0.95})`,
+                  transform:
+                    variant === "desktop"
+                      ? `translate(${((index - currentSlide + images.length) % images.length) * 260}px, -50%) scale(${isActive ? 1 : 0.95})`
+                      : `translate(${((index - currentSlide + images.length) % images.length) * 260}px, -50%) scale(${isActive ? 1 : 0.95})`,
                   opacity: offset > 1080 ? 0 : 1,
                   height: variant === "desktop" ? "320px" : "320px",
                   width: variant === "desktop" ? "250px" : "250px",

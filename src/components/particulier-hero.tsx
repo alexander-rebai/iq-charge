@@ -20,15 +20,21 @@ const PartiulierHero = () => {
   return (
     <div className="relative mb-20 h-screen">
       <div className="absolute inset-0 z-0 h-full w-full">
-        <Image
-          src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/thuis.webp"
-          alt="Hero image"
-          fill
-          priority
-          sizes="100vw"
-          className="h-full w-full object-cover"
-          quality={90}
-        />
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcSet="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/thuis-mobile.webp"
+          />
+          <Image
+            src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/thuis.webp"
+            alt="Hero image"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 1600px, 4800px"
+            className="h-full w-full object-cover"
+            quality={90}
+          />
+        </picture>
         <div className="absolute inset-0 bg-black/40" />
       </div>
 

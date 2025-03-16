@@ -133,6 +133,11 @@ export function Footer({ hideLinks }: { hideLinks?: boolean }) {
             </PopoverContent>
           </Popover>
         </div>
+
+        {/* Add VAT number */}
+        <div className="mt-8 text-center text-sm text-gray-300">
+          BE 1020.949.150
+        </div>
       </div>
     </footer>
   );
