@@ -28,6 +28,7 @@ const PartiulierHero = () => {
           <Image
             src="https://dx8uea1j8p9gd.cloudfront.net/public/fotos/thuis.webp"
             alt="Hero image"
+            fetchPriority="high"
             fill
             priority
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 1600px, 4800px"

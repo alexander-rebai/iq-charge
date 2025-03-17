@@ -7,8 +7,8 @@ const ProductsHero = () => {
   const words = ["Smappee", "Wallbox", "Peblar", "Easee"];
 
   return (
-    <section className="relative h-screen w-full overflow-hidden pt-16">
-      <div className="relative h-full overflow-hidden">
+    <div className="relative mb-20 h-screen">
+      <div className="absolute inset-0 z-0 h-full w-full">
         <picture>
           <source
             media="(max-width: 768px)"
@@ -25,42 +25,36 @@ const ProductsHero = () => {
             quality={90}
           />
         </picture>
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      {/* Content */}
-      <div className="absolute inset-0">
-        <div className="mx-auto h-full max-w-7xl px-4 sm:px-6 md:mx-40 md:px-8">
-          {/* Mobile: centered content, Desktop: bottom-aligned content */}
-          <div className="flex h-full flex-col justify-center md:justify-end md:pb-96">
-            {/* Content container - centered on mobile, left-aligned on desktop */}
-            <div className="flex flex-col space-y-6 text-center md:max-w-xl md:text-left">
-              <div className="flex flex-col gap-1">
-                <h1
-                  className="max-w-3xl text-left text-3xl font-semibold text-white drop-shadow-lg sm:text-4xl md:text-start md:text-5xl lg:text-[64px]"
-                  data-aos="fade-up"
-                >
-                  Ons aanbod:
-                </h1>
-                <h1
-                  className="mb-4 max-w-3xl text-left text-3xl font-semibold text-white drop-shadow-lg sm:text-4xl md:text-start md:text-5xl lg:text-[64px]"
-                  data-aos="fade-up"
-                >
-                  <FlipWords words={words} />
-                </h1>
-              </div>
-              <p
-                className="max-w-lg text-left text-sm text-white drop-shadow-md sm:text-base md:text-start md:text-lg lg:self-auto lg:pr-4 lg:text-[24px]"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                Wij selecteren wat écht bij jou past.
-              </p>
-            </div>
+      <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white lg:p-0">
+        <div className="flex w-full flex-col items-center justify-center md:items-start md:justify-start">
+          <div className="flex flex-col gap-1">
+            <h1
+              className="max-w-3xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
+              data-aos="fade-up"
+            >
+              Ons aanbod:
+            </h1>
+            <h1
+              className="mb-8 max-w-3xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
+              data-aos="fade-up"
+            >
+              <FlipWords words={words} />
+            </h1>
           </div>
+
+          <p
+            className="mb-8 max-w-lg text-left text-base text-white drop-shadow-md md:text-start md:text-lg lg:self-auto lg:pr-4 lg:text-[24px]"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Wij selecteren wat écht bij jou past.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -137,7 +137,7 @@ export function RealisationsCarousel({
       className={`${
         variant === "desktop"
           ? "absolute bottom-12 right-16"
-          : "relative h-[500px] w-full overflow-x-hidden"
+          : "relative h-[500px] w-full overflow-x-hidden pl-8"
       }`}
     >
       <div

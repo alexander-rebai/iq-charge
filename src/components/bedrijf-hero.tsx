@@ -32,6 +32,7 @@ const BedrijfHero = () => {
             alt="Hero image"
             fill
             priority
+            fetchPriority="high"
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 1600px, 4800px"
             className="h-full w-full object-cover"
             quality={90}
