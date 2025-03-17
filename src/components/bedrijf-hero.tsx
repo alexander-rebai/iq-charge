@@ -47,17 +47,17 @@ const BedrijfHero = () => {
         </div>
       </div>
 
-      <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white lg:p-0">
-        <div className="flex w-full flex-col items-center justify-center md:items-start md:justify-start">
+      <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-left text-white lg:p-0">
+        <div className="flex w-full flex-col items-start justify-center md:items-start md:justify-start">
           <div className="flex flex-col gap-1">
             <h1
-              className="max-w-3xl text-center text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
+              className="max-w-3xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
               data-aos="fade-up"
             >
               Laadoplossingen op maat voor jouw{" "}
             </h1>
             <h1
-              className="mb-8 max-w-3xl text-center text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
+              className="mb-8 max-w-3xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
               data-aos="fade-up"
             >
               <FlipWords words={words} />
@@ -65,7 +65,7 @@ const BedrijfHero = () => {
           </div>
 
           <p
-            className="mb-8 max-w-lg text-center text-base text-white drop-shadow-md md:text-start md:text-lg lg:self-auto lg:pr-4 lg:text-[24px]"
+            className="mb-8 max-w-lg text-left text-base text-white drop-shadow-md md:text-start md:text-lg lg:self-auto lg:pr-4 lg:text-[24px]"
             data-aos="fade-up"
             data-aos-delay="100"
           >

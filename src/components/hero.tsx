@@ -47,7 +47,7 @@ export function Hero() {
           {/* Mobile: centered content, Desktop: bottom-aligned content */}
           <div className="flex h-full flex-col justify-center md:justify-end md:pb-80">
             {/* Content container - centered on mobile, left-aligned on desktop */}
-            <div className="flex flex-col space-y-6 text-center md:max-w-xl md:text-left">
+            <div className="flex flex-col space-y-6 text-left md:max-w-xl">
               <div className="flex flex-col gap-1">
                 <h1
                   className="text-4xl font-semibold text-white drop-shadow-lg md:text-5xl lg:text-[64px]"
@@ -77,7 +77,7 @@ export function Hero() {
               >
                 <Button
                   variant="secondary"
-                  className="mx-auto md:mx-0"
+                  className="self-start md:mx-0"
                   onClick={openChat}
                   size="lg"
                 >

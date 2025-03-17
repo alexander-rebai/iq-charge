@@ -84,6 +84,8 @@ export const TeamCards = ({
                     alt={testimonial.name}
                     width={500}
                     height={500}
+                    priority
+                    fetchPriority="high"
                     draggable={false}
                     className="h-full w-full rounded-3xl object-contain object-center"
                   />

@@ -28,17 +28,17 @@ const ProductsHero = () => {
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-center text-white lg:p-0">
-        <div className="flex w-full flex-col items-center justify-center md:items-start md:justify-start">
+      <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-left text-white xl:p-0">
+        <div className="-mt-48 flex w-full flex-col items-start justify-center md:mt-0 md:items-start md:justify-start">
           <div className="flex flex-col gap-1">
             <h1
-              className="max-w-3xl text-center text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
+              className="max-w-3xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
               data-aos="fade-up"
             >
               Ons aanbod:
             </h1>
             <h1
-              className="mb-8 max-w-3xl text-center text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
+              className="mb-4 max-w-3xl text-left text-4xl font-semibold text-white drop-shadow-lg md:mb-8 md:text-start md:text-5xl lg:text-[64px]"
               data-aos="fade-up"
             >
               <FlipWords words={words} />
@@ -46,7 +46,7 @@ const ProductsHero = () => {
           </div>
 
           <p
-            className="mb-8 max-w-lg text-center text-base text-white drop-shadow-md md:text-start md:text-lg lg:self-auto lg:pr-4 lg:text-[24px]"
+            className="mb-8 max-w-lg text-left text-base text-white drop-shadow-md md:text-start md:text-lg lg:self-auto lg:pr-4 lg:text-[24px]"
             data-aos="fade-up"
             data-aos-delay="100"
           >
