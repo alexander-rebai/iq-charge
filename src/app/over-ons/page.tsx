@@ -48,7 +48,6 @@ export default function Home() {
           className="flex flex-col items-center justify-center"
           data-aos="fade-up"
         >
-          <h2 className="text-center text-5xl font-bold">Ons team</h2>
           <TeamCards testimonials={teamMembers} autoplay />
         </section>
 
