@@ -29,7 +29,7 @@ const ProductsHero = () => {
       </div>
 
       <div className="z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-8 text-left text-white xl:p-0">
-        <div className="-mt-48 flex w-full flex-col items-start justify-center md:mt-0 md:items-start md:justify-start">
+        <div className="-mt-28 flex w-full flex-col items-start justify-center md:mt-0 md:items-start md:justify-start">
           <div className="flex flex-col gap-1">
             <h1
               className="max-w-3xl text-left text-4xl font-semibold text-white drop-shadow-lg md:text-start md:text-5xl lg:text-[64px]"
