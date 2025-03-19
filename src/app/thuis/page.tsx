@@ -18,8 +18,7 @@ export default function Home() {
 voordelige manier om je elektrische auto op te laden.`,
             info2: `Heb je al zonnepanelen of een thuisbatterij? Dan vormt de laadpaal het
 laatste puzzelstuk van je duurzame energieplan.`,
-            video:
-              "https://dx8uea1j8p9gd.cloudfront.net/public/UITLEG_NOAM.mp4",
+            video: "https://dx8uea1j8p9gd.cloudfront.net/public/video_ad.mp4",
           }}
         />
 

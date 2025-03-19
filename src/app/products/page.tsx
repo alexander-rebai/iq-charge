@@ -160,7 +160,8 @@ geavanceerde slimme laadsystemen - zodat je altijd krijgt wat perfect bij jouw
 situatie past. We werken met toonaangevende merken zoals Smappee,
 Wallbox en Huawei. Bij Laadexpert draait alles om één ding: jouw
 overstap naar elektrisch rijden zo zorgeloos mogelijk maken.`,
-            video: "https://dx8uea1j8p9gd.cloudfront.net/public/video_ad.mp4",
+            video:
+              "https://dx8uea1j8p9gd.cloudfront.net/public/UITLEG_NOAM.mp4",
           }}
         />
 

@@ -69,7 +69,7 @@ const BedrijfHero = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            10 tot 50 laadpunten? Voor ons vormt dat geen probleem! Wij
+            Meerdere laadpunten? Voor ons vormt dat geen probleem! Wij
             installeren snel en efficiënt wat bij jouw bedrijf past.
           </p>
           <div

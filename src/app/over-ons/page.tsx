@@ -91,7 +91,7 @@ export default function Home() {
 
                 <h3 className="pt-6  text-2xl">Vragen of storingen?</h3>
                 <p className="pt-1  text-gray-500">
-                  Onze helpdesk staat 24/7 voor je klaar.
+                  Onze helpdesk staat voor je klaar.
                 </p>
               </div>
             </div>

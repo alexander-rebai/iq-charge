@@ -1,5 +1,6 @@
 import { type Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
+import Script from "next/script";
 import "~/styles/globals.css";
 
 import { AOSInit } from "~/components/aos-init";
@@ -30,6 +31,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-597B4FETPL"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-597B4FETPL');
+          `}
+        </Script>
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background antialiased",
