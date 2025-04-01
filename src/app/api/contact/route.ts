@@ -10,7 +10,7 @@ export async function POST(request: Request) {
 
     const data = await resend.emails.send({
       from: "Contact Form <laadexpert@mail.leveragelabs.io>",
-      to: ["alexander@heyjay.io"],
+      to: ["info@laadexpert.be"],
       subject: "New Contact Form Submission",
       html: `
         <h2>New Contact Form Submission</h2>

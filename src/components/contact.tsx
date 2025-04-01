@@ -59,6 +59,8 @@ export default function Contact() {
 
   const onSubmit = async (values: ContactFormType) => {
     setLoading(true);
+
+    console.log("values", values);
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -68,9 +70,14 @@ export default function Contact() {
         body: JSON.stringify(values),
       });
 
+      console.log("response", response);
+
       const responseData = (await response.json()) as ApiResponse;
 
+      console.log("responseData", responseData);
+
       if (responseData.success) {
+        console.log("resetForm");
         resetForm();
       } else {
         console.error("Failed to send message:", responseData.error);
