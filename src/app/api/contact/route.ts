@@ -23,8 +23,17 @@ export async function POST(request: Request) {
       reply_to: email,
     });
 
+    await resend.contacts.create({
+      email: email,
+      firstName: firstname,
+      lastName: lastname,
+      unsubscribed: false,
+      audienceId: "a1dc23d7-6372-4de5-b9e8-2e89420dd867",
+    });
+
     return NextResponse.json({ success: true, data });
   } catch (error) {
+    console.log("error", error);
     return NextResponse.json(
       { success: false, error: "Failed to send email" },
       { status: 500 },
